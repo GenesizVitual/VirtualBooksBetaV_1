@@ -14,8 +14,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('login');
 });
+
+
+Route::get('login', 'User@login');
+
+Route::get('register', 'User@register');
+
+Route::post('login-check','User@Usercheck');
+
+Route::resource('user', 'User');
+
+//=====================================================================================================================
+
+Route::get('dashboard','Apps\Dashboard@index');
+
+Route::resource('perusahaan','Apps\Perusahaan');
+
+//======================================================================================================================
+
 
 Route::get('jurnal-umum', 'AkuntansiJasa\report\JurnalUmum@JurnalUmum');
 
