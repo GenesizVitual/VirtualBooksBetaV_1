@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Apps;
+namespace App\Http\Controllers\Persediaan;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\Apps\Provinsi;
 use App\Model\Apps\KotaProv;
 
-class Perusahaan extends Controller
+class Instansi extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class Perusahaan extends Controller
      */
     public function index()
     {
-        return view('Apps.Perusahaan.content');
+        return view('Persediaan.Instansi.content');
     }
 
     /**
@@ -30,7 +30,7 @@ class Perusahaan extends Controller
             'provinsi'=> Provinsi::all(),
             'kabkot'=> KotaProv::all(),
         ];
-        return view('Apps.Perusahaan.new', $data);
+        return view('Persediaan.Instansi.new', $data);
     }
 
     /**

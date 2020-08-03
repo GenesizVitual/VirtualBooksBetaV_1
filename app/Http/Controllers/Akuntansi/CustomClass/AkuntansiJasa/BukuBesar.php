@@ -6,7 +6,7 @@
  * Time: 14:13
  */
 
-namespace App\Http\Controllers\CustomClass\AkuntansiJasa;
+namespace App\Http\Controllers\Akuntansi\CustomClass\AkuntansiJasa;
 use App\Model\AkuntansiJasa\JurnalTransaksiAkun;
 use Illuminate\Support\Facades\DB;
 

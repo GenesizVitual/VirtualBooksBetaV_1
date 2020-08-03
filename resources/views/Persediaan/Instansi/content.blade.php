@@ -1,4 +1,4 @@
-@extends('base')
+@extends('Persediaan.base')
 
 
 @section('content')
@@ -29,7 +29,7 @@
                 <div class="col-sm-12">
                     <div class="card card-primary">
                         <div class="card-body">
-                           <a href="{{ url('perusahaan/create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah</a>
+                           <a href="{{ url('instansi/create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah</a>
                            <label style="color: darkblue"> Instansi masih kosong. </label>
                         </div>
                     </div>

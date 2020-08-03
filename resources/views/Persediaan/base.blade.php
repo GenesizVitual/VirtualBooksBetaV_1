@@ -34,15 +34,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
 </head>
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini sidebar-collapse">
 <div class="wrapper">
 
   <!-- Navbar -->
-  @include('component_admin.navbar')
+  @include('Persediaan.component_admin.navbar')
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  @include('component_admin.sidebar')
+  @include('Persediaan.component_admin.sidebar')
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -51,7 +51,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- /.content-wrapper -->
 
   <!-- Control Sidebar -->
-  @include('component_admin.Lsidebar')
+  @include('Persediaan.component_admin.Lsidebar')
   <!-- /.control-sidebar -->
 
   <!-- Main Footer -->
@@ -83,5 +83,5 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{ asset('admin_asset/dist/js/adminlte.min.js') }}"></script>
 </body>
 @yield('jsContainer')
-@include('component_admin.toast')
+@include('Persediaan.component_admin.toast')
 </html>

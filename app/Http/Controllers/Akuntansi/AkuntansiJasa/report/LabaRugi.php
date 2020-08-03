@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\AkuntansiJasa\report;
+namespace App\Http\Controllers\Akuntansi\AkuntansiJasa\report;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;

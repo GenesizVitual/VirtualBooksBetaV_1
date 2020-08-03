@@ -6,8 +6,8 @@
  * Time: 10:07
  */
 
-namespace App\Http\Controllers\CustomClass\AkuntansiJasa;
-use App\Http\Controllers\CustomClass\AkuntansiJasa\BukuBesar;
+namespace App\Http\Controllers\Akuntansi\CustomClass\AkuntansiJasa;
+use App\Http\Controllers\Akuntansi\CustomClass\AkuntansiJasa\BukuBesar;
 
 class NeracaSaldo
 {

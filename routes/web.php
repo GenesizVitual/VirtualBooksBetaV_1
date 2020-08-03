@@ -19,18 +19,14 @@ Route::get('/', function () {
 
 
 Route::get('login', 'User@login');
-
+Route::get('log-out', 'User@LogOut');
 Route::get('register', 'User@register');
-
 Route::post('login-check','User@Usercheck');
-
 Route::resource('user', 'User');
-
 //=====================================================================================================================
-
-Route::get('dashboard','Apps\Dashboard@index');
-
-Route::resource('perusahaan','Apps\Perusahaan');
+Route::get('dashboard','Persediaan\Dashboard@index');
+Route::resource('instansi','Persediaan\Instansi');
+Route::post('kota-kab/{id}','Apps\Provinsi@getLinkKab');
 
 //======================================================================================================================
 
@@ -58,3 +54,4 @@ Route::get('jurnal-penyesuian', 'AkuntansiJasa\report\JurnalUmum@JurnalPenyesuia
 Route::get('buku-besar-penyesuaian', 'AkuntansiJasa\report\BukuBesar@buku_besar_penyesuaian');
 
 Route::get('neraca-saldo-penyesuaian', 'AkuntansiJasa\report\NeracaSaldo@NeracaSaldoPenyesuaian');
+

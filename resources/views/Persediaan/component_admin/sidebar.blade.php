@@ -40,9 +40,9 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ url('perusahaan') }}" class="nav-link">
+                            <a href="{{ url('instansi') }}" class="nav-link">
                                 <i class="far fa-building nav-icon"></i>
-                                <p>Perusahaan</p>
+                                <p>Instansi</p>
                             </a>
                         </li>
                         <li class="nav-item">

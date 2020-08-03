@@ -6,7 +6,7 @@
  * Time: 13:08
  */
 
-namespace App\Http\Controllers\CustomClass\AkuntansiJasa;
+namespace App\Http\Controllers\Akuntansi\CustomClass\AkuntansiJasa;
 use App\Model\AkuntansiJasa\Jurnal;
 
 

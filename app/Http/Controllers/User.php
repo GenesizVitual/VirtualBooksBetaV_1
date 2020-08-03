@@ -64,4 +64,9 @@ class User extends Controller
             return true;
         }
     }
+
+    public function LogOut(Request $req){
+        $req->session()->flush();
+        return redirect('login')->with('message_success','Anda telah keluar dari aplikasi');
+    }
 }

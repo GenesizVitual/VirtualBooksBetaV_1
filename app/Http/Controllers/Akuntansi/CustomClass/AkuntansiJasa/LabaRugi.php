@@ -6,7 +6,7 @@
  * Time: 13:56
  */
 
-namespace App\Http\Controllers\CustomClass\AkuntansiJasa;
+namespace App\Http\Controllers\Akuntansi\CustomClass\AkuntansiJasa;
 use App\Http\Controllers\CustomClass\AkuntansiJasa\NeracaSaldo;
 use App\Model\AkuntansiJasa\Akun;
 
