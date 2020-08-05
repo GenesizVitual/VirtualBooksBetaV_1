@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Akuntansi\AkuntansiJasa\report;
 
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\CustomClass\AkuntansiJasa\JurnalUmum as jurnal_umum;
+use App\Http\Controllers\Akuntansi\CustomClass\AkuntansiJasa\JurnalUmum as jurnal_umum;
 use Illuminate\Http\Request;
 use Session;
 

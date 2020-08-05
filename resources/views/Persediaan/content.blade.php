@@ -1,4 +1,4 @@
-@extends('base')
+@extends('Persediaan.base')
 
 @section('content')
 <!-- Content Header (Page header) -->

@@ -42,6 +42,15 @@
             })
         @endif
 
+        @if(count($errors) > 0)
+            @foreach ($errors->all() as $error)
+                Toast.fire({
+                    icon: 'error',
+                    title: '{{ $error }}'
+                })
+            @endforeach
+        @endif
+
         $('.swalDefaultSuccess').click(function() {
             Toast.fire({
                 icon: 'success',
@@ -54,18 +63,21 @@
                 title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
             })
         });
+
         $('.swalDefaultError').click(function() {
             Toast.fire({
                 icon: 'error',
                 title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
             })
         });
+
         $('.swalDefaultWarning').click(function() {
             Toast.fire({
                 icon: 'warning',
                 title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
             })
         });
+
         $('.swalDefaultQuestion').click(function() {
             Toast.fire({
                 icon: 'question',

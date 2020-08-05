@@ -26,32 +26,35 @@ Route::resource('user', 'User');
 //=====================================================================================================================
 Route::get('dashboard','Persediaan\Dashboard@index');
 Route::resource('instansi','Persediaan\Instansi');
+Route::put('instansi/{id}/upload','Persediaan\Instansi@upload');
 Route::post('kota-kab/{id}','Apps\Provinsi@getLinkKab');
+Route::resource('tahun-anggaran', 'Persediaan\TahunAnggaran');
+
 
 //======================================================================================================================
 
-
-Route::get('jurnal-umum', 'AkuntansiJasa\report\JurnalUmum@JurnalUmum');
-
-Route::get('buku-besar', 'AkuntansiJasa\report\BukuBesar@buku_besar');
-
-Route::post('ceta-buku-besar', 'AkuntansiJasa\report\BukuBesar@cetak_buku_besar');
-
-Route::get('neraca-saldo', 'AkuntansiJasa\report\NeracaSaldo@NeracaSaldo');
-
-Route::post('ceta-neraca-saldo', 'AkuntansiJasa\report\NeracaSaldo@CetakNeracaSaldo');
-
-Route::get('laba-rugi','AkuntansiJasa\report\LabaRugi@LabaRugi');
-
-Route::post('cetak-laba-rugi','AkuntansiJasa\report\LabaRugi@CetakLabaRugi');
-
-Route::get('neraca','AkuntansiJasa\report\Neraca@neraca');
-
-Route::post('ceta-neraca','AkuntansiJasa\report\Neraca@cetak_neraca');
-
-Route::get('jurnal-penyesuian', 'AkuntansiJasa\report\JurnalUmum@JurnalPenyesuian');
-
-Route::get('buku-besar-penyesuaian', 'AkuntansiJasa\report\BukuBesar@buku_besar_penyesuaian');
-
-Route::get('neraca-saldo-penyesuaian', 'AkuntansiJasa\report\NeracaSaldo@NeracaSaldoPenyesuaian');
+//
+//Route::get('jurnal-umum', 'Akuntansi\AkuntansiJasa\report\JurnalUmum@JurnalUmum');
+//
+//Route::get('buku-besar', 'Akuntansi\AkuntansiJasa\report\BukuBesar@buku_besar');
+//
+//Route::post('ceta-buku-besar', 'Akuntansi\AkuntansiJasa\report\BukuBesar@cetak_buku_besar');
+//
+//Route::get('neraca-saldo', 'Akuntansi\AkuntansiJasa\report\NeracaSaldo@NeracaSaldo');
+//
+//Route::post('ceta-neraca-saldo', 'Akuntansi\AkuntansiJasa\report\NeracaSaldo@CetakNeracaSaldo');
+//
+//Route::get('laba-rugi','Akuntansi\AkuntansiJasa\report\LabaRugi@LabaRugi');
+//
+//Route::post('cetak-laba-rugi','Akuntansi\AkuntansiJasa\report\LabaRugi@CetakLabaRugi');
+//
+//Route::get('neraca','Akuntansi\AkuntansiJasa\report\Neraca@neraca');
+//
+//Route::post('ceta-neraca','Akuntansi\AkuntansiJasa\report\Neraca@cetak_neraca');
+//
+//Route::get('jurnal-penyesuian', 'Akuntansi\AkuntansiJasa\report\JurnalUmum@JurnalPenyesuian');
+//
+//Route::get('buku-besar-penyesuaian', 'Akuntansi\AkuntansiJasa\report\BukuBesar@buku_besar_penyesuaian');
+//
+//Route::get('neraca-saldo-penyesuaian', 'Akuntansi\AkuntansiJasa\report\NeracaSaldo@NeracaSaldoPenyesuaian');
 

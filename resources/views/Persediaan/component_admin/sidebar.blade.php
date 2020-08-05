@@ -46,6 +46,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{ url('tahun-anggaran') }}" class="nav-link">
+                                <i class="far fa-calendar nav-icon"></i>
+                                <p>Tahun Anggaran</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="#" class="nav-link ">
                                 <i class="far fa-user nav-icon"></i>
                                 <p>Pengguna</p>

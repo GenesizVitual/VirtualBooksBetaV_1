@@ -10,4 +10,13 @@
             {{ Session::get('message_error') }}
         </div>
     @endif
+
+    @if (count($errors) > 0)
+            {{ dd(count($errors)) }}
+         @foreach ($errors->all() as $error)
+                            <div class="alert alert-danger alert-dismissible">
+                                    {{ $error }}
+                            </div>
+         @endforeach
+    @endif
 </div>

@@ -25,6 +25,9 @@ class User extends Controller
         if(Hash::check($req->pass, $model->password)){
             $req->session()->put('name', $model->name);
             $req->session()->put('user_id', $model->id);
+            if(!empty($model->linkToInstansi->id)){
+                $req->session()->put('id_instansi', $model->linkToInstansi->id);
+            }
             return redirect('dashboard')->with('message_success','Selamat Datang '.$model->name);
         }else{
             return redirect('login')->with('message_error','Maaf, Email atau password anda salah. silahkah coba lagi');

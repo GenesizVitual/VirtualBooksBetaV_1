@@ -3,27 +3,23 @@
 namespace App\Http\Controllers\Persediaan;
 
 use App\Http\Controllers\Controller;
+use App\Model\Persediaan\Instansi as instance;
+use App\Model\Apps\KotaProv;
 use Illuminate\Http\Request;
 use App\Model\Apps\Provinsi;
-use App\Model\Apps\KotaProv;
-
+use Illuminate\Support\Facades\Session;
 class Instansi extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        return view('Persediaan.Instansi.content');
+        $data = [
+            'instansi'=> instance::where('user_id', Session::get('user_id'))->first()
+        ];
+        return view('Persediaan.Instansi.content', $data);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         $data = [
@@ -33,59 +29,95 @@ class Instansi extends Controller
         return view('Persediaan.Instansi.new', $data);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+
+    public function store(Request $req)
     {
         //
+
+        $this->validate($req,[
+           'name_instansi'=>'required',
+           'singkatan_instansi'=>'required',
+           'alamat'=>'required',
+           'id_provinsi'=>'required',
+           'id_kab_kota'=>'required',
+           'no_telp'=>'required',
+           'email'=>'required|unique:tbl_instansi,email|max:255',
+           'level_instansi'=>'required',
+        ]);
+
+        $request = $req->except(['_token']);
+        $request['user_id']=Session::get('user_id');
+
+        $model = new instance($request);
+        if($model->save()){
+            return redirect('instansi')->with('message_success', 'Anda telah mengisi data instansi anda.');
+        }
+
+        return redirect('instansi')->with('message_error', 'ada kesalahan mengisi data instansi anda, mohon periksa kembali.');
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+        $model = instance::findOrFail($id);
+        $data = [
+            'provinsi'=> Provinsi::all(),
+            'kabkot'=> KotaProv::all()->where('provinsi_id', $model->id_provinsi),
+            'instansi'=> $model
+        ];
+        return view('Persediaan.Instansi.edit', $data);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+
+    public function update(Request $req, $id)
     {
-        //
+        $this->validate($req,[
+            'name_instansi'=>'required',
+            'singkatan_instansi'=>'required',
+            'alamat'=>'required',
+            'id_provinsi'=>'required',
+            'id_kab_kota'=>'required',
+            'no_telp'=>'required',
+            'email'=>'required|unique:tbl_instansi,email|max:255',
+            'level_instansi'=>'required',
+        ]);
+
+        $request = $req->except(['_token','_method']);
+        $model = instance::where('id', $id)->update($request);
+        if($model){
+            return redirect('instansi')->with('message_success', 'Anda telah mengubah data instansi anda.');
+        }
+
+        return redirect('instansi')->with('message_error', 'Ada kesalahan mengubah data instansi anda, mohon periksa kembali.');
+
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function upload(Request $req, $id)
     {
-        //
+        $this->validate($req,[
+            'logo'=>'required|image|mimes:jpeg,jpg,png|max:25000',
+        ]);
+
+        $gambar= $req->logo;
+        $imagename = time() . '.' . $gambar->getClientOriginalExtension();
+        $model = instance::findOrFail( $id);
+
+        if(!empty($model->gambar))
+        {
+            $file_path =public_path('persediaan/logo').'/' . $model->gambar;
+            if (file_exists($file_path)) {
+                @unlink($file_path);
+            }
+        }
+
+        $model->logo = $imagename;
+        if($model->save()){
+            $gambar->move(public_path('persediaan/logo'), $imagename);
+            return redirect('instansi')->with('message_success', 'Upload Logo Berhasil.');
+        }
+        return redirect('instansi')->with('message_error', 'Gagal Upload Logo. mohon sesuaikan file telah direkomendasikan');
+
     }
+
 }

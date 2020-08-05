@@ -26,7 +26,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Select2 -->
   <link rel="stylesheet" href="{{ asset('admin_asset/plugins/select2/css/select2.min.css') }}">
   <link rel="stylesheet" href="{{ asset('admin_asset/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
-
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="{{ asset('admin_asset/plugins/daterangepicker/daterangepicker.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('admin_asset/dist/css/adminlte.min.css') }}">
   <!-- Google Font: Source Sans Pro -->
@@ -81,6 +82,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{ asset('admin_asset/plugins/toastr/toastr.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('admin_asset/dist/js/adminlte.min.js') }}"></script>
+<!-- daterangepicker -->
+<script src="{{ asset('admin_asset/plugins/moment/moment.min.js') }}"></script>
+<script src="{{ asset('admin_asset/plugins/daterangepicker/daterangepicker.js') }}"></script>
+
 </body>
 @yield('jsContainer')
 @include('Persediaan.component_admin.toast')

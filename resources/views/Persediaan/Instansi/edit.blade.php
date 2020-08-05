@@ -15,7 +15,8 @@
                         <div class="card-header">
                             <h3 class="card-title">Formulir Instansi</h3>
                         </div>
-                        <form action="{{ url('instansi') }}"  role="form" method="post" id="quickForm" enctype="multipart/form-data">
+                        <form action="{{ url('instansi/'.$instansi->id) }}"  role="form" method="post" id="quickForm" enctype="multipart/form-data">
+                            <input type="hidden" name="_method" value="PUT">
                             <div class="card-body">
                                 <span style="color: green">* Isilah Formulir dibawah ini dengan benar.</span>
                                 <hr>
@@ -26,13 +27,13 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label for="nm_instansi"><small style="color: red">*</small> Nama Instansi</label>
-                                                    <input type="text" class="form-control" name="name_instansi">
+                                                    <input type="text" class="form-control" name="name_instansi" value="{{ $instansi->name_instansi }}">
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label for="singkatan_instansi"><small style="color: red">*</small> Singkatan Instansi</label>
-                                                    <input type="text" class="form-control" name="singkatan_instansi">
+                                                    <input type="text" class="form-control" name="singkatan_instansi" value="{{ $instansi->singkatan_instansi }}">
                                                 </div>
                                             </div>
                                         </div>
@@ -40,7 +41,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="alamat"><small style="color: red">*</small> Alamat</label>
-                                            <textarea class="form-control" name="alamat"></textarea>
+                                            <textarea class="form-control" name="alamat">{{ $instansi->alamat }}</textarea>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
@@ -51,7 +52,7 @@
                                                     <select class="form-control select2" style="width: 100%;" name="id_provinsi" required>
                                                         <option selected="selected">Pilih Provinsi Anda</option>
                                                         @foreach($provinsi as $data)
-                                                            <option value="{{ $data->id }}">{{ $data->nama }}</option>
+                                                            <option value="{{ $data->id }}" @if($instansi->id_provinsi==$data->id) selected @endif>{{ $data->nama }}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>
@@ -60,7 +61,10 @@
                                                 <div class="form-group">
                                                     <label for="kabupaten"><small style="color: red">*</small> Kabupaten</label>
                                                     <select class="form-control select2" style="width: 100%;" name="id_kab_kota" required>
-                                                        <option selected="selected">Silahkan pilih provinsi terlebih dahulu</option>
+                                                        <option>Silahkan pilih provinsi terlebih dahulu</option>
+                                                        @foreach($kabkot as $data)
+                                                            <option value="{{ $data->id }}" @if($instansi->id_kab_kota==$data->id) selected @endif>{{ $data->nama }}</option>
+                                                        @endforeach
                                                     </select>
                                                 </div>
                                             </div>
@@ -71,13 +75,13 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="no_telp"><small style="color: red">*</small> No.Telp</label>
-                                                    <input type="text" class="form-control" name="no_telp">
+                                                    <input type="text" class="form-control" name="no_telp" value="{{ $instansi->no_telp }}">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="fax"><small style="color: orange">*</small> No. Fax</label>
-                                                    <input type="fax" class="form-control" name="fax">
+                                                    <input type="fax" class="form-control" name="fax" value="{{ $instansi->fax }}">
                                                     <small style="color: orange">* Logo tidak diwajibkan diisi</small>
                                                 </div>
                                             </div>
@@ -86,16 +90,16 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="email"><small style="color: red">*</small>Email</label>
-                                            <input type="email" class="form-control" name="email">
+                                            <input type="email" class="form-control" name="email" value="{{ $instansi->email }}">
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="level"><small style="color: red">*</small>Tingkat Instansi :</label> <span style="padding: 2px;"></span>
-                                            <input  type="radio" name="level_instansi" value="0" checked required> <label> Provinsi</label><span style="padding: 2px;"></span>
-                                            <input type="radio" name="level_instansi" value="1"> <label> Kabupaten</label><span style="padding: 2px;"></span>
-                                            <input type="radio" name="level_instansi" value="2"> <label> Kota</label>
+                                            <input  type="radio" name="level_instansi" value="0" @if($instansi->level_instansi==0) checked @endif required> <label> Provinsi</label><span style="padding: 2px;"></span>
+                                            <input type="radio" name="level_instansi" value="1" @if($instansi->level_instansi==1) checked @endif> <label> Kabupaten</label><span style="padding: 2px;"></span>
+                                            <input type="radio" name="level_instansi" value="2" @if($instansi->level_instansi==2) checked @endif> <label> Kota</label>
                                         </div>
                                     </div>
 
@@ -116,6 +120,7 @@
 @section('jsContainer')
 <script src="{{ asset('admin_asset/plugins/jquery-validation/jquery.validate.min.js') }}"></script>
 <script src="{{ asset('admin_asset/plugins/jquery-validation/additional-methods.min.js') }}"></script>
+
 <script type="text/javascript">
     $(function () {
         //Initialize Select2 Elements
