@@ -52,6 +52,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{ url('jenis-tbk') }}" class="nav-link">
+                                <i class="far fa fa-paperclip nav-icon"></i>
+                                <p>Jenis TBK</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="#" class="nav-link ">
                                 <i class="far fa-user nav-icon"></i>
                                 <p>Pengguna</p>

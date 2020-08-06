@@ -23,12 +23,15 @@ Route::get('log-out', 'User@LogOut');
 Route::get('register', 'User@register');
 Route::post('login-check','User@Usercheck');
 Route::resource('user', 'User');
-//=====================================================================================================================
+
+//======================================================================================================================
+
 Route::get('dashboard','Persediaan\Dashboard@index');
 Route::resource('instansi','Persediaan\Instansi');
 Route::put('instansi/{id}/upload','Persediaan\Instansi@upload');
 Route::post('kota-kab/{id}','Apps\Provinsi@getLinkKab');
 Route::resource('tahun-anggaran', 'Persediaan\TahunAnggaran');
+Route::resource('jenis-tbk','Persediaan\JenisTbk');
 
 
 //======================================================================================================================
