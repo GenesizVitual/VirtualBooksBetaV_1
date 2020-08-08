@@ -36,6 +36,8 @@ Route::resource('jenis-tbk','Persediaan\JenisTbk');
 
 //======================================================================================================================
 
+Route::resource('bidang','Persediaan\Bidang');
+
 //
 //Route::get('jurnal-umum', 'Akuntansi\AkuntansiJasa\report\JurnalUmum@JurnalUmum');
 //

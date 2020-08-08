@@ -46,6 +46,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{ url('bidang') }}" class="nav-link">
+                                <i class="far fa fa-puzzle-piece nav-icon"></i>
+                                <p>Bidang/Bagian</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{ url('tahun-anggaran') }}" class="nav-link">
                                 <i class="far fa-calendar nav-icon"></i>
                                 <p>Tahun Anggaran</p>
