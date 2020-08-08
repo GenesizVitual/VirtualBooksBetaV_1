@@ -32,6 +32,7 @@ Route::put('instansi/{id}/upload','Persediaan\Instansi@upload');
 Route::post('kota-kab/{id}','Apps\Provinsi@getLinkKab');
 Route::resource('tahun-anggaran', 'Persediaan\TahunAnggaran');
 Route::resource('jenis-tbk','Persediaan\JenisTbk');
+Route::resource('penyedia','Persediaan\Penyedia');
 
 
 //======================================================================================================================

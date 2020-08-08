@@ -64,6 +64,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{ url('penyedia') }}" class="nav-link">
+                                <i class="far fa fa-store nav-icon"></i>
+                                <p>Penyedia</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="#" class="nav-link ">
                                 <i class="far fa-user nav-icon"></i>
                                 <p>Pengguna</p>
