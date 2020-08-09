@@ -32,7 +32,7 @@
 
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-home"></i>
+                        <i class="nav-icon fas fa-list"></i>
                         <p>
                             Data Master
                             <i class="right fas fa-angle-left"></i>
@@ -70,12 +70,38 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link ">
-                                <i class="far fa-user nav-icon"></i>
-                                <p>Pengguna</p>
+                            <a href="{{ url('gudang') }}" class="nav-link">
+                                <i class="far fa fa-warehouse nav-icon"></i>
+                                <p>Gudang</p>
                             </a>
                         </li>
                     </ul>
+                </li>
+
+
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link ">
+                        <i class="nav-icon fas fa-list"></i>
+                        <p>
+                            Data Pengguna
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">
+                                <i class="far fa-user nav-icon"></i>
+                                <p>Berwenang</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ url('nota') }}" class="nav-link">
+                        <i class="nav-icon fas fa fa-paperclip"></i>
+                        <p>Nota</p>
+                    </a>
                 </li>
 
                 <li class="nav-item has-treeview">

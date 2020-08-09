@@ -39,6 +39,9 @@ Route::resource('penyedia','Persediaan\Penyedia');
 
 Route::resource('bidang','Persediaan\Bidang');
 
+Route::resource('gudang','Persediaan\Gudang');
+
+Route::resource('nota','Persediaan\Nota');
 //
 //Route::get('jurnal-umum', 'Akuntansi\AkuntansiJasa\report\JurnalUmum@JurnalUmum');
 //
