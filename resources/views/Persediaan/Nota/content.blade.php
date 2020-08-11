@@ -1,5 +1,10 @@
 @extends('Persediaan.base')
 
+@section('css')
+    <link rel="stylesheet" href="{{ asset('admin_asset/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin_asset/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
+@stop
+
 
 @section('content')
 
@@ -29,46 +34,84 @@
                 <div class="col-sm-6">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="card card-primary">
+                            <div class="card">
+                                <div class="card-header d-flex p-0">
+                                    <h3 class="card-title p-3">Panel Nota</h3>
+                                    <ul class="nav nav-pills ml-auto p-2">
+                                        <li class="nav-item"><a class="nav-link active" href="#tab_1" data-toggle="tab" id="tab1><i class="fa fa-list"></i> Daftar</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#tab_2" data-toggle="tab" id="tab2"><i class="fa fa-bookmark"></i> Formulir</a></li>
+                                    </ul>
+                                </div><!-- /.card-header -->
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab_1">
+                                            <table id="table-data-nota" class="table table-bordered table-striped" style="width: 100%" role="grid">
+                                                <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Tanggal</th>
+                                                    <th>Kode Nota</th>
+                                                    <th>Total</th>
+                                                    <th>Aksi</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- /.tab-pane -->
+                                        <div class="tab-pane" id="tab_2">
+                                            <form action="{{ url('nota') }}" method="post" id="quickForm">
+                                                {{ csrf_field() }}
+                                                <input type="hidden" name="_method" value="post">
+                                                <div class="form-group row">
+                                                    <label for="kode_nota" class="col-sm-3 col-form-label">Kode Nota</label>
+                                                    <div class="col-sm-9" style="padding-bottom: 3px">
+                                                        <input type="text" class="form-control" id="kode_nota" name="kode_nota">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="tgl_beli" class="col-sm-3 col-form-label">Tanggal Beli</label>
+                                                    <div class="col-sm-9" style="padding-bottom: 3px">
+                                                        <input type="date" class="form-control" id="tgl_beli" name="tgl_beli">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="tgl_beli" class="col-sm-3 col-form-label">Pajak</label>
+                                                    <div class="col-sm-9" style="padding-bottom: 3px">
+                                                        <input type="checkbox" id="ppn" name="ppn" value="1"> ppn 10%
+                                                        <input type="checkbox" id="pph" name="pph" value="1"> pph 1,5%
+                                                        <p>
+                                                            <small style="color: orange">*Centang ppn atau pph jika nota mempuyai pajak</small>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12" style="padding-bottom: 3px">
+                                                    <button type="submit" class="btn btn-primary btn-sm float-right"><i class="fa fa-check"></i></button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card card-warning">
                                 <div class="card-header">
-                                    <h3 class="card-title">Panel Nota Pembelian</h3>
+                                    <h3 class="card-title">Panel Pembelian Barang</h3>
                                 </div>
                                 <div class="card-body">
-                                    <form action="{{ url('nota') }}" method="post" id="quickForm">
-                                        {{ csrf_field() }}
-                                        <div class="form-group row">
-                                            <label for="kode_nota" class="col-sm-3 col-form-label">Kode Nota</label>
-                                            <div class="col-sm-9" style="padding-bottom: 3px">
-                                                <input type="text" class="form-control" id="kode_nota" name="kode_nota">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="tgl_beli" class="col-sm-3 col-form-label">Tanggal Beli</label>
-                                            <div class="col-sm-9" style="padding-bottom: 3px">
-                                                <input type="date" class="form-control" id="tgl_beli" name="tgl_beli">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="tgl_beli" class="col-sm-3 col-form-label">Pajak</label>
-                                            <div class="col-sm-9" style="padding-bottom: 3px">
-                                                <input type="checkbox" id="ppn" name="ppn" value="1"> ppn 10%
-                                                <input type="checkbox" id="pph" name="pph" value="1"> pph 1,5%
-                                                <p>
-                                                    <small style="color: orange">*Centang ppn atau pph jika nota mempuyai pajak</small>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12" style="padding-bottom: 3px">
-                                            <button type="submit" class="btn btn-primary btn-sm float-right"><i class="fa fa-plus"></i></button>
-                                        </div>
-                                    </form>
+                                    <p>Pilihlah nota pembelian terlebih dahulu</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-6">
-
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -77,10 +120,10 @@
 
 
 @section('jsContainer')
+    @include('Persediaan.Nota.Js.daftar_js')
     <script src="{{ asset('admin_asset/plugins/jquery-validation/jquery.validate.min.js') }}"></script>
     <script src="{{ asset('admin_asset/plugins/jquery-validation/additional-methods.min.js') }}"></script>
     <script type="text/javascript">
-
         $(document).ready(function () {
 
             const Toast = Swal.mixin({
@@ -90,8 +133,6 @@
                 timer: 3000
             });
 
-
-            
             $('#quickForm').validate({
                 rules: {
                     kode_nota: {
