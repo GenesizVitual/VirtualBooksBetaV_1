@@ -31,15 +31,15 @@
     <div class="content" style="margin-top: 0px">
         <div class="container-fluid" >
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-12">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header d-flex p-0">
                                     <h3 class="card-title p-3">Panel Nota</h3>
                                     <ul class="nav nav-pills ml-auto p-2">
-                                        <li class="nav-item"><a class="nav-link active" href="#tab_1" data-toggle="tab" id="tab1><i class="fa fa-list"></i> Daftar</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#tab_2" data-toggle="tab" id="tab2"><i class="fa fa-bookmark"></i> Formulir</a></li>
+                                        <li class="nav-item"><a class="nav-link active" href="#tab_1" data-toggle="tab" id="tab1"><i class="fa fa-list"></i> Daftar</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#tab_2" data-toggle="tab" id="tab2"><i class="fa fa-bookmark"></i> Bukti Terima</a></li>
                                     </ul>
                                 </div><!-- /.card-header -->
                                 <div class="card-body">
@@ -51,8 +51,10 @@
                                                     <th>#</th>
                                                     <th>Tanggal</th>
                                                     <th>Kode Nota</th>
+                                                    <th>Penyedia</th>
+                                                    <th>PPH 10%</th>
+                                                    <th>PPN 1.5%</th>
                                                     <th>Total</th>
-                                                    <th>Aksi</th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
@@ -66,20 +68,31 @@
                                                 {{ csrf_field() }}
                                                 <input type="hidden" name="_method" value="post">
                                                 <div class="form-group row">
-                                                    <label for="kode_nota" class="col-sm-3 col-form-label">Kode Nota</label>
-                                                    <div class="col-sm-9" style="padding-bottom: 3px">
+                                                    <label for="kode_nota" class="col-sm-2 col-form-label">Kode Nota</label>
+                                                    <div class="col-sm-10" style="padding-bottom: 3px">
                                                         <input type="text" class="form-control" id="kode_nota" name="kode_nota">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="tgl_beli" class="col-sm-3 col-form-label">Tanggal Beli</label>
-                                                    <div class="col-sm-9" style="padding-bottom: 3px">
+                                                    <label for="tgl_beli" class="col-sm-2 col-form-label">Tanggal Beli</label>
+                                                    <div class="col-sm-10" style="padding-bottom: 3px">
                                                         <input type="date" class="form-control" id="tgl_beli" name="tgl_beli">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="tgl_beli" class="col-sm-3 col-form-label">Pajak</label>
-                                                    <div class="col-sm-9" style="padding-bottom: 3px">
+                                                    <label for="tgl_beli" class="col-sm-2 col-form-label">Penyedia</label>
+                                                    <div class="col-sm-10" style="padding-bottom: 3px">
+                                                        <select class="form-control select2" style="width: 100%;" name="id_penyedia" required>
+                                                            <option selected="selected">Pilih Penyedia</option>
+                                                            @foreach($penyedia as $data)
+                                                                <option value="{{ $data->id }}">{{ $data->penyedia }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="tgl_beli" class="col-sm-2 col-form-label">Pajak</label>
+                                                    <div class="col-sm-4" style="padding-bottom: 3px">
                                                         <input type="checkbox" id="ppn" name="ppn" value="1"> ppn 10%
                                                         <input type="checkbox" id="pph" name="pph" value="1"> pph 1,5%
                                                         <p>
@@ -99,20 +112,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card card-warning">
-                                <div class="card-header">
-                                    <h3 class="card-title">Panel Pembelian Barang</h3>
-                                </div>
-                                <div class="card-body">
-                                    <p>Pilihlah nota pembelian terlebih dahulu</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div><!-- /.container-fluid -->
     </div>
@@ -124,6 +124,12 @@
     <script src="{{ asset('admin_asset/plugins/jquery-validation/jquery.validate.min.js') }}"></script>
     <script src="{{ asset('admin_asset/plugins/jquery-validation/additional-methods.min.js') }}"></script>
     <script type="text/javascript">
+
+        $(function () {
+            //Initialize Select2 Elements
+            $('.select2').select2()
+        })
+
         $(document).ready(function () {
 
             const Toast = Swal.mixin({
@@ -141,6 +147,9 @@
                     tgl_beli: {
                         required: true,
                     },
+                    id_penyedia: {
+                        required: true,
+                    },
                 },
                 messages: {
                     kode_nota: {
@@ -148,6 +157,9 @@
                     },
                     tgl_beli: {
                         required: "Silahkan isi tanggal nota pembelian.",
+                    },
+                    id_penyedia: {
+                        required: "Silahkan isi penyedia barang.",
                     },
                 },
 

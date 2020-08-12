@@ -16,7 +16,7 @@
         tabel_nota=$('#table-data-nota').DataTable({
             "paging": true,
             "lengthChange": false,
-            "searching": false,
+            "searching": true,
             "ordering": true,
             "info": true,
             "autoWidth": true,
@@ -55,6 +55,7 @@
                     $('#quickForm').attr('action','{{ url('nota') }}/'+result.data.id);
                     $("[name='kode_nota']").val(result.data.kode_nota);
                     $("[name='tgl_beli']").val(result.data.tgl_beli);
+                    $("[name='id_penyedia']").val(result.data.id_penyedia).trigger('change');
                     if(result.data.pph==1){
                         $("[name='ppn']").prop('checked', true);
                     }

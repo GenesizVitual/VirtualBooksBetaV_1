@@ -8,6 +8,7 @@ use App\Model\Persediaan\Nota as notas;
 use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\Persediaan\utils\TahunAggaranCheck;
 use View;
+use App\Model\Persediaan\Penyedia;
 
 class Nota extends Controller
 {
@@ -15,13 +16,17 @@ class Nota extends Controller
 
     public function index()
     {
-        return view('Persediaan.Nota.content');
+        $data = [
+            'penyedia'=>Penyedia::all()->where('id_instansi', Session::get('id_instansi'))
+        ];
+        return view('Persediaan.Nota.content',$data);
     }
 
     public function store(Request $request){
         $this->validate($request,[
             'kode_nota'=>'required|unique:tbl_nota,kode_nota',
             'tgl_beli'=>'required',
+            'id_penyedia'=>'required',
         ]);
 
         TahunAggaranCheck::tahun_anggaran_aktif([
@@ -64,9 +69,11 @@ class Nota extends Controller
             $column = array();
             $column[] = $no++;
             $column[] = date('d-m-Y', strtotime($data_nota->tgl_beli));
-            $column[] = $data_nota->kode_nota;
-            $column[] = $this->render_partial('Persediaan.Nota.partial.total',$data_nota);
             $column[] = $this->render_partial('Persediaan.Nota.partial.button',$data_nota);
+            $column[] = $data_nota->linkToPenyedia->penyedia;
+            $column[] = $data_nota->pph;
+            $column[] = $data_nota->ppn;
+            $column[] = $this->render_partial('Persediaan.Nota.partial.total',$data_nota);
             $row[] = $column;
         }
         return response()->json(array('data'=>$row));
@@ -85,6 +92,7 @@ class Nota extends Controller
         $this->validate($req,[
             'kode_nota'=>'required|unique:tbl_nota,kode_nota',
             'tgl_beli'=>'required',
+            'id_penyedia'=>'required',
             '_token'=>'required',
         ]);
 
@@ -97,6 +105,7 @@ class Nota extends Controller
         $model = notas::where('id_instansi', $ndata->id_instansi)->findOrFail($id);
         $model->kode_nota = $req->kode_nota;
         $model->tgl_beli = $req->tgl_beli;
+        $model->id_penyedia = $req->id_penyedia;
         $model->id_instansi = $ndata->id_instansi;
         $model->id_thn_anggaran = $ndata->id;
 
