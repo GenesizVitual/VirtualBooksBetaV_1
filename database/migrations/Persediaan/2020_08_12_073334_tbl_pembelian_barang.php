@@ -20,10 +20,11 @@ class TblPembelianBarang extends Migration
             $table->foreignId('id_penyedia')->references('id')->on('tbl_penyedia')->onDelete('cascade');
             $table->foreignId('id_gudang')->references('id')->on('tbl_gudang')->onDelete('cascade');
             $table->decimal('jumlah_barang',12,4)->unsigned();
-            $table->string('satuan');
+            $table->string('satuan')->nullable();
             $table->decimal('harga_barang',12,4)->unsigned();
+            $table->date('tanggal_expired');
             $table->decimal('total_beli',12,4)->unsigned();
-            $table->text('keterangan');
+            $table->text('keterangan')->nullable();
             $table->timestamps();
         });
     }

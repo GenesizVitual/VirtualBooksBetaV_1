@@ -81,4 +81,9 @@ class Gudang extends Controller
             return redirect('gudang')->with('message_error','Gagal, menghapus data barang ke gudang');
         }
     }
+
+    public function data_gudang(){
+        $model = gudangs::all()->where('id_instansi', Session::get('id_instansi'));
+        return response()->json(array('data'=>$model));
+    }
 }

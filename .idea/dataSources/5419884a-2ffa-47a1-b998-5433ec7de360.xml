@@ -897,226 +897,231 @@
       <DataType>decimal(12,4) unsigned|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="223" parent="50" name="total_beli">
+    <column id="223" parent="50" name="tanggal_expired">
       <Position>9</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="224" parent="50" name="total_beli">
+      <Position>10</Position>
       <DataType>decimal(12,4) unsigned|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="224" parent="50" name="keterangan">
-      <Position>10</Position>
+    <column id="225" parent="50" name="keterangan">
+      <Position>11</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="225" parent="50" name="created_at">
-      <Position>11</Position>
-      <DataType>timestamp|0</DataType>
-    </column>
-    <column id="226" parent="50" name="updated_at">
+    <column id="226" parent="50" name="created_at">
       <Position>12</Position>
       <DataType>timestamp|0</DataType>
     </column>
-    <index id="227" parent="50" name="tbl_pembelian_barang_id_gudang_foreign">
+    <column id="227" parent="50" name="updated_at">
+      <Position>13</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <index id="228" parent="50" name="tbl_pembelian_barang_id_gudang_foreign">
       <ColNames>id_gudang</ColNames>
     </index>
-    <index id="228" parent="50" name="tbl_pembelian_barang_id_instansi_foreign">
+    <index id="229" parent="50" name="tbl_pembelian_barang_id_instansi_foreign">
       <ColNames>id_instansi</ColNames>
     </index>
-    <index id="229" parent="50" name="tbl_pembelian_barang_id_nota_foreign">
+    <index id="230" parent="50" name="tbl_pembelian_barang_id_nota_foreign">
       <ColNames>id_nota</ColNames>
     </index>
-    <index id="230" parent="50" name="tbl_pembelian_barang_id_penyedia_foreign">
+    <index id="231" parent="50" name="tbl_pembelian_barang_id_penyedia_foreign">
       <ColNames>id_penyedia</ColNames>
     </index>
-    <key id="231" parent="50" name="PRIMARY">
+    <key id="232" parent="50" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="232" parent="50" name="tbl_pembelian_barang_id_instansi_foreign">
+    <foreign-key id="233" parent="50" name="tbl_pembelian_barang_id_instansi_foreign">
       <ColNames>id_instansi</ColNames>
       <RefSchemaName>virtual_book</RefSchemaName>
       <RefTableName>tbl_instansi</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="233" parent="50" name="tbl_pembelian_barang_id_nota_foreign">
+    <foreign-key id="234" parent="50" name="tbl_pembelian_barang_id_nota_foreign">
       <ColNames>id_nota</ColNames>
       <RefSchemaName>virtual_book</RefSchemaName>
       <RefTableName>tbl_nota</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="234" parent="50" name="tbl_pembelian_barang_id_penyedia_foreign">
+    <foreign-key id="235" parent="50" name="tbl_pembelian_barang_id_penyedia_foreign">
       <ColNames>id_penyedia</ColNames>
       <RefSchemaName>virtual_book</RefSchemaName>
       <RefTableName>tbl_penyedia</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="235" parent="50" name="tbl_pembelian_barang_id_gudang_foreign">
+    <foreign-key id="236" parent="50" name="tbl_pembelian_barang_id_gudang_foreign">
       <ColNames>id_gudang</ColNames>
       <RefSchemaName>virtual_book</RefSchemaName>
       <RefTableName>tbl_gudang</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="236" parent="51" name="id">
+    <column id="237" parent="51" name="id">
       <Position>1</Position>
       <DataType>bigint(20) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="237" parent="51" name="penyedia">
+    <column id="238" parent="51" name="penyedia">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="238" parent="51" name="pimpinan">
+    <column id="239" parent="51" name="pimpinan">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="239" parent="51" name="alamat">
+    <column id="240" parent="51" name="alamat">
       <Position>4</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="240" parent="51" name="no_telp">
+    <column id="241" parent="51" name="no_telp">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="241" parent="51" name="no_fax">
+    <column id="242" parent="51" name="no_fax">
       <Position>6</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="242" parent="51" name="id_instansi">
+    <column id="243" parent="51" name="id_instansi">
       <Position>7</Position>
       <DataType>bigint(20) unsigned|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="243" parent="51" name="created_at">
+    <column id="244" parent="51" name="created_at">
       <Position>8</Position>
       <DataType>timestamp|0</DataType>
     </column>
-    <column id="244" parent="51" name="updated_at">
+    <column id="245" parent="51" name="updated_at">
       <Position>9</Position>
       <DataType>timestamp|0</DataType>
     </column>
-    <index id="245" parent="51" name="tbl_penyedia_id_instansi_foreign">
+    <index id="246" parent="51" name="tbl_penyedia_id_instansi_foreign">
       <ColNames>id_instansi</ColNames>
     </index>
-    <key id="246" parent="51" name="PRIMARY">
+    <key id="247" parent="51" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="247" parent="51" name="tbl_penyedia_id_instansi_foreign">
+    <foreign-key id="248" parent="51" name="tbl_penyedia_id_instansi_foreign">
       <ColNames>id_instansi</ColNames>
       <RefSchemaName>virtual_book</RefSchemaName>
       <RefTableName>tbl_instansi</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="248" parent="52" name="id">
+    <column id="249" parent="52" name="id">
       <Position>1</Position>
       <DataType>bigint(20) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="249" parent="52" name="thn_anggaran">
+    <column id="250" parent="52" name="thn_anggaran">
       <Position>2</Position>
       <DataType>year(4)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="250" parent="52" name="status">
+    <column id="251" parent="52" name="status">
       <Position>3</Position>
       <Comment>0=tidak aktif, 1=aktif</Comment>
       <DataType>enum(&apos;0&apos;, &apos;1&apos;)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
-    <column id="251" parent="52" name="id_instansi">
+    <column id="252" parent="52" name="id_instansi">
       <Position>4</Position>
       <DataType>bigint(20) unsigned|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="252" parent="52" name="created_at">
+    <column id="253" parent="52" name="created_at">
       <Position>5</Position>
       <DataType>timestamp|0</DataType>
     </column>
-    <column id="253" parent="52" name="updated_at">
+    <column id="254" parent="52" name="updated_at">
       <Position>6</Position>
       <DataType>timestamp|0</DataType>
     </column>
-    <index id="254" parent="52" name="tbl_thn_anggaran_id_instansi_foreign">
+    <index id="255" parent="52" name="tbl_thn_anggaran_id_instansi_foreign">
       <ColNames>id_instansi</ColNames>
     </index>
-    <key id="255" parent="52" name="PRIMARY">
+    <key id="256" parent="52" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="256" parent="52" name="tbl_thn_anggaran_id_instansi_foreign">
+    <foreign-key id="257" parent="52" name="tbl_thn_anggaran_id_instansi_foreign">
       <ColNames>id_instansi</ColNames>
       <RefSchemaName>virtual_book</RefSchemaName>
       <RefTableName>tbl_instansi</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="257" parent="53" name="id">
+    <column id="258" parent="53" name="id">
       <Position>1</Position>
       <DataType>bigint(20) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="258" parent="53" name="name">
+    <column id="259" parent="53" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="259" parent="53" name="email">
+    <column id="260" parent="53" name="email">
       <Position>3</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="260" parent="53" name="email_verified_at">
+    <column id="261" parent="53" name="email_verified_at">
       <Position>4</Position>
       <DataType>timestamp|0</DataType>
     </column>
-    <column id="261" parent="53" name="password">
+    <column id="262" parent="53" name="password">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="262" parent="53" name="level">
+    <column id="263" parent="53" name="level">
       <Position>6</Position>
       <Comment>0=admin, 1=karyawan</Comment>
       <DataType>enum(&apos;0&apos;, &apos;1&apos;)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
-    <column id="263" parent="53" name="remember_token">
+    <column id="264" parent="53" name="remember_token">
       <Position>7</Position>
       <DataType>varchar(100)|0</DataType>
     </column>
-    <column id="264" parent="53" name="created_at">
+    <column id="265" parent="53" name="created_at">
       <Position>8</Position>
       <DataType>timestamp|0</DataType>
     </column>
-    <column id="265" parent="53" name="updated_at">
+    <column id="266" parent="53" name="updated_at">
       <Position>9</Position>
       <DataType>timestamp|0</DataType>
     </column>
-    <index id="266" parent="53" name="users_email_unique">
+    <index id="267" parent="53" name="users_email_unique">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="267" parent="53" name="PRIMARY">
+    <key id="268" parent="53" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="268" parent="53" name="users_email_unique">
+    <key id="269" parent="53" name="users_email_unique">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>users_email_unique</UnderlyingIndexName>
     </key>
