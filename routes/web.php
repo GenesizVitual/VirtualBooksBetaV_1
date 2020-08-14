@@ -44,10 +44,11 @@ Route::get('data-gudang','Persediaan\Gudang@data_gudang');
 
 Route::resource('nota','Persediaan\Nota');
 Route::post('edit-nota/{id}','Persediaan\Nota@edit_nota');
-Route::post('load-data-pembelian','Persediaan\Nota@data_nota_pembelian');
+Route::post('load-data-nota','Persediaan\Nota@data_nota_pembelian');
 
 Route::resource('pembelian-barang','Persediaan\PembelianBarang');
 Route::post('pembelian-barang/{id_nota}/store','Persediaan\PembelianBarang@store_barang');
+Route::post('load-data-pembelian/{id_nota}','Persediaan\PembelianBarang@data_pembelian_barang');
 
 //
 //Route::get('jurnal-umum', 'Akuntansi\AkuntansiJasa\report\JurnalUmum@JurnalUmum');

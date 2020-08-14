@@ -74,19 +74,19 @@
                                                         <tr>
                                                             <td><h3>Total</h3></td>
                                                             <td><h3>:</h3></td>
-                                                            <td><h3>10000</h3></td>
+                                                            <td><h3 id="total_pembelian">-</h3></td>
                                                         </tr>
 
                                                         <tr>
-                                                            <td><h6>PPH 10%</h6></td>
+                                                            <td><h6>PPN 10%</h6></td>
                                                             <td><h6>:</h6></td>
-                                                            <td><h6>10000</h6></td>
+                                                            <td><h6 id="ppn">-</h6></td>
                                                         </tr>
 
                                                         <tr>
-                                                            <td><h6>PPN 1.5%</h6></td>
+                                                            <td><h6>PPH 1.5%</h6></td>
                                                             <td><h6>:</h6></td>
-                                                            <td><h6>10000</h6></td>
+                                                            <td><h6 id="pph">-</h6></td>
                                                         </tr>
                                                         <tr>
                                                             <td colspan="3">
@@ -111,7 +111,7 @@
                                                 <div class="form-group">
                                                     <label for="id_gudang">Barang</label>
                                                     <select class="form-control select2" style="width: 100%;" name="id_gudang" required>
-                                                        <option selected="selected">Silahkan pilih barang</option>
+                                                        <option >Silahkan pilih barang</option>
                                                         @foreach($gudang as $data)
                                                             <option value="{{ $data->id }}">{{ $data->nama_barang }}</option>
                                                         @endforeach
@@ -145,11 +145,19 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label for="keterangan">Keterangan</label>
-                                                    <textarea class="form-control" name="satuan" id="keterangan" placeholder='Keterangan bisa saja seperti Spesifikasi Barang, Berat, Warna, Asal Barang, dll'></textarea>
+                                                    <textarea class="form-control" name="keterangan" id="keterangan" placeholder='Keterangan bisa saja seperti Spesifikasi Barang, Berat, Warna, Asal Barang, dll'></textarea>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
-                                                <button type="button" onclick="onSubmit()" class="btn btn-primary float-right"><i class="fa fa-check"></i> Simpan</button>
+                                               <span style="color: orange">
+                                                    @if($nota->ppn==1)
+                                                       Pajak PPN 10%.
+                                                    @endif
+                                                    @if($nota->pph==1)
+                                                        Pajak PPH 1.5%.
+                                                    @endif
+                                               </span>
+                                               <button type="button" onclick="onSubmit()" class="btn btn-primary float-right"><i class="fa fa-check"></i> Simpan</button>
                                             </div>
                                         </div>
                                         </form>
@@ -166,8 +174,8 @@
                                             <th>Kwatintas</th>
                                             <th>Satuan</th>
                                             <th>Harga</th>
-                                            <th>Keterangan</th>
                                             <th>Sub Total</th>
+                                            <th>Keterangan</th>
                                             <th>Aksi</th>
                                         </tr>
                                         </thead>
@@ -253,9 +261,9 @@
             if($('#quickForm').valid()){
                 if($('[name="_method"]').val()=="post")
                 {
-                    onStore();
+                    onStore('{{ url('pembelian-barang') }}/'+'{{ $nota->id }}/store');
                 }else{
-                    alert('mengubah');
+                    onUpdate();
                 }
             }else{
                 alert('Isilah formulir dibawah ini');

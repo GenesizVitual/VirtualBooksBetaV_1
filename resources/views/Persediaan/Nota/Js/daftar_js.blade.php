@@ -25,7 +25,7 @@
 
         collect_data_nota = function () {
             $.ajax({
-                url:'{{ url('load-data-pembelian') }}',
+                url:'{{ url('load-data-nota') }}',
                 dataType: 'json',
                 type :'post',
                 data: {

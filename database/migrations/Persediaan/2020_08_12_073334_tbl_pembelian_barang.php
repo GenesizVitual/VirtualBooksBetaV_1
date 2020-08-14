@@ -24,6 +24,8 @@ class TblPembelianBarang extends Migration
             $table->decimal('harga_barang',12,4)->unsigned();
             $table->date('tanggal_expired');
             $table->decimal('total_beli',12,4)->unsigned();
+            $table->decimal('total_ppn',12,4)->unsigned();
+            $table->decimal('total_pph',12,4)->unsigned();
             $table->text('keterangan')->nullable();
             $table->timestamps();
         });
