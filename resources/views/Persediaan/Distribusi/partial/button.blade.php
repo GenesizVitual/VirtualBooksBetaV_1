@@ -1,0 +1,1 @@
+<a href="{{ url('bagikan-barang/'. $data->id) }}" class="btn btn-primary">Bagikan</a>

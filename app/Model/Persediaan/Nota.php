@@ -9,7 +9,7 @@ class Nota extends Model
     //
     protected $table='tbl_nota';
 
-    protected $fillable = ['kode_nota','tgl_beli','pph','ppn','id_instansi','id_thn_anggaran','id_penyedia'];
+    protected $fillable = ['kode_nota','tgl_beli','pph','ppn','id_instansi','id_thn_anggaran','id_jenis_tbk','id_penyedia'];
 
     public function linkToPenyedia(){
         return $this->belongsTo('App\Model\Persediaan\Penyedia','id_penyedia');

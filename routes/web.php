@@ -51,6 +51,10 @@ Route::resource('pembelian-barang','Persediaan\PembelianBarang');
 Route::post('pembelian-barang/{id_nota}/store','Persediaan\PembelianBarang@store_barang');
 Route::post('load-data-pembelian/{id_nota}','Persediaan\PembelianBarang@data_pembelian_barang');
 
+Route::resource('distribusi','Persediaan\Distribusi');
+Route::get('bagikan-barang/{id}','Persediaan\Distribusi@show');
+
+
 //
 //Route::get('jurnal-umum', 'Akuntansi\AkuntansiJasa\report\JurnalUmum@JurnalUmum');
 //

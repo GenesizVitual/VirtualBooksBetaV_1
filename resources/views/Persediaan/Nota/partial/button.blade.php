@@ -1,4 +1,3 @@
-
 <div class="btn-group">
     <a class="btn btn-sm btn-success" href="{{ url('pembelian-barang/'.$data->id) }}"><i class="fa fa-archive"></i> {{ $data->kode_nota }} </a>
     <button type="button" class="btn btn-warning btn-flat dropdown-toggle dropdown-icon" data-toggle="dropdown">

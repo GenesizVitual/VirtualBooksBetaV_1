@@ -10,6 +10,7 @@ use App\Http\Controllers\Persediaan\utils\TahunAggaranCheck;
 use View;
 use App\Model\Persediaan\Penyedia;
 use App\Http\Controllers\Persediaan\utils\data\Nota as data_nota;
+use App\Model\Persediaan\JenisTbk;
 
 
 class Nota extends Controller
@@ -19,7 +20,8 @@ class Nota extends Controller
     public function index()
     {
         $data = [
-            'penyedia'=>Penyedia::all()->where('id_instansi', Session::get('id_instansi'))
+            'penyedia'=>Penyedia::all()->where('id_instansi', Session::get('id_instansi')),
+            'jenis_tbk'=> JenisTbk::all()->where('id_instansi', Session::get('id_instansi'))
         ];
         return view('Persediaan.Nota.content',$data);
     }
@@ -63,6 +65,7 @@ class Nota extends Controller
             'kode_nota'=>'required|unique:tbl_nota,kode_nota',
             'tgl_beli'=>'required',
             'id_penyedia'=>'required',
+            'id_jenis_tbk'=>'required',
             '_token'=>'required',
         ]);
 
@@ -76,6 +79,7 @@ class Nota extends Controller
         $model->kode_nota = $req->kode_nota;
         $model->tgl_beli = $req->tgl_beli;
         $model->id_penyedia = $req->id_penyedia;
+        $model->id_jenis_tbk = $req->id_jenis_tbk;
         $model->id_instansi = $ndata->id_instansi;
         $model->id_thn_anggaran = $ndata->id;
 

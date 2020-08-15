@@ -21,6 +21,8 @@ class TblNota extends Migration
             $table->enum('ppn',[0,1])->default('0')->comment('0=aktif, 1=tidak aktif');
             $table->foreignId('id_thn_anggaran')->references('id')->on('tbl_thn_anggaran')->onDelete('cascade');
             $table->foreignId('id_instansi')->references('id')->on('tbl_instansi')->onDelete('cascade');
+            $table->foreignId('id_jenis_tbk')->references('id')->on('tbl_jenis_tbk')->onDelete('cascade');
+            $table->foreignId('id_penyedia')->references('id')->on('tbl_penyedia')->onDelete('cascade');
             $table->timestamps();
         });
     }

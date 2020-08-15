@@ -10,6 +10,7 @@ use App\Model\Persediaan\Gudang;
 use App\Model\Persediaan\PembelianBarang as pembelian;
 use App\Http\Controllers\Persediaan\utils\data\Nota as data_nota;
 
+
 class PembelianBarang extends Controller
 {
     //
@@ -130,7 +131,6 @@ class PembelianBarang extends Controller
         $this->validate($req,[
             '_token'=> 'required'
         ]);
-
         data_nota::$id_nota = $id_nota;
         $data = data_nota::data_pembelian_barang_per_nota();
         return response()->json($data);

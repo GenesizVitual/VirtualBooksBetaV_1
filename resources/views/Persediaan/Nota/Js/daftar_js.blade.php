@@ -56,6 +56,7 @@
                     $("[name='kode_nota']").val(result.data.kode_nota);
                     $("[name='tgl_beli']").val(result.data.tgl_beli);
                     $("[name='id_penyedia']").val(result.data.id_penyedia).trigger('change');
+                    $("[name='id_jenis_tbk']").val(result.data.id_jenis_tbk).trigger('change');
                     if(result.data.pph==1){
                         $("[name='ppn']").prop('checked', true);
                     }

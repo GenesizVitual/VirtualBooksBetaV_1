@@ -69,6 +69,17 @@
                                                 {{ csrf_field() }}
                                                 <input type="hidden" name="_method" value="post">
                                                 <div class="form-group row">
+                                                    <label for="tgl_beli" class="col-sm-2 col-form-label">Jenis TBK</label>
+                                                    <div class="col-sm-10" style="padding-bottom: 3px">
+                                                        <select class="form-control select2" style="width: 100%;" name="id_jenis_tbk" required>
+                                                            <option selected="selected">Kode TBK - Jenis TBK</option>
+                                                            @foreach($jenis_tbk as $data)
+                                                                <option value="{{ $data->id }}">{{ $data->kode }} - {{ $data->jenis_tbk }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
                                                     <label for="kode_nota" class="col-sm-2 col-form-label">Kode Nota</label>
                                                     <div class="col-sm-10" style="padding-bottom: 3px">
                                                         <input type="text" class="form-control" id="kode_nota" name="kode_nota">
@@ -151,6 +162,9 @@
                     id_penyedia: {
                         required: true,
                     },
+                    id_jenis_tbk: {
+                        required: true,
+                    },
                 },
                 messages: {
                     kode_nota: {
@@ -161,6 +175,9 @@
                     },
                     id_penyedia: {
                         required: "Silahkan isi penyedia barang.",
+                    },
+                    id_jenis_tbk: {
+                        required: "Silahkan isi jenis tbk anda.",
                     },
                 },
 
