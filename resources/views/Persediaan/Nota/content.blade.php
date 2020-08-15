@@ -52,9 +52,10 @@
                                                     <th>Tanggal</th>
                                                     <th>Kode Nota</th>
                                                     <th>Penyedia</th>
-                                                    <th>PPH 10%</th>
-                                                    <th>PPN 1.5%</th>
-                                                    <th>Total</th>
+                                                    <th>PPN 10%</th>
+                                                    <th>PPH 1.5%</th>
+                                                    <th>Total Sebelum Pajak</th>
+                                                    <th>Total Sesudah Pajak</th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>

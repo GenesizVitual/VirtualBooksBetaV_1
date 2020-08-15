@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Session;
 use App\Model\Persediaan\Nota;
 use App\Model\Persediaan\Gudang;
 use App\Model\Persediaan\PembelianBarang as pembelian;
-use App\Http\Controllers\Persediaan\utils\RenderParsial;
+use App\Http\Controllers\Persediaan\utils\data\Nota as data_nota;
 
 class PembelianBarang extends Controller
 {
@@ -131,46 +131,16 @@ class PembelianBarang extends Controller
             '_token'=> 'required'
         ]);
 
-        try
-        {
-            $total_pph = 0;
-            $total_ppn = 0;
-            $nota =Nota::where('id_instansi', Session::get('id_instansi'))->findOrFail($id_nota);
-            $row=array();
-            $no=1;
-            foreach ($nota->linkToPembelian as $data)
-            {
-                $column = array();
-                $column[] = $no++;
-                $column[] = $data->linkToGudang->nama_barang;
-                $column[] = $data->jumlah_barang;
-                $column[] = $data->satuan;
-                $column[] = number_format($data->harga_barang,2,',','.');
-                $column[] = number_format($data->total_beli,2,',','.');
-                $column[] = $data->keterangan;
-                $column[] = RenderParsial::render_partial('Persediaan.Pembelian.partial.button', $data);
-                $row[] = $column;
-            }
-            $total_pembelian = $nota->linkToPembelian->sum('total_beli');
-            $data_pajak = $this->cek_pajak($total_pembelian, $id_nota);
-
-
-            return response()->json(array('data'=> $row,
-                'total_beli'=>number_format(($data_pajak->total+$data_pajak->total_ppn+$data_pajak->total_pph),2,',','.'),
-                'ppn'=>number_format($data_pajak->total_ppn,2,',','.'),
-                'pph'=>number_format($data_pajak->total_pph,2,',','.'),
-            ));
-        }catch (Throwable $e){
-            report($e);
-            return false;
-        }
+        data_nota::$id_nota = $id_nota;
+        $data = data_nota::data_pembelian_barang_per_nota();
+        return response()->json($data);
     }
 
 
-
-
     private function cek_pajak($total, $id_nota){
+
         $model_notal = Nota::where('id_instansi', Session::get('id_instansi'))->findOrFail($id_nota);
+
         $total_ppn=0;
         $total_pph=0;
 

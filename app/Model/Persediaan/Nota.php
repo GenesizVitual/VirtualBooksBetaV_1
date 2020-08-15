@@ -18,4 +18,6 @@ class Nota extends Model
     public function linkToPembelian(){
         return $this->hasMany('App\Model\Persediaan\PembelianBarang','id_nota', 'id');
     }
+
+
 }

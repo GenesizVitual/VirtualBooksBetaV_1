@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\Persediaan\utils\TahunAggaranCheck;
 use View;
 use App\Model\Persediaan\Penyedia;
-use App\Http\Controllers\Persediaan\utils\RenderParsial;
+use App\Http\Controllers\Persediaan\utils\data\Nota as data_nota;
+
 
 class Nota extends Controller
 {
@@ -47,38 +48,6 @@ class Nota extends Controller
 
     }
 
-    public function data_nota_pembelian(Request $req)
-    {
-        $this->validate($req,[
-            '_token'=> 'required'
-        ]);
-
-        TahunAggaranCheck::tahun_anggaran_aktif([
-            'id_instansi'=> Session::get('id_instansi')
-        ]);
-
-        $ndata = TahunAggaranCheck::$id_thn_anggaran;
-
-        $model_nota = notas::all()->where('id_instansi',$ndata->id_instansi)
-                      ->where('id_thn_anggaran', $ndata->id)->sortBy('tgl_beli');
-
-        $row = array();
-        $no = 1;
-
-        foreach ($model_nota as $data_nota)
-        {
-            $column = array();
-            $column[] = $no++;
-            $column[] = date('d-m-Y', strtotime($data_nota->tgl_beli));
-            $column[] = RenderParsial::render_partial('Persediaan.Nota.partial.button',$data_nota);
-            $column[] = $data_nota->linkToPenyedia->penyedia;
-            $column[] = $data_nota->pph;
-            $column[] = $data_nota->ppn;
-            $column[] = RenderParsial::render_partial('Persediaan.Nota.partial.total',$data_nota);
-            $row[] = $column;
-        }
-        return response()->json(array('data'=>$row));
-    }
 
     public function edit_nota(Request $req, $id)
     {
@@ -141,6 +110,21 @@ class Nota extends Controller
         }
     }
 
+    public function data_nota_pembelian(Request $req)
+    {
+        $this->validate($req,[
+            '_token'=> 'required'
+        ]);
 
 
+        $row = data_nota::data_nota(null);
+        return response()->json(array('data'=>$row));
+    }
+
+    public function cetak_nota($id)
+    {
+        data_nota::$id_nota = $id;
+        $data = data_nota::data_pembelian_barang_per_nota();
+        return view('Persediaan.Nota.report.print_page', $data);
+    }
 }
