@@ -49,7 +49,8 @@ Route::get('cetak-nota/{id}','Persediaan\Nota@cetak_nota');
 
 Route::resource('pembelian-barang','Persediaan\PembelianBarang');
 Route::post('pembelian-barang/{id_nota}/store','Persediaan\PembelianBarang@store_barang');
-Route::post('load-data-pembelian/{id_nota}','Persediaan\PembelianBarang@data_pembelian_barang');
+Route::post('load-data-pembelian/{id_nota}','Persediaan\PembelianBarang@data_pembelian_barang_pernota');
+Route::put('load-data-pembelian','Persediaan\PembelianBarang@data_pembelian_barang_perbarang');
 
 Route::resource('distribusi','Persediaan\Distribusi');
 Route::get('bagikan-barang/{id}','Persediaan\Distribusi@show');

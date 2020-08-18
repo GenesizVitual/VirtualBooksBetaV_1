@@ -37,7 +37,7 @@ class Gudang
                 $column['no'] = $no++;
                 $column['nama_barang'] = $data->nama_barang;
                 $column['stok_barang'] = number_format($data->stok,2,',','.');
-                $column['aksi'] = RenderParsial::render_partial('Persediaan.Distribusi.partial.button', $data);
+                $column['aksi'] = RenderParsial::render_partial('Persediaan.Distribusi.partial.button_gudang', $data);
                 $row[] = $column;
             }
 

@@ -9,6 +9,7 @@ use App\Model\Persediaan\Nota;
 use App\Model\Persediaan\Gudang;
 use App\Model\Persediaan\PembelianBarang as pembelian;
 use App\Http\Controllers\Persediaan\utils\data\Nota as data_nota;
+use App\Http\Controllers\Persediaan\utils\data\PembelianBarang as data_pembelian;
 
 
 class PembelianBarang extends Controller
@@ -126,7 +127,7 @@ class PembelianBarang extends Controller
         }
     }
 
-    public function data_pembelian_barang(Request $req, $id_nota)
+    public function data_pembelian_barang_pernota(Request $req, $id_nota)
     {
         $this->validate($req,[
             '_token'=> 'required'
@@ -136,6 +137,22 @@ class PembelianBarang extends Controller
         return response()->json($data);
     }
 
+    public function data_pembelian_barang_perbarang(Request $req)
+    {
+        $this->validate($req,[
+            'kode_barang'=> 'required',
+            'status_pembayaran'=> 'required',
+            '_token'=> 'required'
+        ]);
+
+        $array = [
+            'status_pembayaran'=> $req->status_pembayaran,
+            'id_barang'=> $req->kode_barang,
+        ];
+
+        $ndata = data_pembelian::data_pembelian($array);
+        return response()->json($ndata);
+    }
 
     private function cek_pajak($total, $id_nota){
 

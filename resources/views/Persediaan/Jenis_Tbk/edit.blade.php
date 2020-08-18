@@ -38,7 +38,7 @@
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label for="level"><small style="color: red">*</small>Status Pembayaran :</label> <span style="padding: 2px;"></span>
+                                                    <label for="level"><small style="color: red">*</small>Status Penerimaan :</label> <span style="padding: 2px;"></span>
                                                     @foreach($status_pembayaran as $key=> $keterangan)
                                                         <input  type="radio" name="status_pembayaran" value="{{ $key }}" @if($key==$jenis_tbk->status_pembayaran) checked @endif required> <label> {{ $keterangan }}</label><span style="padding: 2px;"></span>
                                                     @endforeach

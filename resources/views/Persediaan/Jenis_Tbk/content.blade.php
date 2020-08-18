@@ -44,7 +44,7 @@
                                 <tr>
                                     <th>Kode Rekening</th>
                                     <th>Jenis TBK</th>
-                                    <th>Status Pembayaran</th>
+                                    <th>Status Penerimaan</th>
                                     <th>Aksi</th>
                                 </tr>
                                 </thead>
