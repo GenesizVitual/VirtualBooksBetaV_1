@@ -1,1 +1,1 @@
-<button class="btn btn-success">Keluarkan</button>
+<button class="btn btn-success" data-toggle="modal" data-target="#modal-xl">Keluarkan</button>

@@ -38,11 +38,13 @@
                         <div class="card-header p-0 pt-1">
                             <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist">
                                 <li class="pt-2 px-3"><h3 class="card-title">Status Penerimaan</h3></li>
-                                @foreach($data as $key=> $data_list)
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="custom-tabs-two-messages-tab" data-toggle="pill" href="#custom-tabs-two-settings" role="tab" aria-controls="custom-tabs-two-home" aria-selected="false"><span class="badge badge-danger right">{{ $data_list['root_data']['banyak_data'] }}</span> {{ $data_list['judul'] }}</a>
-                                    </li>
-                                @endforeach
+                                @if(!empty($data))
+                                    @foreach($data as $key=> $data_list)
+                                        <li class="nav-item">
+                                            <a onclick="onLoaded({{ $key }})" class="nav-link" id="custom-tabs-two-messages-tab" data-toggle="pill" href="#custom-tabs-two-settings" role="tab" aria-controls="custom-tabs-two-home" aria-selected="false"><span class="badge badge-danger right">{{ $data_list['root_data']['banyak_data'] }}</span> {{ $data_list['judul'] }}</a>
+                                        </li>
+                                    @endforeach
+                                @endif
                             </ul>
                         </div>
                         <div class="card-body">
@@ -56,7 +58,7 @@
                                                         <div class="col-sm-3">
                                                             <div class="small-box bg-info">
                                                                 <div class="inner">
-                                                                    <h3>150</h3>
+                                                                    <h3 id="stok_tersedian">0</h3>
 
                                                                     <p>Stok Tersediaan</p>
                                                                 </div>
@@ -105,6 +107,8 @@
                                                                         <th>Tanggal Beli</th>
                                                                         <th>Nama Barang</th>
                                                                         <th>Banyak Barang</th>
+                                                                        <th>Harga Barang</th>
+                                                                        <th>Total Harga</th>
                                                                         <th>Aksi</th>
                                                                     </tr>
                                                                     </thead>
@@ -143,9 +147,12 @@
             </div>
         </div><!-- /.container-fluid -->
     </div>
+
+    @include('Persediaan.Distribusi.partial.modal');
 @stop
 
 
 @section('jsContainer')
     @include('Persediaan.Distribusi.js.js')
+    @include('Persediaan.Distribusi.js.action')
 @stop

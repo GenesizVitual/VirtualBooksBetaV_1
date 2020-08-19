@@ -6,8 +6,6 @@
 <script>
     $(function () {
 
-        var status_pembayaran=0;
-
        var pembelian = $('#table-data-pembelian').DataTable({
             "paging": true,
             "lengthChange": false,
@@ -21,12 +19,14 @@
                {'data':'tgl_beli'},
                {'data':'nama_barang'},
                {'data':'stok'},
+               {'data':'harga'},
+               {'data':'sub_total'},
                {'data':'aksi'},
            ]
 
         });
 
-        onLoaded = function () {
+        onLoaded = function (status_pembayaran) {
             $.ajax({
                 url : '{{ url('load-data-pembelian') }}',
                 type : 'post',
@@ -37,6 +37,7 @@
                     'status_pembayaran': status_pembayaran
                 }
             }).done(function (result) {
+                $('#stok_tersedian').text(result.banyak_barang);
                 pembelian.clear().draw();
                 pembelian.rows.add(result.data).draw();
             })
@@ -52,7 +53,7 @@
             "responsive": true,
         });
 
-        onLoaded();
+        onLoaded(0);
     });
 </script>
 

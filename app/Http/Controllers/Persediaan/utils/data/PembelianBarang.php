@@ -31,18 +31,22 @@ class PembelianBarang
             $row = array();
             $no = 1;
             $banyaK_item=0;
+            $banyaK_barang=0;
             foreach ($query as $data){
                 $column = array();
                 $column['no'] = $no++;
                 $column['tgl_beli'] = date('d-m-Y', strtotime($data->tgl_beli));
                 $column['nama_barang'] = $data->nama_barang;
-                $column['stok'] = $data->stok;
+                $column['stok'] = number_format($data->stok,2,',','.');
+                $column['harga'] = number_format($data->harga_barang,2,',','.');
+                $column['sub_total'] = number_format($data->harga_barang*$data->stok,2,',','.');
                 $column['aksi'] = RenderParsial::render_partial('Persediaan.Distribusi.partial.button_pembelian', $data);
                 $column['id_pembelian'] = $data->id;
                 $banyaK_item ++;
+                $banyaK_barang +=$data->stok;
                 $row[] = $column;
             }
-            return array('data'=>$row,'banyak_data'=> $banyaK_item);
+            return array('data'=>$row,'banyak_data'=> $banyaK_item,'banyak_barang'=> $banyaK_barang);
         }catch (Throwable $e){
             report($e);
             return false;
