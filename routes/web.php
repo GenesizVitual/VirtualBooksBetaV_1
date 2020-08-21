@@ -54,7 +54,7 @@ Route::put('load-data-pembelian','Persediaan\PembelianBarang@data_pembelian_bara
 
 Route::resource('distribusi','Persediaan\Distribusi');
 Route::get('bagikan-barang/{id}','Persediaan\Distribusi@show');
-
+Route::put('form-data-distribusi','Persediaan\Distribusi@form_distribusi');
 
 //
 //Route::get('jurnal-umum', 'Akuntansi\AkuntansiJasa\report\JurnalUmum@JurnalUmum');

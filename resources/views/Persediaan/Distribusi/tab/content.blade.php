@@ -135,20 +135,25 @@
                                                         </div>
                                                     </div>
                                                 </div>
+
+
+
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- /.card -->
+                    <!-- /.card -->
                     </div>
                 </div>
             </div>
+
         </div><!-- /.container-fluid -->
     </div>
 
-    @include('Persediaan.Distribusi.partial.modal');
+    @include('Persediaan.Distribusi.partial.modal')
+
 @stop
 
 

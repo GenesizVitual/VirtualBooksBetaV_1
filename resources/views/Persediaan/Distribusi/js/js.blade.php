@@ -3,6 +3,8 @@
 <script src="{{ asset('admin_asset/plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
 <script src="{{ asset('admin_asset/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
 
+
+
 <script>
     $(function () {
 
@@ -33,7 +35,7 @@
                 data : {
                     '_token':'{{ csrf_token() }}',
                     '_method':'put',
-                    'kode_barang': '{{ $id_barang }}',
+                    'kode_barang': '{{ $gudang->id }}',
                     'status_pembayaran': status_pembayaran
                 }
             }).done(function (result) {
@@ -52,6 +54,38 @@
             "autoWidth": false,
             "responsive": true,
         });
+
+
+
+        CallFormData = function (action) {
+
+            var form_pengeluaran = $('#xample1').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+
+            $.ajax({
+                url : '{{ url('form-data-distribusi') }}',
+                type: 'post',
+                data: {
+                    '_token': '{{ csrf_token() }}',
+                    '_method': 'put',
+                    'kode': action,
+                },
+            }).done(function (result) {
+                $('#modal-xl').modal('show');
+                form_pengeluaran.clear().draw()
+                form_pengeluaran.rows.add(result.data_form).draw();
+            })
+        }
+
+
+//        CallFormData(1)
 
         onLoaded(0);
     });
