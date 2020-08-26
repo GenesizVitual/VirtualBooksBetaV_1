@@ -10,6 +10,9 @@ use Illuminate\Http\Request;
 use Session;
 use App\Http\Controllers\Persediaan\utils\StatusPenerimaan;
 use App\Model\Persediaan\Gudang as tbl_gudang;
+use App\Model\Persediaan\PembelianBarang as tbl_pembelian;
+use App\Model\Persediaan\Distribusi as tbl_distribusi;
+
 class Distribusi extends Controller
 {
     //
@@ -21,13 +24,106 @@ class Distribusi extends Controller
         return view('Persediaan.Distribusi.content', $data);
     }
 
+    public function store(Request $req)
+    {
+
+        //kode adalah pk dari pembelian dan
+        // pengeluaran pada saat menambah pengeluaran nilai kode_berasal dari pk pembelian dan
+        // pada saat mengubah kode berasal dari pk pengeluaran barang
+        $this->validate($req,[
+            '_token'=>'required',
+            '_method'=>'required',
+            'id_bidang'=>'required',
+            'jumlah_keluar'=>'required',
+            'tgl_kerluar'=>'required',
+            'kode'=>'required',
+            'status_pengeluaran'=>'required',
+        ]);
+
+        try{
+            $nreq = $req->except(['_token','_method']);
+            $pembelian = tbl_pembelian::where('id_instansi', Session::get('id_instansi'))->findOrFail($req->kode);
+            $nreq['id_instansi'] = $pembelian->id_instansi;
+            $nreq['id_pembelian'] = $pembelian->id;
+            $nreq['id_nota'] = $pembelian->id_nota;
+            $nreq['id_penyedia'] = $pembelian->id_penyedia;
+            $nreq['id_gudang'] = $pembelian->id_gudang;
+
+            $model_distribusi = new tbl_distribusi($nreq);
+            if ($model_distribusi->save())
+            {
+                return response()->json(array('status'=> 'success','message'=> 'Barang '.$model_distribusi->linkToGudang->nama_barang.', banyak barang '.$model_distribusi->jumlah_keluar));
+            }else{
+                return response()->json(array('status'=> 'error','message'=> 'Barang Gagal dikeluarkan'));
+            }
+
+        }catch (Throwable $e){
+            report($e);
+            return false;
+        }
+    }
+
     public function show($id)
     {
         StatusPenerimaan::$id_barang = $id;
         $data =StatusPenerimaan::DataStatusPenerimaan();
         $bidang = Bidang::all()->where('id_instansi', Session::get('id_instansi'));
         $gudang = tbl_gudang::where('id_instansi', Session::get('id_instansi'))->findOrFail($id);
-        return view('Persediaan.Distribusi.tab.content', array('data'=>$data,'gudang'=>$gudang,'bidang'=>$bidang));
+        $set_status_penerimaan = data_form_distribusi::$status_keluar;
+        return view('Persediaan.Distribusi.tab.content',
+            array('data'=>$data,'gudang'=>$gudang,'bidang'=>$bidang,'status_penerimaan'=>$set_status_penerimaan)
+        );
+    }
+
+    public function edit(Request $req)
+    {
+        try{
+            $this->validate($req,[
+                '_token'=>'required',
+                '_method'=>'required',
+                'kode'=>'required',
+            ]);
+
+            $model = tbl_distribusi::where('id_instansi', Session::get('id_instansi'))->findOrFail($req->kode);
+            return response()->json($model);
+        }catch (Throwable $e){
+            report($e);
+            return false;
+        }
+    }
+
+    public function update(Request $req, $id){
+        try{
+
+            $this->validate($req,[
+                '_token'=>'required',
+                '_method'=>'required',
+                'id_bidang'=>'required',
+                'jumlah_keluar'=>'required',
+                'tgl_kerluar'=>'required',
+                'kode'=>'required',
+                'status_pengeluaran'=>'required',
+            ]);
+
+
+            $model_ditribusi = tbl_distribusi::where('id_instansi', Session::get('id_instansi'))->findOrFail($req->kode);
+            $model_ditribusi->id_bidang = $req->id_bidang;
+            $model_ditribusi->tgl_kerluar = $req->tgl_kerluar;
+            $model_ditribusi->jumlah_keluar = $req->jumlah_keluar;
+            $model_ditribusi->status_pengeluaran = $req->status_pengeluaran;
+            $model_ditribusi->keterangan = $req->keterangan;
+            if($model_ditribusi->save())
+            {
+                return response()->json(array('status'=>'success','message'=>'Anda telah mengubah barang:'.$model_ditribusi->linkToGudang->nama_barang.', Stok:'. $model_ditribusi->jumlah_keluar));
+            }else{
+                return response()->json(array('status'=>'error','message'=>'Gagal, mengubah barang, silahkan cek kembali form'));
+            }
+
+        }catch (Throwable $e){
+            report($e);
+            return false;
+        }
+        return response()->json($req->all());
     }
 
     public function form_distribusi(Request $request){
@@ -36,7 +132,8 @@ class Distribusi extends Controller
             '_method'=> 'required',
             'kode'=> 'required' //id_pembelian
         ]);
-        $data = data_form_distribusi::form_data_distribusi(null);
+        $nreq = $request->except(['_token','_method']);
+        $data = data_form_distribusi::data_distribusi($nreq);
         $data['id_pembelian']=$request->kode;
         return response()->json($data);
     }

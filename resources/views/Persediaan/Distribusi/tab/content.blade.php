@@ -93,13 +93,17 @@
                                                                 <a class="nav-link active" id="custom-content-below-home-tab" data-toggle="pill" href="#custom-content-below-home" role="tab" aria-controls="custom-content-below-home" aria-selected="true">Penerimaan</a>
                                                             </li>
                                                             <li class="nav-item">
+                                                                <a class="nav-link" id="custom-content-below-pembagian-tab" data-toggle="pill" href="#custom-content-below-pembagian" role="tab" aria-controls="custom-content-below-profile" aria-selected="false">Pembagian</a>
+                                                            </li>
+                                                            <li class="nav-item">
                                                                 <a class="nav-link" id="custom-content-below-profile-tab" data-toggle="pill" href="#custom-content-below-profile" role="tab" aria-controls="custom-content-below-profile" aria-selected="false">Pengeluaran</a>
                                                             </li>
+
 
                                                         </ul>
                                                         <div class="tab-content" id="custom-content-below-tabContent">
                                                             <div class="tab-pane fade active show" id="custom-content-below-home" role="tabpanel" aria-labelledby="custom-content-below-home-tab">
-                                                                <p style="color: green">* Tabs Penerimaan akan menampilkan barang yang telah dimasukan pada nota pembelian. Barang yang telah dikeluarkan akan tampil pada tabs pengeluaran dan akan otomatis dipindahkan ke tabs pengeluaran jika barang telah habis dikeluarkan.</p>
+                                                                <p style="color: green">* Tabs Penerimaan akan menampilkan barang yang telah dimasukan pada nota pembelian. Barang yang telah dikeluarkan akan tampilkan ke tabs pengembalian ketika tombol keluarkan yang ada pada tabs penerimaan dan pengeluarkan ditekan.</p>
                                                                 <table id="table-data-pembelian" class="table table-bordered table-striped">
                                                                     <thead>
                                                                     <tr>
@@ -132,11 +136,31 @@
                                                                     </tbody>
                                                                 </table>
                                                             </div>
+                                                            <div class="tab-pane fade" id="custom-content-below-pembagian" role="tabpanel" aria-labelledby="custom-content-below-pembagian-tab">
+                                                                <p style="color: darkblue">* Tabs Pembagian akan menampilkan formulir pembagian dalam format tabel. Tabs pembagian ini juga berfungsi untuk menampilkan barang yang telah dibagi</p>
+                                                                <button class="btn btn-primary" data-toggle="modal" data-target="#modal-lg" style="margin-bottom: 10px">Keluarkan</button>
+                                                                <hr>
+                                                                <form id="form-pembagian">
+                                                                    <table id="sample1" cellspacing="0" class="table table-striped table-bordered dt-responsive " style="width:100%">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th>#</th>
+                                                                            <th>Bidang</th>
+                                                                            <th>Tanggal Keluar</th>
+                                                                            <th>Jumlah Keluar</th>
+                                                                            <th>Status Pengeluaran</th>
+                                                                            <th>Keterangan</th>
+                                                                            <th>Aksi</th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </form>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-
-
 
                                             </div>
                                         </div>
@@ -160,4 +184,50 @@
 @section('jsContainer')
     @include('Persediaan.Distribusi.js.js')
     @include('Persediaan.Distribusi.js.action')
+
+    <script>
+
+        $('#quickForm').validate({
+            rules: {
+                tgl_keluar: {
+                    required: true,
+                },
+                id_gudang: {
+                    required: true,
+                },
+                jumlah_keluar: {
+                    required: true,
+                },
+                status_pengeluaran: {
+                    required: true,
+                },
+            },
+            messages: {
+                tgl_keluar: {
+                    required: "Silahkan Isi Tanggal Keluar",
+                },
+                id_gudang: {
+                    required: "Silahkan Pilih Bidang",
+                },
+                jumlah_keluar: {
+                    required: "Silahkan Isi Jumlah Keluar",
+                },
+                status_pengeluaran: {
+                    required: "Silahkan Isi Harga Barang",
+                },
+
+            },
+            errorElement: 'span',
+            errorPlacement: function (error, element) {
+                error.addClass('invalid-feedback');
+                element.closest('.form-group').append(error);
+            },
+            highlight: function (element, errorClass, validClass) {
+                $(element).addClass('is-invalid');
+            },
+            unhighlight: function (element, errorClass, validClass) {
+                $(element).removeClass('is-invalid');
+            }
+        });
+    </script>
 @stop

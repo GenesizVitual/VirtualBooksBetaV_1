@@ -16,4 +16,9 @@ class PembelianBarang extends Model
         return $this->belongsTo('App\Model\Persediaan\Gudang','id_gudang');
     }
 
+    public function linkToDistribusi()
+    {
+        return $this->hasMany('App\Model\Persediaan\Distribusi','id_pembelian','id');
+    }
+
 }

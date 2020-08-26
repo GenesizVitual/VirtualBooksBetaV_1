@@ -10,35 +10,32 @@ namespace app\Http\Controllers\Persediaan\utils\data;
 use App\Model\Persediaan\Bidang;
 use App\Http\Controllers\Persediaan\utils\RenderParsial;
 use Session;
+use App\Model\Persediaan\PembelianBarang;
+use Illuminate\Support\Facades\DB;
 class Distribusi
 {
 
-    public static function form_data_distribusi($array){
+    public static $status_keluar = [
+      'Non Expired',
+      'Expired',
+    ];
+
+    public static function data_distribusi($array){
         try{
-            $data_bidang = Bidang::all()->where('id_instansi', Session::get('id_instansi'));
+            $id_pembelian = $array['kode'];
+            $model_pembelian = PembelianBarang::where('id_instansi', Session::get('id_instansi'))->findOrFail($id_pembelian);
             $no = 1;
             $row = array();
-            foreach ($data_bidang as $bidang)
+            foreach ($model_pembelian->linkToDistribusi->sortBy('tgl_keluar') as $data_distribusi)
             {
                 $column = array();
                 $column[] = $no++;
-                $column[] = $bidang->nama_bidang;
-                $column[] = RenderParsial::render_partial('Persediaan.Distribusi.partial.form_table_distribusi',
-                    array('widget'=> 'tgl')
-                );
-                $column[] = RenderParsial::render_partial('Persediaan.Distribusi.partial.form_table_distribusi',
-                    array('widget'=> 'jml_k')
-                );
-                $column[] = RenderParsial::render_partial('Persediaan.Distribusi.partial.form_table_distribusi',
-                    array('widget'=> 'status_keluar')
-                );
-                $column[] = RenderParsial::render_partial('Persediaan.Distribusi.partial.form_table_distribusi',
-                    array('widget'=> 'ket')
-                );
-                $column[] = RenderParsial::render_partial('Persediaan.Distribusi.partial.form_table_distribusi',
-                    array('widget'=> 'aksi')
-                );
-
+                $column[] = $data_distribusi->linkToBidang->nama_bidang;
+                $column[] = date('d-m-Y', strtotime($data_distribusi->tgl_kerluar));
+                $column[] = $data_distribusi->jumlah_keluar;
+                $column[] = self::$status_keluar[$data_distribusi->status_pengeluaran];
+                $column[] = $data_distribusi->keterangan;
+                $column[] = RenderParsial::render_partial('Persediaan.Distribusi.partial.button_distribusi', $data_distribusi);
                 $row[] = $column;
             }
             return array('data_form'=> $row);
@@ -47,5 +44,6 @@ class Distribusi
             return false;
         }
     }
+
 
 }

@@ -3,10 +3,30 @@
 <script src="{{ asset('admin_asset/plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
 <script src="{{ asset('admin_asset/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
 
-
+<script src="{{ asset('admin_asset/plugins/jquery-validation/jquery.validate.min.js') }}"></script>
+<script src="{{ asset('admin_asset/plugins/jquery-validation/additional-methods.min.js') }}"></script>
 
 <script>
-    $(function () {
+    $(document).ready(function () {
+
+        var status;
+
+        feedback=function (result) {
+
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000
+            });
+
+            Toast.fire({
+                icon: result.status,
+                title: result.message
+            })
+            $('#tombol_simpan').attr('onclick','OnItemOut()');
+            $('#modal-lg').modal('hide');
+        }
 
        var pembelian = $('#table-data-pembelian').DataTable({
             "paging": true,
@@ -29,6 +49,7 @@
         });
 
         onLoaded = function (status_pembayaran) {
+            status = status_pembayaran;
             $.ajax({
                 url : '{{ url('load-data-pembelian') }}',
                 type : 'post',
@@ -42,6 +63,9 @@
                 $('#stok_tersedian').text(result.banyak_barang);
                 pembelian.clear().draw();
                 pembelian.rows.add(result.data).draw();
+                $('#table-data-pembelian').DataTable()
+                    .columns.adjust()
+                    .responsive.recalc();
             })
         }
 
@@ -55,20 +79,13 @@
             "responsive": true,
         });
 
+       var form_pengeluaran= $('#sample1').DataTable({
+            responsive: true
+        });
 
 
-        CallFormData = function (action) {
-
-            var form_pengeluaran = $('#xample1').DataTable({
-                "paging": true,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false,
-                "responsive": true,
-            });
-
+       CallFormData = function (action) {
+            $('#custom-content-below-pembagian-tab').click()
             $.ajax({
                 url : '{{ url('form-data-distribusi') }}',
                 type: 'post',
@@ -78,16 +95,35 @@
                     'kode': action,
                 },
             }).done(function (result) {
-                $('#modal-xl').modal('show');
+                $('[name="kode"]').val(action);
                 form_pengeluaran.clear().draw()
                 form_pengeluaran.rows.add(result.data_form).draw();
+                $('#sample1').DataTable()
+                    .columns.adjust()
+                    .responsive.recalc();
+                $('.select2').select2();
             })
         }
 
-
-//        CallFormData(1)
+        $('#custom-content-below-home-tab').click(function () {
+            onLoaded(status);
+        })
 
         onLoaded(0);
     });
+
+    function formatDate(date) {
+        var d = new Date(date),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+
+        if (month.length < 2) month = '0' + month;
+        if (day.length < 2) day = '0' + day;
+
+        var nDate =  [day,month,year].join('/');
+
+        return nDate;
+    }
 </script>
 

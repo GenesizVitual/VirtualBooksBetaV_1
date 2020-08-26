@@ -1,35 +1,59 @@
-<div class="modal fade" id="modal-xl">
-    <div class="modal-dialog modal-xl">
+<div class="modal fade" id="modal-lg">
+    <div class="modal-dialog modal-lg modal-primary">
         <div class="modal-content">
-            <div class="modal-header bg-primary">
-                <h4 class="modal-title">Panel Pengeluaran Barang : {{ $gudang->nama_barang }}</h4>
+            <div class="modal-header">
+                <h4 class="modal-title">Pengeluaran Barang : {{ $gudang->nama_barang }}</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="card-body">
-                         <table id="xample1" class="table table-bordered table-striped">
-                             <thead>
-                                 <tr>
-                                     <th>#</th>
-                                     <th>Bidang</th>
-                                     <th>Tanggal Keluar</th>
-                                     <th>Jumlah Keluar</th>
-                                     <th>Status Pengeluaran</th>
-                                     <th>Keterangan</th>
-                                     <th>Aksi</th>
-                                 </tr>
-                             </thead>
-                         </table>
+            <form action="#" role="form" method="post" id="quickForm" >
+                {{ csrf_field() }}
+                <input type="hidden" name="_method" value="post">
+                <input type="hidden" name="kode">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="tgl_keluar">Tanggal Keluar</label>
+                                <input type="date" class="form-control" name="tgl_kerluar" id="tgl_keluar" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="id_gudang">Bidang</label>
+                                <select class="form-control select2" style="width: 100%;" name="id_bidang" required>
+                                    @if(!empty($bidang))
+                                        @foreach($bidang as $bidang)
+                                            <option value="{{ $bidang->id }}">{{ $bidang->nama_bidang }}</option>
+                                        @endforeach
+                                    @else
+                                        <option selected="selected" disabled>Masukan data bidang terlebih dahulu</option>
+                                    @endif
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="jumlah_keluar">Jumlah Keluar</label>
+                                <input type="number" min="0" class="form-control" name="jumlah_keluar" id="jumlah_keluar" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="status_pengeluaran">Status Pengeluaran</label>
+                                <select class="form-control select2" style="width: 100%;" name="status_pengeluaran" required>
+                                    @foreach($status_penerimaan as $key=>$data)
+                                        <option value="{{ $key }}">{{ $data }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="keterangan">Keterangan Tambahan</label>
+                                <textarea class="form-control" name="keterangan"></textarea>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" onclick="OnSubmit()" class="btn btn-primary" id="tombol_simpan">Simpan</button>
+                </div>
+            </form>
         </div>
         <!-- /.modal-content -->
     </div>
