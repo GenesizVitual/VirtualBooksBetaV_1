@@ -14,10 +14,22 @@ use View;
 
 class PembelianBarang
 {
+
+    public static $metode;
+
     public static function data_pembelian($array)
     {
         //Ada Kemungkinan error butuh back tester lebih lanjut
         try {
+            if(empty($array['metode'])){
+                $order = "x.stok > 0";
+            }else if($array['metode']=="pen"){
+                $order = "x.stok <=0";
+            }else if($array['metode']=="pem"){
+                $order = "x.stok > 0";
+            }
+
+
             $query = DB::select('select * from (
                                     SELECT d.*,if(d.stok_p-sum(tbl_pengeluaran_barang.jumlah_keluar) is null,d.stok_p, d.stok_p-sum(tbl_pengeluaran_barang.jumlah_keluar) ) as stok  from (
                                     SELECT tbl_nota.tgl_beli,tbl_gudang.nama_barang,tbl_pembelian_barang.*, tbl_pembelian_barang.jumlah_barang as stok_p FROM tbl_jenis_tbk 
@@ -28,13 +40,14 @@ class PembelianBarang
                                     and tbl_gudang.id = '.$array['id_barang'].'
     								order by tgl_beli asc
                                 ) as d left join tbl_pengeluaran_barang on tbl_pengeluaran_barang.id_pembelian = d.id GROUP by d.id
-                              ) as x where x.stok > 0');
+                              ) as x where '.$order);
                                     //Ubah condisi where jika ingin menampilkan stok yang tidak tersisah
 
             $row = array();
             $no = 1;
             $banyaK_item=0;
-            $banyaK_barang=0;
+            $banyaK_barang_penerimaan=0;
+            $banyaK_barang_pengeluaran=0;
             foreach ($query as $data){
                 $column = array();
                 $column['no'] = $no++;
@@ -46,10 +59,11 @@ class PembelianBarang
                 $column['aksi'] = RenderParsial::render_partial('Persediaan.Distribusi.partial.button_pembelian', $data);
                 $column['id_pembelian'] = $data->id;
                 $banyaK_item ++;
-                $banyaK_barang +=$data->stok;
+                $banyaK_barang_penerimaan +=$data->stok;
+                $banyaK_barang_pengeluaran +=$data->stok_p-$data->stok;
                 $row[] = $column;
             }
-            return array('data'=>$row,'banyak_data'=> $banyaK_item,'banyak_barang'=> $banyaK_barang);
+            return array('data'=>$row,'banyak_data'=> $banyaK_item,'banyak_barang'=> $banyaK_barang_penerimaan,'banyak_barang_pengeluaran'=>$banyaK_barang_pengeluaran);
         }catch (Throwable $e){
             report($e);
             return false;

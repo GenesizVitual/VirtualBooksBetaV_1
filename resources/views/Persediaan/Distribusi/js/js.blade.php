@@ -10,6 +10,7 @@
     $(document).ready(function () {
 
         var status;
+        var kode;
 
         feedback=function (result) {
 
@@ -48,28 +49,7 @@
 
         });
 
-        onLoaded = function (status_pembayaran) {
-            status = status_pembayaran;
-            $.ajax({
-                url : '{{ url('load-data-pembelian') }}',
-                type : 'post',
-                data : {
-                    '_token':'{{ csrf_token() }}',
-                    '_method':'put',
-                    'kode_barang': '{{ $gudang->id }}',
-                    'status_pembayaran': status_pembayaran
-                }
-            }).done(function (result) {
-                $('#stok_tersedian').text(result.banyak_barang);
-                pembelian.clear().draw();
-                pembelian.rows.add(result.data).draw();
-                $('#table-data-pembelian').DataTable()
-                    .columns.adjust()
-                    .responsive.recalc();
-            })
-        }
-
-       var pengeluaran= $('#table-data-pengeluaran').DataTable({
+        var pengeluaran= $('#table-data-pengeluaran').DataTable({
             "paging": true,
             "lengthChange": false,
             "searching": false,
@@ -77,14 +57,52 @@
             "info": true,
             "autoWidth": false,
             "responsive": true,
+            "columns":[
+                {'data':'no'},
+                {'data':'tgl_beli'},
+                {'data':'nama_barang'},
+                {'data':'stok'},
+                {'data':'harga'},
+                {'data':'sub_total'},
+                {'data':'aksi'},
+            ]
         });
+
+        onLoaded = function (status_pembayaran, table_id, metode) {
+            status = status_pembayaran;
+            $.ajax({
+                url : '{{ url('load-data-pembelian') }}',
+                type : 'post',
+                data : {
+                    '_token':'{{ csrf_token() }}',
+                    '_method':'put',
+                    'metode':metode,
+                    'kode_barang': '{{ $gudang->id }}',
+                    'status_pembayaran': status_pembayaran
+                }
+            }).done(function (result) {
+                $('#stok_tersedian').text(result.banyak_barang);
+                $('#stok_pengeluaran').text(result.banyak_barang_pengeluaran);
+                if(metode=="pem"){
+                    pembelian.clear().draw();
+                    pembelian.rows.add(result.data).draw();
+                }else{
+                    pengeluaran.clear().draw();
+                    pengeluaran.rows.add(result.data).draw();
+                }
+                $(table_id).DataTable()
+                    .columns.adjust()
+                    .responsive.recalc();
+            })
+        }
+
 
        var form_pengeluaran= $('#sample1').DataTable({
             responsive: true
         });
 
 
-       CallFormData = function (action) {
+       CallFormData = function (action, stok_akhir) {
             $('#custom-content-below-pembagian-tab').click()
             $.ajax({
                 url : '{{ url('form-data-distribusi') }}',
@@ -95,9 +113,12 @@
                     'kode': action,
                 },
             }).done(function (result) {
+                kode = action;
                 $('[name="kode"]').val(action);
                 form_pengeluaran.clear().draw()
                 form_pengeluaran.rows.add(result.data_form).draw();
+                $('[name="tgl_terima"]').val(result.tgl_beli);
+                $('[name="stok_terakhir"]').val(stok_akhir);
                 $('#sample1').DataTable()
                     .columns.adjust()
                     .responsive.recalc();
@@ -105,11 +126,16 @@
             })
         }
 
-        $('#custom-content-below-home-tab').click(function () {
-            onLoaded(status);
-        })
 
-        onLoaded(0);
+            $('#custom-content-below-home-tab').click(function () {
+                onLoaded(status,'#table-data-pembelian','pem');
+            })
+
+            $('#custom-content-below-profile-tab').click(function () {
+                onLoaded(status,'#table-data-pengeluaran','pen');
+            })
+
+        onLoaded(0,'#table-data-pembelian','pem');
     });
 
     function formatDate(date) {

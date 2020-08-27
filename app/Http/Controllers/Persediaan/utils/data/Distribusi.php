@@ -26,7 +26,7 @@ class Distribusi
             $model_pembelian = PembelianBarang::where('id_instansi', Session::get('id_instansi'))->findOrFail($id_pembelian);
             $no = 1;
             $row = array();
-            foreach ($model_pembelian->linkToDistribusi->sortBy('tgl_keluar') as $data_distribusi)
+            foreach ($model_pembelian->linkToDistribusi as $data_distribusi)
             {
                 $column = array();
                 $column[] = $no++;
@@ -38,7 +38,7 @@ class Distribusi
                 $column[] = RenderParsial::render_partial('Persediaan.Distribusi.partial.button_distribusi', $data_distribusi);
                 $row[] = $column;
             }
-            return array('data_form'=> $row);
+            return array('data_form'=> $row,'tgl_beli'=>$model_pembelian->linkToNota->tgl_beli);
         }catch (Throwable $e){
             report($e);
             return false;

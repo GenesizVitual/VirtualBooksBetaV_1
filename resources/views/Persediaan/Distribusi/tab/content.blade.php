@@ -41,7 +41,7 @@
                                 @if(!empty($data))
                                     @foreach($data as $key=> $data_list)
                                         <li class="nav-item">
-                                            <a onclick="onLoaded({{ $key }})" class="nav-link" id="custom-tabs-two-messages-tab" data-toggle="pill" href="#custom-tabs-two-settings" role="tab" aria-controls="custom-tabs-two-home" aria-selected="false"><span class="badge badge-danger right">{{ $data_list['root_data']['banyak_data'] }}</span> {{ $data_list['judul'] }}</a>
+                                            <a onclick="onLoaded( {{ $key }} ,'#table-data-pembelian','pem')" class="nav-link" id="custom-tabs-two-messages-tab" data-toggle="pill" href="#custom-tabs-two-settings" role="tab" aria-controls="custom-tabs-two-home" aria-selected="false"><span class="badge badge-danger right">{{ $data_list['root_data']['banyak_data'] }}</span> {{ $data_list['judul'] }}</a>
                                         </li>
                                     @endforeach
                                 @endif
@@ -73,9 +73,9 @@
                                                         <div class="col-sm-3">
                                                             <div class="small-box bg-danger">
                                                                 <div class="inner">
-                                                                    <h3>150</h3>
+                                                                    <h3 id="stok_pengeluaran">0</h3>
 
-                                                                    <p>New Orders</p>
+                                                                    <p>Stok Keluar</p>
                                                                 </div>
                                                                 <div class="icon">
                                                                     <i class="ion ion-pie-graph"></i>
@@ -127,7 +127,11 @@
                                                                     <thead>
                                                                     <tr>
                                                                         <th>#</th>
+                                                                        <th>Tanggal Beli</th>
                                                                         <th>Nama Barang</th>
+                                                                        <th>Banyak Barang</th>
+                                                                        <th>Harga Barang</th>
+                                                                        <th>Total Harga</th>
                                                                         <th>Aksi</th>
                                                                     </tr>
                                                                     </thead>
@@ -138,7 +142,7 @@
                                                             </div>
                                                             <div class="tab-pane fade" id="custom-content-below-pembagian" role="tabpanel" aria-labelledby="custom-content-below-pembagian-tab">
                                                                 <p style="color: darkblue">* Tabs Pembagian akan menampilkan formulir pembagian dalam format tabel. Tabs pembagian ini juga berfungsi untuk menampilkan barang yang telah dibagi</p>
-                                                                <button class="btn btn-primary" data-toggle="modal" data-target="#modal-lg" style="margin-bottom: 10px">Keluarkan</button>
+                                                                    <button class="btn btn-primary" data-toggle="modal" data-target="#modal-lg" style="margin-bottom: 10px">Keluarkan</button>
                                                                 <hr>
                                                                 <form id="form-pembagian">
                                                                     <table id="sample1" cellspacing="0" class="table table-striped table-bordered dt-responsive " style="width:100%">

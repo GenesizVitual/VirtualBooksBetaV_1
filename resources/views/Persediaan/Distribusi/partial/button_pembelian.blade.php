@@ -1,4 +1,4 @@
 <button class="btn btn-success"
         {{--data-toggle="modal" data-target="#modal-xl"--}}
-        onclick="CallFormData({{ $data->id }})"
+        onclick="CallFormData('{{ $data->id }}','{{ $data->stok }}')"
 >Keluarkan</button>

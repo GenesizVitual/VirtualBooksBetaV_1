@@ -16,9 +16,13 @@ class PembelianBarang extends Model
         return $this->belongsTo('App\Model\Persediaan\Gudang','id_gudang');
     }
 
+    public function linkToNota(){
+        return $this->belongsTo('App\Model\Persediaan\Nota','id_nota');
+    }
+
     public function linkToDistribusi()
     {
-        return $this->hasMany('App\Model\Persediaan\Distribusi','id_pembelian','id');
+        return $this->hasMany('App\Model\Persediaan\Distribusi','id_pembelian','id')->orderBy('tgl_kerluar');
     }
 
 }

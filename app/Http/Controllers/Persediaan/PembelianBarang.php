@@ -142,15 +142,17 @@ class PembelianBarang extends Controller
         $this->validate($req,[
             'kode_barang'=> 'required',
             'status_pembayaran'=> 'required',
+            '_method'=> 'required',
+            'metode'=> 'required',
             '_token'=> 'required'
         ]);
 
         $array = [
             'status_pembayaran'=> $req->status_pembayaran,
             'id_barang'=> $req->kode_barang,
+            'metode'=> $req->metode,
         ];
-
-        $ndata = data_pembelian::data_pembelian($array);
+       $ndata = data_pembelian::data_pembelian($array);
         return response()->json($ndata);
     }
 

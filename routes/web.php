@@ -56,6 +56,7 @@ Route::resource('distribusi','Persediaan\Distribusi');
 Route::get('bagikan-barang/{id}','Persediaan\Distribusi@show');
 Route::put('form-data-distribusi','Persediaan\Distribusi@form_distribusi');
 Route::put('edit-data-distribusi','Persediaan\Distribusi@edit');
+Route::put('delete-data-distribusi/{id}','Persediaan\Distribusi@destroy');
 
 
 //

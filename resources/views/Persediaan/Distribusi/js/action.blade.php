@@ -4,7 +4,7 @@
             if($('[name="_method"]').val()=="post"){
                 OnItemOut();
             }else{
-                OnItemOut
+                OnItemUpdate();
             }
         }else{
             alert('Isilah formulir dibawah ini');
@@ -18,6 +18,7 @@
             data : $('#quickForm').serialize(),
             success : function (result) {
                 feedback(result);
+                CallFormData(result.kode);
             }
         })
     }
@@ -29,6 +30,7 @@
             data : $('#quickForm').serialize(),
             success : function (result) {
                 feedback(result);
+                CallFormData(result.kode);
             }
         })
     }
@@ -56,7 +58,24 @@
         })
     }
 
-
+    OnItemDelete = function (kode) {
+        if(confirm('Apakah anda ingin menghapus barang ditribusi ini ...?')){
+            $.ajax({
+                url: '{{ url('delete-data-distribusi') }}/'+kode,
+                type:'post',
+                data : {
+                    '_token': '{{ csrf_token() }}',
+                    '_method': 'put',
+                    'kode': kode,
+                },
+                success : function (result) {
+                    feedback(result);
+                }
+            })
+        }else {
+            alert('Proses hapus dibatalkan');
+        }
+    }
 
 
 </script>
