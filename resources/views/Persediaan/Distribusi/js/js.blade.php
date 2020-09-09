@@ -11,6 +11,7 @@
 
         var status;
         var kode;
+        var stok_kode;
 
         feedback=function (result) {
 
@@ -20,12 +21,21 @@
                 showConfirmButton: false,
                 timer: 3000
             });
-
-            Toast.fire({
-                icon: result.status,
-                title: result.message
-            })
+            if(result.length > 0){
+                $.each(result.message, function(i,v){
+                    Toast.fire({
+                        icon: v.status,
+                        title: v.message
+                    })
+                })
+            }else{
+                Toast.fire({
+                    icon: result.status,
+                    title: result.message
+                })
+            }
             $('#tombol_simpan').attr('onclick','OnItemOut()');
+            onLoaded(0,'#table-data-pembelian','pem');
             $('#modal-lg').modal('hide');
         }
 
@@ -114,11 +124,15 @@
                 },
             }).done(function (result) {
                 kode = action;
+                stok_kode = stok_akhir;
                 $('[name="kode"]').val(action);
                 form_pengeluaran.clear().draw()
                 form_pengeluaran.rows.add(result.data_form).draw();
                 $('[name="tgl_terima"]').val(result.tgl_beli);
-                $('[name="stok_terakhir"]').val(stok_akhir);
+                $('[name="stok_terakhir"]').val(stok_kode);
+
+                $('#tombol-form-keluar').attr('onclick','OnPressButtonIncreate('+action+','+stok_kode+')');
+
                 $('#sample1').DataTable()
                     .columns.adjust()
                     .responsive.recalc();

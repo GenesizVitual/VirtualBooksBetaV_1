@@ -21,11 +21,15 @@ class PembelianBarang
     {
         //Ada Kemungkinan error butuh back tester lebih lanjut
         try {
+            $label_button = "";
             if(empty($array['metode'])){
+                $label_button = "Keluarkan";
                 $order = "x.stok > 0";
             }else if($array['metode']=="pen"){
+                $label_button = "Pembagian";
                 $order = "x.stok <=0";
             }else if($array['metode']=="pem"){
+                $label_button = "Keluarkan";
                 $order = "x.stok > 0";
             }
 
@@ -56,7 +60,7 @@ class PembelianBarang
                 $column['stok'] = number_format($data->stok,2,',','.');
                 $column['harga'] = number_format($data->harga_barang,2,',','.');
                 $column['sub_total'] = number_format($data->harga_barang*$data->stok,2,',','.');
-                $column['aksi'] = RenderParsial::render_partial('Persediaan.Distribusi.partial.button_pembelian', $data);
+                $column['aksi'] = RenderParsial::render_partial('Persediaan.Distribusi.partial.button_pembelian', [$data,$label_button]);
                 $column['id_pembelian'] = $data->id;
                 $banyaK_item ++;
                 $banyaK_barang_penerimaan +=$data->stok;

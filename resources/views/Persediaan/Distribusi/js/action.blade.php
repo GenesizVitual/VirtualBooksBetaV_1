@@ -1,4 +1,12 @@
 <script>
+
+    OnPressButtonIncreate = function (action, stok) {
+        $('[name="kode"]').val(action);
+        $('[name="stok_terakhir"]').val(stok);
+//        $('.select2').select2();
+        $('#modal-lg').modal('show');
+    }
+
     OnSubmit = function () {
         if($('#quickForm').valid()){
             if($('[name="_method"]').val()=="post"){
@@ -18,7 +26,7 @@
             data : $('#quickForm').serialize(),
             success : function (result) {
                 feedback(result);
-                CallFormData(result.kode);
+                CallFormData(result.kode, result.stok);
             }
         })
     }
@@ -69,6 +77,7 @@
                     'kode': kode,
                 },
                 success : function (result) {
+                    CallFormData(result.kode, result.stok);
                     feedback(result);
                 }
             })

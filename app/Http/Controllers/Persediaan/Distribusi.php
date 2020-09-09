@@ -58,15 +58,23 @@ class Distribusi extends Controller
 
             $model_distribusi = new tbl_distribusi($nreq);
             $check_form=$this->validate_($req);
+
+            // mengecek tanggal keluar tidak boleh lebih rendah dari pada tanggal penerimaan
+            // dan mengecek jumlah keluar tidak boleh lebih dari jumlah sisa/stok barang penerimaan
             if($check_form['status']==true) {
-                return response()->json(array('result'=>$check_form['message'], 'kode' => $model_distribusi->id_pembelian));
+                return response()->json(['message'=>$check_form['message'],'kode'=>$model_distribusi->id_pembelian]);
+            }else{
+
+                //mencari mengurangi stok yang ada
+                if ($model_distribusi->save())
+                {
+                    $stok = $this->hitung_stok($pembelian->id);
+                    return response()->json(array('status'=> 'success','stok'=>$stok,'kode'=>$model_distribusi->id_pembelian,'message'=> 'Barang '.$model_distribusi->linkToGudang->nama_barang.', banyak barang '.$model_distribusi->jumlah_keluar));
+                }else{
+                    return response()->json(array('status'=> 'error','message'=> 'Barang Gagal dikeluarkan'));
+                }
             }
-//            if ($model_distribusi->save())
-//            {
-//                return response()->json(array('status'=> 'success','kode'=>$model_distribusi->id_pembelian,'message'=> 'Barang '.$model_distribusi->linkToGudang->nama_barang.', banyak barang '.$model_distribusi->jumlah_keluar));
-//            }else{
-//                return response()->json(array('status'=> 'error','message'=> 'Barang Gagal dikeluarkan'));
-//            }
+
         }catch (Throwable $e){
             report($e);
             return false;
@@ -125,18 +133,28 @@ class Distribusi extends Controller
             $model_ditribusi->jumlah_keluar = $req->jumlah_keluar;
             $model_ditribusi->status_pengeluaran = $req->status_pengeluaran;
             $model_ditribusi->keterangan = $req->keterangan;
-            if($model_ditribusi->save())
-            {
-                return response()->json(array('status'=>'success','kode'=>$model_ditribusi->id_pembelian,'message'=>'Anda telah mengubah barang:'.$model_ditribusi->linkToGudang->nama_barang.', Stok:'. $model_ditribusi->jumlah_keluar));
-            }else{
-                return response()->json(array('status'=>'error','message'=>'Gagal, mengubah barang, silahkan cek kembali form'));
-            }
 
+            $check_form=$this->validate_($req);
+
+            // mengecek tanggal keluar tidak boleh lebih rendah dari pada tanggal penerimaan
+            // dan mengecek jumlah keluar tidak boleh lebih dari jumlah sisa/stok barang penerimaan
+            if($check_form['status']==true) {
+                return response()->json(['message'=>$check_form['message'],'kode'=>$model_ditribusi->id_pembelian]);
+            }else{
+                //menghitung sisa stok
+                $stok = $this->hitung_stok($model_ditribusi->id_pembelian);
+                if($model_ditribusi->save())
+                {
+                    return response()->json(array('status'=>'success','stok'=>$stok,'kode'=>$model_ditribusi->id_pembelian,'message'=>'Anda telah mengubah barang:'.$model_ditribusi->linkToGudang->nama_barang.', Stok:'. $model_ditribusi->jumlah_keluar));
+                }else{
+                    return response()->json(array('status'=>'error','message'=>'Gagal, mengubah barang, silahkan cek kembali form'));
+                }
+            }
         }catch (Throwable $e){
             report($e);
             return false;
         }
-        return response()->json($req->all());
+
     }
 
 
@@ -152,7 +170,9 @@ class Distribusi extends Controller
             $model_ditribusi=tbl_distribusi::where('id_instansi', Session::get('id_instansi'))->findOrFail($req->kode);
             if($model_ditribusi->delete())
             {
-                return response()->json(array('status'=>'success','kode'=>$model_ditribusi->id_pembelian,'message'=>'Anda telah menghapus barang:'.$model_ditribusi->linkToGudang->nama_barang.', Stok:'. $model_ditribusi->jumlah_keluar));
+                //menghitung sisa stok
+                $stok = $this->hitung_stok($model_ditribusi->id_pembelian);
+                return response()->json(array('status'=>'success','stok'=>$stok,'kode'=>$model_ditribusi->id_pembelian,'message'=>'Anda telah menghapus barang:'.$model_ditribusi->linkToGudang->nama_barang.', Stok:'. $model_ditribusi->jumlah_keluar));
             }else{
                 return response()->json(array('status'=>'error','message'=>'Gagal, menghapus barang, silahkan cek kembali form'));
             }
@@ -175,27 +195,38 @@ class Distribusi extends Controller
         return response()->json($data);
     }
 
+
+    // Function yang berfungsi sebagai validasi tanggal keluar tidak boleh lebih kecil dari pada tanggal pembelian/penerimaan
+    // dan jumlah keluar tidak boleh lebih banyak dari pada kumlah keluar
     private function validate_(Request $req)
     {
         $status = false;
         $array_message = array();
         if($req->jumlah_keluar > $req->stok_terakhir){
             $array = array(
-                'status'=>'error',
+                'status'=>'info',
                 'message'=> 'Jumlah keluar tidak boleh melebihi stok akhir'
             );
             $array_message[] = $array;
             $status = true;
         }
 
-        if(date($req->tgl_kerluar) > date($req->tgl_terima)){
+        if(date($req->tgl_kerluar) < date($req->tgl_terima)){
             $array = array(
-                'status'=>'error',
+                'status'=>'info',
                 'message'=> 'Tanggal keluar harus lebih tinggi dari tanggal beli'
             );
             $array_message[] = $array;
             $status = true;
         }
         return array('status'=>$status, 'message'=> $array_message);
+    }
+
+    //function rumus perhitungan stok
+    public function hitung_stok($id_pembelian){
+        $model_pembelian = tbl_pembelian::findOrFail($id_pembelian);
+        $model_pengeluaran = tbl_distribusi::where('id_pembelian', $model_pembelian->id)->sum('jumlah_keluar');
+        $stok =  intval($model_pembelian->jumlah_barang)-$model_pengeluaran;
+        return $stok;
     }
 }
