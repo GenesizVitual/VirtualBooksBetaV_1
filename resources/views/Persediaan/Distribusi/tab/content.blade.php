@@ -122,7 +122,7 @@
                                                                 </table>
                                                             </div>
                                                             <div class="tab-pane fade" id="custom-content-below-profile" role="tabpanel" aria-labelledby="custom-content-below-profile-tab">
-                                                                <p style="color: red">* Tabs Pengeluaran akan menampilkan barang yang telah/habis dikeluakan pada tabs penerimaan ke bidang masing-masing</p>
+                                                                <p style="color: red">* Tabs Pengeluaran akan menampilkan barang yang telah/habis dikeluarkan pada tabs penerimaan ke bidang masing-masing</p>
                                                                 <table id="table-data-pengeluaran" class="table table-bordered table-striped">
                                                                     <thead>
                                                                     <tr>

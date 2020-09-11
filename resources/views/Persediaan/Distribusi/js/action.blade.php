@@ -27,6 +27,7 @@
             success : function (result) {
                 feedback(result);
                 CallFormData(result.kode, result.stok);
+                onLoaded(result.status_penerimaan,'#table-data-pembelian','pem');
             }
         })
     }
@@ -39,6 +40,7 @@
             success : function (result) {
                 feedback(result);
                 CallFormData(result.kode);
+                onLoaded(result.status_penerimaan,'#table-data-pembelian','pem');
             }
         })
     }
@@ -75,10 +77,12 @@
                     '_token': '{{ csrf_token() }}',
                     '_method': 'put',
                     'kode': kode,
+                    'status': $('[name="status"]').val()
                 },
                 success : function (result) {
-                    CallFormData(result.kode, result.stok);
                     feedback(result);
+                    CallFormData(result.kode, result.stok);
+                    onLoaded(result.status_penerimaan,'#table-data-pembelian','pem');
                 }
             })
         }else {

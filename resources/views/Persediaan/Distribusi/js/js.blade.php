@@ -80,6 +80,7 @@
 
         onLoaded = function (status_pembayaran, table_id, metode) {
             status = status_pembayaran;
+            $('[name="status"]').val(status);
             $.ajax({
                 url : '{{ url('load-data-pembelian') }}',
                 type : 'post',

@@ -43,11 +43,13 @@ class Distribusi extends Controller
                 'tgl_terima'=>'required',
                 'tgl_kerluar'=>'required',
                 'kode'=>'required',
+                //status digunakan untuk membedakan antara penerimaan rutin, kegiatan, dll
+                'status'=> 'required',
                 'status_pengeluaran'=>'required',
             ]);
 
 
-            $nreq = $req->except(['_token','_method']);
+            $nreq = $req->except(['_token','_method','status']);
             $pembelian = tbl_pembelian::where('id_instansi', Session::get('id_instansi'))->findOrFail($req->kode);
             $nreq['id_instansi'] = $pembelian->id_instansi;
             $nreq['id_pembelian'] = $pembelian->id;
@@ -62,16 +64,16 @@ class Distribusi extends Controller
             // mengecek tanggal keluar tidak boleh lebih rendah dari pada tanggal penerimaan
             // dan mengecek jumlah keluar tidak boleh lebih dari jumlah sisa/stok barang penerimaan
             if($check_form['status']==true) {
-                return response()->json(['message'=>$check_form['message'],'kode'=>$model_distribusi->id_pembelian]);
+                return response()->json(['message'=>$check_form['message'],'status_penerimaan'=> $req->status,'kode'=>$model_distribusi->id_pembelian]);
             }else{
 
                 //mencari mengurangi stok yang ada
                 if ($model_distribusi->save())
                 {
                     $stok = $this->hitung_stok($pembelian->id);
-                    return response()->json(array('status'=> 'success','stok'=>$stok,'kode'=>$model_distribusi->id_pembelian,'message'=> 'Barang '.$model_distribusi->linkToGudang->nama_barang.', banyak barang '.$model_distribusi->jumlah_keluar));
+                    return response()->json(array('status'=> 'success','status_penerimaan'=> $req->status,'stok'=>$stok,'kode'=>$model_distribusi->id_pembelian,'message'=> 'Barang '.$model_distribusi->linkToGudang->nama_barang.', banyak barang '.$model_distribusi->jumlah_keluar));
                 }else{
-                    return response()->json(array('status'=> 'error','message'=> 'Barang Gagal dikeluarkan'));
+                    return response()->json(array('status'=> 'error','status_penerimaan'=> $req->status,'message'=> 'Barang Gagal dikeluarkan'));
                 }
             }
 
@@ -122,6 +124,8 @@ class Distribusi extends Controller
                 'jumlah_keluar'=>'required',
                 'tgl_kerluar'=>'required',
                 'tgl_terima'=>'required',
+                //status digunakan untuk membedakan antara penerimaan rutin, kegiatan, dll
+                'status'=> 'required',
                 'kode'=>'required',
                 'status_pengeluaran'=>'required',
             ]);
@@ -139,15 +143,15 @@ class Distribusi extends Controller
             // mengecek tanggal keluar tidak boleh lebih rendah dari pada tanggal penerimaan
             // dan mengecek jumlah keluar tidak boleh lebih dari jumlah sisa/stok barang penerimaan
             if($check_form['status']==true) {
-                return response()->json(['message'=>$check_form['message'],'kode'=>$model_ditribusi->id_pembelian]);
+                return response()->json(['message'=>$check_form['message'],'status_penerimaan'=> $req->status,'kode'=>$model_ditribusi->id_pembelian]);
             }else{
                 //menghitung sisa stok
                 $stok = $this->hitung_stok($model_ditribusi->id_pembelian);
                 if($model_ditribusi->save())
                 {
-                    return response()->json(array('status'=>'success','stok'=>$stok,'kode'=>$model_ditribusi->id_pembelian,'message'=>'Anda telah mengubah barang:'.$model_ditribusi->linkToGudang->nama_barang.', Stok:'. $model_ditribusi->jumlah_keluar));
+                    return response()->json(array('status'=>'success','stok'=>$stok,'status_penerimaan'=> $req->status,'kode'=>$model_ditribusi->id_pembelian,'message'=>'Anda telah mengubah barang:'.$model_ditribusi->linkToGudang->nama_barang.', Stok:'. $model_ditribusi->jumlah_keluar));
                 }else{
-                    return response()->json(array('status'=>'error','message'=>'Gagal, mengubah barang, silahkan cek kembali form'));
+                    return response()->json(array('status'=>'error','status_penerimaan'=> $req->status,'message'=>'Gagal, mengubah barang, silahkan cek kembali form'));
                 }
             }
         }catch (Throwable $e){
@@ -164,6 +168,7 @@ class Distribusi extends Controller
             $this->validate($req, [
                 '_token'=> 'required',
                 '_method'=> 'required',
+                'status'=> 'required',
                 'kode'=> 'required',
             ]);
 
@@ -172,9 +177,9 @@ class Distribusi extends Controller
             {
                 //menghitung sisa stok
                 $stok = $this->hitung_stok($model_ditribusi->id_pembelian);
-                return response()->json(array('status'=>'success','stok'=>$stok,'kode'=>$model_ditribusi->id_pembelian,'message'=>'Anda telah menghapus barang:'.$model_ditribusi->linkToGudang->nama_barang.', Stok:'. $model_ditribusi->jumlah_keluar));
+                return response()->json(array('status'=>'success','status_penerimaan'=> $req->status,'stok'=>$stok,'kode'=>$model_ditribusi->id_pembelian,'message'=>'Anda telah menghapus barang:'.$model_ditribusi->linkToGudang->nama_barang.', Stok:'. $model_ditribusi->jumlah_keluar));
             }else{
-                return response()->json(array('status'=>'error','message'=>'Gagal, menghapus barang, silahkan cek kembali form'));
+                return response()->json(array('status'=>'error','status_penerimaan'=> $req->status,'message'=>'Gagal, menghapus barang, silahkan cek kembali form'));
             }
         }catch (Throwable $e){
             report($e);

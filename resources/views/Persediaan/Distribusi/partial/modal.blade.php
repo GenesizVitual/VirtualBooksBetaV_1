@@ -16,6 +16,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <input type="hidden" name="tgl_terima">
+                                <input type="hidden" name="status">
                                 <input type="hidden" name="stok_terakhir">
                                 <label for="tgl_keluar">Tanggal Keluar</label>
                                 <input type="date" class="form-control" name="tgl_kerluar" id="tgl_keluar" required>
