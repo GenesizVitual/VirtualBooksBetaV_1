@@ -46,8 +46,20 @@
                                 <li><a href="#"><button class="btn btn-sm btn-primary" onclick="$('#modal-lg-spj').modal('show')">Tambah SPJ</button></a></li>
                                 @if(!empty($data))
                                     @foreach($data as $spj)
-                                        <li {{--class="folder-root open"--}} >
+                                        <li {{--class="folder-root open"--}}>
                                             <a href="#">{{ $spj->kode }}</a>
+                                            <div class="btn-group btn-xs">
+                                                <button type="button" class="btn btn-info btn-xs">Aksi</button>
+                                                <button type="button" class="btn btn-info btn-xs dropdown-toggle dropdown-hover dropdown-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                    <div class="dropdown-menu dropdown-menu-right" role="menu" style="">
+                                                        <a class="dropdown-item" href="#" ><i class="fa fa-paperclip"></i> Tambah TBK</a>
+                                                        <hr>
+                                                        <a class="dropdown-item" href="#" onclick="onEditSpj('{{ $spj->id }}')"><i class="fa fa-pencil"></i> ubah</a>
+                                                        <a class="dropdown-item" href="#" onclick="onDeleteSpj('{{ $spj->id }}')"><i class="fa fa-eraser"></i> hapus</a>
+                                                    </div>
+                                                </button>
+                                            </div>
                                             <ul>
                                                 <li><a href="#">Link 1</a> </li>
                                                 <li><a href="#">Link 2</a> </li>
@@ -74,6 +86,14 @@
 @section('jsContainer')
     <script src="{{ asset('treeview/js/file-explore.js') }}"></script>
     <script>
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000
+        });
+
+
         $(document).ready(function() {
             $(".file-tree").filetree({
                 collapsed:true,
@@ -81,4 +101,5 @@
 
         });
     </script>
+    @include('Persediaan.SpjTBK.js.spj')
 @stop
