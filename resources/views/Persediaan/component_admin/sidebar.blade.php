@@ -140,28 +140,11 @@
                     {{--</ul>--}}
                 {{--</li>--}}
 
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-book"></i>
-                        <p>
-                            Penentuan Spj/Tbk
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
+                <li class="nav-item">
+                    <a href="{{ url('spj-tbk') }}" class="nav-link">
+                        <i class="nav-icon fas fa fa-book"></i>
+                        <p>Penentuan SPJ/TBK</p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{url('tbk')}}" class="nav-link ">
-                                <i class="fa fa-paperclip nav-icon"></i>
-                                <p>Tanda Bukti Kas</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link ">
-                                <i class="fa fa-paperclip nav-icon"></i>
-                                <p>Surat Pertanggung Jawaban</p>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
 
                 <li class="nav-item">

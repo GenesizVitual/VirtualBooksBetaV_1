@@ -14,6 +14,6 @@ class TBK extends Controller
 
     public function index()
     {
-        return view('Persediaan.TBK.content');
+        return 'TBK';
     }
 }

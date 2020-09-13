@@ -58,7 +58,7 @@ Route::put('form-data-distribusi','Persediaan\Distribusi@form_distribusi');
 Route::put('edit-data-distribusi','Persediaan\Distribusi@edit');
 Route::put('delete-data-distribusi/{id}','Persediaan\Distribusi@destroy');
 
-Route::resource('tbk','Persediaan\TBK');
+Route::resource('spj-tbk','Persediaan\SPJ');
 
 //
 //Route::get('jurnal-umum', 'Akuntansi\AkuntansiJasa\report\JurnalUmum@JurnalUmum');
