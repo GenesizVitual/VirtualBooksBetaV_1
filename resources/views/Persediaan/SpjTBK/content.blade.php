@@ -53,19 +53,27 @@
                                                 <button type="button" class="btn btn-info btn-xs dropdown-toggle dropdown-hover dropdown-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <span class="sr-only">Toggle Dropdown</span>
                                                     <div class="dropdown-menu dropdown-menu-right" role="menu" style="">
-                                                        <a class="dropdown-item" href="#" ><i class="fa fa-paperclip"></i> Tambah TBK</a>
+                                                        <a class="dropdown-item" href="#" onclick="OnButtonTbk('{{ $spj->id }}')"><i class="fa fa-paperclip"></i> Tambah TBK</a>
                                                         <hr>
                                                         <a class="dropdown-item" href="#" onclick="onEditSpj('{{ $spj->id }}')"><i class="fa fa-pencil"></i> ubah</a>
                                                         <a class="dropdown-item" href="#" onclick="onDeleteSpj('{{ $spj->id }}')"><i class="fa fa-eraser"></i> hapus</a>
                                                     </div>
                                                 </button>
                                             </div>
-                                            <ul>
-                                                <li><a href="#">Link 1</a> </li>
-                                                <li><a href="#">Link 2</a> </li>
-                                                <li><a href="#">Link 3</a> </li>
-                                                <li><a href="#">Link 4</a> </li>
-                                            </ul>
+                                            @if(!empty($spj->linkToTbk))
+                                                <ul>
+                                                    @foreach($spj->linkToTbk as $tbk)
+                                                        <li>
+                                                            <a href="#">{{ $tbk->kode }}</a>
+                                                            {{--: {{ $tbk->keterangan }}--}}
+                                                            <button class="btn btn-xs btn-default" onclick="alert('{{ $tbk->keterangan }}')"><i class="fa fa-info-circle"></i> Keterangan</button>
+                                                            <button class="btn btn-xs btn-primary" ><i class="fa fa-chain"></i> Hubungkan Nota</button>
+                                                            <button class="btn btn-xs btn-warning" onclick="onEditTbk('{{ $tbk->id }}')"><i class="fa fa-pencil"></i> ubah tbk</button>
+                                                            <button class="btn btn-xs btn-danger" onclick="onDeleteTbk('{{ $tbk->id }}')"><i class="fa fa-eraser"></i> hapus tbk</button>
+                                                        </li>
+                                                    @endforeach
+                                                </ul>
+                                            @endif
                                         </li>
                                     @endforeach
                                 @endif
@@ -80,6 +88,7 @@
     </div>
 
     @include('Persediaan.SpjTBK.partial.modal_spj')
+    @include('Persediaan.SpjTBK.partial.modal_tbk')
 @stop
 
 
@@ -102,4 +111,5 @@
         });
     </script>
     @include('Persediaan.SpjTBK.js.spj')
+    @include('Persediaan.SpjTBK.js.tbk')
 @stop

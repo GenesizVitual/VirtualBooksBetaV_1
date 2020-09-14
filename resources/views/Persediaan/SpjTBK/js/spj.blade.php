@@ -4,10 +4,10 @@
             url: '{{ url('spj-tbk') }}/'+kode+'/edit',
             type: 'get',
             success : function (result) {
-                $('[name="_method"]').val('put');
-                $('[name="kode"]').val(result.id);
+                $('#method_spj').val('put');
+                $('#kode_spja').val(result.id);
                 $('[name="kode_spj"]').val(result.kode);
-                $('#quickForm').attr('action','{{ url('spj-tbk') }}/'+result.id);
+                $('#quickForm_spj').attr('action','{{ url('spj-tbk') }}/'+result.id);
                 $('#modal-lg-spj').modal('show');
             }
         })
@@ -28,7 +28,6 @@
                         icon: result.status,
                         title: result.message
                     })
-
                     window.location.reload();
                 }
             })

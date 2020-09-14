@@ -1,23 +1,29 @@
-<div class="modal fade" id="modal-lg-spj">
+<div class="modal fade" id="modal-lg-tbk">
     <div class="modal-dialog modal-md modal-primary">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Panel Surat Pertanggung Jawaban</h4>
+                <h4 class="modal-title">Panel Tanda Bukti Kas</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="{{ url('spj-tbk') }}" role="form" method="post" id="quickForm_spj">
+            <form action="{{ url('tbk') }}" role="form" method="post" id="quickForm_tbk">
                 {{ csrf_field() }}
-                <input type="hidden" name="_method" id="method_spj" value="post">
-                <input type="hidden" name="kode" id="kode_spj">
+                <input type="hidden" name="_method" id="method_tbk" value="post">
+                <input type="hidden" name="kode_temp_spj" id="kode_temp_spj">
+                <input type="hidden" name="kode" id="kode_tbk">
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="tgl_keluar">Kode SPJ</label>
-                                <input type="text" class="form-control" name="kode_spj" id="kode_spj" required placeholder="Masukan Kode SPJ">
+                                <label for="tgl_keluar">Kode TBK</label>
+                                <input type="text" class="form-control" name="kode_tbk" placeholder="Masukan Kode TBK" required>
                                 <small style="color: red">* kode tidak boleh kosong atau kode yang telah dimasukan sudah ada</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="tgl_keluar">Keterangan</label>
+                                <textarea class="form-control" name="keterangan" id="keterangan" placeholder="Keterangan TBK" required></textarea>
+                                <small style="color: red">* Keterangan Tidak Boleh Kosong</small>
                             </div>
                         </div>
                     </div>
