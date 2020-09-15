@@ -60,7 +60,7 @@ Route::put('delete-data-distribusi/{id}','Persediaan\Distribusi@destroy');
 
 Route::resource('spj-tbk','Persediaan\SPJ');
 Route::resource('tbk','Persediaan\TBK');
-
+Route::resource('tbk-nota','Persediaan\TBK_NOTA');
 //
 //Route::get('jurnal-umum', 'Akuntansi\AkuntansiJasa\report\JurnalUmum@JurnalUmum');
 //

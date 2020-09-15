@@ -11,7 +11,7 @@ use View;
 
 class RenderParsial
 {
-    public static function render_partial($view,$array){
-        return (string)View::make($view, array('data'=>$array));
+    public static function render_partial($view,$array,$show=false){
+        return (string)View::make($view, array('data'=>$array,'show'=> $show));
     }
 }

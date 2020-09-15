@@ -19,5 +19,8 @@ class Nota extends Model
         return $this->hasMany('App\Model\Persediaan\PembelianBarang','id_nota', 'id');
     }
 
+    public function linkToTbkNota(){
+        return $this->hasOne('App\Model\Persediaan\TBK_NOTA','id_nota','id');
+    }
 
 }

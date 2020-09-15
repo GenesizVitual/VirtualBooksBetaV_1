@@ -67,7 +67,7 @@
                                                             <a href="#">{{ $tbk->kode }}</a>
                                                             {{--: {{ $tbk->keterangan }}--}}
                                                             <button class="btn btn-xs btn-default" onclick="alert('{{ $tbk->keterangan }}')"><i class="fa fa-info-circle"></i> Keterangan</button>
-                                                            <button class="btn btn-xs btn-primary" ><i class="fa fa-chain"></i> Hubungkan Nota</button>
+                                                            <button class="btn btn-xs btn-primary" onclick="window.location.href='{{ url('tbk-nota/'.$tbk->id) }}' "><i class="fa fa-chain"></i> Hubungkan Nota</button>
                                                             <button class="btn btn-xs btn-warning" onclick="onEditTbk('{{ $tbk->id }}')"><i class="fa fa-pencil"></i> ubah tbk</button>
                                                             <button class="btn btn-xs btn-danger" onclick="onDeleteTbk('{{ $tbk->id }}')"><i class="fa fa-eraser"></i> hapus tbk</button>
                                                         </li>

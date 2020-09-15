@@ -14,6 +14,7 @@ use App\Http\Controllers\Persediaan\utils\RenderParsial;
 class Nota
 {
     public static $id_nota;
+    public static $status;
 
     public static function data_nota($array)
     {
@@ -40,12 +41,15 @@ class Nota
             $column = array();
             $column[] = $no++;
             $column[] = date('d-m-Y', strtotime($data_nota->tgl_beli));
-            $column[] = RenderParsial::render_partial('Persediaan.Nota.partial.button',$data_nota);
+            $column[] = RenderParsial::render_partial('Persediaan.Nota.partial.button',$data_nota, self::$status);
             $column[] = $data_nota->linkToPenyedia->penyedia;
             $column[] = number_format($total_ppn,2,',','.');
             $column[] = number_format($total_pph,2,',','.');
             $column[] = number_format($total_sebelum_pajak,2,',','.');
             $column[] = number_format($total_sesudah_pajak,2,',','.');
+            $column[] = $data_nota->id;
+            $column[] = $data_nota->linkToTbkNota;
+
             $row[] = $column;
         }
 

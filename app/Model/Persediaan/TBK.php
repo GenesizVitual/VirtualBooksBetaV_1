@@ -11,4 +11,6 @@ class TBK extends Model
 
     protected $fillable = ['id_spj','id_instansi','kode','keterangan'];
 
+
+
 }

@@ -120,7 +120,6 @@ class Nota extends Controller
             '_token'=> 'required'
         ]);
 
-
         $row = data_nota::data_nota(null);
         return response()->json(array('data'=>$row));
     }

@@ -34,6 +34,9 @@
             }).done(function (result) {
                 tabel_nota.clear().draw();
                 tabel_nota.rows.add(result.data).draw();
+                $('#table-data-nota').DataTable()
+                    .columns.adjust()
+                    .responsive.recalc();
             });
         }
 
