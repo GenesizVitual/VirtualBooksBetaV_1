@@ -71,6 +71,21 @@
                                                             <button class="btn btn-xs btn-warning" onclick="onEditTbk('{{ $tbk->id }}')"><i class="fa fa-pencil"></i> ubah tbk</button>
                                                             <button class="btn btn-xs btn-danger" onclick="onDeleteTbk('{{ $tbk->id }}')"><i class="fa fa-eraser"></i> hapus tbk</button>
                                                         </li>
+                                                        @if(!empty($tbk->LinkToNota_via_TBK_Nota))
+                                                            <ul>
+                                                                @foreach($tbk->LinkToNota_via_TBK_Nota as $nota)
+                                                                    <form action="{{ url('tbk-nota/'.$nota->id) }}" method="post">
+                                                                    <li style="background-color: #f5f5f5">
+                                                                        <a href="#" style="margin-right: 5%">{{ $nota->LinkToNota->kode_nota }}</a> <button class="btn btn-xs btn-success" onclick="onShareNota('{{ $nota->id }}')"><i class="fa fa-share"></i> Pindah TBK</button>
+                                                                            {{ csrf_field() }}
+                                                                            <input type="hidden" name="_method" value="delete">
+                                                                            <input type="hidden" name="kode" value="{{ $nota->id }}">
+                                                                            <button type="submit" class="btn btn-xs btn-danger" onclick="return confirm('Apakah anda ingin memutuskan hubungan nota ini ...?')"><i class="fa fa-eraser"></i> hapus hubungan nota</button>
+                                                                    </li>
+                                                                    </form>
+                                                                @endforeach
+                                                            </ul>
+                                                        @endif
                                                     @endforeach
                                                 </ul>
                                             @endif
@@ -89,6 +104,7 @@
 
     @include('Persediaan.SpjTBK.partial.modal_spj')
     @include('Persediaan.SpjTBK.partial.modal_tbk')
+    @include('Persediaan.SpjTBK.partial.modal_share_nota')
 @stop
 
 
@@ -112,4 +128,5 @@
     </script>
     @include('Persediaan.SpjTBK.js.spj')
     @include('Persediaan.SpjTBK.js.tbk')
+    @include('Persediaan.SpjTBK.js.nota')
 @stop

@@ -40,6 +40,7 @@
                             </div>
                         </div>
                         <div class="card-body">
+                            <p style="color: green">* Data nota yang tampil pada tabel dibawah ini adalah nota yang belum dihubungkan dengan tanda bukti kas lainnya.</p>
                             <form action="{{ url('tbk-nota') }}" method="post">
                                 {{ csrf_field() }}
                                 <input type="hidden" name="kode" value="{{ $tbk->id }}" >
@@ -60,28 +61,30 @@
                                     <tbody>
                                         @if(!empty($data))
                                             @foreach($data as $key=>$data_nota)
-                                                <tr>
-                                                    <td>{{ $data_nota[0] }}</td>
-                                                    <td>{{ $data_nota[1] }}</td>
-                                                    <td>{!! $data_nota[2] !!}</td>
-                                                    <td>{{ $data_nota[3] }}</td>
-                                                    <td>{{ $data_nota[4] }}</td>
-                                                    <td>{{ $data_nota[5] }}</td>
-                                                    <td>{{ $data_nota[6] }}</td>
-                                                    <td>{{ $data_nota[7] }}</td>
-                                                    <td>
-                                                        <input type="hidden" name="kode_nota[]" value="{{ $data_nota[8] }}"/>
-                                                        <input type="radio" name="status_nota_{{ $key }}[]" value="0" />Putuskan
-                                                        <br>
-                                                        <input type="radio" name="status_nota_{{$key}}[]" value="1"
-                                                               @if(!empty($data_nota[9]))
-                                                                    @if(!empty($data_nota[9]->where('id_tbk', $tbk->id)->where('id_nota', $data_nota[8])->first()->id_nota))
-                                                                         checked
-                                                                    @endif
-                                                               @endif
-                                                        />Hubungkan
-                                                    </td>
-                                                </tr>
+                                                @if(empty($data_nota[9]))
+                                                    <tr>
+                                                        <td>{{ $data_nota[0] }}</td>
+                                                        <td>{{ $data_nota[1] }}</td>
+                                                        <td>{!! $data_nota[2] !!}</td>
+                                                        <td>{{ $data_nota[3] }}</td>
+                                                        <td>{{ $data_nota[4] }}</td>
+                                                        <td>{{ $data_nota[5] }}</td>
+                                                        <td>{{ $data_nota[6] }}</td>
+                                                        <td>{{ $data_nota[7] }}</td>
+                                                        <td>
+                                                            <input type="hidden" name="kode_nota[]" value="{{ $data_nota[8] }}"/>
+                                                            <input type="radio" name="status_nota_{{ $key }}[]" value="0" />Putuskan
+                                                            <br>
+                                                            <input type="radio" name="status_nota_{{$key}}[]" value="1"
+                                                                   @if(!empty($data_nota[9]))
+                                                                        @if(!empty($data_nota[9]->where('id_tbk', $tbk->id)->where('id_nota', $data_nota[8])->first()->id_nota))
+                                                                             checked
+                                                                        @endif
+                                                                   @endif
+                                                            />Hubungkan
+                                                        </td>
+                                                    </tr>
+                                                @endif
                                             @endforeach
                                         @endif
                                     </tbody>

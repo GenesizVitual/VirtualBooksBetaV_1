@@ -19,7 +19,7 @@ class TBK_NOTA extends Controller
             data_nota::$status=true;
             $row = data_nota::data_nota(null);
             $tbk = tbl_nota::where('id_instansi', Session::get('id_instansi'))->findOrFail($id);
-            return view('Persediaan.TbkNota.content',['data'=> $row,'tbk'=> $tbk]);
+            return view('Persediaan.TbkNota.content', ['data'=> $row,'tbk'=> $tbk]);
         }catch (Throwable $e)
         {
             report($e);
@@ -60,7 +60,58 @@ class TBK_NOTA extends Controller
             return redirect('tbk-nota/'.$req->kode)->with('message_success','Proses telah selesai');
         }catch (Throwable $e)
         {
+            return false;
+        }
+    }
 
+    public function update(Request $req, $id)
+    {
+        try{
+
+            $this->validate($req,[
+                '_token'=>'required',
+                'kode'=>'required',
+                '_method'=>'required',
+                'tbk_nota'=>'required',
+            ]);
+
+            $data = tbl_tbk_nota::where('id_instansi', Session::get('id_instansi'))->findOrFail($req->kode);
+            #mengambil kode nota setelah nota dipindahkan ke tbk yang baru
+            $nota = $data->LinkToNota->kode_nota;
+
+            $data->id_tbk = $req->tbk_nota;
+            if($data->save()){
+                #mengambil kode tbk yang baru setelah nota dipindahkan
+                $tbk = $data->LinkToTbk->kode;
+                return redirect()->back()->with('message_success', 'Anda telah memindahkan nota: '. $nota.' ke TBK: '.$tbk);
+            }else{
+                return redirect()->back()->with('message_error', 'Anda telah memindahkan nota:'. $nota);
+            }
+        }catch (Throwable $e){
+            report($e);
+            return false;
+        }
+    }
+
+    public function destroy(Request $req, $id)
+    {
+
+        try{
+            $this->validate($req,[
+               'kode'=> 'required',
+                '_token'=> 'required',
+                '_method'=> 'required',
+            ]);
+
+            $model = tbl_tbk_nota::where('id_instansi', Session::get('id_instansi'))->findOrFail($req->kode);
+            if($model->delete()){
+                return redirect()->back()->with('message_success', 'Anda telah memutuskan hubungan nota dengan TBK: '.$model->LinkToTbk->kode);
+            }else{
+                return redirect()->back()->with('message_error', 'Gagal, menghapus hubungan tbk dengan nota:'.$model->LinkToNota->kode_nota);
+            }
+        }catch (Throwable $e){
+            report($e);
+            return false;
         }
     }
 }

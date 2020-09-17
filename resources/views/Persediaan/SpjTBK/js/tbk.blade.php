@@ -1,4 +1,5 @@
 <script>
+
     OnButtonTbk = function (kode) {
         $('#kode_temp_spj').val(kode);
         $('#method_tbk').val('post');

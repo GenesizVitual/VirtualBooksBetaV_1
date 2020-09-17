@@ -11,4 +11,13 @@ class TBK_NOTA extends Model
 
     protected $fillable = ['id_instansi','id_tbk','id_nota'];
 
+    #hubungkan TBK_NOTA dengan table nota
+    public function LinkToNota(){
+        return $this->belongsTo('App\Model\Persediaan\Nota', 'id_nota');
+    }
+
+    #hubungkan TBK Nota Dengan table TBK
+    public function LinkToTbk(){
+        return $this->belongsTo('App\Model\Persediaan\TBK','id_tbk');
+    }
 }

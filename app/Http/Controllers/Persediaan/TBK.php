@@ -9,6 +9,9 @@ use App\Model\Persediaan\TahunAnggaran;
 
 use Session;
 use App\Model\Persediaan\TBK as tbl_tbk;
+use App\Http\Controllers\Persediaan\utils\TahunAggaranCheck;
+use App\Model\Persediaan\SPJ as tbl_spj;
+
 class TBK extends Controller
 {
     //
@@ -17,6 +20,7 @@ class TBK extends Controller
     {
         return 'TBK';
     }
+
 
     public function store(Request $req)
     {
