@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,8 +23,9 @@ Route::get('login', 'User@login');
 Route::get('log-out', 'User@LogOut');
 Route::get('register', 'User@register');
 Route::post('login-check','User@Usercheck');
-Route::resource('user', 'User');
 
+//#admin
+Route::resource('user', 'User');
 //======================================================================================================================
 
 Route::get('dashboard','Persediaan\Dashboard@index');
@@ -33,13 +35,13 @@ Route::post('kota-kab/{id}','Apps\Provinsi@getLinkKab');
 Route::resource('tahun-anggaran', 'Persediaan\TahunAnggaran');
 Route::resource('jenis-tbk','Persediaan\JenisTbk');
 Route::resource('penyedia','Persediaan\Penyedia');
-
+Route::resource('bidang','Persediaan\Bidang');
+Route::resource('gudang','Persediaan\Gudang');
+Route::resource('berwenang','Persediaan\Berwenang');
 
 //======================================================================================================================
 
-Route::resource('bidang','Persediaan\Bidang');
 
-Route::resource('gudang','Persediaan\Gudang');
 Route::get('data-gudang','Persediaan\Gudang@data_gudang');
 
 Route::resource('nota','Persediaan\Nota');
@@ -61,6 +63,9 @@ Route::put('delete-data-distribusi/{id}','Persediaan\Distribusi@destroy');
 Route::resource('spj-tbk','Persediaan\SPJ');
 Route::resource('tbk','Persediaan\TBK');
 Route::resource('tbk-nota','Persediaan\TBK_NOTA');
+//#admin
+
+
 //
 //Route::get('jurnal-umum', 'Akuntansi\AkuntansiJasa\report\JurnalUmum@JurnalUmum');
 //

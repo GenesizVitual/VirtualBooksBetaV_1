@@ -16,4 +16,5 @@ class TBK extends Model
         return $this->hasMany('App\Model\Persediaan\TBK_NOTA','id_tbk','id');
     }
 
+
 }

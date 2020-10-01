@@ -66,21 +66,38 @@
                                                         <li>
                                                             <a href="#">{{ $tbk->kode }}</a>
                                                             {{--: {{ $tbk->keterangan }}--}}
-                                                            <button class="btn btn-xs btn-default" onclick="alert('{{ $tbk->keterangan }}')"><i class="fa fa-info-circle"></i> Keterangan</button>
-                                                            <button class="btn btn-xs btn-primary" onclick="window.location.href='{{ url('tbk-nota/'.$tbk->id) }}' "><i class="fa fa-chain"></i> Hubungkan Nota</button>
-                                                            <button class="btn btn-xs btn-warning" onclick="onEditTbk('{{ $tbk->id }}')"><i class="fa fa-pencil"></i> ubah tbk</button>
-                                                            <button class="btn btn-xs btn-danger" onclick="onDeleteTbk('{{ $tbk->id }}')"><i class="fa fa-eraser"></i> hapus tbk</button>
+                                                                @if(!empty($tbk->LinkToNota_via_TBK_Nota))
+                                                                    <button class="btn btn-xs btn-primary">
+                                                                        @foreach($tbk->LinkToNota_via_TBK_Nota as $nota_tbk)
+                                                                            @php($total_tbk =$nota_tbk->LinkToNota->linkToPembelian->sum('total_beli') )
+                                                                            @php($total_ppn_tbk =$nota_tbk->LinkToNota->linkToPembelian->sum('total_ppn') )
+                                                                            @php($total_pph_tbk =$nota_tbk->LinkToNota->linkToPembelian->sum('total_pph') )
+                                                                            {{ number_format($total_tbk+$total_ppn_tbk+$total_pph_tbk,'2',',','.') }}
+                                                                        @endforeach
+                                                                    </button>
+                                                                @endif
+                                                            <button class="btn btn-xs btn-danger pull-right" onclick="onDeleteTbk('{{ $tbk->id }}')"><i class="fa fa-eraser"></i> hapus tbk</button>
+                                                            <button class="btn btn-xs btn-warning pull-right" onclick="onEditTbk('{{ $tbk->id }}')"><i class="fa fa-pencil"></i> ubah tbk</button>
+                                                            <button class="btn btn-xs btn-primary pull-right" onclick="window.location.href='{{ url('tbk-nota/'.$tbk->id) }}' "><i class="fa fa-chain"></i> Hubungkan Nota</button>
+                                                            <button class="btn btn-xs btn-default pull-right" onclick="alert('{{ $tbk->keterangan }}')"><i class="fa fa-info-circle"></i> Keterangan</button>
                                                         </li>
                                                         @if(!empty($tbk->LinkToNota_via_TBK_Nota))
                                                             <ul>
                                                                 @foreach($tbk->LinkToNota_via_TBK_Nota as $nota)
                                                                     <form action="{{ url('tbk-nota/'.$nota->id) }}" method="post">
                                                                     <li style="background-color: #f5f5f5">
-                                                                        <a href="#" style="margin-right: 5%">{{ $nota->LinkToNota->kode_nota }}</a> <button class="btn btn-xs btn-success" onclick="onShareNota('{{ $nota->id }}')"><i class="fa fa-share"></i> Pindah TBK</button>
                                                                             {{ csrf_field() }}
                                                                             <input type="hidden" name="_method" value="delete">
-                                                                            <input type="hidden" name="kode" value="{{ $nota->id }}">
-                                                                            <button type="submit" class="btn btn-xs btn-danger" onclick="return confirm('Apakah anda ingin memutuskan hubungan nota ini ...?')"><i class="fa fa-eraser"></i> hapus hubungan nota</button>
+                                                                            <input type="hidden" name="kode" value="{{ $nota->id }}"> <a href="#" style="margin-right: 1%">{{ $nota->LinkToNota->kode_nota }}</a>
+                                                                            <button class="btn btn-xs btn-success">
+                                                                                @php($total_belanja = $nota->LinkToNota->linkToPembelian->sum('total_beli'))
+                                                                                @php($total_ppn = $nota->LinkToNota->linkToPembelian->sum('total_ppn'))
+                                                                                @php($total_pph = $nota->LinkToNota->linkToPembelian->sum('total_pph'))
+                                                                                {{ number_format($total_belanja+$total_ppn+$total_pph,'2',',','.') }}
+                                                                            </button>
+                                                                            <button type="submit" class="btn btn-xs btn-danger pull-right" onclick="return confirm('Apakah anda ingin memutuskan hubungan nota ini ...?')"><i class="fa fa-eraser"></i> hapus hubungan nota</button>
+                                                                            <button class="btn btn-xs btn-success pull-right" onclick="onShareNota('{{ $nota->id }}')"><i class="fa fa-share"></i> Pindah TBK</button>
+
                                                                     </li>
                                                                     </form>
                                                                 @endforeach
