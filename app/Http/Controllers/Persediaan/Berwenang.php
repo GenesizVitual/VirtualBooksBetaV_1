@@ -49,6 +49,17 @@ class Berwenang extends Controller
         }
     }
 
+    public function show($id){
+        try
+        {
+            $model = tbl_berwenang::where('id_instansi', Session::get('id_instansi'))->findOrFail($id);
+            return response()->json($model);
+        }catch (Throwable $e){
+            return false;
+        }
+    }
+
+
     public function edit($id){
         try
         {

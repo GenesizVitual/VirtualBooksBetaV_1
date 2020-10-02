@@ -71,7 +71,7 @@ class Nota
                 $column = array();
                 $column[] = $no++;
                 $column[] = $data->linkToGudang->nama_barang;
-                $column[] = $data->jumlah_barang;
+                $column[] = number_format($data->jumlah_barang,2,',','.');
                 $column[] = $data->satuan;
                 $column[] = number_format($data->harga_barang,2,',','.');
                 $column[] = number_format($data->total_beli,2,',','.');
@@ -80,6 +80,7 @@ class Nota
                 $row[] = $column;
             }
             $total_pembelian = $nota->linkToPembelian->sum('total_beli');
+            # Nilai total pajak tidak berasal dari field pph atau ppn yang ada pada tabel pembelianbarang
             $data_pajak = self::cek_pajak($total_pembelian, $nota);
 
 
@@ -87,7 +88,9 @@ class Nota
                 'total_beli'=>number_format(($data_pajak->total+$data_pajak->total_ppn+$data_pajak->total_pph),2,',','.'),
                 'ppn'=>number_format($data_pajak->total_ppn,2,',','.'),
                 'pph'=>number_format($data_pajak->total_pph,2,',','.'),
+                'total_pajak'=>number_format($data_pajak->total_ppn+$data_pajak->total_pph,2,',','.'),
                 'total_sebelum_bajak'=>number_format($data_pajak->total,2,',','.'),
+                'terbilang'=> self::terbilang(($data_pajak->total+$data_pajak->total_ppn+$data_pajak->total_pph)),
                 'nota'=> $nota
             );
 
@@ -106,7 +109,7 @@ class Nota
             $total_ppn = $total*0.1;
         }
 
-        if($model_notal->ppn==1){
+        if($model_notal->pph==1){
             $total_pph = $total*0.015;
         }
 
@@ -117,4 +120,42 @@ class Nota
 
         return $data_pajak;
     }
+
+    private static function penyebut($nilai) {
+        $nilai = abs($nilai);
+        $huruf = array("", "Satu", "Dua", "Tiga", "Empat", "Lima", "Enam", "Tujuh", "Delapan", "Sembilan", "Sepuluh", "Sebelas");
+        $temp = "";
+        if ($nilai < 12) {
+            $temp = " ". $huruf[$nilai];
+        } else if ($nilai <20) {
+            $temp = self::penyebut($nilai - 10). " Belas";
+        } else if ($nilai < 100) {
+            $temp = self::penyebut($nilai/10)." Puluh". self::penyebut($nilai % 10);
+        } else if ($nilai < 200) {
+            $temp = " Seratus" . self::penyebut($nilai - 100);
+        } else if ($nilai < 1000) {
+            $temp = self::penyebut($nilai/100) . " Ratus" . self::penyebut($nilai % 100);
+        } else if ($nilai < 2000) {
+            $temp = " Seribu" . self::penyebut($nilai - 1000);
+        } else if ($nilai < 1000000) {
+            $temp = self::penyebut($nilai/1000) . " Ribu" . self::penyebut($nilai % 1000);
+        } else if ($nilai < 1000000000) {
+            $temp = self::penyebut($nilai/1000000) . " Juta" . self::penyebut($nilai % 1000000);
+        } else if ($nilai < 1000000000000) {
+            $temp = self::penyebut($nilai/1000000000) . " Milyar" . self::penyebut(fmod($nilai,1000000000));
+        } else if ($nilai < 1000000000000000) {
+            $temp = self::penyebut($nilai/1000000000000) . " Trilyun" . self::penyebut(fmod($nilai,1000000000000));
+        }
+        return $temp;
+    }
+
+    private static function terbilang($nilai) {
+        if($nilai<0) {
+            $hasil = "minus ". trim(self::penyebut($nilai));
+        } else {
+            $hasil = trim(self::penyebut($nilai));
+        }
+        return $hasil;
+    }
+
 }
