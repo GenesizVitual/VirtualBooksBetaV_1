@@ -67,7 +67,7 @@
                                                             <a href="#">{{ $tbk->kode }}</a>
                                                             {{--: {{ $tbk->keterangan }}--}}
                                                                 @if(!empty($tbk->LinkToNota_via_TBK_Nota))
-                                                                    <button class="btn btn-xs btn-primary">
+                                                                    <button type="button" class="btn btn-xs btn-primary">
                                                                         @foreach($tbk->LinkToNota_via_TBK_Nota as $nota_tbk)
                                                                             @php($total_tbk =$nota_tbk->LinkToNota->linkToPembelian->sum('total_beli') )
                                                                             @php($total_ppn_tbk =$nota_tbk->LinkToNota->linkToPembelian->sum('total_ppn') )
@@ -89,7 +89,7 @@
                                                                             {{ csrf_field() }}
                                                                             <input type="hidden" name="_method" value="delete">
                                                                             <input type="hidden" name="kode" value="{{ $nota->id }}"> <a href="#" style="margin-right: 1%">{{ $nota->LinkToNota->kode_nota }}</a>
-                                                                            <button class="btn btn-xs btn-success">
+                                                                            <button type="button" class="btn btn-xs btn-success">
                                                                                 @php($total_belanja = $nota->LinkToNota->linkToPembelian->sum('total_beli'))
                                                                                 @php($total_ppn = $nota->LinkToNota->linkToPembelian->sum('total_ppn'))
                                                                                 @php($total_pph = $nota->LinkToNota->linkToPembelian->sum('total_pph'))

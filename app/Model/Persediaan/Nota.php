@@ -36,4 +36,9 @@ class Nota extends Model
         return $this->hasOne('App\Model\Persediaan\TBK_NOTA','id_nota','id');
     }
 
+    # Hubungan Nota dengan Surat Pesanan
+    public function linkToSuratPesanan(){
+        return $this->hasOne('App\Model\Persediaan\SuratPesanan','id_nota','id');
+    }
+
 }
