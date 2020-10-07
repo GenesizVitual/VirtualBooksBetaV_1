@@ -16,7 +16,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Nota</a></li>
+                        <li class="breadcrumb-item"><a href="{{ url('nota') }}">Nota</a></li>
                         <li class="breadcrumb-item active">Surat Pesanan</li>
                     </ol>
                 </div><!-- /.col -->
@@ -36,7 +36,7 @@
                     <div class="col-lg-10">
                         <div class="card card-default">
                             <div class="card-header">
-                                <button class="btn btn-xs btn-primary float-right"><i class="fa fa-print"></i> Cetak</button>
+                                <a href="{{ url('cetak-surat-pesanan/'.$nota->id) }}" target="_blank" class="btn btn-xs btn-primary float-right"><i class="fa fa-print"></i> Cetak</a>
                             </div>
                             <form action="{{ url('surat-pesanan') }}" id="quickForm" method="post">
                             <div class="card-body">
@@ -72,7 +72,7 @@
                                         <table style="font-weight: bold;">
                                             <tr>
                                                 <td colspan="3">
-                                                    <label style="padding-left: 5%">Yang Bertanda tangan dibawah ini:</label>
+                                                    <label style="padding-left: 5%">Yang bertanda tangan dibawah ini:</label>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -211,7 +211,7 @@
                                                 </div>
                                                 <div class="p-2">
                                                     <p style="text-align: center; margin: 0px;">Untuk dan atas nama</p>
-                                                    <input type="text" class="form-control" name="title_jabatan" value="@if(!empty($nota->linkToSuratPesanan->judul_penyedia)) {{ $nota->linkToSuratPesanan->judul_penyedia }} @else {{ "Pejabat Anggaran" }} @endif" style="text-align: center">
+                                                    <input type="text" class="form-control" name="title_jabatan" value="@if(!empty($nota->linkToSuratPesanan->judul_jabatan)) {{ $nota->linkToSuratPesanan->judul_jabatan }} @else {{ "Pejabat Anggaran" }} @endif" style="text-align: center">
                                                     <p style="margin: 0px;text-align: center; text-decoration: underline;" id="pengadaan">@if(!empty($nota->linkToSuratPesanan->linkToBerwenang->nama)) {{ $nota->linkToSuratPesanan->linkToBerwenang->nama }} @endif</p>
                                                     <p style="margin: 0px; text-align: center;" id="nip">@if(!empty($nota->linkToSuratPesanan->linkToBerwenang->nip)) {{ $nota->linkToSuratPesanan->linkToBerwenang->nip }} @endif</p>
                                                 </div>

@@ -18,14 +18,28 @@ class SuratPesanan extends Controller
 
     public function show($id_nota){
         try{
-            Nota::$id_nota = $id_nota;
-            $data_nota = Nota::data_pembelian_barang_per_nota();
-//            dd($data_nota);
-            $data_nota['berwenang'] = Berwenang::all()->where('id_instansi', Session::get('id_instansi'));
+            $data_nota = $this->data_nota($id_nota);
             return view('Persediaan.Surat.SuratPesanan.content', $data_nota);
         }catch (Throwable $e){
             return $e;
         }
+    }
+
+    public function cetak($id_nota){
+        try{
+            $data_nota = $this->data_nota($id_nota);
+            return view('Persediaan.Surat.SuratPesanan.print', $data_nota);
+        }catch (Throwable $e){
+            return $e;
+        }
+    }
+
+    private function data_nota($id_nota){
+        Nota::$id_nota = $id_nota;
+        $data_nota = Nota::data_pembelian_barang_per_nota();
+//            dd($data_nota);
+        $data_nota['berwenang'] = Berwenang::all()->where('id_instansi', Session::get('id_instansi'));
+        return $data_nota;
     }
 
     public function store(Request $req)
@@ -64,4 +78,6 @@ class SuratPesanan extends Controller
             return false;
         }
     }
+
+
 }

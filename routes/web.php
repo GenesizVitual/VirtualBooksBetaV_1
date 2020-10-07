@@ -50,6 +50,7 @@ Route::post('load-data-nota','Persediaan\Nota@data_nota_pembelian');
 Route::get('cetak-nota/{id}','Persediaan\Nota@cetak_nota');
 
 Route::resource('surat-pesanan','Persediaan\SuratPesanan');
+Route::get('cetak-surat-pesanan/{id_nota}','Persediaan\SuratPesanan@cetak');
 
 Route::resource('pembelian-barang','Persediaan\PembelianBarang');
 Route::post('pembelian-barang/{id_nota}/store','Persediaan\PembelianBarang@store_barang');
@@ -61,6 +62,9 @@ Route::get('bagikan-barang/{id}','Persediaan\Distribusi@show');
 Route::put('form-data-distribusi','Persediaan\Distribusi@form_distribusi');
 Route::put('edit-data-distribusi','Persediaan\Distribusi@edit');
 Route::put('delete-data-distribusi/{id}','Persediaan\Distribusi@destroy');
+
+Route::resource('surat-permintaan','Persediaan\SuratPermintaan');
+Route::get('buat-surat/{id_bidang}/{tgl}','Persediaan\SuratPermintaan@created_surat');
 
 Route::resource('spj-tbk','Persediaan\SPJ');
 Route::resource('tbk','Persediaan\TBK');

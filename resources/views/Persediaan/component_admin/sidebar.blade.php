@@ -156,23 +156,23 @@
 
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="nav-icon fas fa-envelope"></i>
                         <p>
-                            Starter Pages
+                            Surat
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link ">
+                            <a href="{{ url('surat-permintaan') }}" class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Active Page</p>
+                                <p>Surat Permintaan</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Inactive Page</p>
+                                <p>Surat Pengeluaran</p>
                             </a>
                         </li>
                     </ul>

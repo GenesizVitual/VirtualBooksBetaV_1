@@ -74,4 +74,5 @@ class Bidang extends Controller
             return redirect('bidang')->with('message_fail', 'Gagal, menghapus bidang');
         }
     }
+
 }
