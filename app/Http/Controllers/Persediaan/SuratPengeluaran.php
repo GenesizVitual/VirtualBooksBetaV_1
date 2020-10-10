@@ -4,44 +4,40 @@ namespace App\Http\Controllers\Persediaan;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Model\Persediaan\SuratPermintaan;
 use App\Http\Controllers\Persediaan\utils\data\Distribusi;
 use App\Model\Persediaan\Berwenang;
-use Session;
 use App\Model\Persediaan\Instansi;
-use App\Model\Persediaan\SuratPermintaan as tbl_surat_permintaan;
-
-class SuratPermintaan extends Controller
+use App\Model\Persediaan\SuratPengeluaran as tbl_surat_pengeluaran;
+use Session;
+class SuratPengeluaran extends Controller
 {
     //
     public function index(){
-        #Tampilkan bidang yang telah difilter pada table ditribusi barang
+       $data = SuratPermintaan::all()->where('id_instansi', Session::get('id_instansi'))->groupBy('id_bidang');
+       return view('Persediaan.Surat.SuratPengeluaran.content', ['bidang'=>$data]);
+    }
+
+    public function show($id_bidang){
         try{
-            $model = Distribusi::data_pengeluaran_bidang(null);
-            return view('Persediaan.Surat.SuratPermintaan.content',['bidang'=> $model['bidang']]);
+            $data = SuratPermintaan::all()->where('id_instansi', Session::get('id_instansi'))->where('id_bidang',$id_bidang);
+            return view('Persediaan.Surat.SuratPengeluaran.content', ['id_bidang'=>$id_bidang, 'data'=>$data]);
         }catch (Throwable $e){
             return false;
         }
     }
 
-    public function show($id){
+    public function created_surat($id_surat_permintaan){
         try{
-            $array = ['id_bidang'=> $id];
-            $model = Distribusi::data_pengeluaran_bidang($array);
-            return view('Persediaan.Surat.SuratPermintaan.content',['bidang'=> $model['bidang'], 'tgl_permintaan'=> $model['tgl_pp'],'id_bidang'=>$model['id_bidang']]);
-        }catch (Throwable $e){
-            return false;
-        }
-    }
-
-    public function created_surat($id_bidang, $tgl){
-        try{
-            $array =['tgl_keluar'=>$tgl,'id_bidang'=> $id_bidang];
+            $model_surat_pemintaan = SuratPermintaan::where('id_instansi', Session::get('id_instansi'))->findOrFail($id_surat_permintaan);
+            $array =['tgl_keluar'=>$model_surat_pemintaan->tgl_permintaan_barang,'id_bidang'=> $model_surat_pemintaan->id_bidang];
             $data_array = Distribusi::data_pengeluaran_by_id_dan_tanggal($array);
             $data_array['berwenang'] = Berwenang::all()->where('id_instansi',Session::get('id_instansi'));
             $data_array['instansi'] = Instansi::findOrFail(Session::get('id_instansi'));
-            $data_array['tgl_permintaan_barang'] = $tgl;
-            $data_array['data_surat']= tbl_surat_permintaan::where('id_bidang', $id_bidang)->whereDate('tgl_permintaan_barang',$tgl)->first();
-            return view('Persediaan.Surat.SuratPermintaan.template_surat', $data_array);
+            $data_array['tgl_permintaan_barang'] = $model_surat_pemintaan->tgl_permintaan_barang;
+            $data_array['id_surat_permintaan_barang'] = $id_surat_permintaan;
+            $data_array['data_surat']= tbl_surat_pengeluaran::where('id_instansi', Session::get('id_instansi'))->where('id_surat_permintaan', $model_surat_pemintaan->id)->first();
+            return view('Persediaan.Surat.SuratPengeluaran.template_surat', $data_array);
         }catch (Throwable $e){
             return false;
         }
@@ -49,8 +45,9 @@ class SuratPermintaan extends Controller
 
     public function store(Request $req){
         try{
+
             $this->validate($req,[
-                'nomor_surat'=> 'required|unique:tbl_surat_permintaan_barang,nomor_surat',
+                'nomor_surat'=> 'required|unique:tbl_surat_pengeluaran,nomor_surat',
                 'perihal'=> 'required',
                 'id_bidang'=> 'required',
                 'id_berwenang'=> 'required',
@@ -64,8 +61,8 @@ class SuratPermintaan extends Controller
                 'id_berwenang2'=> 'required',
             ]);
 
-            $model = tbl_surat_permintaan::updateOrCreate(
-                ['id_bidang'=>$req->id_bidang,'id_instansi'=> Session::get('id_instansi'),'nomor_surat'=>$req->nomor_surat],
+            $model = tbl_surat_pengeluaran::updateOrCreate(
+                ['id_bidang'=>$req->id_bidang,'id_surat_permintaan'=>$req->id_surat_permintaan_barang,'id_instansi'=>Session::get('id_instansi'),'nomor_surat'=>$req->nomor_surat],
                 [
                     'isi_surat'=>$req->isi_surat,
                     'id_barang'=>$req->id_barang,

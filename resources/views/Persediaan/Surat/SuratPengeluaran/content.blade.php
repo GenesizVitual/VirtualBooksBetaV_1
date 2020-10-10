@@ -11,17 +11,17 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Surat Permintaan</h1>
+                    <h1 class="m-0 text-dark">Surat Pengeluaran</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item"><a href="{{ url('nota') }}">Nota</a></li>
-                        <li class="breadcrumb-item active">Surat Permintaan</li>
+                        <li class="breadcrumb-item active">Surat Pengeluaran</li>
                     </ol>
                 </div><!-- /.col -->
                 <div class="col-sm-12">
-                    <p style="color: darkgray">Halaman Ini adalah untuk menampilkan nama bidang yang data barang yang telah dikeluarkan telah dikelompokan guna untuk membuat surat permintaan.</p>
+                    <p style="color: darkgray">Halaman Ini adalah untuk menampilkan nama bidang yang mempunyai surat permintaan yang sebelumnya telah dibuat.</p>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -31,15 +31,19 @@
     <div class="content" style="margin-top: 0px">
         <div class="container-fluid" >
                 <div class="row">
-                    @foreach($bidang as $data_bidang)
-                        <div class="col-lg-2">
-                            <div class="card card-default">
-                                <div class="card-body ">
-                                    <a href="{{ url('surat-permintaan/'.$data_bidang->linkToBidang->id) }}">{{ $data_bidang->linkToBidang->nama_bidang }}</a>
+                    @if(!empty($bidang))
+                        @php($idx=0)
+                        @foreach($bidang as $key=> $data_bidang)
+                            <div class="col-lg-2">
+                                <div class="card card-default">
+                                    <div class="card-body ">
+                                        <a href="{{ url('surat-pengeluaran/'.$data_bidang[$idx]->linkToBidang->id) }}">{{ $data_bidang[$idx]->linkToBidang->nama_bidang }}</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    @endforeach
+                            @php($idx++)
+                        @endforeach
+                    @endif
 
                     @if(!empty($id_bidang))
                       <div class="col-lg-12">
@@ -49,20 +53,20 @@
                                      <thead>
                                          <tr>
                                              <th>#</th>
-                                             <th>Tanggal</th>
+                                             <th>Tanggal Minta</th>
                                              <th>Nomor Surat Permintaan</th>
                                              <th>Aksi</th>
                                          </tr>
                                      </thead>
                                      <tbody>
                                      @php($no=1)
-                                     @foreach($tgl_permintaan as $data)
+                                     @foreach($data as $data)
                                          <tr>
                                              <td>{{ $no++ }}</td>
-                                             <td>{{ date('d-m-Y', strtotime($data['tgl_keluar'])) }}</td>
-                                             <td>{{ $data['nomor_surat'] }}</td>
+                                             <td>{{ date('d-m-Y', strtotime($data->tgl_permintaan_barang)) }}</td>
+                                             <td>{{ $data->nomor_surat }}</td>
                                              <td>
-                                                 <a  href="#" onclick="window.location.href='{{ url('buat-surat/'.$id_bidang.'/'.$data['tgl_keluar']) }}'" class="btn btn-primary">Buatkan Surat Permintaan</a>
+                                                 <a  href="#" onclick="window.location.href='{{ url('buat-surat-pengeluaran/'.$data->id) }}'" class="btn btn-primary">Buatkan Surat Pengeluaran</a>
                                              </td>
                                          </tr>
                                      @endforeach

@@ -170,12 +170,18 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ url('surat-pengeluaran') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Surat Pengeluaran</p>
                             </a>
                         </li>
                     </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url('laporan') }}" class="nav-link">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>Laporan</p>
+                    </a>
                 </li>
             </ul>
         </nav>

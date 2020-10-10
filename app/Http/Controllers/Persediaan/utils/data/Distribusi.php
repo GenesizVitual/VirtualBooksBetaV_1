@@ -14,6 +14,7 @@ use App\Model\Persediaan\PembelianBarang;
 //use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Persediaan\utils\TahunAggaranCheck;
 use App\Model\Persediaan\Distribusi as tbl_distribusi;
+use App\Model\Persediaan\SuratPermintaan;
 class Distribusi
 {
 
@@ -70,6 +71,12 @@ class Distribusi
                     $column = [];
                     $column['id_bidang']= $item->id_bidang;
                     $column['tgl_keluar']= $item->tgl_kerluar;
+                    $no_surat='';
+                    $model_surat_permintaan = SuratPermintaan::where('id_instansi', Session::get('id_instansi'))->whereDate('tgl_permintaan_barang',$item->tgl_kerluar)->where('id_bidang',$id_bidang)->first();
+                    if(!empty($model_surat_permintaan)){
+                        $no_surat = $model_surat_permintaan->nomor_surat;
+                    }
+                    $column['nomor_surat']= $no_surat;
                     $data_tgl_permintaan[] = $column;
                 }
             }

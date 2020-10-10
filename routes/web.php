@@ -66,10 +66,21 @@ Route::put('delete-data-distribusi/{id}','Persediaan\Distribusi@destroy');
 Route::resource('surat-permintaan','Persediaan\SuratPermintaan');
 Route::get('buat-surat/{id_bidang}/{tgl}','Persediaan\SuratPermintaan@created_surat');
 
+Route::resource('surat-pengeluaran','Persediaan\SuratPengeluaran');
+Route::get('buat-surat-pengeluaran/{id_surat_pemintaan}','Persediaan\SuratPengeluaran@created_surat');
+
 Route::resource('spj-tbk','Persediaan\SPJ');
 Route::resource('tbk','Persediaan\TBK');
 Route::resource('tbk-nota','Persediaan\TBK_NOTA');
+
+#laporan
+Route::get('laporan','Persediaan\MasterLaporan@index');
+
+
+
 //#admin
+
+
 
 
 //

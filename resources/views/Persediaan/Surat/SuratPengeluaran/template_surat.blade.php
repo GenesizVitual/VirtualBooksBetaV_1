@@ -11,17 +11,17 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Surat Permintaan</h1>
+                    <h1 class="m-0 text-dark">Surat Pengeluaran</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item"><a href="{{ url('nota') }}">Nota</a></li>
-                        <li class="breadcrumb-item active">Surat Permintaan</li>
+                        <li class="breadcrumb-item active">Surat Pengeluaran</li>
                     </ol>
                 </div><!-- /.col -->
                 <div class="col-sm-12">
-                    <p style="color: darkgray">Halaman Ini adalah untuk menampilkan nama bidang yang data barang yang telah dikeluarkan telah dikelompokan guna untuk membuat surat permintaan.</p>
+                    <p style="color: darkgray">Halaman Ini adalah untuk menampilkan nama bidang yang mempunyai surat permintaan yang sebelumnya telah dibuat.</p>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -36,16 +36,16 @@
                     <div class="col-lg-10">
                         <div class="card card-default">
                             <div class="card-header">
-                                <a href="#" onclick="alert('Cetak Surat Permintaan Belum diaktifkan')" class="btn btn-xs btn-primary float-right"><i class="fa fa-print"></i> Cetak</a>
+                                <a href="#" onclick="alert('Cetak Surat Pengeluaran Belum diaktifkan')" class="btn btn-xs btn-primary float-right"><i class="fa fa-print"></i> Cetak</a>
                             </div>
-                            <form action="{{ url('surat-permintaan') }}" id="quickForm" method="post">
+                            <form action="{{ url('surat-pengeluaran') }}" id="quickForm" method="post">
                             <div class="card-body">
                             {{ csrf_field() }}
 
                                 <div class="row">
                                     <div class="col-md-12">
                                         <h5 style="text-align: center; font-weight: bold; text-decoration: underline">
-                                            SURAT PERMINTAAN BARANG
+                                            SURAT PENGELUARAN BARANG
                                         </h5>
                                     </div>
                                     <div class="col-md-12">
@@ -56,12 +56,13 @@
                                                <td style="width: 400px">
                                                    <input type="text" class="form-control" name="nomor_surat" placeholder="Nomor Surat" value="{{ $data_surat->nomor_surat }}" style="width: 100%" required>
                                                    <input type="hidden" name="tgl_permintaan_barang" value="{{ $tgl_permintaan_barang }}">
+                                                   <input type="hidden" name="id_surat_permintaan_barang" value="{{ $id_surat_permintaan_barang }}">
                                                </td>
                                            </tr>
                                            <tr>
                                                <td>Perihal</td>
                                                <td>:</td>
-                                               <td style="width: 400px"><input type="text" class="form-control" name="perihal" value="Permintaan Barang" style="width: 100%" ></td>
+                                               <td style="width: 400px"><input type="text" class="form-control" name="perihal" value="Pengeluaran Barang" style="width: 100%" ></td>
                                            </tr>
                                            <tr>
                                                <td>Bidang</td>
