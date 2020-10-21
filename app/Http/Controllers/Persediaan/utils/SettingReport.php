@@ -23,8 +23,8 @@ class SettingReport
             'icon'=>''
         ],
         [
-            'title'=> 'Rekapitulasi Penerimaan Perjenis Barang',
-            'url' => 'rekapitulasi-penerimaan-perjenis-barang',
+            'title'=> 'Rekapitulasi Persediaan Perjenis TBK',
+            'url' => 'rekapitulasi-persediaan-perjenis-tbk',
             'icon'=>''
         ],
         [

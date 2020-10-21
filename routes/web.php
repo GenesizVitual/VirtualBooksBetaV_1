@@ -83,7 +83,10 @@ Route::post('cetak-data-nota','Persediaan\MasterLaporan@print_data_daftar_nota')
 Route::get('rekapitulasi-persediaan','Persediaan\MasterLaporan@preview_data_rekapitulasi_persediaan');
 # Cetak Data rekapitulasi persediaan
 Route::post('cetak-rekapitulasi-persediaan','Persediaan\MasterLaporan@print_data_rekapitulasi_persediaan');
-
+# Preview Rekapitulasi Persediaan Per Jenis TBK
+Route::get('rekapitulasi-persediaan-perjenis-tbk','Persediaan\MasterLaporan@preview_data_rekapitulasi_persediaan_perjenis_tbk');
+# Cetak Data rekapitulasi persediaan Per Jenis TBK
+Route::post('cetak-rekapitulasi-persediaan-perjenis-tbk','Persediaan\MasterLaporan@print_data_rekapitulasi_persediaan_per_jenis_tbk');
 
 # setting laporan berwenang
 

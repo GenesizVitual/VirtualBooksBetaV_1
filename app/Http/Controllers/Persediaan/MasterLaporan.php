@@ -132,6 +132,64 @@ class MasterLaporan extends Controller
         }
     }
 
+    # Preview Data Rekapitulasi Persediaan Perjenis TBK
+    public function preview_data_rekapitulasi_persediaan_perjenis_tbk(){
+        $data_rekap = RekapitulasiPersediaan::DataRekapitupitulasi(null);
+        $jenis_tbk = JenisTbk::all()->where('id_instansi', Session::get('id_instansi'));
+        $data = [
+            'data'=>$data_rekap,
+            'berwenang'=> $this->berwenang(null),
+            'jenis_tbk'=> $jenis_tbk
+        ];
+        return view('Persediaan.laporan.rekapitulasi_persediaan_perjenis_tbk.content', $data);
+    }
+
+    # Cetak Data Rekapitulasi Persediaan
+    public function print_data_rekapitulasi_persediaan_per_jenis_tbk(Request $req){
+
+        try{
+            $this->validate($req,[
+                'tgl_awal'=> 'required',
+                'tgl_akhir'=> 'required',
+                'tgl_cetak'=> 'required',
+                'berwenang_1'=> 'required',
+                'berwenang_2'=> 'required',
+                'jabatan1'=> 'required',
+                'jabatan2'=> 'required',
+            ]);
+
+            # Panggil Model Jenis TBK
+            $jenis_tbk = JenisTbk::all()->where('id_instansi', Session::get('id_instansi'));
+
+            # Kondisi tanggal awal tidak boleh melebihi tanggal akhir
+            if (date('d-m-Y', strtotime($req->tgl_awal)) >= date('d-m-Y', strtotime($req->tgl_akhir))){
+                return redirect()->back()->with('message_info','Tanggal akhir tidak boleh lebih kecil dari tanggal awal');
+            }
+
+            # Inisialisasi Variable di clas Rekapitulasi Persediaan
+            RekapitulasiPersediaan::$tgl_awal = date('Y-m-d', strtotime($req->tgl_awal));
+            RekapitulasiPersediaan::$tgl_akhir = date('Y-m-d', strtotime($req->tgl_akhir));
+
+            # Data Instansi
+            $data_instansi = Instansi::findOrFail(Session::get('id_instansi'));
+
+            # Passing Data
+            $data = [
+                'data'=>RekapitulasiPersediaan::DataRekapitupitulasi(null),
+                'instansi' => $data_instansi,
+                'tgl_cetak' => $this->konversi_bulan($req->tgl_cetak),
+                'berwenang_1' => $this->berwenang($req->berwenang_1),
+                'berwenang_2' => $this->berwenang($req->berwenang_2),
+                'jabatan_1'=> $req->jabatan1,
+                'jabatan_2'=> $req->jabatan2,
+                'jenis_tbk'=> $jenis_tbk
+            ];
+            return view('Persediaan.laporan.rekapitulasi_persediaan_perjenis_tbk.print', $data);
+        }catch (Throwable $e){
+            return false;
+        }
+    }
+
 
     # list data berwenang
     private function berwenang($id){
