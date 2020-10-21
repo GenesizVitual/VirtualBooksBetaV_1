@@ -75,10 +75,18 @@ Route::resource('tbk-nota','Persediaan\TBK_NOTA');
 
 #laporan
 Route::get('laporan','Persediaan\MasterLaporan@index');
-
+# Preview Daftar Nota
 Route::get('daftar-nota','Persediaan\MasterLaporan@preview_data_daftar_nota');
-
+# Cetak Daftar Nota
 Route::post('cetak-data-nota','Persediaan\MasterLaporan@print_data_daftar_nota');
+# Preview Rekapitulasi Persediaan Nota
+Route::get('rekapitulasi-persediaan','Persediaan\MasterLaporan@preview_data_rekapitulasi_persediaan');
+# Cetak Data rekapitulasi persediaan
+Route::post('cetak-rekapitulasi-persediaan','Persediaan\MasterLaporan@print_data_rekapitulasi_persediaan');
+
+
+# setting laporan berwenang
+
 
 //#admin
 

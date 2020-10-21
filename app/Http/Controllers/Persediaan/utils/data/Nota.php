@@ -14,6 +14,7 @@ use App\Http\Controllers\Persediaan\utils\RenderParsial;
 class Nota
 {
     public static $id_nota;
+    public static $id_jenis_nota;
     public static $status;
 
     public static $tgl_awal;
@@ -28,38 +29,54 @@ class Nota
 
         $ndata = TahunAggaranCheck::$id_thn_anggaran;
 
-
+        # Kalau tanggal awal dan tanggal akhir tidak kosong maka jalankan query filter data berdasarkan tanggal beli
         if(!empty(self::$tgl_awal) && !empty(self::$tgl_akhir)){
-
-            $model_nota = notas::whereBetween('tgl_beli',[self::$tgl_awal, self::$tgl_akhir])->where('id_instansi',$ndata->id_instansi)
-                ->where('id_thn_anggaran', $ndata->id)->orderBy('tgl_beli','asc')->get();
-
+            if(!empty(self::$id_jenis_nota)) { # Seleksi id jenis tbk berdasarkan tanggal awal dan tanggal akhir
+                $model_nota = notas::where('id_jenis_tbk', self::$id_jenis_nota)
+                    ->whereBetween('tgl_beli', [self::$tgl_awal, self::$tgl_akhir])
+                    ->where('id_instansi', $ndata->id_instansi)
+                    ->where('id_thn_anggaran', $ndata->id)
+                    ->orderBy('tgl_beli', 'asc')->get();
+            }else{ # selain itu jalankan query default seleksi berdasarkan tanggal awal dan tanggal akhir
+                $model_nota = notas::whereBetween('tgl_beli', [self::$tgl_awal, self::$tgl_akhir])
+                    ->where('id_instansi', $ndata->id_instansi)
+                    ->where('id_thn_anggaran', $ndata->id)
+                    ->orderBy('tgl_beli', 'asc')->get();
+            }
         }else{
-            $model_nota = notas::all()->where('id_instansi',$ndata->id_instansi)
-                ->where('id_thn_anggaran', $ndata->id)->sortBy('tgl_beli');
+
+            if(!empty(self::$id_jenis_nota)){ # Seleksi semua data berdasarkan id jenis nota
+                $model_nota = notas::where('id_jenis_tbk', self::$id_jenis_nota)
+                    ->where('id_instansi',$ndata->id_instansi)
+                    ->where('id_thn_anggaran', $ndata->id)
+                    ->orderBy('tgl_beli','asc')->get();
+            }else{ # Kalau Tanggal Awal dan akhir tidak ada jalankan query defaul tampa tanggal awal dan tanggal akhir
+                $model_nota = notas::all()->where('id_instansi',$ndata->id_instansi)
+                    ->where('id_thn_anggaran', $ndata->id)
+                    ->sortBy('tgl_beli');
+            }
         }
 
         $row = array();
         $no = 1;
-
         foreach ($model_nota as $data_nota)
         {
-            $total_ppn = $data_nota->linkToPembelian->sum('total_ppn');
-            $total_pph = $data_nota->linkToPembelian->sum('total_pph');
-            $total_sebelum_pajak = $data_nota->linkToPembelian->sum('total_beli');
-            $total_sesudah_pajak = $total_sebelum_pajak+$total_ppn+$total_pph;
+
+            $cek_pajak = self::cek_pajak($data_nota->linkToPembelian->sum('total_beli'), $data_nota);
+            $total_sesudah_pajak = $cek_pajak->total+$cek_pajak->total_ppn+$cek_pajak->total_pph;
 
             $column = array();
             $column[] = $no++;
             $column[] = date('d-m-Y', strtotime($data_nota->tgl_beli));
             $column[] = RenderParsial::render_partial('Persediaan.Nota.partial.button',$data_nota, self::$status);
             $column[] = $data_nota->linkToPenyedia->penyedia;
-            $column[] = number_format($total_ppn,2,',','.');
-            $column[] = number_format($total_pph,2,',','.');
-            $column[] = number_format($total_sebelum_pajak,2,',','.');
+            $column[] = number_format($cek_pajak->total_ppn,2,',','.');
+            $column[] = number_format($cek_pajak->total_pph,2,',','.');
+            $column[] = number_format($cek_pajak->total,2,',','.');
             $column[] = number_format($total_sesudah_pajak,2,',','.');
             $column[] = $data_nota->id;
             $column[] = $data_nota->linkToTbkNota;
+            $column[] = $total_sesudah_pajak;
 
             $row[] = $column;
         }

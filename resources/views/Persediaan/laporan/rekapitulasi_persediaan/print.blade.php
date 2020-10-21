@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cetak Daftar Nota</title>
+    <title>Cetak Rekapitulasi Persediaan</title>
     <style>
         table.table_nota{
             width: 100%;
@@ -27,7 +27,7 @@
         <table style="width: 100%; text-align: center">
             <tr>
                 <td rowspan="4" style="width: 100px"><img src="{{ asset('persediaan/logo/'.$instansi->logo) }}" alt="Logo tidak ditemukan" style="width:100px;height: 110px; margin-left: 20px"></td>
-                <td><h2>DAFTAR NOTA PEMBELIAN</h2></td>
+                <td><h2>LAPORAN REKAPITULASI PERSEDIAAN</h2></td>
                 <td rowspan="4"> </td>
             </tr>
             <tr>
@@ -55,8 +55,8 @@
         <br>
         <table class="table_nota" role="grid" border="1">
             <thead>
-                <tr>
-                    <th>#</th>
+                <tr >
+                    <th style="padding: 10px;">#</th>
                     <th>Tanggal</th>
                     <th>Kode Nota</th>
                     <th>Penyedia</th>
@@ -68,17 +68,30 @@
                 </thead>
             <tbody>
             @if(!empty($data))
-                @foreach($data as $data_nota)
-                    <tr>
-                        <td style="width: 30px; text-align: center;">{{ $data_nota[0] }}</td>
-                        <td style="text-align: center;">{{ $data_nota[1] }}</td>
-                        <td style="text-align: left; padding-left:10px;">{!! $data_nota[2] !!}</td>
-                        <td style="text-align: left; padding-left:10px;">{{ $data_nota[3] }}</td>
-                        <td style="text-align: left; padding-left:10px;">{{ $data_nota[4] }}</td>
-                        <td style="text-align: left; padding-left:10px;">{{ $data_nota[5] }}</td>
-                        <td style="text-align: left; padding-left:10px;">{{ $data_nota[6] }}</td>
-                        <td style="text-align: left; padding-left:10px;">{{ $data_nota[7] }}</td>
-                    </tr>
+                @foreach($data as $key=>$data_jenis_tbk)
+                    @if(!empty($data_jenis_tbk))
+                        @php($saldo=0)
+                        <tr style="background-color: greenyellow;">
+                            <th colspan="8" style="text-align: left; padding: 5px;">{{ $jenis_tbk->where('id',$key)->first()->kode }} - {{ $jenis_tbk->where('id',$key)->first()->jenis_tbk }}</th>
+                        </tr>
+                        @foreach($data_jenis_tbk as $data_nota)
+                            <tr>
+                                <td style="text-align: center">{{ $data_nota[0] }}</td>
+                                <td style="text-align: center">{{ $data_nota[1] }}</td>
+                                <td >{!! $data_nota[2] !!}</td>
+                                <td style="text-align: center">{{ $data_nota[3] }}</td>
+                                <td style="padding: 5px;">{{ $data_nota[4] }}</td>
+                                <td style="padding: 5px;">{{ $data_nota[5] }}</td>
+                                <td style="padding: 5px;">{{ $data_nota[6] }}</td>
+                                <td style="padding: 5px;">{{ $data_nota[7] }}</td>
+                            </tr>
+                            @php($saldo+=$data_nota[10])
+                        @endforeach
+                        <tr>
+                            <th colspan="7">Total </th>
+                            <th colspan="7" style="text-align: left;padding: 5px;">{{ number_format($saldo,2,',','.') }} </th>
+                        </tr>
+                    @endif
                 @endforeach
             @endif
             </tbody>
@@ -90,8 +103,8 @@
                 <td colspan="2" style="text-align: right;font-weight: bold; height: 80px">{{ $instansi->BelongsToKabupatenKot->nama }}, {{ $tgl_cetak }}</td>
             </tr>
             <tr style="text-align: center;font-weight: bold;">
-                <td>{{ $jabatan_1 }}</td>
-                <td>{{ $jabatan_2 }}</td>
+                <td>{{ $jabatan_1 }}<br><br><br></td>
+                <td>{{ $jabatan_2 }}<br><br><br></td>
             </tr>
             <tr style="text-align: center; font-weight: bold;">
                 <td style="height: 100px"><label style="text-decoration: underline">{{ $berwenang_1->nama }}</label> <br> {{ $berwenang_1->nip }}</td>

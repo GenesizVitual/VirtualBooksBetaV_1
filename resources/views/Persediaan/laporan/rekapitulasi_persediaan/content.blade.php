@@ -11,16 +11,16 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Daftar Nota</h1>
+                    <h1 class="m-0 text-dark">Rekapitulasi Persediaan</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Daftar Nota</li>
+                        <li class="breadcrumb-item active">Rekapitulasi Persediaan</li>
                     </ol>
                 </div><!-- /.col -->
                 <div class="col-sm-12">
-                    <p style="color: darkgray">Halaman daftar nota akan menampilkan semua nota pembelian pertahun.</p>
+                    <p style="color: darkgray">Halaman rekapitulasi persediaan akan menampilkan semua nota pembelian pertahun dikelompokkan ke jenis tanda bukti kas.</p>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -33,15 +33,15 @@
                 <div class="col-sm-12">
                     <div class="card card-success">
                         <div class="card-header">
-                            <h3 class="card-title">Panel Daftar Nota</h3>
+                            <h3 class="card-title">Panel Rekapitulasi Persediaan</h3>
                             <div class="card-tools">
                                 {{--<a href="{{ url('gudang/create') }}" class="btn btn-tool" ><i class="fas fa-plus"></i></a>--}}
                             </div>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body ">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <form action="{{ url('cetak-data-nota') }}" method="post">
+                                    <form action="{{ url('cetak-rekapitulasi-persediaan') }}" method="post">
                                         {{ csrf_field() }}
                                         <div class="row">
                                             <div class="col-md-4">
@@ -136,7 +136,8 @@
                                     </form>
                                 </div>
                                 <p style="height: 2px; background-color: grey; width: 100%; margin-top:10px"></p>
-                                <div class="col-md-12">
+                                <div class="col-md-12 table-responsive p-0">
+
                                     <table id="table-data-nota" class="table table-bordered table-striped" style="width: 100%" role="grid">
                                         <thead>
                                         <tr>
@@ -152,17 +153,30 @@
                                         </thead>
                                         <tbody>
                                         @if(!empty($data))
-                                            @foreach($data as $data_nota)
-                                                <tr>
-                                                    <td>{{ $data_nota[0] }}</td>
-                                                    <td>{{ $data_nota[1] }}</td>
-                                                    <td>{!! $data_nota[2] !!}</td>
-                                                    <td>{{ $data_nota[3] }}</td>
-                                                    <td>{{ $data_nota[4] }}</td>
-                                                    <td>{{ $data_nota[5] }}</td>
-                                                    <td>{{ $data_nota[6] }}</td>
-                                                    <td>{{ $data_nota[7] }}</td>
-                                                </tr>
+                                            @foreach($data as $key=>$data_jenis_tbk)
+                                                @if(!empty($data_jenis_tbk))
+                                                    @php($saldo=0)
+                                                    <tr>
+                                                        <th colspan="8">{{ $jenis_tbk->where('id',$key)->first()->kode }} - {{ $jenis_tbk->where('id',$key)->first()->jenis_tbk }}</th>
+                                                    </tr>
+                                                    @foreach($data_jenis_tbk as $data_nota)
+                                                        <tr>
+                                                            <td>{{ $data_nota[0] }}</td>
+                                                            <td>{{ $data_nota[1] }}</td>
+                                                            <td>{!! $data_nota[2] !!}</td>
+                                                            <td>{{ $data_nota[3] }}</td>
+                                                            <td>{{ $data_nota[4] }}</td>
+                                                            <td>{{ $data_nota[5] }}</td>
+                                                            <td>{{ $data_nota[6] }}</td>
+                                                            <td>{{ $data_nota[7] }}</td>
+                                                        </tr>
+                                                        @php($saldo+=$data_nota[10])
+                                                    @endforeach
+                                                    <tr>
+                                                        <th colspan="7">Total </th>
+                                                        <th colspan="7">{{ number_format($saldo,2,',','.') }} </th>
+                                                    </tr>
+                                                @endif
                                             @endforeach
                                         @endif
                                         </tbody>
@@ -194,15 +208,15 @@
 
             $('.select2').select2();
 
-            $('#table-data-nota').DataTable({
-                "paging": true,
-                "lengthChange": false,
-                "searching": true,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false,
-                "responsive": true,
-            });
+//            $('#table-data-nota').DataTable({
+//                "paging": true,
+//                "lengthChange": false,
+//                "searching": true,
+//                "ordering": true,
+//                "info": true,
+//                "autoWidth": false,
+//                "responsive": true,
+//            });
 
             //Datemask dd/mm/yyyy
             $('[name="tgl_awal"]').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' });

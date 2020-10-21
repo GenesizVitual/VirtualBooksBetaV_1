@@ -19,7 +19,7 @@ class SettingReport
         ],
         [
             'title'=> 'Rekapitulasi Persediaan',
-            'url' => 'rekapitulasi-persediaa',
+            'url' => 'rekapitulasi-persediaan',
             'icon'=>''
         ],
         [
@@ -67,10 +67,6 @@ class SettingReport
             'url' => 'stok-opname',
             'icon'=> ''
         ],
-        [
-            'title'=> 'Stok Opname',
-            'url' => 'stok-opname',
-            'icon'=> ''
-        ],
+
     ];
 }
