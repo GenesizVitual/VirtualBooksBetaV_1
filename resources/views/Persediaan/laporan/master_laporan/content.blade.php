@@ -28,7 +28,7 @@
             <div class="col-sm-2 col-md-4">
                 <div class="card card-success">
                     <div class="card-body">
-                        <a href="#">
+                        <a href="{{ url($menu_laporan['url']) }}">
                             <p  style="font-size: 50px; text-align: center"><i class="fas fa-book-open fa-md"></i></p>
                             <p style="text-align: center">{{ $menu_laporan['title'] }}</p>
                         </a>

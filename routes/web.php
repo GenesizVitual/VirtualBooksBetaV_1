@@ -76,7 +76,9 @@ Route::resource('tbk-nota','Persediaan\TBK_NOTA');
 #laporan
 Route::get('laporan','Persediaan\MasterLaporan@index');
 
+Route::get('daftar-nota','Persediaan\MasterLaporan@preview_data_daftar_nota');
 
+Route::post('cetak-data-nota','Persediaan\MasterLaporan@print_data_daftar_nota');
 
 //#admin
 

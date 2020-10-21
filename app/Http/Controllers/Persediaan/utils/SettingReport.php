@@ -13,7 +13,7 @@ class SettingReport
 {
     public static $report = [
         [
-            'title'=> 'Nota',
+            'title'=> 'Daftar Nota',
             'url' => 'daftar-nota',
             'icon'=>''
         ],

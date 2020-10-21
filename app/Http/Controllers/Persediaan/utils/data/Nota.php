@@ -16,6 +16,9 @@ class Nota
     public static $id_nota;
     public static $status;
 
+    public static $tgl_awal;
+    public static $tgl_akhir;
+
     public static function data_nota($array)
     {
 
@@ -25,8 +28,16 @@ class Nota
 
         $ndata = TahunAggaranCheck::$id_thn_anggaran;
 
-        $model_nota = notas::all()->where('id_instansi',$ndata->id_instansi)
-            ->where('id_thn_anggaran', $ndata->id)->sortBy('tgl_beli');
+
+        if(!empty(self::$tgl_awal) && !empty(self::$tgl_akhir)){
+
+            $model_nota = notas::whereBetween('tgl_beli',[self::$tgl_awal, self::$tgl_akhir])->where('id_instansi',$ndata->id_instansi)
+                ->where('id_thn_anggaran', $ndata->id)->orderBy('tgl_beli','asc')->get();
+
+        }else{
+            $model_nota = notas::all()->where('id_instansi',$ndata->id_instansi)
+                ->where('id_thn_anggaran', $ndata->id)->sortBy('tgl_beli');
+        }
 
         $row = array();
         $no = 1;
