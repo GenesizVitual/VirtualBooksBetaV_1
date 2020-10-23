@@ -3,13 +3,15 @@
 namespace App\Http\Controllers\Persediaan;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Http\Controllers\Persediaan\utils\SettingReport;
-use App\Http\Controllers\Persediaan\utils\data\Nota;
-use App\Model\Persediaan\Instansi;
 use App\Model\Persediaan\Berwenang;
-use App\Http\Controllers\Persediaan\utils\data\RekapitulasiPersediaan;
+use App\Model\Persediaan\Instansi;
 use App\Model\Persediaan\JenisTbk;
+use App\Http\Controllers\Persediaan\utils\data\Nota;
+use App\Http\Controllers\Persediaan\utils\data\PersediaanBarang;
+use App\Http\Controllers\Persediaan\utils\data\RekapitulasiPersediaan;
+use App\Http\Controllers\Persediaan\utils\SettingReport;
+use Illuminate\Http\Request;
+
 use Session;
 
 class MasterLaporan extends Controller
@@ -189,6 +191,65 @@ class MasterLaporan extends Controller
             return false;
         }
     }
+
+    # Preview Data Persediaan Barang
+    public function preview_data_persediaan_barang(){
+        try{
+            $data_persediaan = PersediaanBarang::PersediaanBarang(null);
+            $data = [
+                'berwenang'=>$this->berwenang(null),
+                'data'=>$data_persediaan
+            ];
+            return view('Persediaan.laporan.persediaan_barang.content', $data);
+        }catch (Throwable $e){
+            return false;
+        }
+    }
+
+    # Cetak Data Persediaan Barang
+    public function print_data_persediaan_barang(Request $req){
+
+        try{
+            $this->validate($req,[
+                'tgl_awal'=> 'required',
+                'tgl_akhir'=> 'required',
+                'tgl_cetak'=> 'required',
+                'berwenang_1'=> 'required',
+                'berwenang_2'=> 'required',
+                'jabatan1'=> 'required',
+                'jabatan2'=> 'required',
+            ]);
+
+
+            # Kondisi tanggal awal tidak boleh melebihi tanggal akhir
+            if (date('d-m-Y', strtotime($req->tgl_awal)) >= date('d-m-Y', strtotime($req->tgl_akhir))){
+                return redirect()->back()->with('message_info','Tanggal akhir tidak boleh lebih kecil dari tanggal awal');
+            }
+
+            # Inisialisasi Variable di clas Rekapitulasi Persediaan
+            PersediaanBarang::$tgl_awal = date('Y-m-d', strtotime($req->tgl_awal));
+            PersediaanBarang::$tgl_akhir = date('Y-m-d', strtotime($req->tgl_akhir));
+
+            # Data Instansi
+            $data_instansi = Instansi::findOrFail(Session::get('id_instansi'));
+
+            # Passing Data
+            $data = [
+                'data'=>PersediaanBarang::PersediaanBarang(null),
+                'instansi' => $data_instansi,
+                'tgl_cetak' => $this->konversi_bulan($req->tgl_cetak),
+                'berwenang_1' => $this->berwenang($req->berwenang_1),
+                'berwenang_2' => $this->berwenang($req->berwenang_2),
+                'jabatan_1'=> $req->jabatan1,
+                'jabatan_2'=> $req->jabatan2,
+            ];
+            return view('Persediaan.laporan.persediaan_barang.print', $data);
+        }catch (Throwable $e){
+            return false;
+        }
+    }
+
+
 
 
     # list data berwenang

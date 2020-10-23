@@ -87,6 +87,10 @@ Route::post('cetak-rekapitulasi-persediaan','Persediaan\MasterLaporan@print_data
 Route::get('rekapitulasi-persediaan-perjenis-tbk','Persediaan\MasterLaporan@preview_data_rekapitulasi_persediaan_perjenis_tbk');
 # Cetak Data rekapitulasi persediaan Per Jenis TBK
 Route::post('cetak-rekapitulasi-persediaan-perjenis-tbk','Persediaan\MasterLaporan@print_data_rekapitulasi_persediaan_per_jenis_tbk');
+# Previe Persediaan Barang
+Route::get('persediaan-barang','Persediaan\MasterLaporan@preview_data_persediaan_barang');
+# Cetak Data rekapitulasi persediaan Per Jenis TBK
+Route::post('cetak-persediaan-barang','Persediaan\MasterLaporan@print_data_persediaan_barang');
 
 # setting laporan berwenang
 

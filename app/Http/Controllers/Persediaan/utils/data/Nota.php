@@ -20,6 +20,7 @@ class Nota
     public static $tgl_awal;
     public static $tgl_akhir;
 
+    # Semua Data Nota
     public static function data_nota($array)
     {
 
@@ -84,6 +85,7 @@ class Nota
         return $row;
     }
 
+    # Data Nota Berdasarkan id Nota
     public static function data_pembelian_barang_per_nota()
     {
 

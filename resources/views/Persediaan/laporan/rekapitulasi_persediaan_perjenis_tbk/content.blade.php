@@ -41,100 +41,116 @@
                         <div class="card-body ">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <form action="{{ url('cetak-rekapitulasi-persediaan-perjenis-tbk') }}" method="post">
-                                        {{ csrf_field() }}
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label>Tanggal Awal:</label>
+                                    <div class="card card-primary collapsed-card">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Pengaturan Cetak</h3>
 
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
-                                                        </div>
-                                                        <input type="date" name="tgl_awal" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask="" im-insert="false">
-                                                    </div>
-                                                    <!-- /.input group -->
-                                                </div>
+                                            <div class="card-tools">
+                                                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-print"></i>
+                                                </button>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label>Tanggal Akhir:</label>
-
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
-                                                        </div>
-                                                        <input type="date" name="tgl_akhir" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask="" im-insert="false">
-                                                    </div>
-                                                    <!-- /.input group -->
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label>Tanggal Cetak:</label>
-
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
-                                                        </div>
-                                                        <input type="date" name="tgl_cetak" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask="" im-insert="false">
-                                                    </div>
-                                                    <!-- /.input group -->
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label>Berwenang 1:</label>
-                                                    <div class="input-group">
-                                                        <select class="form-control select2" style="width: 100%;" name="berwenang_1" required>
-                                                            <option selected="selected">Nik - Nama Berwenang - Jabatan</option>
-                                                            @foreach($berwenang as $berwenang1)
-                                                                <option value="{{ $berwenang1->id }}">{{ $berwenang1->nip }} - {{ $berwenang1->nama }} - {{ $berwenang1->jabatan }}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-                                                    <!-- /.input group -->
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label>Berwenang 2:</label>
-                                                    <div class="input-group">
-                                                        <select class="form-control select2" style="width: 100%;" name="berwenang_2" required>
-                                                            <option selected="selected">Nik - Nama Berwenang -  Jabatan</option>
-                                                            @foreach($berwenang as $data2)
-                                                                <option value="{{ $data2->id }}">{{ $data2->nip }} - {{ $data2->nama }} - {{ $data2->jabatan }}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-                                                    <!-- /.input group -->
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label>Jabatan 1:</label>
-                                                    <div class="input-group">
-                                                        <input type="text" name="jabatan1" class="form-control" required>
-                                                    </div>
-                                                    <!-- /.input group -->
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label>Jabatan 2:</label>
-                                                    <div class="input-group">
-                                                        <input type="text" name="jabatan2" class="form-control" required>
-                                                    </div>
-                                                    <!-- /.input group -->
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <button class="btn btn-primary">Cetak</button>
-                                            </div>
+                                            <!-- /.card-tools -->
                                         </div>
-                                    </form>
+                                        <!-- /.card-header -->
+                                        <div class="card-body" style="display: none;">
+                                            <form action="{{ url('cetak-rekapitulasi-persediaan-perjenis-tbk') }}" method="post">
+                                                {{ csrf_field() }}
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label>Tanggal Awal:</label>
+
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                                                </div>
+                                                                <input type="date" name="tgl_awal" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask="" im-insert="false">
+                                                            </div>
+                                                            <!-- /.input group -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label>Tanggal Akhir:</label>
+
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                                                </div>
+                                                                <input type="date" name="tgl_akhir" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask="" im-insert="false">
+                                                            </div>
+                                                            <!-- /.input group -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label>Tanggal Cetak:</label>
+
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                                                </div>
+                                                                <input type="date" name="tgl_cetak" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask="" im-insert="false">
+                                                            </div>
+                                                            <!-- /.input group -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Berwenang 1:</label>
+                                                            <div class="input-group">
+                                                                <select class="form-control select2" style="width: 100%;" name="berwenang_1" required>
+                                                                    <option selected="selected">Nik - Nama Berwenang - Jabatan</option>
+                                                                    @foreach($berwenang as $berwenang1)
+                                                                        <option value="{{ $berwenang1->id }}">{{ $berwenang1->nip }} - {{ $berwenang1->nama }} - {{ $berwenang1->jabatan }}</option>
+                                                                    @endforeach
+                                                                </select>
+                                                            </div>
+                                                            <!-- /.input group -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Berwenang 2:</label>
+                                                            <div class="input-group">
+                                                                <select class="form-control select2" style="width: 100%;" name="berwenang_2" required>
+                                                                    <option selected="selected">Nik - Nama Berwenang -  Jabatan</option>
+                                                                    @foreach($berwenang as $data2)
+                                                                        <option value="{{ $data2->id }}">{{ $data2->nip }} - {{ $data2->nama }} - {{ $data2->jabatan }}</option>
+                                                                    @endforeach
+                                                                </select>
+                                                            </div>
+                                                            <!-- /.input group -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Jabatan 1:</label>
+                                                            <div class="input-group">
+                                                                <input type="text" name="jabatan1" class="form-control" required>
+                                                            </div>
+                                                            <!-- /.input group -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Jabatan 2:</label>
+                                                            <div class="input-group">
+                                                                <input type="text" name="jabatan2" class="form-control" required>
+                                                            </div>
+                                                            <!-- /.input group -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <button class="btn btn-primary">Cetak</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- /.card-body -->
+                                    </div>
                                 </div>
+
                                 <p style="height: 2px; background-color: grey; width: 100%; margin-top:10px"></p>
                                 <div class="col-md-12 table-responsive p-0">
 

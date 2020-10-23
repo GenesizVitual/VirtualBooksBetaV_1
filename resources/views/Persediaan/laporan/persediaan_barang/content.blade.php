@@ -11,16 +11,16 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Rekapitulasi Persediaan</h1>
+                    <h1 class="m-0 text-dark">Daftar Persediaan</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Rekapitulasi Persediaan</li>
+                        <li class="breadcrumb-item active">Daftar Persediaan</li>
                     </ol>
                 </div><!-- /.col -->
                 <div class="col-sm-12">
-                    <p style="color: darkgray">Halaman rekapitulasi persediaan akan menampilkan semua nota pembelian pertahun dikelompokkan ke jenis tanda bukti kas.</p>
+                    <p style="color: darkgray">Halaman daftar persediaan akan menampilkan semua data pembelian selama satu tahun.</p>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -33,12 +33,12 @@
                 <div class="col-sm-12">
                     <div class="card card-success">
                         <div class="card-header">
-                            <h3 class="card-title">Panel Rekapitulasi Persediaan</h3>
+                            <h3 class="card-title">Panel Daftar Persediaan</h3>
                             <div class="card-tools">
                                 {{--<a href="{{ url('gudang/create') }}" class="btn btn-tool" ><i class="fas fa-plus"></i></a>--}}
                             </div>
                         </div>
-                        <div class="card-body ">
+                        <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="card card-primary collapsed-card">
@@ -53,7 +53,7 @@
                                         </div>
                                         <!-- /.card-header -->
                                         <div class="card-body" style="display: none;">
-                                            <form action="{{ url('cetak-rekapitulasi-persediaan') }}" method="post">
+                                            <form action="{{ url('cetak-persediaan-barang') }}" method="post">
                                                 {{ csrf_field() }}
                                                 <div class="row">
                                                     <div class="col-md-4">
@@ -153,46 +153,58 @@
 
                                 <p style="height: 2px; background-color: grey; width: 100%; margin-top:10px"></p>
                                 <div class="col-md-12 table-responsive p-0">
-
                                     <table id="table-data-nota" class="table table-bordered table-striped" style="width: 100%" role="grid">
                                         <thead>
                                         <tr>
-                                            <th>#</th>
+                                            <th rowspan="2">#</th>
+                                            <th rowspan="2">Tanggal</th>
+                                            <th rowspan="2">Dari</th>
+                                            <th colspan="2">Dokumen Faktur</th>
+                                            <th rowspan="2">Nama Barang</th>
+                                            <th rowspan="2">Kwantitas</th>
+                                            <th rowspan="2">Harga Satuan</th>
+                                            <th rowspan="2">Jumlah Harga</th>
+                                            <th colspan="2">Bukti Penerimaan <br> BA. Penerimaan</th>
+                                            <th rowspan="2"> Keterangan</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Nomor</th>
                                             <th>Tanggal</th>
-                                            <th>Kode Nota</th>
-                                            <th>Penyedia</th>
-                                            <th>PPN 10%</th>
-                                            <th>PPH 1.5%</th>
-                                            <th>Total Sebelum Pajak</th>
-                                            <th>Total Sesudah Pajak</th>
+                                            <th>Nomor</th>
+                                            <th>Tanggal</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         @if(!empty($data))
-                                            @foreach($data as $key=>$data_jenis_tbk)
-                                                @if(!empty($data_jenis_tbk))
-                                                    @php($saldo=0)
-                                                    <tr>
-                                                        <th colspan="8">{{ $jenis_tbk->where('id',$key)->first()->kode }} - {{ $jenis_tbk->where('id',$key)->first()->jenis_tbk }}</th>
-                                                    </tr>
-                                                    @foreach($data_jenis_tbk as $data_nota)
-                                                        <tr>
-                                                            <td>{{ $data_nota[0] }}</td>
-                                                            <td>{{ $data_nota[1] }}</td>
-                                                            <td>{!! $data_nota[2] !!}</td>
-                                                            <td>{{ $data_nota[3] }}</td>
-                                                            <td>{{ $data_nota[4] }}</td>
-                                                            <td>{{ $data_nota[5] }}</td>
-                                                            <td>{{ $data_nota[6] }}</td>
-                                                            <td>{{ $data_nota[7] }}</td>
-                                                        </tr>
-                                                        @php($saldo+=$data_nota[10])
-                                                    @endforeach
-                                                    <tr>
-                                                        <th colspan="7">Total </th>
-                                                        <th colspan="7">{{ number_format($saldo,2,',','.') }} </th>
-                                                    </tr>
-                                                @endif
+                                            @foreach($data as $data_persediaan)
+                                                <tr>
+                                                    <td>{{ $data_persediaan['no'] }}</td>
+                                                    <td>{{ $data_persediaan['tanggal_pembelian'] }}</td>
+                                                    <td>{{ $data_persediaan['penyedia'] }}</td>
+                                                    <td>{{ $data_persediaan['nomor_faktur'] }}</td>
+                                                    <td>{{ $data_persediaan['tgl_faktur'] }}</td>
+                                                    <td>{{ $data_persediaan['nama_barang'] }}</td>
+                                                    <td>{{ $data_persediaan['banyak_barang'] }}</td>
+                                                    <td>{{ $data_persediaan['harga_barang'] }}</td>
+                                                    <td>{{ $data_persediaan['jumlah_harga'] }}</td>
+                                                    <td>{{ $data_persediaan['BA_nomor'] }}</td>
+                                                    <td>{{ $data_persediaan['BA_tanggal'] }}</td>
+                                                    <td>{{ $data_persediaan['keterangan'] }}</td>
+                                                </tr>
                                             @endforeach
                                         @endif
                                         </tbody>

@@ -28,8 +28,8 @@ class SettingReport
             'icon'=>''
         ],
         [
-            'title'=> 'Penerimaan Barang',
-            'url' => 'penerimaan-barang',
+            'title'=> 'Persediaan Barang',
+            'url' => 'persediaan-barang',
             'icon'=>''
         ],
         [
