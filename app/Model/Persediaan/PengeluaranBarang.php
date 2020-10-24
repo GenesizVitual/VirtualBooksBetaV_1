@@ -6,5 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class PengeluaranBarang extends Model
 {
-    //
+    // Ngga Dipakei
+
 }

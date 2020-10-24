@@ -41,4 +41,9 @@ class Nota extends Model
         return $this->hasOne('App\Model\Persediaan\SuratPesanan','id_nota','id');
     }
 
+    # Hubungkan nota Dengan Pengeluaran Barang
+    public function linkToPengeluaranBarang(){
+        return $this->hasMany('App\Model\Persediaan\Distribusi','id_nota','id');
+    }
+
 }

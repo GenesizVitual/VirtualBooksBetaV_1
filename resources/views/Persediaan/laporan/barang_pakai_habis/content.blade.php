@@ -11,16 +11,16 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Daftar Persediaan</h1>
+                    <h1 class="m-0 text-dark">Daftar Barang Pakai Habus</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Daftar Persediaan</li>
+                        <li class="breadcrumb-item active">Daftar  Barang Pakai Habus</li>
                     </ol>
                 </div><!-- /.col -->
                 <div class="col-sm-12">
-                    <p style="color: darkgray">Halaman daftar persediaan akan menampilkan semua data pembelian selama satu tahun.</p>
+                    <p style="color: darkgray">Halaman daftar daftar barang pakai habus akan menampilkan semua data penerimaan yang telah dikeluarkan selama satu tahun.</p>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -33,7 +33,7 @@
                 <div class="col-sm-12">
                     <div class="card card-success">
                         <div class="card-header">
-                            <h3 class="card-title">Panel Daftar Persediaan</h3>
+                            <h3 class="card-title">Panel Barang Pakai Habis</h3>
                             <div class="card-tools">
                                 {{--<a href="{{ url('gudang/create') }}" class="btn btn-tool" ><i class="fas fa-plus"></i></a>--}}
                             </div>
@@ -53,7 +53,7 @@
                                         </div>
                                         <!-- /.card-header -->
                                         <div class="card-body" style="display: none;">
-                                            <form action="{{ url('cetak-persediaan-barang') }}" method="post">
+                                            <form action="{{ url('cetak-barang-pakai-habis') }}" method="post">
                                                 {{ csrf_field() }}
                                                 <div class="row">
                                                     <div class="col-md-4">
@@ -169,58 +169,63 @@
                                 <div class="col-md-12 table-responsive p-0">
                                     <table id="table-data-nota" class="table table-bordered table-striped" style="width: 100%" role="grid">
                                         <thead>
-                                        <tr>
-                                            <th rowspan="2">#</th>
-                                            <th rowspan="2">Tanggal</th>
-                                            <th rowspan="2">Dari</th>
-                                            <th colspan="2">Dokumen Faktur</th>
-                                            <th rowspan="2">Nama Barang</th>
-                                            <th rowspan="2">Kwantitas</th>
-                                            <th rowspan="2">Harga Satuan</th>
-                                            <th rowspan="2">Jumlah Harga</th>
-                                            <th colspan="2">Bukti Penerimaan <br> BA. Penerimaan</th>
-                                            <th rowspan="2"> Keterangan</th>
-                                        </tr>
-                                        <tr>
-                                            <th>Nomor</th>
-                                            <th>Tanggal</th>
-                                            <th>Nomor</th>
-                                            <th>Tanggal</th>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>4</td>
-                                            <td>5</td>
-                                            <td>6</td>
-                                            <td>7</td>
-                                            <td>8</td>
-                                            <td>9</td>
-                                            <td>10</td>
-                                            <td>11</td>
-                                            <td>12</td>
-                                        </tr>
+                                            <tr>
+                                                <th rowspan="2">No</th>
+                                                <th rowspan="2">Tanggal Terima</th>
+                                                <th rowspan="2">Nama Barang</th>
+                                                <th rowspan="2">Satuan</th>
+                                                <th rowspan="2">Jumlah Satuan</th>
+                                                <th rowspan="2">SP/SPK</th>
+                                                <th colspan="2">Berita Acara</th>
+                                                <th rowspan="2">Tanggal Keluar</th>
+                                                <th rowspan="2">Diserahkan Kepada</th>
+                                                <th rowspan="2">Jumlah Satuan</th>
+                                                <th rowspan="2">Tanggal Penyerahan</th>
+                                                <th rowspan="2"> Keterangan</th>
+                                            </tr>
+                                            <tr>
+                                                <th>Tanggal</th>
+                                                <th>Nomor</th>
+                                            </tr>
+                                            <tr>
+                                                <th >1</th>
+                                                <th >2</th>
+                                                <th >3</th>
+                                                <th >4</th>
+                                                <th >5</th>
+                                                <th >6</th>
+                                                <th >7</th>
+                                                <th >8</th>
+                                                <th >9</th>
+                                                <th >10</th>
+                                                <th >11</th>
+                                                <th >12</th>
+                                                <th >13</th>
+                                            </tr>
                                         </thead>
                                         <tbody>
-                                        @if(!empty($data))
-                                            @foreach($data as $data_persediaan)
-                                                <tr>
-                                                    <td>{{ $data_persediaan['no'] }}</td>
-                                                    <td>{{ $data_persediaan['tanggal_pembelian'] }}</td>
-                                                    <td>{{ $data_persediaan['penyedia'] }}</td>
-                                                    <td>{{ $data_persediaan['nomor_faktur'] }}</td>
-                                                    <td>{{ $data_persediaan['tgl_faktur'] }}</td>
-                                                    <td>{{ $data_persediaan['nama_barang'] }}</td>
-                                                    <td>{{ $data_persediaan['banyak_barang'] }}</td>
-                                                    <td>{{ $data_persediaan['harga_barang'] }}</td>
-                                                    <td>{{ $data_persediaan['jumlah_harga'] }}</td>
-                                                    <td>{{ $data_persediaan['BA_nomor'] }}</td>
-                                                    <td>{{ $data_persediaan['BA_tanggal'] }}</td>
-                                                    <td>{{ $data_persediaan['keterangan'] }}</td>
-                                                </tr>
-                                            @endforeach
-                                        @endif
+                                            @if(!empty($data))
+                                                @php($no=1)
+                                                @php($no2=1)
+                                                @foreach($data as $data_pengeluaran)
+                                                    <tr>
+                                                        <td >{{ $no++ }}</td>
+                                                        <td >{{ date('d-m-Y', strtotime($data_pengeluaran['tanggal_terima'])) }}</td>
+                                                        <td >{{ $data_pengeluaran['nama_barang'] }}</td>
+                                                        <td >{{ $data_pengeluaran['satuan'] }}</td>
+                                                        <td >{{ $data_pengeluaran['banyak_barang'] }}</td>
+                                                        <td >{{ $data_pengeluaran['sp'] }}</td>
+                                                        <td >{{ $data_pengeluaran['tgl_BA'] }}</td>
+                                                        <td >{{ $data_pengeluaran['nomor_BA'] }}</td>
+
+                                                        <td >{{ date('d-m-Y', strtotime($data_pengeluaran['tanggal_keluar'])) }}</td>
+                                                        <td >{{ $data_pengeluaran['bidang'] }}</td>
+                                                        <td >{{ $data_pengeluaran['banyak_barang'] }}</td>
+                                                        <td >{{ date('d-m-Y', strtotime($data_pengeluaran['tanggal_penyerahan'])) }}</td>
+                                                        <td >{{ $data_pengeluaran['keterangan'] }}</td>
+                                                    </tr>
+                                                @endforeach
+                                            @endif
                                         </tbody>
                                     </table>
                                 </div>
@@ -250,15 +255,15 @@
 
             $('.select2').select2();
 
-//            $('#table-data-nota').DataTable({
-//                "paging": true,
-//                "lengthChange": false,
-//                "searching": true,
-//                "ordering": true,
-//                "info": true,
-//                "autoWidth": false,
-//                "responsive": true,
-//            });
+            $('#table-data-nota').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
 
             //Datemask dd/mm/yyyy
             $('[name="tgl_awal"]').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' });
