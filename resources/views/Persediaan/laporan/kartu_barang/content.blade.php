@@ -11,16 +11,16 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Daftar Barang Pakai Habis</h1>
+                    <h1 class="m-0 text-dark">Daftar Kartu Barang</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Daftar  Barang Pakai Habis</li>
+                        <li class="breadcrumb-item active">Daftar Kartu Barang</li>
                     </ol>
                 </div><!-- /.col -->
                 <div class="col-sm-12">
-                    <p style="color: darkgray">Halaman daftar daftar barang pakai habis akan menampilkan semua data penerimaan yang telah dikeluarkan selama satu tahun.</p>
+                    <p style="color: darkgray">Halaman Kartu barang akan menampilkan semua data penerimaan barang yang telah dikeluarkan.</p>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -33,7 +33,7 @@
                 <div class="col-sm-12">
                     <div class="card card-success">
                         <div class="card-header">
-                            <h3 class="card-title">Panel Barang Pakai Habis</h3>
+                            <h3 class="card-title">Panel Kartu Barang</h3>
                             <div class="card-tools">
                                 {{--<a href="{{ url('gudang/create') }}" class="btn btn-tool" ><i class="fas fa-plus"></i></a>--}}
                             </div>
@@ -53,7 +53,7 @@
                                         </div>
                                         <!-- /.card-header -->
                                         <div class="card-body" style="display: none;">
-                                            <form action="{{ url('cetak-barang-pakai-habis') }}" method="post">
+                                            <form action="{{ url('cetak-semester') }}" method="post">
                                                 {{ csrf_field() }}
                                                 <div class="row">
                                                     <div class="col-md-4">
@@ -156,6 +156,19 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Semester</label>
+                                                            <div class="input-group">
+                                                                <select class="form-control select2" style="width: 100%;" name="semester" required>
+                                                                   <option value="I">I</option>
+                                                                   <option value="II">II</option>
+                                                                   <option value="III">IIP</option>
+                                                                </select>
+                                                            </div>
+                                                            <!-- /.input group -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
                                                         <button class="btn btn-primary">Cetak</button>
                                                     </div>
                                                 </div>
@@ -166,68 +179,45 @@
                                 </div>
 
                                 <p style="height: 2px; background-color: grey; width: 100%; margin-top:10px"></p>
-                                <div class="col-md-12 table-responsive p-0">
-                                    <table id="table-data-nota" class="table table-bordered table-striped" style="width: 100%" role="grid">
-                                        <thead>
-                                            <tr>
-                                                <th rowspan="2">No</th>
-                                                <th rowspan="2">Tanggal Terima</th>
-                                                <th rowspan="2">Nama Barang</th>
-                                                <th rowspan="2">Satuan</th>
-                                                <th rowspan="2">Jumlah Satuan</th>
-                                                <th rowspan="2">SP/SPK</th>
-                                                <th colspan="2">Berita Acara</th>
-                                                <th rowspan="2">Tanggal Keluar</th>
-                                                <th rowspan="2">Diserahkan Kepada</th>
-                                                <th rowspan="2">Jumlah Satuan</th>
-                                                <th rowspan="2">Tanggal Penyerahan</th>
-                                                <th rowspan="2"> Keterangan</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Tanggal</th>
-                                                <th>Nomor</th>
-                                            </tr>
-                                            <tr>
-                                                <th >1</th>
-                                                <th >2</th>
-                                                <th >3</th>
-                                                <th >4</th>
-                                                <th >5</th>
-                                                <th >6</th>
-                                                <th >7</th>
-                                                <th >8</th>
-                                                <th >9</th>
-                                                <th >10</th>
-                                                <th >11</th>
-                                                <th >12</th>
-                                                <th >13</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @if(!empty($data))
-                                                @php($no=1)
-                                                @php($no2=1)
-                                                @foreach($data as $data_pengeluaran)
-                                                    <tr>
-                                                        <td >{{ $no++ }}</td>
-                                                        <td >{{ date('d-m-Y', strtotime($data_pengeluaran['tanggal_terima'])) }}</td>
-                                                        <td >{{ $data_pengeluaran['nama_barang'] }}</td>
-                                                        <td >{{ $data_pengeluaran['satuan'] }}</td>
-                                                        <td >{{ $data_pengeluaran['banyak_barang'] }}</td>
-                                                        <td >{{ $data_pengeluaran['sp'] }}</td>
-                                                        <td >{{ $data_pengeluaran['tgl_BA'] }}</td>
-                                                        <td >{{ $data_pengeluaran['nomor_BA'] }}</td>
+                                <div class="col-md-12 table-responsive p-0" >
+                                    <div style="overflow-x: scroll; width: 100%">
+                                        <table id="table-data-nota" class="table table-bordered table-striped" style="width: 100%;" role="grid">
+                                            <thead>
+                                                <tr>
+                                                    <th >No</th>
+                                                    <th >Tanggal</th>
+                                                    <th >Nama Barang</th>
+                                                    <th >Barang Masuk</th>
+                                                    <th >Barang Keluar</th>
+                                                    <th >Sisa Barang</th>
+                                                </tr>
+                                                <tr>
+                                                    <th >1</th>
+                                                    <th >2</th>
+                                                    <th >3</th>
+                                                    <th >4</th>
+                                                    <th >5</th>
+                                                    <th >6</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @if(!empty($data))
+                                                    @php($no=1)
 
-                                                        <td >{{ date('d-m-Y', strtotime($data_pengeluaran['tanggal_keluar'])) }}</td>
-                                                        <td >{{ $data_pengeluaran['bidang'] }}</td>
-                                                        <td >{{ $data_pengeluaran['banyak_barang'] }}</td>
-                                                        <td >{{ date('d-m-Y', strtotime($data_pengeluaran['tanggal_penyerahan'])) }}</td>
-                                                        <td >{{ $data_pengeluaran['keterangan'] }}</td>
-                                                    </tr>
-                                                @endforeach
-                                            @endif
-                                        </tbody>
-                                    </table>
+                                                    @foreach($data as $data_mutasi)
+                                                        <tr>
+                                                            <td >{{ $no++ }}</td>
+                                                            <td >{{ date('d-m-Y', strtotime($data_mutasi['tgl'])) }}</td>
+                                                            <td >{{ $data_mutasi['nm_barang'] }}</td>
+                                                            <td >{{ $data_mutasi['masuk'] }}</td>
+                                                            <td >{{ $data_mutasi['keluar'] }}</td>
+                                                            <td >{{ $data_mutasi['sisa'] }}</td>
+                                                        </tr>
+                                                    @endforeach
+                                                @endif
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -262,7 +252,7 @@
                 "ordering": true,
                 "info": true,
                 "autoWidth": false,
-                "responsive": true,
+                "responsive": false,
             });
 
             //Datemask dd/mm/yyyy

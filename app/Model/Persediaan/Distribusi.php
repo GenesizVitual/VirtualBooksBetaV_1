@@ -19,6 +19,10 @@ class Distribusi extends Model
         return $this->belongsTo('App\Model\Persediaan\Bidang','id_bidang');
     }
 
+    public function linkToSupplier(){
+        return $this->belongsTo('App\Model\Persediaan\Penyedia','id_penyedia');
+    }
+
     public function linkToPembelian(){
         return $this->belongsTo('App\Model\Persediaan\PembelianBarang','id_pembelian');
     }

@@ -16,6 +16,7 @@ class PengeluaranBarang
     public static $tgl_awal;
     public static $tgl_akhir;
     public static $status_penerimaan=99;
+    public static $tahun;
 
     private static $row = array();
     private static $id;
@@ -35,7 +36,7 @@ class PengeluaranBarang
             ]);
             # Inisialisasi ID tahun Anggaran
             $ndata = TahunAggaranCheck::$id_thn_anggaran;
-
+            self::$tahun = $ndata->thn_anggaran;
             # Data nota pembelian berdasarkan tahun anggaran
             $nota = Nota::all()->where('id_thn_anggaran', $ndata->id)
                 ->where('id_instansi', Session::get('id_instansi'))->sortBy('tgl_beli');
@@ -70,12 +71,21 @@ class PengeluaranBarang
             $column = array();
             # Data Penerimaan
             $column['tanggal_terima'] =$data->linkToPembelian->linkToNota->tgl_beli;
+            $column['penyedia'] =$data->linkToSupplier->penyedia;
+            $column['no_faktur'] ='';
+            $column['tgl_faktur'] ='';
+            $column['jenis_surat'] ='';
+            $column['no_surat_faktur'] ='';
             $column['satuan'] = $data->linkToPembelian->satuan;
             $column['thn_pembuatan'] = '';
             $column['sp'] = '';
             # Data Berita Acara
             $column['tgl_BA'] = '';
             $column['nomor_BA'] = '';
+            $column['keterangan_pem'] = $data->linkToPembelian->linkToNota->keterangan;
+            # Data Surat Bon
+            $column['tgl_bon'] = '';
+            $column['nomor_bon'] = '';
             # Data Pengeluaran
             $column['tanggal_keluar'] =$data->tgl_kerluar;
             $column['nama_barang'] =$data->linkToGudang->nama_barang;

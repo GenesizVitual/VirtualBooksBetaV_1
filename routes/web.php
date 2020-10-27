@@ -99,6 +99,13 @@ Route::post('cetak-pengeluaran-barang','Persediaan\MasterLaporan@print_data_peng
 Route::get('barang-pakai-habis','Persediaan\MasterLaporan@preview_data_barang_barang_pakai_habis');
 # Cetak Pengeluaran Barang
 Route::post('cetak-barang-pakai-habis','Persediaan\MasterLaporan@print_data_barang_pakai_habis');
+# Preview Barang Semester
+Route::get('semester','Persediaan\MasterLaporan@preview_data_semester');
+# Cetak Semeter
+Route::post('cetak-semester','Persediaan\MasterLaporan@print_data_barang_semester');
+# Preview Barang Semester
+Route::get('kartu-barang','Persediaan\MasterLaporan@preview_kartu_barang');
+
 
 
 
