@@ -17,9 +17,11 @@ class MutasiBarang
     public static $tgl_awal;
     public static $tgl_akhir;
     public static $status_penerimaan=99;
+    public static $id_barang;
 
     private static $row = array();
     private static $id;
+    private static $stok = 0;
 
     public static function sortFunctionByDate( $a, $b ) {
         return strtotime($a["tgl"]) - strtotime($b["tgl"]);
@@ -42,10 +44,15 @@ class MutasiBarang
             # Inisialisasi ID tahun Anggaran
             $ndata = TahunAggaranCheck::$id_thn_anggaran;
 
-            # Data pembelian berdasarkan tahun anggaran
-            $pembelian = PembelianBarang::all()->where('id_instansi', Session::get('id_instansi'))->groupBy('id_gudang');
 
-            self::pemilahan_data_perimaan_pengeluaran($pembelian,$ndata );
+            # Jika id barang tidak kosong maka tambahkan query where id barang
+            if(!empty(self::$id_barang)){
+                $pembelian = PembelianBarang::all()->where('id_instansi', Session::get('id_instansi'))->where('id_gudang', self::$id_barang);
+            }else{
+                $pembelian = PembelianBarang::all()->where('id_instansi', Session::get('id_instansi'));
+            }
+
+            self::pemilahan_data_perimaan_pengeluaran($pembelian->groupBy('id_gudang'),$ndata );
             # urutkan pengeluaran barang berdasarkan tanggal keluar barang
             usort(self::$row,"self::sortFunctionByID");
             return self::$row;
@@ -57,37 +64,49 @@ class MutasiBarang
     # Data penerimaan akan dipilah sesuai banyak pengeluaran
     public static function pemilahan_data_perimaan_pengeluaran($data_pembelian, $ndata)
     {
+        //Perulangan group dengan id barang yang sama
         foreach ($data_pembelian as $group_barang){
-            $stok = 0;
+            self:$stok=0;
+            # Data group looping untuk mendapatkan data pembelian
             foreach ($group_barang as $data_barang){
                 # Cek Data Pembelian Berdasarkan tahun nota yang sedang aktif
-                if($data_barang->linkToNota->id_thn_anggaran == $ndata->id){
+                    if($data_barang->linkToNota->id_thn_anggaran == $ndata->id){
 
-                    $stok += $data_barang->jumlah_barang;
-                    $column = self::colomMutasi();
-                    $column['tgl'] = $data_barang->linkToNota->tgl_beli;
-                    $column['nm_barang'] = $data_barang->linkToGudang->nama_barang;
-                    $column['masuk'] = number_format($data_barang->jumlah_barang,2,',','.');
-                    $column['keluar'] = 0;
-                    $column['sisa'] = $stok;
-                    $column['id_barang'] = $data_barang->id_gudang;
-                    self::$row[]=$column;
-
-                    foreach ($data_barang->linkToDistribusi as $data_barang_keluar){
-                        $column = self::colomMutasi();
-                        $stok -= $data_barang_keluar->jumlah_keluar;
-                        $column['tgl'] = $data_barang_keluar->tgl_kerluar;
-                        $column['nm_barang'] = $data_barang->linkToGudang->nama_barang;
-                        $column['masuk'] = 0;
-                        $column['keluar'] = number_format($data_barang_keluar->jumlah_keluar,2,',','.');
-                        $column['sisa'] = $stok;
-                        $column['id_barang'] = $data_barang_keluar->id_gudang;
-                        self::$row[]=$column;
+                         if (self::$status_penerimaan != 99){ #cek status penerimaan selain status penerimaan 99
+                             # memisahkan data pembelian berdasarkan status pembanyaran
+                            if($data_barang->linkToNota->linkToNotaBelongsToTbk->status_pembayaran == self::$status_penerimaan ){
+                                self::daftar_mutasi_barang($data_barang);
+                            }
+                         }else{
+                             self::daftar_mutasi_barang($data_barang);
+                         }
                     }
-                }
             }
         }
-        return $data_pembelian;
+    }
+
+    private static function daftar_mutasi_barang($data_barang){
+        self::$stok += $data_barang->jumlah_barang;
+        $column = self::colomMutasi();
+        $column['tgl'] = $data_barang->linkToNota->tgl_beli;
+        $column['nm_barang'] = $data_barang->linkToGudang->nama_barang;
+        $column['masuk'] = number_format($data_barang->jumlah_barang,2,',','.');
+        $column['keluar'] = 0;
+        $column['sisa'] = self::$stok;
+        $column['id_barang'] = $data_barang->id_gudang;
+        self::$row[]=$column;
+
+        foreach ($data_barang->linkToDistribusi as $data_barang_keluar){
+            $column = self::colomMutasi();
+            self::$stok -= $data_barang_keluar->jumlah_keluar;
+            $column['tgl'] = $data_barang_keluar->tgl_kerluar;
+            $column['nm_barang'] = $data_barang->linkToGudang->nama_barang;
+            $column['masuk'] = 0;
+            $column['keluar'] = number_format($data_barang_keluar->jumlah_keluar,2,',','.');
+            $column['sisa'] = self::$stok;
+            $column['id_barang'] = $data_barang_keluar->id_gudang;
+            self::$row[]=$column;
+        }
     }
 
     # Menghitung stok terakhir dari pembelian sebelum tahun aktif

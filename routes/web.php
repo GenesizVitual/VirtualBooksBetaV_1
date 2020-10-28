@@ -103,8 +103,10 @@ Route::post('cetak-barang-pakai-habis','Persediaan\MasterLaporan@print_data_bara
 Route::get('semester','Persediaan\MasterLaporan@preview_data_semester');
 # Cetak Semeter
 Route::post('cetak-semester','Persediaan\MasterLaporan@print_data_barang_semester');
-# Preview Barang Semester
+# Preview Barang Karu Barang
 Route::get('kartu-barang','Persediaan\MasterLaporan@preview_kartu_barang');
+# Cetak Kartu Barang
+Route::post('cetak-kartu-barang','Persediaan\MasterLaporan@print_kartu_barang');
 
 
 

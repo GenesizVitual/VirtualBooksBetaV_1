@@ -53,7 +53,7 @@
                                         </div>
                                         <!-- /.card-header -->
                                         <div class="card-body" style="display: none;">
-                                            <form action="{{ url('cetak-semester') }}" method="post">
+                                            <form action="{{ url('cetak-kartu-barang') }}" method="post">
                                                 {{ csrf_field() }}
                                                 <div class="row">
                                                     <div class="col-md-4">
@@ -157,12 +157,13 @@
                                                     </div>
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <label>Semester</label>
+                                                            <label>Barang</label>
                                                             <div class="input-group">
-                                                                <select class="form-control select2" style="width: 100%;" name="semester" required>
-                                                                   <option value="I">I</option>
-                                                                   <option value="II">II</option>
-                                                                   <option value="III">IIP</option>
+                                                                <select class="form-control select2" style="width: 100%;" name="id_gudang" required>
+                                                                    <option value="0">Semua Barang</option>
+                                                                    @foreach($data_barang as $barang)
+                                                                        <option value="{{ $barang->id }}">{{ $barang->nama_barang }}</option>
+                                                                    @endforeach
                                                                 </select>
                                                             </div>
                                                             <!-- /.input group -->

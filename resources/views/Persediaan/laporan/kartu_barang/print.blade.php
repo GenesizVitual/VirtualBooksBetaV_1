@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cetak Semester</title>
+    <title>Cetak Kartu Barang</title>
     <style>
         table.table_nota{
             width: 100%;
@@ -29,9 +29,7 @@
             <tr>
                 <td rowspan="4" style="width: 100px"><img src="{{ asset('persediaan/logo/'.$instansi->logo) }}" alt="Logo tidak ditemukan" style="width:100px;height: 110px; margin-left: 20px"></td>
                 <td>
-                    <h2>LAPORAN SEMESTER</h2>
-                    <h2>TENTANG PENERIMAAN DAN PENGELUARAN BARANG PAKAI HABIS</h2>
-                    <h2>SEMESTER {{ $semester }} TAHUN {{ $tahun }}</h2>
+                    <h2>KARTU BARANG</h2>
                 </td>
                 <td rowspan="4"> </td>
             </tr>
@@ -61,35 +59,12 @@
         <table class="table_nota" role="grid" border="1">
             <thead>
             <tr>
-                <th rowspan="2">No</th>
-                <th rowspan="2">Tanggal Terima</th>
-                <th rowspan="2">Supplier</th>
-                <th colspan="4">Dokumen Faktur</th>
-                <th rowspan="2">Kwantitas</th>
-                <th rowspan="2">Barang</th>
-                <th rowspan="2">Satuan</th>
-                <th rowspan="2">Harga Satuan</th>
-                <th colspan="2">Berita Acara</th>
-                <th rowspan="2">Ket</th>
-                <th rowspan="2">No</th>
-                <th rowspan="2">Tanggal Keluar</th>
-                <th colspan="2">Surat Bon</th>
-                <th rowspan="2">Untuk</th>
-                <th rowspan="2">Banyak Barang</th>
-                <th rowspan="2">Harga Satuan</th>
-                <th rowspan="2">Jumlah Harga</th>
-                <th rowspan="2">Tanggal Penyerahan</th>
-                <th rowspan="2">Ket</th>
-            </tr>
-            <tr>
-                <th>No</th>
-                <th>Tanggal</th>
-                <th>Jenis Surat</th>
-                <th>No. Surat</th>
-                <th>Tanggal</th>
-                <th>Nomor</th>
-                <th>Tanggal</th>
-                <th>Nomor</th>
+                <th >No</th>
+                <th >Tanggal</th>
+                <th >Nama Barang</th>
+                <th >Barang Masuk</th>
+                <th >Barang Keluar</th>
+                <th >Sisa Barang</th>
             </tr>
             <tr>
                 <th >1</th>
@@ -98,56 +73,20 @@
                 <th >4</th>
                 <th >5</th>
                 <th >6</th>
-                <th >7</th>
-                <th >8</th>
-                <th >9</th>
-                <th >10</th>
-                <th >11</th>
-                <th >12</th>
-                <th >13</th>
-                <th >14</th>
-                <th >15</th>
-                <th >16</th>
-                <th >17</th>
-                <th >18</th>
-                <th >19</th>
-                <th >20</th>
-                <th >21</th>
-                <th >22</th>
-                <th >23</th>
-                <th >24</th>
             </tr>
             </thead>
             <tbody>
             @if(!empty($data))
                 @php($no=1)
-                @php($no2=1)
-                @foreach($data as $data_pengeluaran)
+
+                @foreach($data as $data_mutasi)
                     <tr>
                         <td >{{ $no++ }}</td>
-                        <td >{{ date('d-m-Y', strtotime($data_pengeluaran['tanggal_terima'])) }}</td>
-                        <td >{{ $data_pengeluaran['penyedia'] }}</td>
-                        <td >{{ $data_pengeluaran['no_faktur'] }}</td>
-                        <td >{{ $data_pengeluaran['tgl_faktur'] }}</td>
-                        <td >{{ $data_pengeluaran['jenis_surat'] }}</td>
-                        <td >{{ $data_pengeluaran['no_surat_faktur'] }}</td>
-                        <td >{{ $data_pengeluaran['banyak_barang'] }}</td>
-                        <td >{{ $data_pengeluaran['nama_barang'] }}</td>
-                        <td >{{ $data_pengeluaran['satuan'] }}</td>
-                        <td >{{ $data_pengeluaran['harga_satuan'] }}</td>
-                        <td >{{ $data_pengeluaran['tgl_BA'] }}</td>
-                        <td >{{ $data_pengeluaran['nomor_BA'] }}</td>
-                        <td >{{ $data_pengeluaran['keterangan_pem'] }}</td>
-                        <td >{{ $no2++ }}</td>
-                        <td >{{ date('d-m-Y', strtotime($data_pengeluaran['tanggal_keluar'])) }}</td>
-                        <td >{{ $data_pengeluaran['tgl_bon'] }}</td>
-                        <td >{{ $data_pengeluaran['nomor_bon'] }}</td>
-                        <td >{{ $data_pengeluaran['bidang'] }}</td>
-                        <td >{{ $data_pengeluaran['banyak_barang'] }}</td>
-                        <td >{{ $data_pengeluaran['harga_satuan'] }}</td>
-                        <td >{{ $data_pengeluaran['jumlah_harga'] }}</td>
-                        <td >{{ date('d-m-Y', strtotime($data_pengeluaran['tanggal_penyerahan'])) }}</td>
-                        <td >{{ $data_pengeluaran['keterangan'] }}</td>
+                        <td >{{ date('d-m-Y', strtotime($data_mutasi['tgl'])) }}</td>
+                        <td >{{ $data_mutasi['nm_barang'] }}</td>
+                        <td >{{ $data_mutasi['masuk'] }}</td>
+                        <td >{{ $data_mutasi['keluar'] }}</td>
+                        <td >{{ $data_mutasi['sisa'] }}</td>
                     </tr>
                 @endforeach
             @endif

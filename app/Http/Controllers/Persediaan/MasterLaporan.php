@@ -13,6 +13,7 @@ use App\Http\Controllers\Persediaan\utils\SettingReport;
 use App\Http\Controllers\Persediaan\utils\StatusPenerimaan;
 use App\Http\Controllers\Persediaan\utils\data\PengeluaranBarang;
 use App\Http\Controllers\Persediaan\utils\data\MutasiBarang;
+use App\Model\Persediaan\Gudang;
 use Illuminate\Http\Request;
 
 use Session;
@@ -459,9 +460,11 @@ class MasterLaporan extends Controller
 
         try{
             $data_pengeluaran = MutasiBarang::mutasi_barang(null);
+            $data_gudang  = Gudang::all()->where('id_instansi', Session::get('id_instansi'));
             $data = [
                 'berwenang'=>$this->berwenang(null),
                 'data'=>$data_pengeluaran,
+                'data_barang'=> $data_gudang,
                 'jenis_penerimaan'=>StatusPenerimaan::SetStatusPenerimaan()
             ];
             return view('Persediaan.laporan.kartu_barang.content', $data);
@@ -469,6 +472,57 @@ class MasterLaporan extends Controller
             return false;
         }
     }
+
+    # Cetak Kartu Barang
+    # Data kartu barang berasal dari class util data,
+    public function print_kartu_barang(Request $req){
+
+        try{
+            $this->validate($req,[
+                'tgl_awal'=> 'required',
+                'tgl_akhir'=> 'required',
+                'tgl_cetak'=> 'required',
+                'berwenang_1'=> 'required',
+                'berwenang_2'=> 'required',
+                'jabatan1'=> 'required',
+                'jabatan2'=> 'required',
+                'status_penerimaan'=> 'required',
+                'id_gudang'=> 'required'
+            ]);
+
+
+            # Kondisi tanggal awal tidak boleh melebihi tanggal akhir
+            if (date('d-m-Y', strtotime($req->tgl_awal)) >= date('d-m-Y', strtotime($req->tgl_akhir))){
+                return redirect()->back()->with('message_info','Tanggal akhir tidak boleh lebih kecil dari tanggal awal');
+            }
+
+            # Inisialisasi Variable di clas Rekapitulasi Persediaan
+            MutasiBarang::$tgl_awal = date('Y-m-d', strtotime($req->tgl_awal));
+            MutasiBarang::$tgl_akhir = date('Y-m-d', strtotime($req->tgl_akhir));
+            MutasiBarang::$status_penerimaan = $req->status_penerimaan;
+            MutasiBarang::$id_barang = $req->id_gudang;
+
+            # Data Instansi
+            $data_instansi = Instansi::findOrFail(Session::get('id_instansi'));
+
+            # Passing Data
+            $data = [
+                'data'=>MutasiBarang::mutasi_barang(null),
+                'instansi' => $data_instansi,
+                'tgl_cetak' => $this->konversi_bulan($req->tgl_cetak),
+                'berwenang_1' => $this->berwenang($req->berwenang_1),
+                'berwenang_2' => $this->berwenang($req->berwenang_2),
+                'jabatan_1'=> $req->jabatan1,
+                'jabatan_2'=> $req->jabatan2,
+                'status_penerimaan'=> $req->status_penerimaan
+            ];
+            return view('Persediaan.laporan.kartu_barang.print', $data);
+        }catch (Throwable $e){
+            return false;
+        }
+    }
+
+
 
     # list data berwenang
     private function berwenang($id){
