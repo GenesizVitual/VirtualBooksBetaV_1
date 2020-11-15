@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cetak Kartu Barang</title>
+    <title>Cetak Laporan Mutasi Persediaan</title>
     <style>
         table.table_nota{
             width: 100%;
@@ -29,7 +29,7 @@
             <tr>
                 <td rowspan="4" style="width: 100px"><img src="{{ asset('persediaan/logo/'.$instansi->logo) }}" alt="Logo tidak ditemukan" style="width:100px;height: 110px; margin-left: 20px"></td>
                 <td>
-                    <h2>KARTU BARANG</h2>
+                    <h2>LAPORAN MUTASI PERSEDIAAN</h2>
                 </td>
                 <td rowspan="4"> </td>
             </tr>
@@ -59,20 +59,25 @@
         <table class="table_nota" role="grid" border="1">
             <thead>
             <tr>
-                <th >No</th>
-                <th >Tanggal</th>
-                <th >Nama Barang</th>
-                <th >Barang Masuk</th>
-                <th >Barang Keluar</th>
-                <th >Sisa Barang</th>
+                <th rowspan="2">No</th>
+                <th rowspan="2">Tanggal</th>
+                <th rowspan="2">Nama Barang</th>
+                <th colspan="3">Saldo Awal</th>
+                <th colspan="6">Mutasi</th>
+                <th colspan="2">Saldo Akhir</th>
             </tr>
             <tr>
-                <th >1</th>
-                <th >2</th>
-                <th >3</th>
-                <th >4</th>
-                <th >5</th>
-                <th >6</th>
+                <th>Jumlah</th>
+                <th>Satuan</th>
+                <th>Total</th>
+                <th>Penerimaan</th>
+                <th>Harga Beli</th>
+                <th>Total Penerimaan</th>
+                <th>Pengeluaran</th>
+                <th>Harga Beli</th>
+                <th>Total Pengeluaran</th>
+                <th>Sisa Barang</th>
+                <th>Jumlah Akhir</th>
             </tr>
             </thead>
             <tbody>
@@ -84,9 +89,17 @@
                         <td >{{ $no++ }}</td>
                         <td >{{ date('d-m-Y', strtotime($data_mutasi['tgl'])) }}</td>
                         <td >{{ $data_mutasi['nm_barang'] }}</td>
+                        <td >{{ $data_mutasi['sisa'] }}</td>
+                        <td >{{ $data_mutasi['satuan'] }}</td>
+                        <td >{{ $data_mutasi['total'] }}</td>
                         <td >{{ $data_mutasi['masuk'] }}</td>
+                        <td >{{ $data_mutasi['harga_beli'] }}</td>
+                        <td >{{ $data_mutasi['total_penerimaan'] }}</td>
                         <td >{{ $data_mutasi['keluar'] }}</td>
+                        <td >{{ $data_mutasi['harga_beli'] }}</td>
+                        <td >{{ $data_mutasi['total_pengeluaran'] }}</td>
                         <td >{{ $data_mutasi['sisa_pp'] }}</td>
+                        <td >{{ $data_mutasi['total_akhir'] }}</td>
                     </tr>
                 @endforeach
             @endif

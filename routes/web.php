@@ -107,6 +107,10 @@ Route::post('cetak-semester','Persediaan\MasterLaporan@print_data_barang_semeste
 Route::get('kartu-barang','Persediaan\MasterLaporan@preview_kartu_barang');
 # Cetak Kartu Barang
 Route::post('cetak-kartu-barang','Persediaan\MasterLaporan@print_kartu_barang');
+# Preview Barang Karu Barang
+Route::get('mutasi-barang','Persediaan\MasterLaporan@preview_mutasi_barang');
+# Cetak Mutasi Barang
+Route::post('cetak-mutasi-barang','Persediaan\MasterLaporan@cetak_mutasi_barang');
 
 
 

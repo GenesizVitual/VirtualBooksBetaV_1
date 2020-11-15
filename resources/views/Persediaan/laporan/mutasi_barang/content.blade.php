@@ -11,16 +11,16 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Daftar Kartu Barang</h1>
+                    <h1 class="m-0 text-dark">Daftar Mutasi Barang</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Daftar Kartu Barang</li>
+                        <li class="breadcrumb-item active">Daftar Mutasi Barang</li>
                     </ol>
                 </div><!-- /.col -->
                 <div class="col-sm-12">
-                    <p style="color: darkgray">Halaman Kartu barang akan menampilkan semua data penerimaan barang yang telah dikeluarkan.</p>
+                    <p style="color: darkgray">Halaman Mutasi Barang akan menampilkan semua data penerimaan barang yang telah dikeluarkan.</p>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -33,7 +33,7 @@
                 <div class="col-sm-12">
                     <div class="card card-success">
                         <div class="card-header">
-                            <h3 class="card-title">Panel Kartu Barang</h3>
+                            <h3 class="card-title">Panel Mutasi Barang</h3>
                             <div class="card-tools">
                                 {{--<a href="{{ url('gudang/create') }}" class="btn btn-tool" ><i class="fas fa-plus"></i></a>--}}
                             </div>
@@ -53,7 +53,7 @@
                                         </div>
                                         <!-- /.card-header -->
                                         <div class="card-body" style="display: none;">
-                                            <form action="{{ url('cetak-kartu-barang') }}" method="post">
+                                            <form action="{{ url('cetak-mutasi-barang') }}" method="post">
                                                 {{ csrf_field() }}
                                                 <div class="row">
                                                     <div class="col-md-4">
@@ -185,20 +185,25 @@
                                         <table id="table-data-nota" class="table table-bordered table-striped" style="width: 100%;" role="grid">
                                             <thead>
                                                 <tr>
-                                                    <th >No</th>
-                                                    <th >Tanggal</th>
-                                                    <th >Nama Barang</th>
-                                                    <th >Barang Masuk</th>
-                                                    <th >Barang Keluar</th>
-                                                    <th >Sisa Barang</th>
+                                                    <th rowspan="2">No</th>
+                                                    <th rowspan="2">Tanggal</th>
+                                                    <th rowspan="2">Nama Barang</th>
+                                                    <th colspan="3">Saldo Awal</th>
+                                                    <th colspan="6">Mutasi</th>
+                                                    <th colspan="2">Saldo Akhir</th>
                                                 </tr>
                                                 <tr>
-                                                    <th >1</th>
-                                                    <th >2</th>
-                                                    <th >3</th>
-                                                    <th >4</th>
-                                                    <th >5</th>
-                                                    <th >6</th>
+                                                    <th>Jumlah</th>
+                                                    <th>Satuan</th>
+                                                    <th>Total</th>
+                                                    <th>Penerimaan</th>
+                                                    <th>Harga Beli</th>
+                                                    <th>Total Penerimaan</th>
+                                                    <th>Pengeluaran</th>
+                                                    <th>Harga Beli</th>
+                                                    <th>Total Pengeluaran</th>
+                                                    <th>Sisa Barang</th>
+                                                    <th>Jumlah Akhir</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -210,9 +215,17 @@
                                                             <td >{{ $no++ }}</td>
                                                             <td >{{ date('d-m-Y', strtotime($data_mutasi['tgl'])) }}</td>
                                                             <td >{{ $data_mutasi['nm_barang'] }}</td>
+                                                            <td >{{ $data_mutasi['sisa'] }}</td>
+                                                            <td >{{ $data_mutasi['satuan'] }}</td>
+                                                            <td >{{ $data_mutasi['total'] }}</td>
                                                             <td >{{ $data_mutasi['masuk'] }}</td>
+                                                            <td >{{ $data_mutasi['harga_beli'] }}</td>
+                                                            <td >{{ $data_mutasi['total_penerimaan'] }}</td>
                                                             <td >{{ $data_mutasi['keluar'] }}</td>
+                                                            <td >{{ $data_mutasi['harga_beli'] }}</td>
+                                                            <td >{{ $data_mutasi['total_pengeluaran'] }}</td>
                                                             <td >{{ $data_mutasi['sisa_pp'] }}</td>
+                                                            <td >{{ $data_mutasi['total_akhir'] }}</td>
                                                         </tr>
                                                     @endforeach
                                                 @endif
