@@ -19,15 +19,27 @@ class Gudang
     public static function getDataStokBarang($array){
         try
         {
-            $query = DB::select('select * from (
-                SELECT d.id, d.nama_barang,if(d.stok-sum(tbl_pengeluaran_barang.jumlah_keluar) is null,d.stok,d.stok-sum(tbl_pengeluaran_barang.jumlah_keluar)) as stok from (
-                select tbl_gudang.id,tbl_gudang.nama_barang,sum(tbl_pembelian_barang.jumlah_barang) as stok from tbl_nota 
-                join tbl_pembelian_barang on tbl_pembelian_barang.id_nota = tbl_nota.id
-                join tbl_gudang on tbl_pembelian_barang.id_gudang = tbl_gudang.id
-                and tbl_gudang.id_instansi='.Session::get('id_instansi').'
-                GROUP by tbl_gudang.id
-                ) as d LEFT JOIN tbl_pengeluaran_barang on tbl_pengeluaran_barang.id_pembelian=d.id GROUP by d.id  ORDER by d.stok desc
-              ) as x where x.stok>0') ;
+            #Query Lama
+//            $query = DB::select('select * from (
+//                SELECT d.id, d.nama_barang,if(d.stok-sum(tbl_pengeluaran_barang.jumlah_keluar) is null,d.stok,d.stok-sum(tbl_pengeluaran_barang.jumlah_keluar)) as stok from (
+//                select tbl_gudang.id,tbl_gudang.nama_barang,sum(tbl_pembelian_barang.jumlah_barang) as stok from tbl_nota
+//                join tbl_pembelian_barang on tbl_pembelian_barang.id_nota = tbl_nota.id
+//                join tbl_gudang on tbl_pembelian_barang.id_gudang = tbl_gudang.id
+//                and tbl_gudang.id_instansi='.Session::get('id_instansi').'
+//                GROUP by tbl_gudang.id
+//                ) as d LEFT JOIN tbl_pengeluaran_barang on tbl_pengeluaran_barang.id_pembelian=d.id GROUP by d.id  ORDER by d.stok desc
+//              ) as x where x.stok>0') ;
+
+            $query = DB::select('select d.id, d.nama_barang,if(d.stok is null, d.jumlah_barang, sum(d.stok)) as stok from (
+                            SELECT tbl_gudang.id,tbl_pembelian_barang.id as id_pembelian,tbl_nota.tgl_beli, tbl_gudang.nama_barang,tbl_pembelian_barang.jumlah_barang,tbl_pembelian_barang.satuan,tbl_pembelian_barang.harga_barang,
+                            tbl_pembelian_barang.jumlah_barang - sum(tbl_pengeluaran_barang.jumlah_keluar) as stok
+                            FROM tbl_pembelian_barang 
+                            LEFT join tbl_pengeluaran_barang on tbl_pembelian_barang.id = tbl_pengeluaran_barang.id_pembelian
+                            join tbl_nota on tbl_pembelian_barang.id_nota = tbl_nota.id
+                            join tbl_gudang on tbl_pembelian_barang.id_gudang = tbl_gudang.id
+                            where tbl_pembelian_barang.id_instansi = '.Session::get('id_instansi').'
+                            GROUP by tbl_nota.id, tbl_gudang.id
+                            ) as d GROUP by d.id ORDER by d.stok asc , d.nama_barang ASC') ;
 
             $row = array();
             $no=1;

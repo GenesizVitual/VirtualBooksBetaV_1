@@ -13,6 +13,7 @@ use App\Http\Controllers\Persediaan\utils\SettingReport;
 use App\Http\Controllers\Persediaan\utils\StatusPenerimaan;
 use App\Http\Controllers\Persediaan\utils\data\PengeluaranBarang;
 use App\Http\Controllers\Persediaan\utils\data\MutasiBarang;
+use App\Http\Controllers\Persediaan\utils\data\Stok;
 use App\Model\Persediaan\Gudang;
 use Illuminate\Http\Request;
 
@@ -586,6 +587,25 @@ class MasterLaporan extends Controller
                 'status_penerimaan'=> $req->status_penerimaan
             ];
             return view('Persediaan.laporan.mutasi_barang.print', $data);
+        }catch (Throwable $e){
+            return false;
+        }
+    }
+
+    # Preview mutasi barang
+    # Data mutasi barang berasal dari class util data,
+    public function preview_stok_barang(){
+
+        try{
+            $data_pengeluaran = Stok::DaftarStok(null);
+            $data_gudang  = Gudang::all()->where('id_instansi', Session::get('id_instansi'));
+            $data = [
+                'berwenang'=>$this->berwenang(null),
+                'data'=>$data_pengeluaran,
+                'data_barang'=> $data_gudang,
+                'jenis_penerimaan'=>StatusPenerimaan::SetStatusPenerimaan()
+            ];
+            return view('Persediaan.laporan.stok_barang.content', $data);
         }catch (Throwable $e){
             return false;
         }

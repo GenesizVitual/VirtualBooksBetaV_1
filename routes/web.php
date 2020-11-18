@@ -112,6 +112,8 @@ Route::get('mutasi-barang','Persediaan\MasterLaporan@preview_mutasi_barang');
 # Cetak Mutasi Barang
 Route::post('cetak-mutasi-barang','Persediaan\MasterLaporan@cetak_mutasi_barang');
 
+# Preview Barang Karu Barang
+Route::get('stok-barang','Persediaan\MasterLaporan@preview_stok_barang');
 
 
 
