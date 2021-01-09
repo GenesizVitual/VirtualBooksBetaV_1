@@ -111,12 +111,14 @@ Route::post('cetak-kartu-barang','Persediaan\MasterLaporan@print_kartu_barang');
 Route::get('mutasi-barang','Persediaan\MasterLaporan@preview_mutasi_barang');
 # Cetak Mutasi Barang
 Route::post('cetak-mutasi-barang','Persediaan\MasterLaporan@cetak_mutasi_barang');
-
-# Preview Barang Karu Barang
+# Preview Stok Barang
 Route::get('stok-barang','Persediaan\MasterLaporan@preview_stok_barang');
-
-
-
+# Cetak Barang Stok
+Route::post('cetak-stok-barang','Persediaan\MasterLaporan@cetak_stok_barang');
+# Preview Stok Opname
+Route::get('stok-opname','Persediaan\MasterLaporan@preview_stok_opname');
+# Cetak Barang Stok
+Route::post('cetak-stok-opname','Persediaan\MasterLaporan@cetak_stok_barang');
 # setting laporan berwenang
 
 

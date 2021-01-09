@@ -11,16 +11,16 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Daftar Stok Opname</h1>
+                    <h1 class="m-0 text-dark">Daftar Stok Barang</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Daftar Stok Opname</li>
+                        <li class="breadcrumb-item active">Daftar Stok Barang</li>
                     </ol>
                 </div><!-- /.col -->
                 <div class="col-sm-12">
-                    <p style="color: darkgray">Halaman Stok Opname akan menampilkan sisa stok barang yang tersisa.</p>
+                    <p style="color: darkgray">Halaman Stok Barang akan menampilkan sisa stok barang yang tersisa ditahun anggaran yang aktif.</p>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -53,7 +53,7 @@
                                         </div>
                                         <!-- /.card-header -->
                                         <div class="card-body" style="display: none;">
-                                            <form action="{{ url('cetak-kartu-barang') }}" method="post">
+                                            <form action="{{ url('cetak-stok-barang') }}" method="post" target="_blank" >
                                                 {{ csrf_field() }}
                                                 <div class="row">
                                                     <div class="col-md-4">
@@ -146,7 +146,7 @@
                                                             <label>Status Penerimaan</label>
                                                             <div class="input-group">
                                                                 <select class="form-control select2" style="width: 100%;" name="status_penerimaan" required>
-                                                                    <option selected="selected" value="99">Semua Status Penerimaan</option>
+                                                                    <option selected="selected" value="-">Semua Status Penerimaan</option>
                                                                     @foreach($jenis_penerimaan as $key =>$data_jenis_penerimaan)
                                                                         <option value="{{ $key }}">{{ $data_jenis_penerimaan }}</option>
                                                                     @endforeach
@@ -160,7 +160,7 @@
                                                             <label>Barang</label>
                                                             <div class="input-group">
                                                                 <select class="form-control select2" style="width: 100%;" name="id_gudang" required>
-                                                                    <option value="0">Semua Barang</option>
+                                                                    <option value="-">Semua Barang</option>
                                                                     @foreach($data_barang as $barang)
                                                                         <option value="{{ $barang->id }}">{{ $barang->nama_barang }}</option>
                                                                     @endforeach
@@ -219,7 +219,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

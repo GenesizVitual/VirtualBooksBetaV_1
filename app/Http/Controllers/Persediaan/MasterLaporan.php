@@ -27,7 +27,7 @@ class MasterLaporan extends Controller
        return view('Persediaan.laporan.master_laporan.content',['setting_laporan'=>$setting]);
     }
 
-    # Preview Data Nota
+    # Todo:Preview Data Nota
     public function preview_data_daftar_nota(){
         Nota::$status = true;
         $data = [
@@ -38,7 +38,7 @@ class MasterLaporan extends Controller
         return view('Persediaan.laporan.daftar_nota.content', $data);
     }
 
-    # Cetak Data Nota
+    # Todo:Cetak Data Nota
     public function print_data_daftar_nota(Request $req){
 
         try{
@@ -81,7 +81,7 @@ class MasterLaporan extends Controller
         }
     }
 
-    # Preview Data Rekapitulasi Persediaan
+    # Todo:Preview Data Rekapitulasi Persediaan
     public function preview_data_rekapitulasi_persediaan(){
         $data_rekap = RekapitulasiPersediaan::DataRekapitupitulasi(null);
         $jenis_tbk = JenisTbk::all()->where('id_instansi', Session::get('id_instansi'));
@@ -93,7 +93,7 @@ class MasterLaporan extends Controller
         return view('Persediaan.laporan.rekapitulasi_persediaan.content', $data);
     }
 
-    # Cetak Data Rekapitulasi Persediaan
+    # Todo:Cetak Data Rekapitulasi Persediaan
     public function print_data_rekapitulasi_persediaan(Request $req){
 
         try{
@@ -139,7 +139,7 @@ class MasterLaporan extends Controller
         }
     }
 
-    # Preview Data Rekapitulasi Persediaan Perjenis TBK
+    # Todo:Preview Data Rekapitulasi Persediaan Perjenis TBK
     public function preview_data_rekapitulasi_persediaan_perjenis_tbk(){
         $data_rekap = RekapitulasiPersediaan::DataRekapitupitulasi(null);
         $jenis_tbk = JenisTbk::all()->where('id_instansi', Session::get('id_instansi'));
@@ -151,7 +151,7 @@ class MasterLaporan extends Controller
         return view('Persediaan.laporan.rekapitulasi_persediaan_perjenis_tbk.content', $data);
     }
 
-    # Cetak Data Rekapitulasi Persediaan
+    # Todo:Cetak Data Rekapitulasi Persediaan
     public function print_data_rekapitulasi_persediaan_per_jenis_tbk(Request $req){
 
         try{
@@ -197,7 +197,7 @@ class MasterLaporan extends Controller
         }
     }
 
-    # Preview Data Persediaan Barang
+    # Todo:Preview Data Persediaan Barang
     public function preview_data_persediaan_barang(){
         try{
             $data_persediaan = PersediaanBarang::PersediaanBarang(null);
@@ -212,7 +212,7 @@ class MasterLaporan extends Controller
         }
     }
 
-    # Cetak Data Persediaan Barang
+    # Todo:Cetak Data Persediaan Barang
     public function print_data_persediaan_barang(Request $req){
 
         try{
@@ -258,7 +258,7 @@ class MasterLaporan extends Controller
         }
     }
 
-    # Preview Data Pengeluaran Barang
+    # Todo:Preview Data Pengeluaran Barang
     public function preview_data_pengeluaran_barang(){
         try{
             $data_pengeluaran = PengeluaranBarang::pengeluaran_barang(null);
@@ -274,7 +274,7 @@ class MasterLaporan extends Controller
         }
     }
 
-    # Cetak Data Persediaan Barang
+    # Todo:Cetak Data Persediaan Barang
     public function print_data_pengeluaran_barang(Request $req){
 
         try{
@@ -320,7 +320,7 @@ class MasterLaporan extends Controller
         }
     }
 
-    # Preview barang pakai habis
+    # Todo:Preview barang pakai habis
     # Data barang pakai habis berasal dari utils data pengeluaran barang karena format data yang disesuaikan dengan barang pakai habis,
     public function preview_data_barang_barang_pakai_habis(){
         try{
@@ -337,7 +337,7 @@ class MasterLaporan extends Controller
         }
     }
 
-    # Cetak barang pakai habis
+    # Todo:Cetak barang pakai habis
     # Data barang pakai habis berasal dari utils data pengeluaran barang karena format data yang disesuaikan dengan barang pakai habis
     public function print_data_barang_pakai_habis(Request $req){
 
@@ -386,7 +386,7 @@ class MasterLaporan extends Controller
         }
     }
 
-    # Preview semester
+    # Todo:Preview semester
     # Data barang pakai habis berasal dari utils data pengeluaran barang karena format data yang disesuaikan dengan semester,
     public function preview_data_semester(){
         try{
@@ -403,7 +403,7 @@ class MasterLaporan extends Controller
         }
     }
 
-    # Cetak barang pakai habis
+    # Todo:Cetak barang pakai habis
     # Data barang pakai habis berasal dari utils data pengeluaran barang karena format data yang disesuaikan dengan barang pakai habis
     public function print_data_barang_semester(Request $req){
 
@@ -455,7 +455,7 @@ class MasterLaporan extends Controller
         }
     }
 
-    # Preview kartu barang
+    # Todo:Preview kartu barang
     # Data kartu barang berasal dari class util data,
     public function preview_kartu_barang(){
 
@@ -474,7 +474,7 @@ class MasterLaporan extends Controller
         }
     }
 
-    # Cetak Kartu Barang
+    # Todo:Cetak Kartu Barang
     # Data kartu barang berasal dari class util data,
     public function print_kartu_barang(Request $req){
 
@@ -524,7 +524,7 @@ class MasterLaporan extends Controller
     }
 
 
-    # Preview mutasi barang
+    # Todo:Preview mutasi barang
     # Data mutasi barang berasal dari class util data,
     public function preview_mutasi_barang(){
 
@@ -543,7 +543,7 @@ class MasterLaporan extends Controller
         }
     }
 
-    # Cetak Kartu Barang
+    # Todo:Cetak Kartu Barang
     # Data kartu barang berasal dari class util data,
     public function cetak_mutasi_barang(Request $req){
 
@@ -592,10 +592,9 @@ class MasterLaporan extends Controller
         }
     }
 
-    # Preview mutasi barang
+    # Todo:Preview mutasi barang
     # Data mutasi barang berasal dari class util data,
     public function preview_stok_barang(){
-
         try{
             $data_pengeluaran = Stok::DaftarStok(null);
             $data_gudang  = Gudang::all()->where('id_instansi', Session::get('id_instansi'));
@@ -611,8 +610,125 @@ class MasterLaporan extends Controller
         }
     }
 
+    # Todo:Cetak Stok barang
+    # Data mutasi barang berasal dari class util data,
+    public function cetak_stok_barang(Request $req){
 
-    # list data berwenang
+        try{
+            $this->validate($req,[
+                'tgl_awal'=> 'required',
+                'tgl_akhir'=> 'required',
+                'tgl_cetak'=> 'required',
+                'berwenang_1'=> 'required',
+                'berwenang_2'=> 'required',
+                'jabatan1'=> 'required',
+                'jabatan2'=> 'required',
+                'status_penerimaan'=> 'required',
+                'id_gudang'=> 'required'
+            ]);
+
+
+            # Kondisi tanggal awal tidak boleh melebihi tanggal akhir
+            if (date('d-m-Y', strtotime($req->tgl_awal)) >= date('d-m-Y', strtotime($req->tgl_akhir))){
+                return redirect()->back()->with('message_info','Tanggal akhir tidak boleh lebih kecil dari tanggal awal');
+            }
+
+            # Inisialisasi Variable di clas Rekapitulasi Persediaan
+            Stok::$tgl_awal = date('Y-m-d', strtotime($req->tgl_awal));
+            Stok::$tgl_akhir = date('Y-m-d', strtotime($req->tgl_akhir));
+            Stok::$status_penerimaan = $req->status_penerimaan;
+            Stok::$id_barang = $req->id_gudang;
+
+            # Data Instansi
+            $data_instansi = Instansi::findOrFail(Session::get('id_instansi'));
+
+            # Passing Data
+            $data = [
+                'data'=>Stok::DaftarStok(null),
+                'instansi' => $data_instansi,
+                'tgl_cetak' => $this->konversi_bulan($req->tgl_cetak),
+                'berwenang_1' => $this->berwenang($req->berwenang_1),
+                'berwenang_2' => $this->berwenang($req->berwenang_2),
+                'jabatan_1'=> $req->jabatan1,
+                'jabatan_2'=> $req->jabatan2,
+                'status_penerimaan'=> $req->status_penerimaan
+            ];
+            return view('Persediaan.laporan.stok_barang.print', $data);
+        }catch (Throwable $e){
+            return false;
+        }
+    }
+
+    # Todo:Preview stock opname
+    # Data mutasi barang berasal dari class util data,
+    public function preview_stok_opname(){
+        try{
+            $data_pengeluaran = Stok::DaftarStok(null);
+            $data_gudang  = Gudang::all()->where('id_instansi', Session::get('id_instansi'));
+            $data = [
+                'berwenang'=>$this->berwenang(null),
+                'data'=>$data_pengeluaran,
+                'data_barang'=> $data_gudang,
+                'jenis_penerimaan'=>StatusPenerimaan::SetStatusPenerimaan()
+            ];
+            return view('Persediaan.laporan.stok_opname.content', $data);
+        }catch (Throwable $e){
+            return false;
+        }
+    }
+
+    # Todo:Cetak Stok opname
+    # Data stok opname berasal dari class util data,
+    public function cetak_stok_opname(Request $req){
+
+        try{
+            $this->validate($req,[
+                'tgl_awal'=> 'required',
+                'tgl_akhir'=> 'required',
+                'tgl_cetak'=> 'required',
+                'berwenang_1'=> 'required',
+                'berwenang_2'=> 'required',
+                'jabatan1'=> 'required',
+                'jabatan2'=> 'required',
+                'status_penerimaan'=> 'required',
+                'id_gudang'=> 'required'
+            ]);
+
+
+            # Kondisi tanggal awal tidak boleh melebihi tanggal akhir
+            if (date('d-m-Y', strtotime($req->tgl_awal)) >= date('d-m-Y', strtotime($req->tgl_akhir))){
+                return redirect()->back()->with('message_info','Tanggal akhir tidak boleh lebih kecil dari tanggal awal');
+            }
+
+            # Inisialisasi Variable di clas Rekapitulasi Persediaan
+            Stok::$tgl_awal = date('Y-m-d', strtotime($req->tgl_awal));
+            Stok::$tgl_akhir = date('Y-m-d', strtotime($req->tgl_akhir));
+            Stok::$status_penerimaan = $req->status_penerimaan;
+            Stok::$id_barang = $req->id_gudang;
+
+            # Data Instansi
+            $data_instansi = Instansi::findOrFail(Session::get('id_instansi'));
+
+            # Passing Data
+            $data = [
+                'data'=>Stok::DaftarStok(null),
+                'instansi' => $data_instansi,
+                'tgl_cetak' => $this->konversi_bulan($req->tgl_cetak),
+                'berwenang_1' => $this->berwenang($req->berwenang_1),
+                'berwenang_2' => $this->berwenang($req->berwenang_2),
+                'jabatan_1'=> $req->jabatan1,
+                'jabatan_2'=> $req->jabatan2,
+                'status_penerimaan'=> $req->status_penerimaan
+            ];
+            return view('Persediaan.laporan.stok_opname.print', $data);
+        }catch (Throwable $e){
+            return false;
+        }
+
+    }
+
+
+    # Todo:list data berwenang
     private function berwenang($id){
         try
         {
@@ -621,14 +737,13 @@ class MasterLaporan extends Controller
             }else{
                 $model = Berwenang::where('id_instansi', Session::get('id_instansi'))->findOrFail($id);
             }
-
             return $model;
         }catch (Throwable $e){
             return false;
         }
     }
 
-    # Format ulang tanggal Ke Contoh Format 01 Januari 2020
+    # Todo:Format ulang tanggal Ke Contoh Format 01 Januari 2020
     private function konversi_bulan($tanggal){
         $remake = explode('-', $tanggal);
 

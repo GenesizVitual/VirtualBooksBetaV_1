@@ -70,12 +70,14 @@ class MutasiBarang
         foreach ($data_pembelian as $key=> $group_barang){
             self::$stok=0;
             self::$total=0;
+
+            # Mencari Data Stok yang tersisah
+//            $data_stok = self::cek_stok_terakhir(['id_thn_anggaran'=> $ndata->id, 'id_instansi'=>$ndata->id_instansi,'id_gudang'=>$group_barang->first()->id_gudang]);
+//            if(!empty($data_stok->stok)){
+//                self::$stok = $data_stok->stok;
+//                self::$total = $data_stok->sisa_uang;
+//            }
             # Data group looping untuk mendapatkan data pembelian
-            $data_stok = self::cek_stok_terakhir(['id_thn_anggaran'=> $ndata->id, 'id_instansi'=>$ndata->id_instansi,'id_gudang'=>$group_barang->first()->id_gudang]);
-            if(!empty($data_stok->stok)){
-                self::$stok = $data_stok->stok;
-                self::$total = $data_stok->sisa_uang;
-            }
             foreach ($group_barang as $data_barang){
                 # Cek Data Pembelian Berdasarkan tahun nota yang sedang aktif
                     if($data_barang->linkToNota->id_thn_anggaran == $ndata->id){

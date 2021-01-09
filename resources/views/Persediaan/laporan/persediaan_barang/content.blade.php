@@ -53,7 +53,7 @@
                                         </div>
                                         <!-- /.card-header -->
                                         <div class="card-body" style="display: none;">
-                                            <form action="{{ url('cetak-persediaan-barang') }}" method="post">
+                                            <form action="{{ url('cetak-persediaan-barang') }}" method="post" target="_blank">
                                                 {{ csrf_field() }}
                                                 <div class="row">
                                                     <div class="col-md-4">

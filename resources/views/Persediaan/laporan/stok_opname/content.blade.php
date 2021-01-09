@@ -11,16 +11,16 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Daftar Nota</h1>
+                    <h1 class="m-0 text-dark">Daftar Stok Opname</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Daftar Nota</li>
+                        <li class="breadcrumb-item active">Daftar Stok Opname</li>
                     </ol>
                 </div><!-- /.col -->
                 <div class="col-sm-12">
-                    <p style="color: darkgray">Halaman daftar nota akan menampilkan semua nota pembelian pertahun.</p>
+                    <p style="color: darkgray">Halaman Stok opname akan menampilkan sisa stok barang dan sisa uang yang tersisa ditahun anggaran yang aktif.</p>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -33,7 +33,7 @@
                 <div class="col-sm-12">
                     <div class="card card-success">
                         <div class="card-header">
-                            <h3 class="card-title">Panel Daftar Nota</h3>
+                            <h3 class="card-title">Panel Stok Opname</h3>
                             <div class="card-tools">
                                 {{--<a href="{{ url('gudang/create') }}" class="btn btn-tool" ><i class="fas fa-plus"></i></a>--}}
                             </div>
@@ -53,7 +53,7 @@
                                         </div>
                                         <!-- /.card-header -->
                                         <div class="card-body" style="display: none;">
-                                            <form action="{{ url('cetak-data-nota') }}" method="post" target="_blank">
+                                            <form action="{{ url('cetak-stok-opname') }}" method="post" target="_blank">
                                                 {{ csrf_field() }}
                                                 <div class="row">
                                                     <div class="col-md-4">
@@ -142,6 +142,34 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Status Penerimaan</label>
+                                                            <div class="input-group">
+                                                                <select class="form-control select2" style="width: 100%;" name="status_penerimaan" required>
+                                                                    <option selected="selected" value="-">Semua Status Penerimaan</option>
+                                                                    @foreach($jenis_penerimaan as $key =>$data_jenis_penerimaan)
+                                                                        <option value="{{ $key }}">{{ $data_jenis_penerimaan }}</option>
+                                                                    @endforeach
+                                                                </select>
+                                                            </div>
+                                                            <!-- /.input group -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Barang</label>
+                                                            <div class="input-group">
+                                                                <select class="form-control select2" style="width: 100%;" name="id_gudang" required>
+                                                                    <option value="-">Semua Barang</option>
+                                                                    @foreach($data_barang as $barang)
+                                                                        <option value="{{ $barang->id }}">{{ $barang->nama_barang }}</option>
+                                                                    @endforeach
+                                                                </select>
+                                                            </div>
+                                                            <!-- /.input group -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
                                                         <button class="btn btn-primary">Cetak</button>
                                                     </div>
                                                 </div>
@@ -149,44 +177,54 @@
                                         </div>
                                         <!-- /.card-body -->
                                     </div>
-
                                 </div>
+
                                 <p style="height: 2px; background-color: grey; width: 100%; margin-top:10px"></p>
-                                <div class="col-md-12">
-                                    <table id="table-data-nota" class="table table-bordered table-striped" style="width: 100%" role="grid">
-                                        <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Tanggal</th>
-                                            <th>Kode Nota</th>
-                                            <th>Penyedia</th>
-                                            <th>PPN 10%</th>
-                                            <th>PPH 1.5%</th>
-                                            <th>Total Sebelum Pajak</th>
-                                            <th>Total Sesudah Pajak</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        @if(!empty($data))
-                                            @foreach($data as $data_nota)
+                                <div class="col-md-12 table-responsive p-0" >
+                                    <div style="overflow-x: scroll; width: 100%">
+                                        <table id="table-data-nota" class="table table-bordered table-striped" style="width: 100%;" role="grid">
+                                            <thead>
                                                 <tr>
-                                                    <td>{{ $data_nota[0] }}</td>
-                                                    <td>{{ $data_nota[1] }}</td>
-                                                    <td>{!! $data_nota[2] !!}</td>
-                                                    <td>{{ $data_nota[3] }}</td>
-                                                    <td>{{ $data_nota[4] }}</td>
-                                                    <td>{{ $data_nota[5] }}</td>
-                                                    <td>{{ $data_nota[6] }}</td>
-                                                    <td>{{ $data_nota[7] }}</td>
+                                                    <th >No</th>
+                                                    <th >Nama Barang</th>
+                                                    <th >Satuan</th>
+                                                    <th >Stok Barang</th>
+                                                    <th >Harga Satuan</th>
+                                                    <th >Harga Total</th>
+                                                    <th >Keterangan</th>
                                                 </tr>
-                                            @endforeach
-                                        @endif
-                                        </tbody>
-                                    </table>
+                                                <tr>
+                                                    <th >1</th>
+                                                    <th >2</th>
+                                                    <th >3</th>
+                                                    <th >4</th>
+                                                    <th >5</th>
+                                                    <th >6</th>
+                                                    <th >7</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @if(!empty($data))
+                                                    @php($no=1)
+
+                                                    @foreach($data as $data_mutasi)
+                                                        <tr>
+                                                            <td >{{ $no++ }}</td>
+                                                            <td >{{ $data_mutasi['nama_barang'] }}</td>
+                                                            <td >{{ $data_mutasi['satuan'] }}</td>
+                                                            <td >{{ number_format($data_mutasi['stok_barang'],2,',','.') }}</td>
+                                                            <td >{{ number_format($data_mutasi['harga_barang'],2,',','.') }}</td>
+                                                            <td >{{ number_format($data_mutasi['stok_barang']*$data_mutasi['harga_barang'],2,',','.') }}</td>
+                                                            <td >{{ $data_mutasi['keterangan'] }}</td>
+                                                        </tr>
+                                                    @endforeach
+                                                @endif
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -217,7 +255,7 @@
                 "ordering": true,
                 "info": true,
                 "autoWidth": false,
-                "responsive": true,
+                "responsive": false,
             });
 
             //Datemask dd/mm/yyyy

@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cetak Stok Barang</title>
+    <title>Cetak Stok Opname</title>
     <style>
         table.table_nota{
             width: 100%;
@@ -29,7 +29,7 @@
             <tr>
                 <td rowspan="4" style="width: 100px"><img src="{{ asset('persediaan/logo/'.$instansi->logo) }}" alt="Logo tidak ditemukan" style="width:100px;height: 110px; margin-left: 20px"></td>
                 <td>
-                    <h2>STOK BARANG</h2>
+                    <h2>STOK OPNAME</h2>
                 </td>
                 <td rowspan="4"> </td>
             </tr>
@@ -63,6 +63,8 @@
                 <th >Nama Barang</th>
                 <th >Satuan</th>
                 <th >Stok Barang</th>
+                <th >Harga Satuan</th>
+                <th >Harga Total</th>
                 <th >Keterangan</th>
             </tr>
             <tr>
@@ -71,6 +73,8 @@
                 <th >3</th>
                 <th >4</th>
                 <th >5</th>
+                <th >6</th>
+                <th >7</th>
             </tr>
             </thead>
             <tbody>
@@ -83,6 +87,8 @@
                         <td >{{ $data_mutasi['nama_barang'] }}</td>
                         <td >{{ $data_mutasi['satuan'] }}</td>
                         <td >{{ number_format($data_mutasi['stok_barang'],2,',','.') }}</td>
+                        <td >{{ $data_mutasi['harga_barang'] }}</td>
+                        <td >{{ number_format($data_mutasi['stok_barang']*$data_mutasi['harga_barang'],2,',','.') }}</td>
                         <td >{{ $data_mutasi['keterangan'] }}</td>
                     </tr>
                 @endforeach
