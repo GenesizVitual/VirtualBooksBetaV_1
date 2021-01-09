@@ -22,6 +22,15 @@ use Session;
 class MasterLaporan extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware(function($req, $next){
+            $req->session()->put('menu','laporan');
+            $req->session()->put('sub_menu','');
+            return $next($req);
+        });
+    }
+
     public function index(){
        $setting = SettingReport::$report;
        return view('Persediaan.laporan.master_laporan.content',['setting_laporan'=>$setting]);

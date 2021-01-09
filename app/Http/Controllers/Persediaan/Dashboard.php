@@ -11,6 +11,15 @@ class Dashboard extends Controller
 {
     //
 
+    public function __construct()
+    {
+      $this->middleware(function($req, $next){
+            $req->session()->put('menu','dashboard');
+            $req->session()->put('sub_menu','');
+            return $next($req);
+      });
+    }
+
     public function index()
     {
         $data = [

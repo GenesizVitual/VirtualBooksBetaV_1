@@ -17,6 +17,15 @@ class Distribusi extends Controller
 {
     //
 
+    public function __construct()
+    {
+        $this->middleware(function($req, $next){
+            $req->session()->put('menu','distribusi');
+            $req->session()->put('sub_menu','');
+            return $next($req);
+        });
+    }
+
     public function index()
     {
         $data = Gudang::getDataStokBarang(null);

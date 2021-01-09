@@ -10,6 +10,15 @@ class JenisTbk extends Controller
 {
     //
 
+    public function __construct()
+    {
+        $this->middleware(function($req, $next){
+            $req->session()->put('menu','data_master');
+            $req->session()->put('sub_menu','jenis_tbk');
+            return $next($req);
+        });
+    }
+
     private $status_pembayaran = array('Rutin','Kegiatan','Hibah','Dana Bos Pusat','Dana Bos Daerah','dll');
 
     public function index(){

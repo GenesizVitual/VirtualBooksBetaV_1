@@ -10,6 +10,14 @@ use Illuminate\Support\Facades\Session;
 class Bidang extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware(function($req, $next){
+            $req->session()->put('menu','data_master');
+            $req->session()->put('sub_menu','bidang');
+            return $next($req);
+        });
+    }
 
     public function index()
     {

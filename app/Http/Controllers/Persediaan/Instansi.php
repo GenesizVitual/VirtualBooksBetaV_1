@@ -7,9 +7,18 @@ use App\Model\Persediaan\Instansi as instance;
 use App\Model\Apps\KotaProv;
 use Illuminate\Http\Request;
 use App\Model\Apps\Provinsi;
-use Illuminate\Support\Facades\Session;
+use Session;
 class Instansi extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(function($req, $next){
+            $req->session()->put('menu','data_master');
+            $req->session()->put('sub_menu','instansi');
+            return $next($req);
+        });
+    }
 
     public function index()
     {

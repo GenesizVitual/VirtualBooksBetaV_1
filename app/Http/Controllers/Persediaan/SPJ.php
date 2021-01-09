@@ -11,6 +11,16 @@ use App\Model\Persediaan\SPJ as tbl_spj;
 class SPJ extends Controller
 {
     //
+
+    public function __construct()
+    {
+        $this->middleware(function($req, $next){
+            $req->session()->put('menu','spj-tbk');
+            $req->session()->put('sub_menu','');
+            return $next($req);
+        });
+    }
+
     public function index()
     {
         try{

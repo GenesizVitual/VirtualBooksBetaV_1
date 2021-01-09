@@ -27,6 +27,8 @@ class User extends Controller
             $req->session()->put('user_id', $model->id);
             if(!empty($model->linkToInstansi->id)){
                 $req->session()->put('id_instansi', $model->linkToInstansi->id);
+                $req->session()->put('level', $model->level);
+                $req->session()->put('kode', $model->id);
             }
             return redirect('dashboard')->with('message_success','Selamat Datang '.$model->name);
         }else{
@@ -49,6 +51,7 @@ class User extends Controller
         $model->name = $req->name;
         $model->email = $req->email;
         $model->password = bcrypt($req->pass);
+        $model->level = 1;
         if($model->save())
         {
             if (empty($req->session()->user_id)){

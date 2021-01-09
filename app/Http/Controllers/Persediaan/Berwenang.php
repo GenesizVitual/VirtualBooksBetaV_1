@@ -10,6 +10,14 @@ use Session;
 class Berwenang extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware(function($req, $next){
+            $req->session()->put('menu','data_pengguna');
+            $req->session()->put('sub_menu','berwenang');
+            return $next($req);
+        });
+    }
 
     public function index()
     {

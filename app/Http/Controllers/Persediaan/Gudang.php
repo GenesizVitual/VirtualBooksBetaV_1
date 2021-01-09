@@ -11,6 +11,15 @@ class Gudang extends Controller
 {
     //
 
+    public function __construct()
+    {
+        $this->middleware(function($req, $next){
+            $req->session()->put('menu','data_master');
+            $req->session()->put('sub_menu','gudang');
+            return $next($req);
+        });
+    }
+
     public function index(){
         $data = [
             'data'=>gudangs::all()->where('id_instansi', Session::get('id_instansi'))

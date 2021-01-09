@@ -24,14 +24,14 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a href="{{ url('dashboard') }}" class="nav-link">
+                    <a href="{{ url('dashboard') }}" class="nav-link @if(Session::get('menu') == 'dashboard') active @else  @endif">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>Dashboard</p>
+                        <p>Dashboard </p>
                     </a>
                 </li>
 
                 <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link ">
+                    <a href="#" class="nav-link @if(Session::get('menu') == 'data_master') active @endif">
                         <i class="nav-icon fas fa-list"></i>
                         <p>
                             Data Master
@@ -40,37 +40,37 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ url('instansi') }}" class="nav-link">
+                            <a href="{{ url('instansi') }}" class="nav-link  @if(Session::get('sub_menu') == 'instansi') active @endif" >
                                 <i class="far fa-building nav-icon"></i>
-                                <p>Instansi</p>
+                                <p>Instansi </p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('bidang') }}" class="nav-link">
+                            <a href="{{ url('bidang') }}" class="nav-link @if(Session::get('sub_menu') == 'bidang') active @endif">
                                 <i class="far fa fa-puzzle-piece nav-icon"></i>
                                 <p>Bidang/Bagian</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('tahun-anggaran') }}" class="nav-link">
+                            <a href="{{ url('tahun-anggaran') }}" class="nav-link @if(Session::get('sub_menu') == 'tahun_anggaran') active @endif">
                                 <i class="far fa-calendar nav-icon"></i>
                                 <p>Tahun Anggaran</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('jenis-tbk') }}" class="nav-link">
+                            <a href="{{ url('jenis-tbk') }}" class="nav-link @if(Session::get('sub_menu') == 'jenis_tbk') active @endif">
                                 <i class="far fa fa-paperclip nav-icon"></i>
                                 <p>Jenis TBK</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('penyedia') }}" class="nav-link">
+                            <a href="{{ url('penyedia') }}" class="nav-link @if(Session::get('sub_menu') == 'penyedia') active @endif">
                                 <i class="far fa fa-store nav-icon"></i>
                                 <p>Penyedia</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('gudang') }}" class="nav-link">
+                            <a href="{{ url('gudang') }}" class="nav-link @if(Session::get('sub_menu') == 'gudang') active @endif">
                                 <i class="far fa fa-warehouse nav-icon"></i>
                                 <p>Gudang</p>
                             </a>
@@ -80,7 +80,7 @@
 
 
                 <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link ">
+                    <a href="#" class="nav-link  @if(Session::get('menu') == 'data_pengguna') active @endif">
                         <i class="nav-icon fas fa-list"></i>
                         <p>
                             Data Pengguna
@@ -89,7 +89,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ url('berwenang') }}" class="nav-link ">
+                            <a href="{{ url('berwenang') }}" class="nav-link @if(Session::get('sub_menu') == 'berwenang') active @endif">
                                 <i class="far fa-user nav-icon"></i>
                                 <p>Berwenang</p>
                             </a>
@@ -98,7 +98,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ url('nota') }}" class="nav-link">
+                    <a href="{{ url('nota') }}" class="nav-link @if(Session::get('menu') == 'nota') active @endif">
                         <i class="nav-icon fas fa fa-paperclip"></i>
                         <p>Nota</p>
                     </a>
@@ -141,21 +141,21 @@
                 {{--</li>--}}
 
                 <li class="nav-item">
-                    <a href="{{ url('spj-tbk') }}" class="nav-link">
+                    <a href="{{ url('spj-tbk') }}" class="nav-link @if(Session::get('menu')=='spj-tbk') active @endif">
                         <i class="nav-icon fas fa fa-book"></i>
                         <p>Penentuan SPJ/TBK</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ url('distribusi') }}" class="nav-link">
+                    <a href="{{ url('distribusi') }}" class="nav-link @if(Session::get('menu')=='distribusi') active @endif">
                         <i class="nav-icon fas fa fa-share"></i>
                         <p>Distribusi Barang</p>
                     </a>
                 </li>
 
                 <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link ">
+                    <a href="#" class="nav-link @if(Session::get('menu')=='surat') active @endif">
                         <i class="nav-icon fas fa-envelope"></i>
                         <p>
                             Surat
@@ -164,13 +164,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ url('surat-permintaan') }}" class="nav-link ">
+                            <a href="{{ url('surat-permintaan') }}" class="nav-link @if(Session::get('sub_menu')=='surat_permintaan') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Surat Permintaan</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('surat-pengeluaran') }}" class="nav-link">
+                            <a href="{{ url('surat-pengeluaran') }}" class="nav-link @if(Session::get('sub_menu')=='surat_pengeluaran') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Surat Pengeluaran</p>
                             </a>
@@ -178,7 +178,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ url('laporan') }}" class="nav-link">
+                    <a href="{{ url('laporan') }}" class="nav-link @if(Session::get('menu')=='laporan') active @endif">
                         <i class="nav-icon fas fa-book"></i>
                         <p>Laporan</p>
                     </a>

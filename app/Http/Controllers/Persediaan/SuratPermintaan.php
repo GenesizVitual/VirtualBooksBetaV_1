@@ -13,6 +13,16 @@ use App\Model\Persediaan\SuratPermintaan as tbl_surat_permintaan;
 class SuratPermintaan extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware(function($req, $next){
+            $req->session()->put('menu','surat');
+            $req->session()->put('sub_menu','surat_permintaan');
+            return $next($req);
+        });
+    }
+
+
     public function index(){
         #Tampilkan bidang yang telah difilter pada table ditribusi barang
         try{

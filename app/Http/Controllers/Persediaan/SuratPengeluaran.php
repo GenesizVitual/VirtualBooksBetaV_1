@@ -13,6 +13,15 @@ use Session;
 class SuratPengeluaran extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware(function($req, $next){
+            $req->session()->put('menu','surat');
+            $req->session()->put('sub_menu','surat_pengeluaran');
+            return $next($req);
+        });
+    }
+
     public function index(){
        $data = SuratPermintaan::all()->where('id_instansi', Session::get('id_instansi'))->groupBy('id_bidang');
        return view('Persediaan.Surat.SuratPengeluaran.content', ['bidang'=>$data]);
