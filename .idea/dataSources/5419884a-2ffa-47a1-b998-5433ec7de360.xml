@@ -1911,10 +1911,10 @@
     </column>
     <column id="434" parent="57" name="level">
       <Position>6</Position>
-      <Comment>0=admin, 1=karyawan</Comment>
+      <Comment>0=admin, 1=users</Comment>
       <DataType>enum(&apos;0&apos;, &apos;1&apos;)|0</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
     </column>
     <column id="435" parent="57" name="remember_token">
       <Position>7</Position>

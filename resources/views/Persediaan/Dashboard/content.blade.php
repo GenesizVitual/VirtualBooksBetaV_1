@@ -106,53 +106,35 @@
                         @endif
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="info-box mb-3 bg-primary">
-                                <span class="info-box-icon"><i class="fas fa-tag"></i></span>
+                @if(!empty($data_rekap))
+                    <div class="col-sm-4">
+                        <div class="row">
+                                @foreach($data_rekap as $rekap)
+                                <div class="col-sm-12">
+                                    <div class="info-box mb-3 bg-primary">
+                                        <span class="info-box-icon"><i class="fas fa-tag"></i></span>
+                                        <div class="info-box-content">
+                                            <span class="info-box-text">{{ $rekap['jenis_tbk'] }}</span>
+                                            <span class="info-box-number">
+                                                <table style="width: 100%">
+                                                    <tr>
+                                                        <td>Ppn : {{ number_format($rekap['total_ppn'],2,',','.') }}</td>
+                                                        <td>Pph : {{ number_format($rekap['total_pph'],2,',','.') }}</td>
+                                                    </tr>
+                                                </table>
+                                            </span>
+                                            <span class="info-box-number">
+                                                Total: {{ number_format($rekap['total_keseluruhan'],2,',','.') }}
+                                            </span>
+                                        </div>
+                                        <!-- /.info-box-content -->
+                                    </div>
+                                </div>
+                            @endforeach
 
-                                <div class="info-box-content">
-                                    <span class="info-box-text">ATK</span>
-                                    <span class="info-box-number">5,200</span>
-                                </div>
-                                <!-- /.info-box-content -->
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="info-box mb-3 bg-warning">
-                                <span class="info-box-icon"><i class="fas fa-tag"></i></span>
-
-                                <div class="info-box-content">
-                                    <span class="info-box-text">BBM</span>
-                                    <span class="info-box-number">5,200</span>
-                                </div>
-                                <!-- /.info-box-content -->
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="info-box mb-3 bg-primary">
-                                <span class="info-box-icon"><i class="fas fa-tag"></i></span>
-
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Cetakan</span>
-                                    <span class="info-box-number">5,200</span>
-                                </div>
-                                <!-- /.info-box-content -->
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="info-box mb-3 bg-warning">
-                                <span class="info-box-icon"><i class="fas fa-tag"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Penggandaan</span>
-                                    <span class="info-box-number">5,200</span>
-                                </div>
-                                <!-- /.info-box-content -->
-                            </div>
                         </div>
                     </div>
-                </div>
+                @endif
             </div>
         </div><!-- /.container-fluid -->
     </div>
