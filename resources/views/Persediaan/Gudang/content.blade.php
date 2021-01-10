@@ -35,7 +35,8 @@
                         <div class="card-header">
                             <h3 class="card-title">Daftar Barang</h3>
                             <div class="card-tools">
-                                <a href="{{ url('gudang/create') }}" class="btn btn-tool" ><i class="fas fa-plus"></i></a>
+                                <a href="{{ url('gudang/create') }}" class="btn btn-tool" title="Tambah barang"><i class="fas fa-plus"></i></a>
+                                <a href="#" class="btn btn-tool" data-toggle="modal" data-target="#modal-default"><i class="fas fa-file-import" title="import data barang"></i></a>
                             </div>
                         </div>
                         <div class="card-body">
@@ -73,6 +74,37 @@
                 </div>
             </div>
         </div><!-- /.container-fluid -->
+
+        <div class="modal fade" id="modal-default">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Import Data Barang</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form action="{{ url('import-barang') }}" method="post" enctype="multipart/form-data">
+                        {{ csrf_field() }}
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>File Barang</label>
+                                <input type="file" class="form-control" name="file" placeholder="File Barang" required>
+                                <span style="color: red"> *format file yang didukung .xls dan besar file 2mb </span>
+                                <span style="color: red"> *Nama barang yang sama tidak dapat diimport</span>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Import</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
     </div>
 @stop
 

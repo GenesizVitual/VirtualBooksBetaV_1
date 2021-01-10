@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\Model\Persediaan\Gudang as gudangs;
+use App\Imports\GudangImport;
+use Excel;
+
 
 class Gudang extends Controller
 {
@@ -94,5 +97,17 @@ class Gudang extends Controller
     public function data_gudang(){
         $model = gudangs::all()->where('id_instansi', Session::get('id_instansi'));
         return response()->json(array('data'=>$model));
+    }
+
+    public function import(Request $req){
+         $this->validate($req,[
+            'file' => 'required|mimes:csv,xls,xlsx|max:2048'
+        ]);
+        if ($req->hasFile('file')) {
+            $file = $req->file('file');
+            Excel::import(new GudangImport, $file);
+            return redirect()->back()->with(['message_success' => 'Import data barang selesai']);
+        }
+        return redirect()->back()->with(['message_info' => 'Pastikan file barang sesaui dengan format']);
     }
 }

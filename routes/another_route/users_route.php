@@ -17,6 +17,7 @@ Route::middleware([CheckLevel::class, CheckUser::class])->group(function () {
     Route::resource('penyedia','Persediaan\Penyedia');
     Route::resource('bidang','Persediaan\Bidang');
     Route::resource('gudang','Persediaan\Gudang');
+    Route::post('import-barang','Persediaan\Gudang@import');
     Route::resource('berwenang','Persediaan\Berwenang');
     //======================================================================================================================
     Route::get('data-gudang','Persediaan\Gudang@data_gudang');
