@@ -79,7 +79,7 @@ class TBK extends Controller
                 'keterangan'=> 'required',
             ]);
 
-            $model = tbl_tbk::findOrFail($req->kode);
+            $model = tbl_tbk::where('id_instansi', Session::get('id_instansi'))->findOrFail($req->kode);
             $model->id_spj = $req->kode_temp_spj;
             $model->id_instansi = Session::get('id_instansi');
             $model->kode = $req->kode_tbk;

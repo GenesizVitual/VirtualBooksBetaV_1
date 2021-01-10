@@ -238,8 +238,8 @@ class Distribusi extends Controller
 
     //function rumus perhitungan stok
     public function hitung_stok($id_pembelian){
-        $model_pembelian = tbl_pembelian::findOrFail($id_pembelian);
-        $model_pengeluaran = tbl_distribusi::where('id_pembelian', $model_pembelian->id)->sum('jumlah_keluar');
+        $model_pembelian = tbl_pembelian::where('id_instansi', Session::get('id_instansi'))->findOrFail($id_pembelian);
+        $model_pengeluaran = tbl_distribusi::where('id_instansi', Session::get('id_instansi'))->where('id_pembelian', $model_pembelian->id)->sum('jumlah_keluar');
         $stok =  intval($model_pembelian->jumlah_barang)-$model_pengeluaran;
         return $stok;
     }

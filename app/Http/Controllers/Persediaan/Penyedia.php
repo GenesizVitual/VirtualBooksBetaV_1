@@ -58,7 +58,7 @@ class Penyedia extends Controller
     public function edit($id)
     {
         $data = [
-            'data'=> penyedias::findOrFail($id)
+            'data'=> penyedias::where('id_instansi', Session::get('id_instansi'))->findOrFail($id)
         ];
 
         return view('Persediaan.Penyedia.edit', $data);
@@ -72,7 +72,7 @@ class Penyedia extends Controller
             'alamat'=>'required'
         ]);
 
-        $model = penyedias::findOrFail($id);
+        $model = penyedias::where('id_instansi', Session::get('id_instansi'))->findOrFail($id);
         $model->penyedia = $req->penyedia;
         $model->pimpinan = $req->pimpinan;
         $model->alamat = $req->alamat;
@@ -94,7 +94,7 @@ class Penyedia extends Controller
             '_method'=>'required',
             '_token'=>'required',
         ]);
-        $model = penyedias::findOrFail($id);
+        $model = penyedias::where('id_instansi', Session::get('id_instansi'))->findOrFail($id);
         if($model->delete()){
             return redirect('penyedia')->with('message_success','Anda telah menghapus penyedia :'. $model->penyedia);
         }else{

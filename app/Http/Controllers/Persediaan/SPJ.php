@@ -31,11 +31,11 @@ class SPJ extends Controller
             TahunAggaranCheck::tahun_anggaran_aktif($array);
             $tahun_anggaran =TahunAggaranCheck::$id_thn_anggaran;
 
-            $model = tbl_spj::all()->where('id_instansi',$tahun_anggaran->id_instansi)->where('id_thn_anggaran', $tahun_anggaran->id);
+            $model = tbl_spj::all()->where('id_instansi',Session::get('id_instansi'))->where('id_thn_anggaran', $tahun_anggaran->id);
             return view('Persediaan.SpjTBK.content', ['data'=> $model]);
         }catch (Throwable $e)
         {
-            report($e);
+
             return false;
         }
     }
@@ -101,7 +101,7 @@ class SPJ extends Controller
             TahunAggaranCheck::tahun_anggaran_aktif($array);
             $tahun_anggaran_aktiv = TahunAggaranCheck::$id_thn_anggaran;
 
-            $model = tbl_spj::findOrFail($req->kode);
+            $model = tbl_spj::where('id_instansi', Session::get('id_instansi'))->findOrFail($req->kode);
             $model->id_instansi = Session::get('id_instansi');
             $model->id_thn_anggaran = $tahun_anggaran_aktiv->id;
             $model->kode = $req->kode_spj;

@@ -25,11 +25,29 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="row">
+                        <div class="col-md-4">
+                            <div class="callout callout-danger">
+                                <h5><i class="fa fa-warning"></i>Total Penerimaan</h5>
+                                <p>Rp. {{ number_format($jumlah_perimaan,2,',','.') }}</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="callout callout-warning">
+                                <h5><i class="fa fa-warning"></i>Total Pengeluaran</h5>
+                                <p>Rp. {{ number_format($jumlah_keluar,2,',','.') }}</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="callout callout-success">
+                                <h5><i class="fa fa-warning"></i>Total Sisa Pembelian</h5>
+                                <p>Rp. {{ number_format($sisa_uang_pembelian,2,',','.') }}</p>
+                            </div>
+                        </div>
                         @if(empty($instansi))
                             <div class="col-md-12">
                                 <div class="callout callout-danger">
                                     <h5><i class="fa fa-warning"></i>Informasi Instansi</h5>
-                                    <p>Pengguna diwajibkan untuk mengisi data instansi anda terlebih dahulu. <a href="instansi/create">Klik disini</a></p>
+                                    <p>Pengguna diwajibkan untuk mengisi data instansi anda terlebih dahulu. <a href="{{ url('instansi/create') }}">Klik disini</a></p>
                                 </div>
                             </div>
                         @else
@@ -104,13 +122,16 @@
                                 </div>
                             </div>
                         @endif
+
                     </div>
                 </div>
                 @if(!empty($data_rekap))
                     <div class="col-sm-4">
                         <div class="row">
+                                <div class="col-sm-12"><h5>Rekapitulasi Pesediaan</h5></div>
                                 @foreach($data_rekap as $rekap)
                                 <div class="col-sm-12">
+
                                     <div class="info-box mb-3 bg-primary">
                                         <span class="info-box-icon"><i class="fas fa-tag"></i></span>
                                         <div class="info-box-content">

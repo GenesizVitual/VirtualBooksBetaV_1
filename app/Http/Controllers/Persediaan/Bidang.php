@@ -48,7 +48,7 @@ class Bidang extends Controller
     }
 
     public function edit($id){
-        $model =bidangs::findOrFail($id);
+        $model =bidangs::where('id_instansi', Session::get('id_instansi'))->findOrFail($id);
         return view('Persediaan.Bidang.edit', ['data'=>$model]);
     }
 
@@ -58,7 +58,7 @@ class Bidang extends Controller
             '_token'=>'required'
         ]);
 
-        $model = bidangs::findOrFail($id);
+        $model = bidangs::where('id_instansi', Session::get('id_instansi'))->findOrFail($id);
         $model->nama_bidang = $req->nama_bidang;
 
         if($model->save()){
@@ -74,7 +74,7 @@ class Bidang extends Controller
             '_method'=> 'required'
         ]);
 
-        $model = bidangs::findOrFail($id);
+        $model = bidangs::where('id_instansi', Session::get('id_instansi'))->findOrFail($id);
 
         if($model->delete()){
             return redirect('bidang')->with('message_success','Anda telah menghapus bidang yang anda telah pilih');

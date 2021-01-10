@@ -91,7 +91,7 @@ class Distribusi
         try
         {
             if(!empty($array)){
-                $model_pengeluaran = tbl_distribusi::whereDate('tgl_kerluar',$array['tgl_keluar'])->where('id_bidang', $array['id_bidang'])
+                $model_pengeluaran = tbl_distribusi::where('id_instansi', Session::get('id_instansi'))->whereDate('tgl_kerluar',$array['tgl_keluar'])->where('id_bidang', $array['id_bidang'])
                 ->where('id_instansi', Session::get('id_instansi'))->orderBy('created_at');
                 $row =array();
                 foreach ($model_pengeluaran->get() as $data)

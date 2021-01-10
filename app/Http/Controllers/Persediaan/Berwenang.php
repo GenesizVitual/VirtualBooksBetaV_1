@@ -22,7 +22,7 @@ class Berwenang extends Controller
     public function index()
     {
         $data = [
-            'data'=>tbl_berwenang::all()->where('id_instansi')
+            'data'=>tbl_berwenang::all()->where('id_instansi', Session::get('id_instansi'))
         ];
         return view('Persediaan.Berwenang.content', $data);
     }

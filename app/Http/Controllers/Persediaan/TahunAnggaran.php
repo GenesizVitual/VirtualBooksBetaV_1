@@ -49,7 +49,7 @@ class TahunAnggaran extends Controller
             'status'=>'required'
         ]);
 
-        $model = thn_anggaran::findOrFail($id);
+        $model = thn_anggaran::where('id_instansi', Session::get('id_instansi'))->findOrFail($id);
         $model->thn_anggaran = $req->thn_anggaran;
         $model->status = $req->status;
 
@@ -67,8 +67,7 @@ class TahunAnggaran extends Controller
             '_method'=> 'required'
          ]);
 
-        $model = thn_anggaran::findOrFail($id);
-
+        $model = thn_anggaran::where('id_instansi', Session::get('id_instansi'))->findOrFail($id);
         if($model->delete())
         {
             return response()->json(array('status'=>'success','message'=>'Anda telah menghapus data tahun anggaran ini'));

@@ -63,7 +63,7 @@ class Nota
         foreach ($model_nota as $data_nota)
         {
 
-            $cek_pajak = self::cek_pajak($data_nota->linkToPembelian->sum('total_beli'), $data_nota);
+            $cek_pajak = self::cek_pajak($data_nota->linkToPembelian->where('id_instansi', Session::get('id_instansi'))->sum('total_beli'), $data_nota);
             $total_sesudah_pajak = $cek_pajak->total+$cek_pajak->total_ppn+$cek_pajak->total_pph;
 
             $column = array();
@@ -109,7 +109,7 @@ class Nota
                 $column[] = RenderParsial::render_partial('Persediaan.Pembelian.partial.button', $data);
                 $row[] = $column;
             }
-            $total_pembelian = $nota->linkToPembelian->sum('total_beli');
+            $total_pembelian = $nota->linkToPembelian->where('id_instansi', Session::get('id_instansi'))->sum('total_beli');
             # Nilai total pajak tidak berasal dari field pph atau ppn yang ada pada tabel pembelianbarang
             $data_pajak = self::cek_pajak($total_pembelian, $nota);
 

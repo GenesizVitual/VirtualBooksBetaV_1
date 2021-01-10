@@ -24,7 +24,10 @@ class Dashboard extends Controller
     {
         $data = [
            'instansi'=>Instansi::where('user_id', Session::get('user_id'))->first(),
-            'data_rekap'=>data_dashboard::JumlahjenisTBK(null)
+           'data_rekap'=>data_dashboard::JumlahjenisTBK(null)['data_rekap'],
+           'jumlah_perimaan'=>data_dashboard::JumlahjenisTBK(null)['total_rekap'],
+           'jumlah_keluar' => data_dashboard::sumTotalPengeluaran(null)['total_pengeluaran'],
+           'sisa_uang_pembelian' => data_dashboard::JumlahjenisTBK(null)['total_rekap']-data_dashboard::sumTotalPengeluaran(null)['total_pengeluaran']
         ];
 
         return view('Persediaan.Dashboard.content', $data);
