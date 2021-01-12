@@ -42,6 +42,12 @@
 							{{ Session::get('message_error') }}
 						</span>
 					@endif
+
+					@if(!empty(Session::get('message_success')))
+						<span style="color: green">
+							{{ Session::get('message_success') }}
+						</span>
+					@endif
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 						<input class="input100" type="text" name="email">
 						<span class="focus-input100"></span>

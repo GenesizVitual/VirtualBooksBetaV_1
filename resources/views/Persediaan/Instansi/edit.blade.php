@@ -82,7 +82,7 @@
                                                 <div class="form-group">
                                                     <label for="fax"><small style="color: orange">*</small> No. Fax</label>
                                                     <input type="fax" class="form-control" name="fax" value="{{ $instansi->fax }}">
-                                                    <small style="color: orange">* Logo tidak diwajibkan diisi</small>
+                                                    {{--<small style="color: orange">* Logo tidak diwajibkan diisi</small>--}}
                                                 </div>
                                             </div>
                                         </div>

@@ -23,8 +23,15 @@ class User extends Controller
     {
         $model = pengguna::where('email', $req->email)->first();
         if(Hash::check($req->pass, $model->password)){
+
+            if($model->status_syarat == 0)
+            {
+                return "Pengisian Formulir Awal dulu";
+            }
+
             $req->session()->put('name', $model->name);
             $req->session()->put('user_id', $model->id);
+
             if(!empty($model->linkToInstansi->id)){
                 $req->session()->put('id_instansi', $model->linkToInstansi->id);
                 $req->session()->put('level', $model->level);
@@ -42,7 +49,6 @@ class User extends Controller
 
     public function store(Request $req)
     {
-
         if($this->check_email($req)==true){
             return redirect('register')->with('message_error','Email anda telah terdaftar');
         }
@@ -51,11 +57,11 @@ class User extends Controller
         $model->name = $req->name;
         $model->email = $req->email;
         $model->password = bcrypt($req->pass);
-        $model->level = 1;
+        $model->level = '1';
         if($model->save())
         {
             if (empty($req->session()->user_id)){
-                return redirect('register')->with('message_success','Silahkan login 5 menit kemudian');
+                return redirect('login')->with('message_success','Silahkan login 5 menit kemudian');
             }else{
                 return "User telah ditambahkan";
             }
@@ -63,7 +69,7 @@ class User extends Controller
     }
 
     public function check_email($req){
-        $model = pengguna::where('email',$req->email)->where('level',0)->first();
+        $model = pengguna::where('email',$req->email)->where('level',1)->first();
         if(empty($model)){
             return false;
         }else{

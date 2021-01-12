@@ -21,8 +21,7 @@ Route::get('login', 'User@login');
 Route::get('log-out', 'User@LogOut');
 Route::get('register', 'User@register');
 Route::post('login-check','User@Usercheck');
-
-
+Route::resource('user', 'User');
 
 //
 //Route::get('jurnal-umum', 'Akuntansi\AkuntansiJasa\report\JurnalUmum@JurnalUmum');

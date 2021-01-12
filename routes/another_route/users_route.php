@@ -5,7 +5,7 @@ use App\Http\Middleware\CheckUser;
 
 
 Route::middleware([CheckLevel::class, CheckUser::class])->group(function () {
-    Route::resource('user', 'User');
+
     //======================================================================================================================
 
     Route::get('dashboard','Persediaan\Dashboard@index');
