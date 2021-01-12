@@ -35,7 +35,7 @@
                         <div class="card-header">
                             <h3 class="card-title">Panel Stok Opname</h3>
                             <div class="card-tools">
-                                {{--<a href="{{ url('gudang/create') }}" class="btn btn-tool" ><i class="fas fa-plus"></i></a>--}}
+                                <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#modal-default"><i class="fas fa-file-export"> Transfer Stok</i></a>
                             </div>
                         </div>
                         <div class="card-body">
@@ -229,6 +229,34 @@
                 </div>
             </div>
         </div><!-- /.container-fluid -->
+        <div class="modal fade" id="modal-default">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal Transfer Stok</h4>
+                    </div>
+                    <form action="{{ url('transfer-stok') }}" method="post">
+                        <div class="modal-body">
+                            {{ csrf_field() }}
+                            <select class="form-control" name="tahun_anggaran">
+                                @if(!empty($tahun_anggaran))
+                                    @foreach($tahun_anggaran as $data)
+                                        <option value="{{ $data->id }}" @if($thn_anggaran_aktif->id==$data->id or $thn_anggaran_aktif->thn_anggaran >= $data->thn_anggaran) disabled @endif> {{ $data->thn_anggaran }}</option>
+                                    @endforeach
+                                @endif
+                            </select>
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+                            <button type="submit" class="btn btn-primary">Kirim</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
     </div>
 @stop
 
@@ -256,6 +284,7 @@
                 "info": true,
                 "autoWidth": false,
                 "responsive": false,
+
             });
 
             //Datemask dd/mm/yyyy

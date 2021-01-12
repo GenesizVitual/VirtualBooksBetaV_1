@@ -32,9 +32,11 @@ class Stok
             $query_segmen .= ' and tbl_pembelian_barang.id_gudang='.self::$id_barang;
         }
 
+
+
         if(empty(self::$tgl_awal) && empty(self::$tgl_akhir)){
-            $query = DB::select('SELECT d.id, d.nama_barang,d.satuan, d.keterangan,if(d.stok is null, d.jumlah_barang, d.stok) as stok,d.harga_barang,d.sisa_uang from(
-                                    SELECT tbl_gudang.id,tbl_pembelian_barang.id as id_pembelian,tbl_nota.tgl_beli, tbl_gudang.nama_barang, tbl_pembelian_barang.satuan,tbl_pembelian_barang.jumlah_barang,tbl_pembelian_barang.keterangan,tbl_pembelian_barang.harga_barang,
+            $query = DB::select('SELECT d.id, d.nama_barang,d.satuan,d.id_nota, d.keterangan,d.id_pembelian,if(d.stok is null, d.jumlah_barang, d.stok) as stok,d.harga_barang,d.sisa_uang from(
+                                    SELECT tbl_gudang.id,tbl_nota.id as id_nota,tbl_pembelian_barang.id as id_pembelian,tbl_nota.tgl_beli, tbl_gudang.nama_barang, tbl_pembelian_barang.satuan,tbl_pembelian_barang.jumlah_barang,tbl_pembelian_barang.keterangan,tbl_pembelian_barang.harga_barang,
                                     tbl_pembelian_barang.jumlah_barang - sum(tbl_pengeluaran_barang.jumlah_keluar) as stok, (tbl_pembelian_barang.jumlah_barang - sum(tbl_pengeluaran_barang.jumlah_keluar)) * tbl_pembelian_barang.harga_barang as sisa_uang
                                     FROM tbl_pembelian_barang 
                                     LEFT join tbl_pengeluaran_barang on tbl_pembelian_barang.id = tbl_pengeluaran_barang.id_pembelian
@@ -42,11 +44,11 @@ class Stok
                                     join tbl_gudang on tbl_pembelian_barang.id_gudang = tbl_gudang.id
                                     where tbl_nota.id_instansi = '.Session::get('id_instansi').' and tbl_nota.id_thn_anggaran='.$model->id.'
                                     GROUP by tbl_nota.id, tbl_gudang.id
-                                    ) as d
+                                    ) as d 
                                 ');
         }else{
-             $query = DB::select('SELECT d.id, d.nama_barang,d.satuan, d.keterangan,if(d.stok is null, d.jumlah_barang, d.stok) as stok,d.harga_barang,d.sisa_uang from(
-                                    SELECT tbl_gudang.id,tbl_pembelian_barang.id as id_pembelian,tbl_nota.tgl_beli, tbl_gudang.nama_barang, tbl_pembelian_barang.satuan,tbl_pembelian_barang.jumlah_barang,tbl_pembelian_barang.keterangan,tbl_pembelian_barang.harga_barang,
+             $query = DB::select('SELECT d.id, d.nama_barang,d.satuan,d.id_nota, d.id_pembelian, d.keterangan,if(d.stok is null, d.jumlah_barang, d.stok) as stok,d.harga_barang,d.sisa_uang from(
+                                    SELECT tbl_gudang.id,tbl_nota.id as id_nota,tbl_pembelian_barang.id as id_pembelian,tbl_nota.tgl_beli, tbl_gudang.nama_barang, tbl_pembelian_barang.satuan,tbl_pembelian_barang.jumlah_barang,tbl_pembelian_barang.keterangan,tbl_pembelian_barang.harga_barang,
                                     tbl_pembelian_barang.jumlah_barang - sum(tbl_pengeluaran_barang.jumlah_keluar) as stok, (tbl_pembelian_barang.jumlah_barang - sum(tbl_pengeluaran_barang.jumlah_keluar)) * tbl_pembelian_barang.harga_barang as sisa_uang
                                     FROM tbl_pembelian_barang 
                                     LEFT join tbl_pengeluaran_barang on tbl_pembelian_barang.id = tbl_pengeluaran_barang.id_pembelian
@@ -56,7 +58,7 @@ class Stok
                                     where tbl_nota.id_instansi = '.Session::get('id_instansi').' and tbl_nota.id_thn_anggaran='.$model->id.' and 
                                     tbl_nota.tgl_beli >= "'.self::$tgl_awal.'" and tbl_nota.tgl_beli <= "'.self::$tgl_akhir.'" '.$query_segmen.'
                                     GROUP by tbl_nota.id, tbl_gudang.id 
-                                    ) as d
+                                    ) as d 
                                 ');
         }
         return $query;
@@ -75,7 +77,6 @@ class Stok
 
 
             $query = self::Query($ndata);
-
             $row = [];
             foreach ($query as $data){
                 $column=[];
@@ -84,7 +85,18 @@ class Stok
                 $column['stok_barang']= $data->stok;
                 $column['harga_barang']= $data->harga_barang;
                 $column['keterangan']= $data->keterangan;
-                $row[] = $column;
+                $column['id_pembelian']=$data->id_pembelian;
+                $column['id_nota']=$data->id_nota;
+                if(!empty($array['filter_zero']))
+                {
+                    if($data->stok>0){
+                        $row[] = $column;
+                    }
+                }
+                else{
+                    $row[] = $column;
+                }
+
             }
 
             return $row;

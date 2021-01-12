@@ -46,4 +46,8 @@ class Nota extends Model
         return $this->hasMany('App\Model\Persediaan\Distribusi','id_nota','id');
     }
 
+    # Hubungkan Tabel Tahun Anggaran()
+    public function linkToTahunAnggaran(){
+        return $this->belongsTo('App\Model\Persediaan\TahunAnggaran','id_thn_anggaran');
+    }
 }

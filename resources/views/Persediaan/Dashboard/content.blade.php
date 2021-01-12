@@ -128,7 +128,7 @@
                 @if(!empty($data_rekap))
                     <div class="col-sm-4">
                         <div class="row">
-                                <div class="col-sm-12"><h5>Rekapitulasi Pesediaan</h5></div>
+                                <div class="col-sm-12"><h5>Rekapitulasi Persediaan</h5></div>
                                 @foreach($data_rekap as $rekap)
                                 <div class="col-sm-12">
 

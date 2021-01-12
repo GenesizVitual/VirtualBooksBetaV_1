@@ -51,7 +51,9 @@ Route::middleware([CheckLevel::class, CheckUser::class])->group(function () {
     Route::resource('tbk','Persediaan\TBK');
     Route::resource('tbk-nota','Persediaan\TBK_NOTA');
 
-    #laporan
+    Route::post('transfer-stok','Persediaan\Stok@preview_stok_opname');
+
+    # Todo laporan
     Route::get('laporan','Persediaan\MasterLaporan@index');
     # Preview Daftar Nota
     Route::get('daftar-nota','Persediaan\MasterLaporan@preview_data_daftar_nota');
@@ -97,5 +99,5 @@ Route::middleware([CheckLevel::class, CheckUser::class])->group(function () {
     Route::get('stok-opname','Persediaan\MasterLaporan@preview_stok_opname');
     # Cetak Barang Stok
     Route::post('cetak-stok-opname','Persediaan\MasterLaporan@cetak_stok_barang');
-    # setting laporan berwenang
+
 });

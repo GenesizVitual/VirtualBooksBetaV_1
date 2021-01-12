@@ -16,6 +16,7 @@ use App\Http\Controllers\Persediaan\utils\data\MutasiBarang;
 use App\Http\Controllers\Persediaan\utils\data\Stok;
 use App\Model\Persediaan\Gudang;
 use Illuminate\Http\Request;
+use App\Model\Persediaan\TahunAnggaran;
 
 use Session;
 
@@ -678,7 +679,9 @@ class MasterLaporan extends Controller
                 'berwenang'=>$this->berwenang(null),
                 'data'=>$data_pengeluaran,
                 'data_barang'=> $data_gudang,
-                'jenis_penerimaan'=>StatusPenerimaan::SetStatusPenerimaan()
+                'jenis_penerimaan'=>StatusPenerimaan::SetStatusPenerimaan(),
+                'thn_anggaran_aktif'=> TahunAnggaran::where('id_instansi', Session::get('id_instansi'))->where('status','1')->first(),
+                'tahun_anggaran'=> TahunAnggaran::all()->where('id_instansi', Session::get('id_instansi'))->sortBy('thn_anggaran')
             ];
             return view('Persediaan.laporan.stok_opname.content', $data);
         }catch (Throwable $e){
