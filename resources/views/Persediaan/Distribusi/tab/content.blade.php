@@ -142,7 +142,7 @@
                                                             </div>
                                                             <div class="tab-pane fade" id="custom-content-below-pembagian" role="tabpanel" aria-labelledby="custom-content-below-pembagian-tab">
                                                                 <p style="color: darkblue">* Tabs Pembagian akan menampilkan formulir pembagian dalam format tabel. Tabs pembagian ini juga berfungsi untuk menampilkan barang yang telah dibagi</p>
-                                                                    <button class="btn btn-primary" id="tombol-form-keluar" style="margin-bottom: 10px">Keluarkan</button>
+                                                                    <button class="btn btn-primary" id="tombol-form-keluar" style="margin-bottom: 10px; display: none;">Keluarkan</button>
                                                                 <hr>
                                                                 <form id="form-pembagian">
                                                                     <table id="sample1" cellspacing="0" class="table table-striped table-bordered dt-responsive " style="width:100%">

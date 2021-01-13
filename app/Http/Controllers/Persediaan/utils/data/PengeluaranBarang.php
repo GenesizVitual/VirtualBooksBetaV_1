@@ -10,6 +10,7 @@ namespace app\Http\Controllers\Persediaan\utils\data;
 use Session;
 use App\Model\Persediaan\Nota;
 use App\Http\Controllers\Persediaan\utils\TahunAggaranCheck;
+use App\Http\Controllers\Persediaan\utils\data\FormulaPajak;
 
 class PengeluaranBarang
 {
@@ -90,8 +91,8 @@ class PengeluaranBarang
             $column['tanggal_keluar'] =$data->tgl_kerluar;
             $column['nama_barang'] =$data->linkToGudang->nama_barang;
             $column['banyak_barang'] =$data->jumlah_keluar;
-            $column['harga_satuan'] =number_format($data->linkToPembelian->harga_barang,2,',','.');
-            $column['jumlah_harga'] =number_format(round($data->jumlah_keluar*$data->linkToPembelian->harga_barang,2),2,',','.');
+            $column['harga_satuan'] =number_format(FormulaPajak::formula_pajak($data->linkToPembelian->harga_barang,$data_nota->ppn,$data_nota->pph),2,',','.');
+            $column['jumlah_harga'] =number_format(round(FormulaPajak::formula_pajak($data->jumlah_keluar*$data->linkToPembelian->harga_barang,$data_nota->ppn,$data_nota->pph),2),2,',','.');
             $column['bidang'] =$data->linkToBidang->nama_bidang;
             $column['tanggal_penyerahan'] =$data->tgl_kerluar;
             $column['keterangan'] =$data->keterangan;

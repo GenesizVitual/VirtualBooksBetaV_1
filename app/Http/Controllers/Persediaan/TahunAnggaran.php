@@ -26,6 +26,25 @@ class TahunAnggaran extends Controller
         return view('Persediaan.Tahun_Anggaran.content', $data);
     }
 
+    # Pengisian tahun anggaran pada saat aplikasi digunakan
+    public function setting_thn_awal_penggunaan(Request $req){
+        $this->validate($req,[
+            'thn_anggaran'=>'required|numeric'
+        ]);
+
+        $model = new thn_anggaran([
+            'thn_anggaran'=> $req->thn_anggaran,
+            'status'=> '1',
+            'id_instansi'=>Session::get('id_instansi')
+        ]);
+
+        if($model->save()){
+            return redirect('login')->with('message_success','Anda telah menambah data tahun anggaran, silahkan login ulang untuk memulai aplikasi');
+        }else{
+            return redirect('penentuan-tahun-anggaran')->with('message_error','Gagal menambahkan tahun anggaran baru');
+        }
+    }
+
     public function store(Request $req){
         $this->validate($req,[
             'thn_anggaran'=>'required|numeric'

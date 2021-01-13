@@ -133,7 +133,7 @@
                 $('[name="stok_terakhir"]').val(stok_kode);
 
                 $('#tombol-form-keluar').attr('onclick','OnPressButtonIncreate('+action+','+stok_kode+')');
-
+                $('#tombol-form-keluar').show();
                 $('#sample1').DataTable()
                     .columns.adjust()
                     .responsive.recalc();

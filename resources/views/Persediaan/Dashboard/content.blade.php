@@ -114,6 +114,33 @@
                                                     <a href="{{ url('instansi/'.$instansi->id.'/edit') }}" class="btn btn-primary btn-sm float-right"><i class="fa fa-pen"></i></a>
                                                 </div>
                                             </div>
+                                            <div class="modal fade" id="modal-default">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title">Panel Upload Logo</h4>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <form action="{{ url('instansi/'.$instansi->id.'/upload') }}" id="#quickForm" method="post" enctype="multipart/form-data">
+                                                            {{ csrf_field() }}
+                                                            <input type="hidden" name="_method" value="put">
+                                                            <div class="modal-body">
+                                                                <div class="custom-file">
+                                                                    <input type="file" class="custom-file-input" name="logo" id="customFile">
+                                                                    <label class="custom-file-label" for="customFile" >format logo .jpeg .jpg .png. Max file 2MB </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer justify-content-between">
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                                                                <button type="submit" class="btn btn-primary">Upload Logo</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         @else
                                             <a href="{{ url('instansi/create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah</a>
                                             <label style="color: darkblue"> Instansi masih kosong. </label>

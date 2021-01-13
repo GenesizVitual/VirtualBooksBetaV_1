@@ -7,6 +7,7 @@ use App\Model\Persediaan\Instansi as instance;
 use App\Model\Apps\KotaProv;
 use Illuminate\Http\Request;
 use App\Model\Apps\Provinsi;
+use App\User;
 use Session;
 class Instansi extends Controller
 {
@@ -59,11 +60,16 @@ class Instansi extends Controller
 
         $model = new instance($request);
         if($model->save()){
-            return redirect('instansi')->with('message_success', 'Anda telah mengisi data instansi anda.');
+            if($model->LinksToUsers->status_syarat==0){
+                $model_users = User::find(Session::get('user_id'));
+                $model_users->status_syarat='1';
+                $model_users->save();
+                return redirect('penentuan-tahun-anggaran')->with('message_success', 'Selanjutnya, menentukan tahun data anggaran');
+            }else{
+                return redirect('instansi')->with('message_success', 'Anda telah mengisi data instansi anda.');
+            }
         }
-
         return redirect('instansi')->with('message_error', 'ada kesalahan mengisi data instansi anda, mohon periksa kembali.');
-
     }
 
 

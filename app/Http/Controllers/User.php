@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Session;
 
 use App\User as pengguna;
+use App\Model\Persediaan\Instansi;
 
 use Hash;
 
@@ -23,20 +24,26 @@ class User extends Controller
     {
         $model = pengguna::where('email', $req->email)->first();
         if(Hash::check($req->pass, $model->password)){
-
+            $req->session()->put('user_id', $model->id);
+            $req->session()->put('kode', $model->id);
+            $req->session()->put('level', $model->level);
+            $req->session()->put('name', $model->name);
+            # Pengisian Instansi diawal aplikasi dimulai
             if($model->status_syarat == 0)
             {
-                return "Pengisian Formulir Awal dulu";
+                return redirect('pengaturan-awal')->with('message_info','Lengkapilah formulir pengaturan awal...!');
             }
-
-            $req->session()->put('name', $model->name);
-            $req->session()->put('user_id', $model->id);
-
+            # Set session id Instansi
             if(!empty($model->linkToInstansi->id)){
                 $req->session()->put('id_instansi', $model->linkToInstansi->id);
-                $req->session()->put('level', $model->level);
-                $req->session()->put('kode', $model->id);
             }
+
+            $model_instansi = Instansi::find(Session::get('id_instansi'));
+            $cek_thn_anggaran = $model_instansi->LinkToTahunAnggaran->where('status','1')->first();
+            if(empty($cek_thn_anggaran)){
+                return redirect('penentuan-tahun-anggaran')->with('message_info','Silahkah, masukan tahun anggaran');
+            }
+
             return redirect('dashboard')->with('message_success','Selamat Datang '.$model->name);
         }else{
             return redirect('login')->with('message_error','Maaf, Email atau password anda salah. silahkah coba lagi');

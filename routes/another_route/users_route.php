@@ -2,9 +2,22 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\CheckLevel;
 use App\Http\Middleware\CheckUser;
-
+use App\Model\Apps\Provinsi;
+use App\Model\Apps\KotaProv;
 
 Route::middleware([CheckLevel::class, CheckUser::class])->group(function () {
+
+    Route::get('pengaturan-awal', function (){
+        $data = [
+            'provinsi'=> Provinsi::all()->sortBy('nama'),
+            'kabupaten'=> KotaProv::all()->sortBy('nama'),
+        ];
+        return view('Persediaan.landingpage', $data);
+    });
+
+    Route::get('penentuan-tahun-anggaran', function (){
+        return view('Persediaan.penentuan_tahun_anggaran');
+    });
 
     //======================================================================================================================
 
@@ -12,6 +25,7 @@ Route::middleware([CheckLevel::class, CheckUser::class])->group(function () {
     Route::resource('instansi','Persediaan\Instansi');
     Route::put('instansi/{id}/upload','Persediaan\Instansi@upload');
     Route::post('kota-kab/{id}','Apps\Provinsi@getLinkKab');
+    Route::post('setting-tahun-anggaran','Persediaan\TahunAnggaran@setting_thn_awal_penggunaan');
     Route::resource('tahun-anggaran', 'Persediaan\TahunAnggaran');
     Route::resource('jenis-tbk','Persediaan\JenisTbk');
     Route::resource('penyedia','Persediaan\Penyedia');

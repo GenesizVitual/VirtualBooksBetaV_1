@@ -18,4 +18,12 @@ class Instansi extends Model
     public function BelongsToKabupatenKot(){
         return $this->belongsTo('App\Model\Apps\KotaProv','id_kab_kota');
     }
+
+    public function LinksToUsers(){
+        return $this->belongsTo('App\Model\Users','user_id');
+    }
+
+    public function LinkToTahunAnggaran(){
+        return $this->hasMany('App\Model\Persediaan\TahunAnggaran','id_instansi','id');
+    }
 }
