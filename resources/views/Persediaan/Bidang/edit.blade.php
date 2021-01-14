@@ -15,7 +15,7 @@
                         <div class="card-header">
                             <h3 class="card-title">Formulir Bidang/Bagian</h3>
                         </div>
-                        <form action="{{ url('bidang/'.$data->id) }}"  role="form" method="post" id="quickForm">
+                        <form action="{{ url('bidang/'.EnDec::setAttribute($data->id)) }}"  role="form" method="post" id="quickForm">
                             <div class="card-body">
                                 <input type="hidden" name="_method" value="put">
                                 <span style="color: green">* Isilah Formulir dibawah ini dengan benar.</span>

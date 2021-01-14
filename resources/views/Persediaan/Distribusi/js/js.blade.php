@@ -115,6 +115,7 @@
 
        CallFormData = function (action, stok_akhir) {
             $('#custom-content-below-pembagian-tab').click()
+           $('#set_ket').text("Sedang Meload Data");
             $.ajax({
                 url : '{{ url('form-data-distribusi') }}',
                 type: 'post',
@@ -134,6 +135,7 @@
 
                 $('#tombol-form-keluar').attr('onclick','OnPressButtonIncreate('+action+','+stok_kode+')');
                 $('#tombol-form-keluar').show();
+                $('#set_ket').text("");
                 $('#sample1').DataTable()
                     .columns.adjust()
                     .responsive.recalc();

@@ -86,7 +86,7 @@
                                          </tr>
                                      </table>
                                      <br>
-                                     <a href="{{ url('instansi/'.$instansi->id.'/edit') }}" class="btn btn-primary btn-sm float-right"><i class="fa fa-pen"></i></a>
+                                     <a href="{{ url('instansi/'.EnDec::setAttribute($instansi->id).'/edit') }}" class="btn btn-primary btn-sm float-right"><i class="fa fa-pen"></i></a>
                                  </div>
                              </div>
                              <div class="modal fade" id="modal-default">
@@ -98,7 +98,7 @@
                                                  <span aria-hidden="true">&times;</span>
                                               </button>
                                             </div>
-                                        <form action="{{ url('instansi/'.$instansi->id.'/upload') }}" id="#quickForm" method="post" enctype="multipart/form-data">
+                                        <form action="{{ url('instansi/'.EnDec::setAttribute($instansi->id).'/upload') }}" id="#quickForm" method="post" enctype="multipart/form-data">
                                             {{ csrf_field() }}
                                             <input type="hidden" name="_method" value="put">
                                             <div class="modal-body">

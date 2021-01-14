@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Persediaan;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Session;
 use App\Model\Persediaan\Gudang as gudangs;
 use App\Imports\GudangImport;
@@ -54,6 +55,7 @@ class Gudang extends Controller
     }
 
     public function edit($id){
+        $id = Crypt::decrypt($id);
         $model = gudangs::where('id_instansi', Session::get('id_instansi'))->findOrFail($id);
         $data = [
             'data'=> $model
@@ -63,7 +65,7 @@ class Gudang extends Controller
 
     public function update(Request $req, $id)
     {
-
+        $id = Crypt::decrypt($id);
         $this->validate($req,[
             'nama_barang'=> 'required',
             '_token'=>'required'
@@ -81,6 +83,7 @@ class Gudang extends Controller
     }
 
     public function destroy(Request $req, $id){
+        $id = Crypt::decrypt($id);
         $this->validate($req,[
             '_token'=> 'required',
             '_method'=>'required'

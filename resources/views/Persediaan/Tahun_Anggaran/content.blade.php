@@ -50,7 +50,7 @@
                             <div class="col-sm-3">
                                 <div class="card card-primary">
                                     <div class="card-body">
-                                        <form action="{{ url('tahun-anggaran/'.$data->id) }}" method="post" id="quickForm">
+                                        <form action="{{ url('tahun-anggaran/'.EnDec::setAttribute($data->id)) }}" method="post" id="quickForm">
                                             {{ csrf_field() }}
                                             <input type="hidden" name="_method" value="put">
                                             <div class="form-group row">
@@ -66,7 +66,7 @@
                                                 </div>
                                                 <div class="col-sm-12" style="padding-top: 2px">
                                                     <button type="submit" class="btn btn-primary"><i class="fa fa-pen"></i></button>
-                                                    <button type="button" class="btn btn-primary" onclick="destroy('{{ $data->id }}')"><i class="fa fa-eraser"></i></button>
+                                                    <button type="button" class="btn btn-primary" onclick="destroy('{{ EnDec::setAttribute($data->id) }}')"><i class="fa fa-eraser"></i></button>
                                                 </div>
                                             </div>
                                         </form>

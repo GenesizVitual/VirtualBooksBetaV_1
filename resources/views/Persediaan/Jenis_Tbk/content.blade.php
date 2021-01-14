@@ -55,11 +55,11 @@
                                             <td>{{ $data->jenis_tbk }}</td>
                                             <td><span class="badge bg-danger">{{ $status_pembayaran[$data->status_pembayaran] }}</span></td>
                                             <td>
-                                                <form action="{{ url('jenis-tbk/'.$data->id) }}" method="post">
+                                                <form action="{{ url('jenis-tbk/'.EnDec::setAttribute($data->id)) }}" method="post">
                                                     {{ csrf_field() }}
                                                     <input type="hidden" name="_method" value="delete">
                                                     <div class="btn-group">
-                                                        <a href="{{ url('jenis-tbk/'.$data->id.'/edit') }}" class="btn btn-info btn-warning"><i class="fa fa-pen"></i></a>
+                                                        <a href="{{ url('jenis-tbk/'.EnDec::setAttribute($data->id).'/edit') }}" class="btn btn-info btn-warning"><i class="fa fa-pen"></i></a>
                                                         <button type="submit" class="btn btn-info btn-danger" onclick="return confirm('Jika anda ingin menghapus Tbk ini, maka data yang terkait akan dihilangkan')"><i class="fa fa-eraser"></i></button>
                                                     </div>
                                                 </form>

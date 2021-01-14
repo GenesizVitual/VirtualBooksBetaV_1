@@ -8,6 +8,7 @@ use App\Model\Apps\KotaProv;
 use Illuminate\Http\Request;
 use App\Model\Apps\Provinsi;
 use App\User;
+use Illuminate\Support\Facades\Crypt;
 use Session;
 class Instansi extends Controller
 {
@@ -75,6 +76,7 @@ class Instansi extends Controller
 
     public function edit($id)
     {
+        $id = Crypt::decrypt($id);
         $model = instance::findOrFail($id);
         $data = [
             'provinsi'=> Provinsi::all(),
@@ -97,7 +99,7 @@ class Instansi extends Controller
             'email'=>'required|unique:tbl_instansi,email|max:255',
             'level_instansi'=>'required',
         ]);
-
+        $id = Crypt::decrypt($id);
         $request = $req->except(['_token','_method']);
         $model = instance::where('id', $id)->update($request);
         if($model){
@@ -113,7 +115,7 @@ class Instansi extends Controller
         $this->validate($req,[
             'logo'=>'required|image|mimes:jpeg,jpg,png|max:25000',
         ]);
-
+        $id = Crypt::decrypt($id);
         $gambar= $req->logo;
         $imagename = time() . '.' . $gambar->getClientOriginalExtension();
         $model = instance::findOrFail( $id);

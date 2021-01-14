@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Persediaan;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\Persediaan\Penyedia as penyedias;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Session;
 
 class Penyedia extends Controller
@@ -57,10 +58,10 @@ class Penyedia extends Controller
 
     public function edit($id)
     {
+        $id = Crypt::decrypt($id);
         $data = [
             'data'=> penyedias::where('id_instansi', Session::get('id_instansi'))->findOrFail($id)
         ];
-
         return view('Persediaan.Penyedia.edit', $data);
     }
 
@@ -71,7 +72,7 @@ class Penyedia extends Controller
             'pimpinan'=>'required',
             'alamat'=>'required'
         ]);
-
+        $id = Crypt::decrypt($id);
         $model = penyedias::where('id_instansi', Session::get('id_instansi'))->findOrFail($id);
         $model->penyedia = $req->penyedia;
         $model->pimpinan = $req->pimpinan;
@@ -94,6 +95,7 @@ class Penyedia extends Controller
             '_method'=>'required',
             '_token'=>'required',
         ]);
+        $id = Crypt::decrypt($id);
         $model = penyedias::where('id_instansi', Session::get('id_instansi'))->findOrFail($id);
         if($model->delete()){
             return redirect('penyedia')->with('message_success','Anda telah menghapus penyedia :'. $model->penyedia);

@@ -15,7 +15,7 @@
                         <div class="card-header">
                             <h3 class="card-title">Formulir Jenis TBK</h3>
                         </div>
-                        <form action="{{ url('jenis-tbk/'.$jenis_tbk->id) }}"  role="form" method="post" id="quickForm">
+                        <form action="{{ url('jenis-tbk/'.EnDec::setAttribute($jenis_tbk->id)) }}"  role="form" method="post" id="quickForm">
                             <input type="hidden" name="_method" value="put">
                             <div class="card-body">
                                 <span style="color: green">* Isilah Formulir dibawah ini dengan benar.</span>

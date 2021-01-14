@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Persediaan;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\Persediaan\TahunAnggaran as thn_anggaran;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Session;
 class TahunAnggaran extends Controller
 {
@@ -67,7 +68,7 @@ class TahunAnggaran extends Controller
             'thn_anggaran'=>'required|numeric',
             'status'=>'required'
         ]);
-
+        $id = Crypt::decrypt($id);
         $model = thn_anggaran::where('id_instansi', Session::get('id_instansi'))->findOrFail($id);
         $model->thn_anggaran = $req->thn_anggaran;
         $model->status = $req->status;
@@ -85,7 +86,7 @@ class TahunAnggaran extends Controller
             '_token'=> 'required',
             '_method'=> 'required'
          ]);
-
+        $id = Crypt::decrypt($id);
         $model = thn_anggaran::where('id_instansi', Session::get('id_instansi'))->findOrFail($id);
         if($model->delete())
         {
