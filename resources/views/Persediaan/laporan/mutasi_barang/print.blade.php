@@ -14,6 +14,10 @@
             padding-left: 30px;
         }
 
+        #customers td, #customers th {
+            border: 1px solid #0f0f0f;
+            padding: 3px;
+        }
 
         @page {
             size: legal landscape;
@@ -56,7 +60,7 @@
             </tr>
         </table>
         <br>
-        <table class="table_nota" role="grid" border="1">
+        <table class="table_nota" id="customers" role="grid" border="1">
             <thead>
             <tr>
                 <th rowspan="2">No</th>

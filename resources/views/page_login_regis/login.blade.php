@@ -35,7 +35,7 @@
 				<form action="{{ url('login-check') }}" method="post" class="login100-form validate-form">
 					{{ csrf_field() }}
 					<span class="login100-form-title p-b-43">
-						Silahkan masuk.
+						Selamat Datang di<br> SayaKetik Persediaan
 					</span>
 					@if(!empty(Session::get('message_error')))
 						<span style="color: red">
@@ -60,17 +60,17 @@
 						<span class="label-input100">Password</span>
 					</div>
 
-					<div class="flex-sb-m w-full p-t-3 p-b-32">
-						<div class="contact100-form-checkbox">
+					{{--<div class="flex-sb-m w-full p-t-3 p-b-32">--}}
+						{{--<div class="contact100-form-checkbox">--}}
 
-						</div>
+						{{--</div>--}}
 
-						<div>
-							<a href="#" class="txt1">
-								Forgot Password?
-							</a>
-						</div>
-					</div>
+						{{--<div>--}}
+							{{--<a href="#" class="txt1">--}}
+								{{--Forgot Password?--}}
+							{{--</a>--}}
+						{{--</div>--}}
+					{{--</div>--}}
 
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
@@ -80,7 +80,7 @@
 					
 					<div class="text-center p-t-46 p-b-20">
 						<span class="txt2">
-							or <a href="{{ url('register') }}">sign up</a>
+							 Anda belum punya akun. anda bisa mendaftar <a href="{{ url('register') }}">disini</a>
 						</span>
 					</div>
 

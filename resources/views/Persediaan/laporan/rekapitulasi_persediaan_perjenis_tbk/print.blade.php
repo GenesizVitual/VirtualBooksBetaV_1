@@ -13,6 +13,10 @@
             border-collapse: collapse;
         }
 
+        #customers td, #customers th {
+            border: 1px solid #0f0f0f;
+            padding: 3px;
+        }
 
         @page {
             size: legal landscape;
@@ -53,7 +57,7 @@
             </tr>
         </table>
         <br>
-        <table class="table_nota" role="grid" border="1">
+        <table class="table_nota" role="grid" id="customers" border="1">
             <thead>
             <tr>
                 <th>#</th>

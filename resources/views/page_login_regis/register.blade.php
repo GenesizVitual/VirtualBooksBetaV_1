@@ -35,7 +35,7 @@
 				<form action="{{ url('user') }}" class="login100-form validate-form" method="post">
 					{{ csrf_field() }}
 					<span class="login100-form-title p-b-43">
-						Cara mudah, untuk mendapatkan akun Virtual Book kami
+						Cara mudah, untuk mendapatkan akun SayaKetik
 						<span class="txt2">
 							@if(!empty(Session::get('message_success')))
 								<p style="color: green">{{ Session::get('message_success') }}</p>
@@ -67,7 +67,7 @@
 
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							Submit
+							Kirim
 						</button>
 					</div>
 

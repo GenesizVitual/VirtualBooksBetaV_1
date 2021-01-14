@@ -14,6 +14,14 @@
         }
 
 
+        #customers td, #customers th {
+            border: 1px solid #0f0f0f;
+            padding: 3px;
+        }
+
+
+
+
         @page {
             size: legal landscape;
             margin-left: 100px;
@@ -35,7 +43,7 @@
             </tr>
         </table>
         <br>
-        <table style="font-weight: bold;">
+        <table style="font-weight: bold;" >
             <tr>
                 <td>Instansi</td>
                 <td>:</td>
@@ -53,7 +61,7 @@
             </tr>
         </table>
         <br>
-        <table class="table_nota" role="grid" border="1">
+        <table class="table_nota" role="grid" id="customers" border="1">
             <thead>
             <tr>
                 <th rowspan="2" style="width: 30px">#</th>
