@@ -14,13 +14,13 @@ class EnDecIDs
     public static function getAttribute($key)
     {
         $value = parent::getAttribute($key);
-        $value_ = Crypt::decrypt($value);
-        return $value_;
+//        $value_ = Crypt::decrypt($value);
+        return $value;
     }
 
     public static function setAttribute($value)
     {
-        $value = Crypt::encrypt($value);
+//        $value = Crypt::encrypt($value);
         return $value;
     }
 }

@@ -55,11 +55,11 @@
                                             <td>{{ $no++ }}</td>
                                             <td>{{ $data->nama_barang }}</td>
                                             <td>
-                                                <form action="{{ url('gudang/'.EnDec::setAttribute($data->id)) }}" method="post">
+                                                <form action="{{ url('gudang/'.$data->id) }}" method="post">
                                                     {{ csrf_field() }}
                                                     <input type="hidden" name="_method" value="delete">
                                                     <div class="btn-group">
-                                                        <a href="{{ url('gudang/'.EnDec::setAttribute($data->id).'/edit') }}" class="btn btn-info btn-warning"><i class="fa fa-pen"></i></a>
+                                                        <a href="{{ url('gudang/'.$data->id.'/edit') }}" class="btn btn-info btn-warning"><i class="fa fa-pen"></i></a>
                                                         <button type="submit" class="btn btn-info btn-danger" onclick="return confirm('Jika anda ingin menghapus barang ini, maka data yang terkait akan dihilangkan')"><i class="fa fa-eraser"></i></button>
                                                     </div>
                                                 </form>

@@ -54,11 +54,11 @@
                                             <td>{{ $i++ }}</td>
                                             <td>{{ $data->nama_bidang }}</td>
                                             <td>
-                                                <form action="{{ url('bidang/'.EnDec::setAttribute($data->id)) }}" method="post">
+                                                <form action="{{ url('bidang/'.$data->id) }}" method="post">
                                                     {{ csrf_field() }}
                                                     <input type="hidden" name="_method" value="delete">
                                                     <div class="btn-group">
-                                                        <a href="{{ url('bidang/'.EnDec::setAttribute($data->id).'/edit') }}" class="btn btn-info btn-warning"><i class="fa fa-pen"></i></a>
+                                                        <a href="{{ url('bidang/'.$data->id.'/edit') }}" class="btn btn-info btn-warning"><i class="fa fa-pen"></i></a>
                                                         <button type="submit" class="btn btn-info btn-danger" onclick="return confirm('Jika anda ingin menghapus bidang ini, maka data dengan bidang yang terkait akan dihilangkan')"><i class="fa fa-eraser"></i></button>
                                                     </div>
                                                 </form>

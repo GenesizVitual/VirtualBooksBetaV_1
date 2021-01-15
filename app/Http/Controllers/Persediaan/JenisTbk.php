@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Persediaan;
 use App\Http\Controllers\Controller;
 use App\Model\Persediaan\JenisTbk as jenis_tbk;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Session;
 class JenisTbk extends Controller
 {
@@ -58,7 +57,6 @@ class JenisTbk extends Controller
     }
 
     public function edit($id){
-        $id=Crypt::decrypt($id);
         $data = [
             'status_pembayaran'=>$this->status_pembayaran,
             'jenis_tbk'=> jenis_tbk::where('id_instansi', Session::get('id_instansi'))->findOrFail($id)
@@ -68,7 +66,6 @@ class JenisTbk extends Controller
 
     public function update(Request $req, $id)
     {
-        $id=Crypt::decrypt($id);
         $this->validate($req,[
             'kode'=>'required',
             'jenis_tbk'=> 'required',
@@ -91,7 +88,6 @@ class JenisTbk extends Controller
         $this->validate($req,[
             '_token'=>'required'
         ]);
-        $id=Crypt::decrypt($id);
         $model = jenis_tbk::where('id_instansi', Session::get('id_instansi'))->findOrFail($id);
         if($model->delete()){
             return redirect('jenis-tbk')->with('message_success','Anda telah menghapus TBK dengan Kode:'. $model->kode);

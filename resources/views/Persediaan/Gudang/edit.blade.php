@@ -15,7 +15,7 @@
                         <div class="card-header">
                             <h3 class="card-title">Formulir Barang</h3>
                         </div>
-                        <form action="{{ url('gudang/'. EnDec::setAttribute($data->id)) }}"  role="form" method="post" id="quickForm">
+                        <form action="{{ url('gudang/'. $data->id) }}"  role="form" method="post" id="quickForm">
                             <input type="hidden" name="_method" value="put">
                             <div class="card-body">
                                 <span style="color: green">* Isilah Formulir dibawah ini dengan benar.</span>

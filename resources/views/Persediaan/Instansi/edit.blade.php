@@ -15,7 +15,7 @@
                         <div class="card-header">
                             <h3 class="card-title">Formulir Instansi</h3>
                         </div>
-                        <form action="{{ url('instansi/'.EnDec::setAttribute($instansi->id)) }}"  role="form" method="post" id="quickForm" enctype="multipart/form-data">
+                        <form action="{{ url('instansi/'.$instansi->id) }}"  role="form" method="post" id="quickForm" enctype="multipart/form-data">
                             <input type="hidden" name="_method" value="PUT">
                             <div class="card-body">
                                 <span style="color: green">* Isilah Formulir dibawah ini dengan benar.</span>

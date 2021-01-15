@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Persediaan;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\Persediaan\Bidang as bidangs;
-use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Session;
 
 class Bidang extends Controller
@@ -49,7 +48,6 @@ class Bidang extends Controller
     }
 
     public function edit($id){
-        $id = Crypt::decrypt($id);
         $model =bidangs::where('id_instansi', Session::get('id_instansi'))->findOrFail($id);
         return view('Persediaan.Bidang.edit', ['data'=>$model]);
     }
@@ -59,7 +57,7 @@ class Bidang extends Controller
             'nama_bidang'=> 'required',
             '_token'=>'required'
         ]);
-        $id = Crypt::decrypt($id);
+
         $model = bidangs::where('id_instansi', Session::get('id_instansi'))->findOrFail($id);
         $model->nama_bidang = $req->nama_bidang;
 
