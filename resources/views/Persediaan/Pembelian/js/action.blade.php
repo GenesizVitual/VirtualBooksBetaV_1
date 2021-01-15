@@ -15,6 +15,7 @@
             success:function (result) {
                 feedback(result);
                 collect_data_pembelian();
+                focus();
             }
         })
     }
@@ -25,6 +26,7 @@
            type: 'get',
            dataType: 'json',
            success: function (result) {
+               focus();
                kode_pembelian = result.data.id;
                $('[name="_method"]').val('put');
                $('[name="id_gudang"]').val(result.data.id_gudang).trigger('change');
@@ -40,6 +42,7 @@
     onUpdate = function () {
         onStore('{{ url('pembelian-barang') }}/'+kode_pembelian);
         $('[name="_method"]').val('post');
+
     }
 
     onDelete = function (kode) {
@@ -66,5 +69,14 @@
             icon: result.status,
             title: result.message
         })
+    }
+
+    clear = function(){
+        $('[name="_method"]').val('');
+        $('[name="jumlah_barang"]').val('');
+        $('[name="satuan"]').val('');
+        $('[name="harga_barang"]').val('');
+        $('[name="tanggal_expired"]').val('');
+        $('[name="keterangan"]').val('');
     }
 </script>

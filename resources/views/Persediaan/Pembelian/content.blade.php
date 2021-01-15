@@ -35,7 +35,7 @@
                         <div class="card-header">
                             <h3 class="card-title">Detail Nota</h3>
                             <div class="card-tools">
-                                <a href="{{ url('jenis-tbk/create') }}" class="btn btn-tool" ><i class="fas fa-plus"></i></a>
+                                {{--<a href="{{ url('jenis-tbk/create') }}" class="btn btn-tool" ><i class="fas fa-plus"></i></a>--}}
                             </div>
                         </div>
                         <div class="card-body">
@@ -111,7 +111,7 @@
                                                 <div class="form-group">
                                                     <label for="id_gudang">Barang</label>
                                                     <select class="form-control select2" style="width: 100%;" name="id_gudang" required>
-                                                        <option >Silahkan pilih barang</option>
+                                                        <option disabled>Silahkan pilih barang</option>
                                                         @foreach($gudang as $data)
                                                             <option value="{{ $data->id }}">{{ $data->nama_barang }}</option>
                                                         @endforeach
@@ -204,6 +204,13 @@
     @include('Persediaan.Pembelian.js.table')
 
     <script>
+
+        focus = function(){
+            $("html, body").animate({
+                scrollTop: $("#quickForm").offset().top
+            }, 2000);
+        }
+
         $(function () {
             //Initialize Select2 Elements
             $('.select2').select2()
@@ -262,8 +269,10 @@
                 if($('[name="_method"]').val()=="post")
                 {
                     onStore('{{ url('pembelian-barang') }}/'+'{{ $nota->id }}/store');
+                    clear();
                 }else{
                     onUpdate();
+                    clear();
                 }
             }else{
                 alert('Isilah formulir dibawah ini');

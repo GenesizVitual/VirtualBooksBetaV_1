@@ -48,7 +48,7 @@ class Berwenang extends Controller
             $model->jabatan = $req->jabatan;
 
             if($model->save()){
-                return redirect()->back()->with('message_success',$model->nama.' Telah berhasil ditambahkan');
+                return redirect('berwenang')->with('message_success',$model->nama.' Telah berhasil ditambahkan');
             }else{
                 return redirect()->back()->with('message_error',$req->nama.' gagal ditambahkan');
             }
@@ -94,7 +94,7 @@ class Berwenang extends Controller
             $model->jabatan = $req->jabatan;
 
             if($model->save()){
-                return redirect()->back()->with('message_success',$model->nama.' Telah berhasil diubah');
+                return redirect('berwenang')->with('message_success',$model->nama.' Telah berhasil diubah');
             }else{
                 return redirect()->back()->with('message_error',$req->nama.' gagal diubah');
             }
@@ -107,7 +107,7 @@ class Berwenang extends Controller
         try{
             $model = tbl_berwenang::where('id_instansi', Session::get('id_instansi'))->findOrFail($id);
             if($model->delete()){
-                return redirect()->back()->with('message_success',$model->nama.' Telah berhasil dihapus');
+                return redirect('berwenang')->with('message_success',$model->nama.' Telah berhasil dihapus');
             }else{
                 return redirect()->back()->with('message_error',$req->nama.' gagal dihapus');
             }

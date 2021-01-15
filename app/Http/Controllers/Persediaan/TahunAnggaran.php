@@ -73,7 +73,7 @@ class TahunAnggaran extends Controller
         $model->status = $req->status;
 
         if($model->save()){
-            thn_anggaran::whereNotIn('id',[$id])->where('id_instansi', Session::get('id_instansi'))->update(['status'=>'0']);
+            thn_anggaran::where('id','!=',$id)->where('id_instansi', Session::get('id_instansi'))->update(['status'=>'0']);
             return redirect('tahun-anggaran')->with('message_success','Anda telah mengubah data tahun anggaran');
         }else{
             return redirect('tahun-anggaran')->with('message_error','Gagal mengubah data tahun anggaran');

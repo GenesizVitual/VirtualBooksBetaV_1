@@ -72,7 +72,7 @@
                                                     <label for="tgl_beli" class="col-sm-2 col-form-label">Jenis TBK</label>
                                                     <div class="col-sm-10" style="padding-bottom: 3px">
                                                         <select class="form-control select2" style="width: 100%;" name="id_jenis_tbk" required>
-                                                            <option selected="selected">Kode TBK - Jenis TBK</option>
+                                                            <option disabled>Kode TBK - Jenis TBK</option>
                                                             @foreach($jenis_tbk as $data)
                                                                 <option value="{{ $data->id }}">{{ $data->kode }} - {{ $data->jenis_tbk }}</option>
                                                             @endforeach
