@@ -37,7 +37,7 @@ class Nota extends Controller
 
     public function store(Request $request){
         $this->validate($request,[
-            'kode_nota'=>'required|unique:tbl_nota,kode_nota',
+            'kode_nota'=>'required',
             'tgl_beli'=>'required',
             'id_penyedia'=>'required',
         ]);
@@ -71,7 +71,7 @@ class Nota extends Controller
 
     public function update(Request $req, $id){
         $this->validate($req,[
-            'kode_nota'=>'required|unique:tbl_nota,kode_nota',
+            'kode_nota'=>'required',
             'tgl_beli'=>'required',
             'id_penyedia'=>'required',
             'id_jenis_tbk'=>'required',

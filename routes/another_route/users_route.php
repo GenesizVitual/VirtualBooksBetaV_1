@@ -19,6 +19,10 @@ Route::middleware([CheckLevel::class, CheckUser::class])->group(function () {
         return view('Persediaan.penentuan_tahun_anggaran');
     });
 
+    Route::post('upload-konfirmasi-pembayaran','User@konfirmasiPembayaran');
+
+    Route::post('setting-langganan','User@upDatePaketLangganan');
+
     //======================================================================================================================
 
     Route::get('dashboard','Persediaan\Dashboard@index');

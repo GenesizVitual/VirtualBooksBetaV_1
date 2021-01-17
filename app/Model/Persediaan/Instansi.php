@@ -9,7 +9,8 @@ class Instansi extends Model
     //
     protected $table="tbl_instansi";
 
-    protected $fillable=['name_instansi','singkatan_instansi','id_provinsi','id_kab_kota','alamat','no_telp','fax','email','level_instansi','logo','user_id'];
+    protected $fillable=['name_instansi','singkatan_instansi','id_provinsi','id_kab_kota','alamat','no_telp','fax','email','level_instansi','logo','user_id',
+        'nilai_langganan','paket_langganan','status_langganan','trial_aktif','durasi'];
 
     public function BelongsToProvinsi(){
         return $this->belongsTo('App\Model\Apps\Provinsi','id_provinsi');

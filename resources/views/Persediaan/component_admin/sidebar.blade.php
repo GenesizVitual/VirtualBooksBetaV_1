@@ -100,7 +100,7 @@
                 <li class="nav-item">
                     <a href="{{ url('nota') }}" class="nav-link @if(Session::get('menu') == 'nota') active @endif">
                         <i class="nav-icon fas fa fa-paperclip"></i>
-                        <p>Nota</p>
+                        <p>Nota Pesanan</p>
                     </a>
                 </li>
 

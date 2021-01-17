@@ -6,7 +6,7 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <h3>Jam : <label id="MyClockDisplay" class="clock" onload="showTime()"></label></h3>
+            <h3>Jam : <label id="MyClockDisplay" class="clock" onload="showTime()"></label> <label id="MyDateTrial" class="clock">{{ Session::get('durasi') }}</label> </h3>
         </li>
         {{--<li class="nav-item d-none d-sm-inline-block">--}}
             {{--<a href="#" class="nav-link">Contact</a>--}}
