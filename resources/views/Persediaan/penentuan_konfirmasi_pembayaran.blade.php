@@ -49,7 +49,7 @@
                         <div class="form-top">
                             <div class="form-top-left">
                                 <h3>
-                                    Konfirmasi pembayaran dengan caran mengupload bukti pembayaran.
+                                    Konfirmasi pembayaran dengan cara mengupload bukti pembayaran.
                                 </h3>
                             </div>
                             <div class="form-top-right">
@@ -61,6 +61,10 @@
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <label for="form-username">Detail Pembayaran</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="hidden" name="kode_bayar" value="{{ $kode_pembayaran }}">
+                                    <label for="form-username">Kode Pembayaran : #{{ $kode_pembayaran }}</label>
                                 </div>
                                 <div class="form-group">
                                     <label for="form-username">Nama Instansi : {{ $data->name_instansi }}</label>
@@ -75,7 +79,9 @@
                                     <label for="form-username">Kab/Kota : {{ $data->BelongsToKabupatenKot->nama }}</label>
                                 </div>
                                 <div class="form-group">
-                                    <label for="form-username">Paket : {{ $paket[$data->paket_langganan]['ket'] }}. </label>
+                                    <label for="form-username">Paket :
+                                        {{ $paket[$data->paket_langganan]['ket'] }}.
+                                    </label>
                                 </div>
                                 <div class="form-group">
                                     <label for="form-username">Biaya yang Harus Dibayarkan : {{ number_format($paket[$data->paket_langganan]['val'],2,',','.') }}. Dengan masa aktif selama 31 hari</label>

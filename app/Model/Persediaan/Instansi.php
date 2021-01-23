@@ -27,4 +27,8 @@ class Instansi extends Model
     public function LinkToTahunAnggaran(){
         return $this->hasMany('App\Model\Persediaan\TahunAnggaran','id_instansi','id');
     }
+
+    public function linkToLangganan(){
+        return $this->hasMany('App\Model\Persediaan\Pembayaran','id_instansi','id');
+    }
 }

@@ -38,6 +38,7 @@ class User extends Controller
     public function Usercheck(Request $req)
     {
         $model = pengguna::where('email', $req->email)->first();
+        $kode_uud = $this->unique_code(4);
         if(Hash::check($req->pass, $model->password)){
             $req->session()->put('user_id', $model->id);
             $req->session()->put('kode', $model->id);
@@ -71,7 +72,12 @@ class User extends Controller
 
             if($model_instansi->trial_aktif == 'true')
             {
-                return view('Persediaan.penentuan_konfirmasi_pembayaran', ['data'=>$model_instansi, 'paket'=> $this->paket]);
+                return view('Persediaan.penentuan_konfirmasi_pembayaran', ['data'=>$model_instansi,'kode_pembayaran'=>$kode_uud, 'paket'=> $this->paket]);
+            }
+
+            if($model_instansi->trial_aktif == 'confirmasi')
+            {
+                return view('Persediaan.pembayaran_sedang_d_konfirmasi', ['data'=>$model_instansi,'kode_pembayaran'=>$kode_uud, 'paket'=> $this->paket]);
             }
 
             $date_new =date_create(date('Y-m-d'));
@@ -119,7 +125,7 @@ class User extends Controller
             $model->paket_langganan = $req->paket_langganan;
             $model->nilai_langganan = $this->paket[$req->paket_langganan]['val'];
             $model->status_langganan ='true';
-            $model->trial ='false';
+            $model->trial_aktif ='false';
             $model->durasi =date('Y-m-d', strtotime('+31 days'));
             if($model->save()){
                 return redirect('login')->with('message_success','Silahkan login 5 menit kemudian');
@@ -148,13 +154,18 @@ class User extends Controller
                 [
                     'id_instansi'=>Session::get('id_instansi'),
                     'tgl_pembayaran'=>$req->tgl_pembayaran,
+                    'kode_bayar'=> $req->kode_bayar
                 ],
                 [
-                    'trial'=>'confirmasi',
-                    'bukti_pembayaran'=>$imagename
+                    'bukti_pembayaran'=>$imagename,
+                    'status_bayar'=> 'aktif'
                 ]
             );
             if($new_model->save()){
+                $gambar->move(public_path('persediaan/bukti_pembayaran/'), $imagename);
+                $model = Instansi::findOrFail($new_model->id_instansi);
+                $model->trial_aktif ='confirmasi';
+                $model->save();
                 return redirect('login')->with('message_success','Terimah kasih telah melakukan pembayaran untuk layanan kami. Saat ini kami belum mengaktifkan akun anda sebelum pembayaran
                 sudah di kami terima');
             }
@@ -170,6 +181,11 @@ class User extends Controller
         }else{
             return true;
         }
+    }
+
+    private function unique_code($limit)
+    {
+        return substr(base_convert(sha1(uniqid(mt_rand())), 16, 36), 0, $limit);
     }
 
     public function LogOut(Request $req){
