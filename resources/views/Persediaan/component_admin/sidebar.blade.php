@@ -183,6 +183,12 @@
                         <p>Laporan</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ url('invoice') }}" class="nav-link @if(Session::get('menu')=='invoice') active @endif">
+                        <i class="nav-icon fas fa-receipt"></i>
+                        <p>invoice</p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

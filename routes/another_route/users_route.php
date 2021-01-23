@@ -71,6 +71,9 @@ Route::middleware([CheckLevel::class, CheckUser::class])->group(function () {
 
     Route::post('transfer-stok','Persediaan\Stok@preview_stok_opname');
 
+    Route::get('invoice', 'Persediaan\Invoice@index');
+    Route::get('invoice/{id}/print', 'Persediaan\Invoice@cetak');
+
     # Todo laporan
     Route::get('laporan','Persediaan\MasterLaporan@index');
     # Preview Daftar Nota

@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\Model\Persediaan\Instansi;
 class Langganan extends Controller
 {
-
     public function index(){
         $data = [
             'instansi'=> Instansi::paginate(20)
