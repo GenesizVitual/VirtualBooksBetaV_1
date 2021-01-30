@@ -1,0 +1,115 @@
+<html lang="en">
+<h1>aslkdjalsdja</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cetak Daftar Nota</title>
+    <style>
+        table.table_nota{
+            width: 100%;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        #customers td, #customers th {
+            border: 1px solid #0f0f0f;
+            padding: 3px;
+        }
+
+        @page  {
+            size: legal landscape;
+            margin-left: 100px;
+        }
+
+    </style>
+
+</head>
+<body style="background-color: grey">
+    <div style="background-color: white; padding: 1%">
+        <table style="width: 100%; text-align: center">
+            <tr>
+                <td rowspan="4" style="width: 100px"><img src="http://127.0.0.1:8000/persediaan/logo/1596531064.png" alt="Logo tidak ditemukan" style="width:100px;height: 110px; margin-left: 20px"></td>
+                <td><h2>DAFTAR NOTA PEMBELIAN</h2></td>
+                <td rowspan="4"> </td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+        <br>
+        <table style="font-weight: bold;">
+            <tr>
+                <td>Instansi</td>
+                <td>:</td>
+                <td>Inspektorat</td>
+            </tr>
+            <tr>
+                <td>Kab/Kota</td>
+                <td>:</td>
+                <td>Kendari</td>
+            </tr>
+            <tr>
+                <td>Provinsi</td>
+                <td>:</td>
+                <td>Sulawesi tenggara</td>
+            </tr>
+        </table>
+        <br>
+        <table class="table_nota" id="customers" role="grid" border="1">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Tanggal</th>
+                    <th>Kode Nota</th>
+                    <th>Penyedia</th>
+                    <th>PPN 10%</th>
+                    <th>PPH 1.5%</th>
+                    <th>Total Sebelum Pajak</th>
+                    <th>Total Sesudah Pajak</th>
+                </tr>
+                </thead>
+            <tbody>
+                                                <tr>
+                        <td style="width: 30px; text-align: center;">1</td>
+                        <td style="text-align: center;">24-08-2020</td>
+                        <td style="text-align: left; padding-left:10px;"><p>02/ATK/Kegiatan/2020s</p>
+</td>
+                        <td style="text-align: left; padding-left:10px;">UD. Kalam Hidup</td>
+                        <td style="text-align: left; padding-left:10px;">47.500,00</td>
+                        <td style="text-align: left; padding-left:10px;">7.125,00</td>
+                        <td style="text-align: left; padding-left:10px;">475.000,00</td>
+                        <td style="text-align: left; padding-left:10px;">529.625,00</td>
+                    </tr>
+                                    <tr>
+                        <td style="width: 30px; text-align: center;">2</td>
+                        <td style="text-align: center;">27-08-2020</td>
+                        <td style="text-align: left; padding-left:10px;"><p>003/as/asd/2020</p>
+</td>
+                        <td style="text-align: left; padding-left:10px;">UD. Kalam Hidup</td>
+                        <td style="text-align: left; padding-left:10px;">0,00</td>
+                        <td style="text-align: left; padding-left:10px;">0,00</td>
+                        <td style="text-align: left; padding-left:10px;">110.000,00</td>
+                        <td style="text-align: left; padding-left:10px;">110.000,00</td>
+                    </tr>
+                                        </tbody>
+        </table>
+        <br>
+        <br>
+        <table style="width: 100%;">
+            <tr>
+                <td colspan="2" style="text-align: right;font-weight: bold; height: 80px">Kendari, 31 Januari 2021</td>
+            </tr>
+            <tr style="text-align: center;font-weight: bold;">
+                <td>Pengguna Barang</td>
+                <td>Penyimpan Barang</td>
+            </tr>
+            <tr style="text-align: center; font-weight: bold;">
+                <td style="height: 100px"><label style="text-decoration: underline">Fandiansyah</label> <br> 19630410 1987031</td>
+                <td style="height: 100px"><label style="text-decoration: underline">Aksan</label> <br> 19840719 201101 2 010</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -142,7 +142,8 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-12">
-                                                        <button class="btn btn-primary">Cetak</button>
+                                                        <button name="button" class="btn btn-primary" value="cetak">Cetak</button>
+                                                        <button name="button" class="btn btn-primary" value="excel">Excel</button>
                                                     </div>
                                                 </div>
                                             </form>

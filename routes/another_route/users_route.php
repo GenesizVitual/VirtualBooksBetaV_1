@@ -119,6 +119,6 @@ Route::middleware([CheckLevel::class, CheckUser::class])->group(function () {
     # Preview Stok Opname
     Route::get('stok-opname','Persediaan\MasterLaporan@preview_stok_opname');
     # Cetak Barang Stok
-    Route::post('cetak-stok-opname','Persediaan\MasterLaporan@cetak_stok_barang');
+    Route::post('cetak-stok-opname','Persediaan\MasterLaporan@cetak_stok_opname');
 
 });

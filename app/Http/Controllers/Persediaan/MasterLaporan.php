@@ -17,12 +17,16 @@ use App\Http\Controllers\Persediaan\utils\data\Stok;
 use App\Model\Persediaan\Gudang;
 use Illuminate\Http\Request;
 use App\Model\Persediaan\TahunAnggaran;
-
+use App\Exports\viewExport;
+use Excel;
 use Session;
 
 class MasterLaporan extends Controller
 {
     //
+
+
+
     public function __construct()
     {
         $this->middleware(function($req, $next){
@@ -50,7 +54,6 @@ class MasterLaporan extends Controller
 
     # Todo:Cetak Data Nota
     public function print_data_daftar_nota(Request $req){
-
         try{
             $this->validate($req,[
                 'tgl_awal'=> 'required',
@@ -85,7 +88,14 @@ class MasterLaporan extends Controller
                 'jabatan_1'=> $req->jabatan1,
                 'jabatan_2'=> $req->jabatan2,
             ];
-            return view('Persediaan.laporan.daftar_nota.print', $data);
+            if($req->button=='cetak'){
+                return view('Persediaan.laporan.daftar_nota.print', $data);
+            }else if($req->button=='excel'){
+                return Excel::download(new viewExport('Persediaan.laporan.daftar_nota.export_excel', $data),'Daftar nota.xlsx');
+            }
+            else{
+
+            }
         }catch (Throwable $e){
             return false;
         }
@@ -143,7 +153,15 @@ class MasterLaporan extends Controller
                 'jabatan_2'=> $req->jabatan2,
                 'jenis_tbk'=> $jenis_tbk
             ];
-            return view('Persediaan.laporan.rekapitulasi_persediaan.print', $data);
+            if($req->button=='cetak'){
+                return view('Persediaan.laporan.rekapitulasi_persediaan.print', $data);
+            }else if($req->button=='excel'){
+                return Excel::download(new viewExport('Persediaan.laporan.rekapitulasi_persediaan.export_excel', $data),'rekapitulasi persediaan.xlsx');
+            }
+            else{
+
+            }
+
         }catch (Throwable $e){
             return false;
         }
@@ -161,7 +179,7 @@ class MasterLaporan extends Controller
         return view('Persediaan.laporan.rekapitulasi_persediaan_perjenis_tbk.content', $data);
     }
 
-    # Todo:Cetak Data Rekapitulasi Persediaan
+    # Todo:Cetak Data Rekapitulasi Persediaan Perjenis TBK
     public function print_data_rekapitulasi_persediaan_per_jenis_tbk(Request $req){
 
         try{
@@ -201,7 +219,14 @@ class MasterLaporan extends Controller
                 'jabatan_2'=> $req->jabatan2,
                 'jenis_tbk'=> $jenis_tbk
             ];
-            return view('Persediaan.laporan.rekapitulasi_persediaan_perjenis_tbk.print', $data);
+            if($req->button=='cetak'){
+                return view('Persediaan.laporan.rekapitulasi_persediaan_perjenis_tbk.print', $data);
+            }else if($req->button=='excel'){
+                return Excel::download(new viewExport('Persediaan.laporan.rekapitulasi_persediaan_perjenis_tbk.export_excel', $data),'rekapitulasi persediaan per jenis tbk.xlsx');
+            }
+            else{
+
+            }
         }catch (Throwable $e){
             return false;
         }
@@ -262,7 +287,14 @@ class MasterLaporan extends Controller
                 'jabatan_2'=> $req->jabatan2,
                 'status_penerimaan'=> $req->status_penerimaan
             ];
-            return view('Persediaan.laporan.persediaan_barang.print', $data);
+            if($req->button=='cetak'){
+                return view('Persediaan.laporan.persediaan_barang.print', $data);
+            }else if($req->button=='excel'){
+                return Excel::download(new viewExport('Persediaan.laporan.persediaan_barang.export_excel', $data),'data persediaan.xlsx');
+            }
+            else{
+
+            }
         }catch (Throwable $e){
             return false;
         }
@@ -324,7 +356,14 @@ class MasterLaporan extends Controller
                 'jabatan_2'=> $req->jabatan2,
                 'status_penerimaan'=> $req->status_penerimaan
             ];
-            return view('Persediaan.laporan.pengeluaran_barang.print', $data);
+            if($req->button=='cetak'){
+                return view('Persediaan.laporan.pengeluaran_barang.print', $data);
+            }else if($req->button=='excel'){
+                return Excel::download(new viewExport('Persediaan.laporan.pengeluaran_barang.export_excel', $data),'Data pengeluaran barang.xlsx');
+            }
+            else{
+
+            }
         }catch (Throwable $e){
             return false;
         }
@@ -389,8 +428,14 @@ class MasterLaporan extends Controller
                 'status_penerimaan'=> $req->status_penerimaan
             ];
 
-            return view('Persediaan.laporan.barang_pakai_habis.print', $data);
+            if($req->button=='cetak'){
+                return view('Persediaan.laporan.barang_pakai_habis.print', $data);
+            }else if($req->button=='excel'){
+                return Excel::download(new viewExport('Persediaan.laporan.barang_pakai_habis.export_excel', $data),'Data Barang Pakai Habis.xlsx');
+            }
+            else{
 
+            }
         }catch (Throwable $e){
             return false;
         }
@@ -458,7 +503,15 @@ class MasterLaporan extends Controller
                 'tahun' =>PengeluaranBarang::$tahun
             ];
 
-            return view('Persediaan.laporan.semester.print', $data);
+            if($req->button=='cetak'){
+                return view('Persediaan.laporan.semester.print', $data);
+            }else if($req->button=='excel'){
+                return Excel::download(new viewExport('Persediaan.laporan.semester.export_excel', $data),'Data Barang Semester.xlsx');
+            }
+            else{
+
+            }
+
 
         }catch (Throwable $e){
             return false;
@@ -527,7 +580,15 @@ class MasterLaporan extends Controller
                 'jabatan_2'=> $req->jabatan2,
                 'status_penerimaan'=> $req->status_penerimaan
             ];
-            return view('Persediaan.laporan.kartu_barang.print', $data);
+            if($req->button=='cetak'){
+                return view('Persediaan.laporan.kartu_barang.print', $data);
+            }else if($req->button=='excel'){
+                return Excel::download(new viewExport('Persediaan.laporan.kartu_barang.export_excel', $data),'Data Kartu Barang.xlsx');
+            }
+            else{
+
+            }
+
         }catch (Throwable $e){
             return false;
         }
@@ -596,7 +657,15 @@ class MasterLaporan extends Controller
                 'jabatan_2'=> $req->jabatan2,
                 'status_penerimaan'=> $req->status_penerimaan
             ];
-            return view('Persediaan.laporan.mutasi_barang.print', $data);
+
+            if($req->button=='cetak'){
+                return view('Persediaan.laporan.mutasi_barang.print', $data);
+            }else if($req->button=='excel'){
+                return Excel::download(new viewExport('Persediaan.laporan.mutasi_barang.export_excel', $data),'Data mutasi.xlsx');
+            }
+            else{
+
+            }
         }catch (Throwable $e){
             return false;
         }
@@ -663,7 +732,14 @@ class MasterLaporan extends Controller
                 'jabatan_2'=> $req->jabatan2,
                 'status_penerimaan'=> $req->status_penerimaan
             ];
-            return view('Persediaan.laporan.stok_barang.print', $data);
+            if($req->button=='cetak'){
+                return view('Persediaan.laporan.stok_barang.print', $data);
+            }else if($req->button=='excel'){
+                return Excel::download(new viewExport('Persediaan.laporan.stok_barang.export_excel', $data),'Data Stok Barang.xlsx');
+            }
+            else{
+
+            }
         }catch (Throwable $e){
             return false;
         }
@@ -732,7 +808,15 @@ class MasterLaporan extends Controller
                 'jabatan_2'=> $req->jabatan2,
                 'status_penerimaan'=> $req->status_penerimaan
             ];
-            return view('Persediaan.laporan.stok_opname.print', $data);
+            if($req->button=='cetak'){
+                return view('Persediaan.laporan.stok_opname.print', $data);
+
+            }else if($req->button=='excel'){
+                return Excel::download(new viewExport('Persediaan.laporan.stok_opname.export_excel', $data),'Data Stok Opname.xlsx');
+            }
+            else{
+
+            }
         }catch (Throwable $e){
             return false;
         }

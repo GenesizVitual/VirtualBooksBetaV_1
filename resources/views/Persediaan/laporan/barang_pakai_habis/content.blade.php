@@ -53,7 +53,7 @@
                                         </div>
                                         <!-- /.card-header -->
                                         <div class="card-body" style="display: none;">
-                                            <form action="{{ url('cetak-barang-pakai-habis') }}" method="post">
+                                            <form action="{{ url('cetak-barang-pakai-habis') }}" method="post" target="_blank">
                                                 {{ csrf_field() }}
                                                 <div class="row">
                                                     <div class="col-md-4">
@@ -156,7 +156,8 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-12">
-                                                        <button class="btn btn-primary">Cetak</button>
+                                                        <button name="button" value="cetak" class="btn btn-primary">Cetak</button>
+                                                        <button name="button" value="excel" class="btn btn-primary">Excel</button>
                                                     </div>
                                                 </div>
                                             </form>

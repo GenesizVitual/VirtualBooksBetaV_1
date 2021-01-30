@@ -162,14 +162,15 @@
                                                                 <select class="form-control select2" style="width: 100%;" name="semester" required>
                                                                    <option value="I">I</option>
                                                                    <option value="II">II</option>
-                                                                   <option value="III">IIP</option>
+                                                                   <option value="III">III</option>
                                                                 </select>
                                                             </div>
                                                             <!-- /.input group -->
                                                         </div>
                                                     </div>
                                                     <div class="col-md-12">
-                                                        <button class="btn btn-primary">Cetak</button>
+                                                        <button name="button" value="cetak" class="btn btn-primary">Cetak</button>
+                                                        <button name="button" value="excel" class="btn btn-primary">Excel</button>
                                                     </div>
                                                 </div>
                                             </form>

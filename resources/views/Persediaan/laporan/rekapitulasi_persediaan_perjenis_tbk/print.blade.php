@@ -61,7 +61,7 @@
             <thead>
             <tr>
                 <th>#</th>
-                <th>Kode - Jenis TBK</th>
+                <th style="text-align: left;">Kode - Jenis TBK</th>
                 <th>Sub Total</th>
             </tr>
             </thead>
@@ -77,14 +77,14 @@
                         @endforeach
                         <tr>
                             <th>{{ $i++ }}</th>
-                            <th>{{ $jenis_tbk->where('id',$key)->first()->kode }} - {{ $jenis_tbk->where('id',$key)->first()->jenis_tbk }}</th>
+                            <th style="text-align: left;">{{ $jenis_tbk->where('id',$key)->first()->kode }} - {{ $jenis_tbk->where('id',$key)->first()->jenis_tbk }}</th>
                             <th>{{ number_format($saldo,2,',','.') }}</th>
                         </tr>
                         @php($total+=$saldo)
                     @endif
                 @endforeach
                 <tr>
-                    <th colspan="2">Total</th>
+                    <th style="text-align: left;" colspan="2">Total</th>
                     <th >{{ number_format($total,2,',','.') }}</th>
                 </tr>
             @endif
