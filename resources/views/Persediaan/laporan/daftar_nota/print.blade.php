@@ -26,14 +26,14 @@
     </style>
 
 </head>
-<body style="background-color: grey">
+<body style="background-color: white">
     <div style="background-color: white; padding: 1%">
         <table style="width: 100%; text-align: center">
             <tr>
                 <td rowspan="4" style="width: 100px">
                     <img src="{{ asset('persediaan/logo/'.$instansi->logo) }}" alt="Logo tidak ditemukan" style="width:100px;height: 110px; margin-left: 20px">
                 </td>
-                <td><h2>DAFTAR NOTA PEMBELIAN</h2></td>
+                <td><h2 style="text-align: center;">DAFTAR NOTA PEMBELIAN</h2></td>
                 <td rowspan="4"> </td>
             </tr>
             <tr>

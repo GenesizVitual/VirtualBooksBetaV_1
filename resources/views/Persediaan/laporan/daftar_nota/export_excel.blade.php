@@ -26,7 +26,7 @@
     </style>
 
 </head>
-<body style="background-color: grey">
+<body style="background-color: white">
     <div style="background-color: white; padding: 1%">
       <table class="table_nota" id="customers" role="grid" border="1">
             <thead>
@@ -45,12 +45,12 @@
             @if(!empty($data))
                 @foreach($data as $data_nota)
                     <tr>
-                        <td >{{ $data_nota[0] }}</td>
+                        <td style="width: 20px">{{ $data_nota[0] }}</td>
                         <td style="width: 30px">{{ $data_nota[1] }}</td>
                         <td style="width: 30px">{!! $data_nota[2] !!}</td>
                         <td style="width: 20px">{{ $data_nota[3] }}</td>
-                        <td >{{ $data_nota[4] }}</td>
-                        <td >{{ $data_nota[5] }}</td>
+                        <td style="width: 20px">{{ $data_nota[4] }}</td>
+                        <td style="width: 20px">{{ $data_nota[5] }}</td>
                         <td style="width: 30px">{{ $data_nota[6] }}</td>
                         <td style="width: 30px">{{ $data_nota[7] }}</td>
                     </tr>

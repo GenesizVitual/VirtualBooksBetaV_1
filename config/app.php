@@ -176,6 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
         App\Providers\SecurityServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
 
     ],
 
@@ -230,6 +231,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'EnDec'=> App\Helpers\EnDecIDs::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
     ],
 
 ];

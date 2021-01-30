@@ -20,6 +20,7 @@ use App\Model\Persediaan\TahunAnggaran;
 use App\Exports\viewExport;
 use Excel;
 use Session;
+use PDF;
 
 class MasterLaporan extends Controller
 {
@@ -92,9 +93,9 @@ class MasterLaporan extends Controller
                 return view('Persediaan.laporan.daftar_nota.print', $data);
             }else if($req->button=='excel'){
                 return Excel::download(new viewExport('Persediaan.laporan.daftar_nota.export_excel', $data),'Daftar nota.xlsx');
-            }
-            else{
-
+            }else{
+                $pdf = PDF::loadview('Persediaan.laporan.daftar_nota.print',$data)->setPaper('legal','landscape');
+                return $pdf->download('data nota.pdf');
             }
         }catch (Throwable $e){
             return false;
