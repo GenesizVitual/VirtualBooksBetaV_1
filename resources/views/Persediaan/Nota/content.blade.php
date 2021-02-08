@@ -82,7 +82,7 @@
                                                 <div class="form-group row">
                                                     <label for="kode_nota" class="col-sm-2 col-form-label">Kode Nota</label>
                                                     <div class="col-sm-10" style="padding-bottom: 3px">
-                                                        <input type="text" class="form-control" id="kode_nota" name="kode_nota">
+                                                        <input type="text" class="form-control" id="kode_nota" name="kode_nota" value="{{ $kode_nota }}">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">

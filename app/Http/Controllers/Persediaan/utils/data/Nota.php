@@ -37,12 +37,12 @@ class Nota
                     ->whereBetween('tgl_beli', [self::$tgl_awal, self::$tgl_akhir])
                     ->where('id_instansi', $ndata->id_instansi)
                     ->where('id_thn_anggaran', $ndata->id)
-                    ->orderBy('tgl_beli', 'asc')->get();
+                    ->orderBy('tgl_beli', 'desc')->get();
             }else{ # selain itu jalankan query default seleksi berdasarkan tanggal awal dan tanggal akhir
                 $model_nota = notas::whereBetween('tgl_beli', [self::$tgl_awal, self::$tgl_akhir])
                     ->where('id_instansi', $ndata->id_instansi)
                     ->where('id_thn_anggaran', $ndata->id)
-                    ->orderBy('tgl_beli', 'asc')->get();
+                    ->orderBy('tgl_beli', 'desc')->get();
             }
         }else{
 
@@ -50,11 +50,11 @@ class Nota
                 $model_nota = notas::where('id_jenis_tbk', self::$id_jenis_nota)
                     ->where('id_instansi',$ndata->id_instansi)
                     ->where('id_thn_anggaran', $ndata->id)
-                    ->orderBy('tgl_beli','asc')->get();
+                    ->orderBy('tgl_beli','desc')->get();
             }else{ # Kalau Tanggal Awal dan akhir tidak ada jalankan query defaul tampa tanggal awal dan tanggal akhir
                 $model_nota = notas::all()->where('id_instansi',$ndata->id_instansi)
                     ->where('id_thn_anggaran', $ndata->id)
-                    ->sortBy('tgl_beli');
+                    ->sortByDesc('tgl_beli');
             }
         }
 

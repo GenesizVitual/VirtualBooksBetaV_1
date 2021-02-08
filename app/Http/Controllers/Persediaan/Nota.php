@@ -26,11 +26,32 @@ class Nota extends Controller
         });
     }
 
+    # Todo Penentuan Kode Nota
+    private function Kode_Nota(){
+        TahunAggaranCheck::tahun_anggaran_aktif([
+            'id_instansi'=> Session::get('id_instansi')
+        ]);
+
+        $data_thn_anggaran = TahunAggaranCheck::$id_thn_anggaran;
+
+        $model_nota = notas::where('id_instansi', Session::get('id_instansi'))
+            ->where('id_thn_anggaran', $data_thn_anggaran->id)->count('id');
+        $kode_nota =0;
+        if($model_nota<10){
+            $kode_nota = '0'.($model_nota+1);
+        }else{
+            $kode_nota = $model_nota+1;
+        }
+        return $kode_nota;
+    }
+
+
     public function index()
     {
         $data = [
             'penyedia'=>Penyedia::all()->where('id_instansi', Session::get('id_instansi')),
-            'jenis_tbk'=> JenisTbk::all()->where('id_instansi', Session::get('id_instansi'))
+            'jenis_tbk'=> JenisTbk::all()->where('id_instansi', Session::get('id_instansi')),
+            'kode_nota'=> $this->Kode_Nota()
         ];
         return view('Persediaan.Nota.content',$data);
     }
@@ -58,7 +79,6 @@ class Nota extends Controller
         }
 
     }
-
 
     public function edit_nota(Request $req, $id)
     {
