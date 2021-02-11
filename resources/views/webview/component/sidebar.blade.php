@@ -8,7 +8,7 @@
             </header>
             <ul>
                 <li style="color: white;"><a href="{{ url('/') }}">Homepage</a></li>
-                <li style="color: white;"><a href="#">Alur Kerja</a></li>
+                <li style="color: white;"><a href="#">Alur Persediaan</a></li>
                 <li style="color: white;"><a href="#">Panduan</a></li>
             </ul>
         </nav>
@@ -16,7 +16,7 @@
 
         <!-- Footer -->
         <footer id="footer">
-            <p class="copyright" style="color: white;">Copyright © 2018 SayaKetik.com All rights reserved.</p>
+            <p class="copyright" style="color: white;">Copyright © 2020 SayaKetik.com All rights reserved.</p>
         </footer>
 
     </div>

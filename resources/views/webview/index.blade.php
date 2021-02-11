@@ -30,12 +30,11 @@
 											<p></p>
 										</header>
 										<p>
-											SayaKetik merupakan sistem informasi yang didalamnya terdapat layanan untuk membantu anda dalam mengola data persediaan barang anda. Dengan berbagai kemudahan
-											dalam melakukan transaksi penerimaan barang, pengeluarang barang dan pelaporan yang lengkap. Sistem ini bersifat multiuser yang dimana didalam satu organisasi dapat menambahkan pengguna baru untuk membantu pengguna lain dalam pendataan transaksi
+											Sayaketik (Persediaan) adalah aplikasi berbasis online yang digunakan untuk membantu anda dalam mengelola atau memonitor data transaksi persediaan dalam pengolahan barang pakai habis. Aplikasi ini dirancangan dengan semudah mungkin mulai dari pencatatan nota pengadaan barang, pengeluaran barang yang akan didistribusikan kepada bidang atau unit kerja.
 										</p>
 										<ul class="actions">
 											<li><a href="{{ url('login') }}" class="button big" style="width: 100%">Masuk Ke Persediaan</a></li>
-											{{--<li><a href="#" class="button big" style="width: 100%">Dokumentasi Persediaan</a></li>--}}
+											<li><a href="{{ url('') }}" class="button big" style="width: 100%">Alur Persediaan</a></li>
 										</ul>
 									</div>
 									<span class="image object">
