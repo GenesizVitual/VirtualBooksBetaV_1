@@ -23,6 +23,10 @@ Route::middleware([CheckLevel::class, CheckUser::class])->group(function () {
 
     Route::post('setting-langganan','User@upDatePaketLangganan');
 
+    Route::get('donasi',function(){
+        return view('Persediaan.Donasi.content');
+    });
+
     //======================================================================================================================
 
     Route::get('dashboard','Persediaan\Dashboard@index');

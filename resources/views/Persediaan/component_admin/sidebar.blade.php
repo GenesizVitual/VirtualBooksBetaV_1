@@ -183,12 +183,21 @@
                         <p>Laporan</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{ url('invoice') }}" class="nav-link @if(Session::get('menu')=='invoice') active @endif">
-                        <i class="nav-icon fas fa-receipt"></i>
-                        <p>invoice</p>
-                    </a>
-                </li>
+                @if(Session::get('status_paket')=='4')
+                    <li class="nav-item">
+                        <a href="{{ url('donasi') }}" class="nav-link">
+                            <i class="nav-icon fas fa-donate"></i>
+                            <p>Donasi</p>
+                        </a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a href="{{ url('invoice') }}" class="nav-link @if(Session::get('menu')=='invoice') active @endif">
+                            <i class="nav-icon fas fa-receipt"></i>
+                            <p>invoice</p>
+                        </a>
+                    </li>
+                @endif
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

@@ -60,6 +60,7 @@ class Instansi extends Controller
 
         $model = new instance($request);
         if($model->save()){
+            $req->session()->put('id_instansi',$model->id);
             if($model->LinksToUsers->status_syarat==0){
                 $model_users = User::find(Session::get('user_id'));
                 $model_users->status_syarat='1';

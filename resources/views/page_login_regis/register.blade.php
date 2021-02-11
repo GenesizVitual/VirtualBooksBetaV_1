@@ -44,6 +44,13 @@
 								@if(!empty(Session::get('message_error')))
 									<p style="color: red">{{ Session::get('message_error') }}</p>
 								@endif
+								@if ($errors->any())
+										<ul>
+											@foreach ($errors->all() as $error)
+												<p>{{ $error }}</p>
+											@endforeach
+										</ul>
+								@endif
 						</span>
 					</span>
 

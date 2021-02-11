@@ -29,6 +29,10 @@ class User extends Controller
             'ket'=>'Jumlah Pembelian Senilai diatas 1 milyar',
             'val'=> 400000
         ],
+        '4' =>[
+            'ket'=> 'Paket Anonymous',
+            'val'=> 0
+        ]
     ];
 
     public function login(){
@@ -54,6 +58,7 @@ class User extends Controller
             # Set session id Instansi
             if(!empty($model->linkToInstansi->id)){
                 $req->session()->put('id_instansi', $model->linkToInstansi->id);
+                $req->session()->put('status_paket', $model->linkToInstansi->paket_langganan);
             }
 
             $model_instansi = Instansi::find(Session::get('id_instansi'));
@@ -99,6 +104,13 @@ class User extends Controller
 
     public function store(Request $req)
     {
+
+        $this->validate($req,[
+           'name'=>'required',
+           'email'=> 'required|unique:users,email|max:255',
+           'pass' => 'required'
+        ]);
+
         if($this->check_email($req)==true){
             return redirect('register')->with('message_error','Email anda telah terdaftar');
         }
@@ -121,6 +133,7 @@ class User extends Controller
     public function upDatePaketLangganan(Request $req)
     {
         try{
+
             $model = Instansi::findOrFail(Session::get('id_instansi'));
             $model->paket_langganan = $req->paket_langganan;
             $model->nilai_langganan = $this->paket[$req->paket_langganan]['val'];
