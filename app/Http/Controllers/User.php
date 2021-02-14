@@ -42,6 +42,11 @@ class User extends Controller
     public function Usercheck(Request $req)
     {
         $model = pengguna::where('email', $req->email)->first();
+
+        if(empty($model)){
+            return redirect('login')->with('message_error','Maaf, Email anda belum terdaftar');
+        }
+
         $kode_uud = $this->unique_code(4);
         if(Hash::check($req->pass, $model->password)){
             $req->session()->put('user_id', $model->id);
