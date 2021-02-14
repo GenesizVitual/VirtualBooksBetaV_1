@@ -17,6 +17,12 @@ Route::get('/', function () {
     return view('webview.index');
 //    return redirect('login');
 });
+
+Route::get('alur-sistem', function () {
+    return view('webview.alur_sistem');
+//    return redirect('login');
+});
+
 Route::get('simper', function () {
     return redirect('login');
 });

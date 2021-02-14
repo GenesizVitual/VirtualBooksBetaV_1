@@ -11,6 +11,10 @@ Route::middleware([AdminAuth::class])->group(function () {
 
     Route::resource('langganan', 'Apps\Langganan');
 
+    Route::resource('dokumentasi','Apps\Dokumentasi');
+    Route::get('dokumentasi/{id}/delete','Apps\Dokumentasi@delete');
+    Route::post('dokumentasi/upload','Apps\Dokumentasi@upload')->name('dokumentasi/upload');
+
     Route::get('password', function () {
         return bcrypt('Allah Tolong Lah Hambamu ini');
     });

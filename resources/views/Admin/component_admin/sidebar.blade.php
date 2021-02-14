@@ -35,6 +35,12 @@
                         <p>Berlangganan</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ url('dokumentasi') }}" class="nav-link @if(Session::get('menu') == 'dokumentasi') active @else  @endif">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>Dokumentasi</p>
+                    </a>
+                </li>
 
             </ul>
         </nav>

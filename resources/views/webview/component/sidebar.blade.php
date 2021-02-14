@@ -8,9 +8,8 @@
             </header>
             <ul>
                 <li style="color: white;"><a href="{{ url('/') }}">Homepage</a></li>
-                <li style="color: white;"><a href="#">Alur Persediaan</a></li>
-                <li style="color: white;"><a href="#">Panduan</a></li>
-            </ul>
+                <li style="color: white;"><a href="{{ url('alur-sistem') }}">Alur Sistem</a></li>
+             </ul>
         </nav>
 
 
