@@ -19,7 +19,7 @@ class JenisTbk extends Controller
         });
     }
 
-    private $status_pembayaran = array('Rutin','Kegiatan','Hibah','Dana Bos Pusat','Dana Bos Daerah','dll');
+    private $status_pembayaran = array('Rutin','Rapat','Kegiatan','Hibah','Dana Bos Pusat','Dana Bos Daerah','dll');
 
     public function index(){
         $data = [
