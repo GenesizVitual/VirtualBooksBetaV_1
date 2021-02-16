@@ -63,7 +63,7 @@
                                                     <input type="hidden" name="_method" value="delete">
                                                     <div class="btn-group">
                                                         <a href="{{ url('berwenang/'.$data->id.'/edit') }}" class="btn btn-info btn-warning"><i class="fa fa-pen"></i></a>
-                                                        <button type="submit" class="btn btn-info btn-danger" onclick="return confirm('Jika anda ingin menghapus barang ini, maka data yang terkait akan dihilangkan')"><i class="fa fa-eraser"></i></button>
+                                                        <button type="submit" class="btn btn-info btn-danger" onclick="return confirm('Jika anda ingin menghapus berwenang ini, maka data yang terkait akan dihilangkan')"><i class="fa fa-eraser"></i></button>
                                                     </div>
                                                 </form>
                                             </td>
