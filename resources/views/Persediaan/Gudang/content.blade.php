@@ -90,8 +90,9 @@
                             <div class="form-group">
                                 <label>File Barang</label>
                                 <input type="file" class="form-control" name="file" placeholder="File Barang" required>
-                                <span style="color: red"> *format file yang didukung .xls dan besar file 2mb </span>
-                                <span style="color: red"> *Nama barang yang sama tidak dapat diimport</span>
+                                <span style="color: red"> *format file yang didukung .xls dan besar file 2mb </span><br>
+                                <span style="color: red"> *Nama barang yang sama tidak dapat diimport</span><br>
+                                <span style="color: green"> Format excel impor barang dapat didownload <a href="{{ asset('persediaan/file/import-barang.xlsx') }}">disini</a> </span>
                             </div>
                         </div>
                         <div class="modal-footer justify-content-between">
