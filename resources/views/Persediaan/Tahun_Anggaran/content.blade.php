@@ -61,7 +61,7 @@
                                                     Status <br>
                                                     <input type="radio" name="status" value="1" @if($data->status==1) checked @endif > Aktif
                                                     @if($tahun_anggaran->count() > 1)
-                                                        <input type="radio" name="status" value="0" @if($data->status==0) checked @endif > Tidak Aktif
+                                                        <input type="radio" name="status" value="0" @if($data->status==1) disabled @endif   @if($data->status==0) checked @endif > Tidak Aktif
                                                     @endif
                                                 </div>
                                                 <div class="col-sm-12" style="padding-top: 2px">
