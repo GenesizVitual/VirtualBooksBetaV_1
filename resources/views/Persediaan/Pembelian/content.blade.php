@@ -230,9 +230,6 @@
                 harga_barang: {
                     required: true,
                 },
-                tanggal_expired: {
-                    required: true,
-                },
             },
             messages: {
                 id_gudang: {
@@ -246,9 +243,6 @@
                 },
                 harga_barang: {
                     required: "Silahkan Isi Harga Barang",
-                },
-                tanggal_expired: {
-                    required: "Silahkan Isi Tanggal Expired / Tanggal Tidak Layak Pakai",
                 },
             },
             errorElement: 'span',
@@ -275,7 +269,7 @@
                     clear();
                 }
             }else{
-                alert('Isilah formulir dibawah ini');
+                alert('Pastikan formulir diisi dengan benar');
             }
         }
     </script>

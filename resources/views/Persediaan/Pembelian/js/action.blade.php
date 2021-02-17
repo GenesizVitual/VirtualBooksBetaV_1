@@ -15,6 +15,7 @@
             success:function (result) {
                 feedback(result);
                 collect_data_pembelian();
+                $('[name="_method"]').val('post');
                 focus();
             }
         })
@@ -72,7 +73,6 @@
     }
 
     clear = function(){
-        $('[name="_method"]').val('');
         $('[name="jumlah_barang"]').val('');
         $('[name="satuan"]').val('');
         $('[name="harga_barang"]').val('');

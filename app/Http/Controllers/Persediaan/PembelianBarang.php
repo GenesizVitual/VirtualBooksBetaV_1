@@ -29,7 +29,6 @@ class PembelianBarang extends Controller
             'id_gudang'=> 'required',
             'jumlah_barang'=> 'required',
             'harga_barang'=> 'required',
-            'tanggal_expired'=> 'required'
         ]);
 
         $notas = Nota::where('id_instansi', Session::get('id_instansi'))->findOrFail($id_nota);
@@ -73,7 +72,6 @@ class PembelianBarang extends Controller
             'id_gudang'=> 'required',
             'jumlah_barang'=> 'required',
             'harga_barang'=> 'required',
-            'tanggal_expired'=> 'required'
         ]);
 
         try
