@@ -56,7 +56,7 @@ class SuratPengeluaran extends Controller
         try{
 
             $this->validate($req,[
-                'nomor_surat'=> 'required|unique:tbl_surat_pengeluaran,nomor_surat',
+                'nomor_surat'=> 'required',
                 'perihal'=> 'required',
                 'id_bidang'=> 'required',
                 'id_berwenang'=> 'required',

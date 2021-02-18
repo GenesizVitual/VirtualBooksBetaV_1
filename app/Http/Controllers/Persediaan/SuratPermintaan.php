@@ -60,7 +60,7 @@ class SuratPermintaan extends Controller
     public function store(Request $req){
         try{
             $this->validate($req,[
-                'nomor_surat'=> 'required|unique:tbl_surat_permintaan_barang,nomor_surat',
+                'nomor_surat'=> 'required',
                 'perihal'=> 'required',
                 'id_bidang'=> 'required',
                 'id_berwenang'=> 'required',

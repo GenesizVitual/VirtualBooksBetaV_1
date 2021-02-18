@@ -55,7 +55,7 @@
                                                     <div class="dropdown-menu dropdown-menu-right" role="menu" style="">
                                                         <a class="dropdown-item" href="#" onclick="OnButtonTbk('{{ $spj->id }}')"><i class="fa fa-paperclip"></i> Tambah TBK</a>
                                                         <hr>
-                                                        <a class="dropdown-item" href="#" onclick="onEditSpj('{{ $spj->id }}')"><i class="fa fa-pencil"></i> ubah</a>
+                                                        <a class="dropdown-item" href="#" onclick="onEditSpj('{{ $spj->id }}')"><i class="fa fa-pen"></i> ubah</a>
                                                         <a class="dropdown-item" href="#" onclick="onDeleteSpj('{{ $spj->id }}')"><i class="fa fa-eraser"></i> hapus</a>
                                                     </div>
                                                 </button>

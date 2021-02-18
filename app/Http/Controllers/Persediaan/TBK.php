@@ -29,7 +29,7 @@ class TBK extends Controller
             $this->validate($req,[
                '_token'=> 'required',
                '_method'=> 'required',
-               'kode_tbk'=> 'required|unique:tbl_tbk,kode',
+               'kode_tbk'=> 'required',
                'kode_temp_spj'=> 'required',
                'keterangan'=> 'required',
             ]);
@@ -74,7 +74,7 @@ class TBK extends Controller
                 '_token'=> 'required',
                 '_method'=> 'required',
                 'kode'=> 'required',
-                'kode_tbk'=> 'required|unique:tbl_tbk,kode',
+                'kode_tbk'=> 'required',
                 'kode_temp_spj'=> 'required',
                 'keterangan'=> 'required',
             ]);

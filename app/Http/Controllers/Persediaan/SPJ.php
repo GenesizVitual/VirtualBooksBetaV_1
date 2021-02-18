@@ -44,7 +44,7 @@ class SPJ extends Controller
     {
         try{
             $this->validate($req,[
-                'kode_spj'=> 'required|unique:tbl_spj,kode',
+                'kode_spj'=> 'required',
                 '_method'=> 'required'
             ]);
 
@@ -89,7 +89,7 @@ class SPJ extends Controller
 
         try{
             $this->validate($req,[
-                'kode_spj'=> 'required|unique:tbl_spj,kode',
+                'kode_spj'=> 'required',
                 '_method'=> 'required',
                 'kode'=> 'required'
             ]);
