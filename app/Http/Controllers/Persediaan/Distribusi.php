@@ -77,9 +77,14 @@ class Distribusi extends Controller
             }else{
 
                 //mencari mengurangi stok yang ada
+                $stok = $this->hitung_stok($pembelian->id);
+
+                if($stok <= 0){
+                    return response()->json(array('status'=>'error','status_penerimaan'=> $req->status,'message'=>'Stok sudah tidak tersedia'));
+                }
+
                 if ($model_distribusi->save())
                 {
-                    $stok = $this->hitung_stok($pembelian->id);
                     return response()->json(array('status'=> 'success','status_penerimaan'=> $req->status,'stok'=>$stok,'kode'=>$model_distribusi->id_pembelian,'message'=> 'Barang '.$model_distribusi->linkToGudang->nama_barang.', banyak barang '.$model_distribusi->jumlah_keluar));
                 }else{
                     return response()->json(array('status'=> 'error','status_penerimaan'=> $req->status,'message'=> 'Barang Gagal dikeluarkan'));
@@ -156,6 +161,10 @@ class Distribusi extends Controller
             }else{
                 //menghitung sisa stok
                 $stok = $this->hitung_stok($model_ditribusi->id_pembelian);
+                if($stok <= 0){
+                    return response()->json(array('status'=>'error','status_penerimaan'=> $req->status,'message'=>'Stok sudah tidak tersedia'));
+                }
+
                 if($model_ditribusi->save())
                 {
                     return response()->json(array('status'=>'success','stok'=>$stok,'status_penerimaan'=> $req->status,'kode'=>$model_ditribusi->id_pembelian,'message'=>'Anda telah mengubah barang:'.$model_ditribusi->linkToGudang->nama_barang.', Stok:'. $model_ditribusi->jumlah_keluar));

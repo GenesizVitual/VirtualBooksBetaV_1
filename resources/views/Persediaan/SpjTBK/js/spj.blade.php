@@ -5,7 +5,7 @@
             type: 'get',
             success : function (result) {
                 $('#method_spj').val('put');
-                $('#kode_spja').val(result.id);
+                $('#kode_spj').val(result.id);
                 $('[name="kode_spj"]').val(result.kode);
                 $('#quickForm_spj').attr('action','{{ url('spj-tbk') }}/'+result.id);
                 $('#modal-lg-spj').modal('show');

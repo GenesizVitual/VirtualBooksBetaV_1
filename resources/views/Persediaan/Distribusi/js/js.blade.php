@@ -14,14 +14,14 @@
         var stok_kode;
 
         feedback=function (result) {
-
             const Toast = Swal.mixin({
                 toast: true,
                 position: 'top-end',
                 showConfirmButton: false,
                 timer: 3000
             });
-            if(result.length > 0){
+
+            if(result.message > 0){
                 $.each(result.message, function(i,v){
                     Toast.fire({
                         icon: v.status,
@@ -34,6 +34,7 @@
                     title: result.message
                 })
             }
+
             $('#tombol_simpan').attr('onclick','OnItemOut()');
             onLoaded(0,'#table-data-pembelian','pem');
             $('#modal-lg').modal('hide');

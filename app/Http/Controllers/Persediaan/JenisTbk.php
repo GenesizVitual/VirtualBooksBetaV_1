@@ -6,20 +6,22 @@ use App\Http\Controllers\Controller;
 use App\Model\Persediaan\JenisTbk as jenis_tbk;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use App\Http\Controllers\Persediaan\utils\StatusPenerimaan;
 class JenisTbk extends Controller
 {
     //
-
+    private $status_pembayaran;
     public function __construct()
     {
         $this->middleware(function($req, $next){
             $req->session()->put('menu','data_master');
             $req->session()->put('sub_menu','jenis_tbk');
+            $this->status_pembayaran = StatusPenerimaan::SetStatusPenerimaan();
             return $next($req);
         });
     }
 
-    private $status_pembayaran = array('Rutin','Rapat','Kegiatan','Hibah','Dana Bos Pusat','Dana Bos Daerah','dll');
+
 
     public function index(){
         $data = [

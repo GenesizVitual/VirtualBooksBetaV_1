@@ -18,11 +18,12 @@ class StatusPenerimaan
     {
         $data = [
             '0'=> 'Rutin',
-            '1'=> 'Kegiatan',
-            '2'=> 'Hibah',
-            '3'=> 'Dana Bos Pusat',
-            '4'=> 'Dana Bos Daerah',
-            '5'=> 'dll',
+            '1'=> 'Rapat',
+            '2'=> 'Kegiatan',
+            '3'=> 'Hibah',
+            '4'=> 'Dana Bos Pusat',
+            '5'=> 'Dana Bos Daerah',
+            '6'=> 'dll',
         ];
         return $data;
     }

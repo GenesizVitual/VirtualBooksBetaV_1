@@ -35,9 +35,9 @@
                     <div class="card card-success">
                         <div class="card-header">
                             <h3 class="card-title">{{ $tbk->kode }}</h3>
-                            <div class="card-tools">
-                                <a href="{{ url('jenis-tbk/create') }}" class="btn btn-tool" ><i class="fas fa-plus"></i></a>
-                            </div>
+                            {{--<div class="card-tools">--}}
+                                {{--<a href="{{ url('jenis-tbk/create') }}" class="btn btn-tool" ><i class="fas fa-plus"></i></a>--}}
+                            {{--</div>--}}
                         </div>
                         <div class="card-body">
                             <p style="color: green">* Data nota yang tampil pada tabel dibawah ini adalah nota yang belum dihubungkan dengan tanda bukti kas lainnya.</p>
