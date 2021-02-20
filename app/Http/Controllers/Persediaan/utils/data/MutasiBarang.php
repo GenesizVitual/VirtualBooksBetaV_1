@@ -26,7 +26,7 @@ class MutasiBarang
     private static $total = 0;
 
     public static function sortFunctionByDate( $a, $b ) {
-        return strtotime($a["tgl"]) - strtotime($b["tgl"]);
+        return strtotime($a["tgl"])-strtotime($b["tgl"]);
     }
 
     public static function sortFunctionByID( $a, $b ) {
@@ -57,7 +57,7 @@ class MutasiBarang
 
             self::pemilahan_data_perimaan_pengeluaran($pembelian->groupBy('id_gudang'),$ndata );
             # urutkan pengeluaran barang berdasarkan tanggal keluar barang
-            usort(self::$row,"self::sortFunctionByID");
+            usort(self::$row,"self::sortFunctionByDate");
             return self::$row;
         }catch (Throwable $e){
             return false;

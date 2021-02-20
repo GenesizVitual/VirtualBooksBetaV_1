@@ -27,7 +27,7 @@
     </style>
 
 </head>
-<body style="background-color: grey">
+<body style="background-color: white">
     <div style="background-color: white; padding: 1%">
         <table style="width: 100%; text-align: center">
             <tr>

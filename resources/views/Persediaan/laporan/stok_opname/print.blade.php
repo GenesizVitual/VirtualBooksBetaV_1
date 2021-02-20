@@ -27,7 +27,7 @@
     </style>
 
 </head>
-<body style="background-color: grey">
+<body style="background-color: white">
     <div style="background-color: white; padding: 1%">
         <table style="width: 100%; text-align: center">
             <tr>
@@ -91,7 +91,7 @@
                         <td >{{ $data_mutasi['nama_barang'] }}</td>
                         <td >{{ $data_mutasi['satuan'] }}</td>
                         <td >{{ number_format($data_mutasi['stok_barang'],2,',','.') }}</td>
-                        <td >{{ $data_mutasi['harga_barang'] }}</td>
+                        <td >{{ number_format($data_mutasi['harga_barang'],2,',','.') }}</td>
                         <td >{{ number_format($data_mutasi['stok_barang']*$data_mutasi['harga_barang'],2,',','.') }}</td>
                         <td >{{ $data_mutasi['keterangan'] }}</td>
                     </tr>
