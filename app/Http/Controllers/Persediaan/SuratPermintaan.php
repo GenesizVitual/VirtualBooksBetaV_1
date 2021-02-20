@@ -59,6 +59,7 @@ class SuratPermintaan extends Controller
 
     public function store(Request $req){
         try{
+
             $this->validate($req,[
                 'nomor_surat'=> 'required',
                 'perihal'=> 'required',
@@ -89,7 +90,6 @@ class SuratPermintaan extends Controller
                     'id_berwenang2'=>$req->id_berwenang2,
                 ]
             );
-
             if($model){
                 return redirect()->back()->with('message_info','Surat Permintaan dengan no:'.$model->nomor_surat.' telah dibuat');
             }else{

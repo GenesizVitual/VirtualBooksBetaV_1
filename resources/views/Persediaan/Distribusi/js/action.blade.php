@@ -1,10 +1,11 @@
 <script>
 
     OnPressButtonIncreate = function (action, stok) {
+        $('#modal-lg').modal('show');
         $('[name="kode"]').val(action);
         $('[name="stok_terakhir"]').val(stok);
 //        $('.select2').select2();
-        $('#modal-lg').modal('show');
+
     }
 
     OnSubmit = function () {
@@ -56,15 +57,17 @@
             }
         }).done(function (result) {
             var d =formatDate(result.tgl_kerluar);
+            $('#modal-lg').modal('show');
             $('[name="kode"]').val(result.id);
             $('[name="_method"]').val('put');
             $('[name="tgl_kerluar"]').val(d);
+            $('#tgl_keluar').val(d);
             $('[name="id_bidang"]').val(result.id_bidang).trigger('change');
             $('[name="jumlah_keluar"]').val(result.jumlah_keluar);
             $('[name="status_pengeluaran"]').val(result.status_pengeluaran).trigger('change');
             $('[name="keterangan"]').val(result.keterangan);
             $('#tombol_simpan').attr('onclick','OnItemUpdate('+result.id+')');
-            $('#modal-lg').modal('show');
+
         })
     }
 

@@ -54,7 +54,7 @@
                                                <td>Nomor</td>
                                                <td>:</td>
                                                <td style="width: 400px">
-                                                   <input type="text" class="form-control" name="nomor_surat" placeholder="Nomor Surat" value="{{ $data_surat->nomor_surat }}" style="width: 100%" required>
+                                                   <input type="text" class="form-control" name="nomor_surat" placeholder="Nomor Surat" value="@if(!empty($data_surat->nomor_surat)){{ $data_surat->nomor_surat }}@endif" style="width: 100%" required>
                                                    <input type="hidden" name="tgl_permintaan_barang" value="{{ $tgl_permintaan_barang }}">
                                                    <input type="hidden" name="id_surat_permintaan_barang" value="{{ $id_surat_permintaan_barang }}">
                                                </td>
@@ -108,7 +108,7 @@
                                         <table style="font-weight: bold; width: 100%" >
                                             <tr>
                                                 <td colspan="3">
-                                                     <textarea class="form-control" name="isi_surat" placeholder="Isi Surat Anda">{{ $data_surat->isi_surat }}</textarea>
+                                                     <textarea class="form-control" name="isi_surat" placeholder="Isi Surat Anda">@if(!empty($data_surat->isi_surat)){{ $data_surat->isi_surat }}@endif</textarea>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -141,7 +141,7 @@
                                             <tr>
                                                 <td colspan="3">
                                                     <input type="hidden" name="id_barang" value="{{ $id }}">
-                                                    <textarea class="form-control" name="penutup_surat" placeholder="Penutup Surat Anda">{{ $data_surat->penutup_surat }}</textarea>
+                                                    <textarea class="form-control" name="penutup_surat" placeholder="Penutup Surat Anda">@if(!empty($data_surat->penutup_surat)){{ $data_surat->penutup_surat }}@endif</textarea>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -183,7 +183,7 @@
                                                             @endforeach
                                                         </select>
                                                     </p>
-                                                    <p style="margin: 0px; text-align: center;" id="nip1">@if(!empty($data_surat))Nip:{{ $data_surat->linkToBerwenang1->nip }}@endif</p>
+                                                    <p style="margin: 0px; text-align: center;" id="nip1">@if(!empty($data_surat))Nip:@if(!empty($data_surat->linkToBerwenang1)){{ $data_surat->linkToBerwenang1->nip }}@endif @endif</p>
                                                 </div>
                                                 <div class="p-2">
                                                     <p style="text-align: center; margin: 0px;"></p>
@@ -204,7 +204,7 @@
                                                             @endforeach
                                                         </select>
                                                     </p>
-                                                    <p style="margin: 0px; text-align: center;" id="nip2">Nip:{{ $data_surat->linkToBerwenang2->nip }}</p>
+                                                    <p style="margin: 0px; text-align: center;" id="nip2">Nip:@if(!empty($data_surat->linkToBerwenang)){{ $data_surat->linkToBerwenang2->nip }}@endif</p>
                                                 </div>
                                             </div>
                                         </div>

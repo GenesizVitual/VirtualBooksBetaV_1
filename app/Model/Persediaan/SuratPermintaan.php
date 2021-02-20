@@ -10,7 +10,7 @@ class SuratPermintaan extends Model
 
     protected $table = 'tbl_surat_permintaan_barang';
 
-    protected $fillable = ['id_bidang','id_instansi','id_berwenang','nomor_surat','isi_surat','id_barang','penutup_surat','tgl_surat','title_penyedia',
+    protected $fillable = ['id_bidang','id_instansi','id_berwenang','tgl_permintaan_barang','nomor_surat','isi_surat','id_barang','penutup_surat','tgl_surat','title_penyedia',
         'title_jabatan','id_berwenang1','id_berwenang2'];
 
     public function linkToBidang(){
