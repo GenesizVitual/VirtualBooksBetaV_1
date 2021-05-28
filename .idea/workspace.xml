@@ -1,0 +1,2030 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="64868ef3-a8b4-45c4-a01c-4c5d46228421" name="Default" comment="- Persediaan Final">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/AdminLTELogo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/avatar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/avatar04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/avatar2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/avatar3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/avatar5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/boxed-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/boxed-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/credit/american-express.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/credit/cirrus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/credit/mastercard.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/credit/mestro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/credit/paypal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/credit/paypal2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/credit/visa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/default-150x150.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/icons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/photo1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/photo2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/photo3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/photo4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/prod-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/prod-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/prod-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/prod-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/prod-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/user1-128x128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/user2-160x160.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/user3-128x128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/user4-128x128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/user5-128x128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/user6-128x128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/user7-128x128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/img/user8-128x128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/daterangepicker/drp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-brands-400.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-brands-400.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-brands-400.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-brands-400.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-regular-400.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-regular-400.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-regular-400.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-regular-400.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-solid-900.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-solid-900.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-solid-900.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-solid-900.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dokumentasi/Ebook.docx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dokumentasi/Ebook.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/persediaan/bukti_pembayaran/1622172792.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/persediaan/bukti_pembayaran/1622178637.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/adminlte.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/adminlte.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/adminlte.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/adminlte.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.components.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.components.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.components.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.components.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.core.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.core.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.core.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.core.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.extra-components.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.extra-components.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.extra-components.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.extra-components.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.pages.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.pages.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.pages.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.pages.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.plugins.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.plugins.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.plugins.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.plugins.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/js/adminlte.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/js/adminlte.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/js/adminlte.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/js/adminlte.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/js/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/js/pages/dashboard.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/js/pages/dashboard2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/dist/js/pages/dashboard3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/bootstrap/js/bootstrap.bundle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/bootstrap/js/bootstrap.bundle.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/bootstrap/js/bootstrap.bundle.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/bootstrap/js/bootstrap.bundle.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/bootstrap/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/bootstrap/js/bootstrap.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/bootstrap/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/bootstrap/js/bootstrap.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/datatables-bs4/css/dataTables.bootstrap4.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/datatables-bs4/js/dataTables.bootstrap4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/datatables-responsive/css/responsive.bootstrap4.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/datatables-responsive/css/responsive.bootstrap4.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/datatables-responsive/js/dataTables.responsive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/datatables-responsive/js/dataTables.responsive.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/datatables-responsive/js/responsive.bootstrap4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/datatables-responsive/js/responsive.bootstrap4.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/datatables/jquery.dataTables.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/datatables/jquery.dataTables.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/daterangepicker/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/daterangepicker/daterangepicker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/daterangepicker/daterangepicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/daterangepicker/example/amd/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/daterangepicker/example/amd/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/daterangepicker/example/amd/require.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/daterangepicker/example/browserify/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/daterangepicker/example/browserify/bundle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/daterangepicker/example/browserify/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/daterangepicker/example/browserify/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/daterangepicker/moment.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/daterangepicker/package.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/daterangepicker/website.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/daterangepicker/website.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/daterangepicker/website/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/daterangepicker/website/website.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/daterangepicker/website/website.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/all.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/all.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/brands.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/brands.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/fontawesome.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/fontawesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/regular.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/regular.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/solid.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/solid.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/svg-with-js.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/svg-with-js.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/v4-shims.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/v4-shims.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-brands-400.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-regular-400.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-solid-900.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/icheck-bootstrap/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/icheck-bootstrap/icheck-bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/icheck-bootstrap/icheck-bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/bindings/inputmask.binding.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/inputmask.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/inputmask.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/inputmask/bindings/inputmask.binding.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/inputmask/dependencyLibs/inputmask.dependencyLib.jqlite.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/inputmask/dependencyLibs/inputmask.dependencyLib.jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/inputmask/dependencyLibs/inputmask.dependencyLib.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/inputmask/global/window.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/inputmask/inputmask.date.extensions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/inputmask/inputmask.extensions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/inputmask/inputmask.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/inputmask/inputmask.numeric.extensions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/inputmask/jquery.inputmask.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/jquery.inputmask.bundle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/jquery.inputmask.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/jquery.inputmask.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/min/inputmask/bindings/inputmask.binding.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/min/inputmask/dependencyLibs/inputmask.dependencyLib.jqlite.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/min/inputmask/dependencyLibs/inputmask.dependencyLib.jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/min/inputmask/dependencyLibs/inputmask.dependencyLib.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/min/inputmask/global/window.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/min/inputmask/inputmask.date.extensions.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/min/inputmask/inputmask.extensions.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/min/inputmask/inputmask.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/min/inputmask/inputmask.numeric.extensions.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/min/inputmask/jquery.inputmask.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/inputmask/min/jquery.inputmask.bundle.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/additional-methods.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/additional-methods.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/jquery.validate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/jquery.validate.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_ar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_ar.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_az.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_az.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_bg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_bg.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_bn_BD.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_bn_BD.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_ca.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_cs.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_da.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_da.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_de.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_el.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_el.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_es.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_es_AR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_es_AR.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_es_PE.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_es_PE.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_et.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_et.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_eu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_eu.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_fa.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_fi.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_fr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_ge.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_ge.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_gl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_gl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_he.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_he.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_hr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_hr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_hu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_hu.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_hy_AM.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_hy_AM.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_id.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_id.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_is.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_is.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_it.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_ja.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_ka.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_ka.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_kk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_kk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_ko.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_ko.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_lt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_lt.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_lv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_lv.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_mk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_mk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_my.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_my.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_nl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_no.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_no.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_pl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_pt_BR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_pt_BR.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_pt_PT.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_pt_PT.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_ro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_ro.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_ru.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_sd.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_sd.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_si.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_si.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_sk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_sk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_sl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_sl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_sr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_sr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_sr_lat.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_sr_lat.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_sv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_sv.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_th.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_th.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_tj.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_tj.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_tr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_tr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_uk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_uk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_ur.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_ur.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_vi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_vi.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_zh.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_zh.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_zh_TW.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/messages_zh_TW.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/methods_de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/methods_de.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/methods_es_CL.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/methods_es_CL.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/methods_fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/methods_fi.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/methods_it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/methods_it.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/methods_nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/methods_nl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/methods_pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery-validation/localization/methods_pt.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery/core.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery/jquery.min.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery/jquery.slim.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery/jquery.slim.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/jquery/jquery.slim.min.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/af.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ar-dz.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ar-kw.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ar-ly.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ar-ma.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ar-sa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ar-tn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/az.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/be.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/bg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/bm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/bn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/bo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/br.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/bs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/cv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/cy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/da.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/de-at.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/de-ch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/dv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/el.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/en-SG.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/en-au.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/en-ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/en-gb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/en-ie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/en-il.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/en-nz.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/eo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/es-do.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/es-us.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/et.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/eu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/fo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/fr-ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/fr-ch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/fy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ga.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/gd.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/gl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/gom-latn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/gu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/he.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/hi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/hr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/hu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/hy-am.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/id.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/is.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/it-ch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/jv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ka.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/kk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/km.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/kn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ko.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ku.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ky.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/lb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/lo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/lt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/lv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/me.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/mi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/mk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ml.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/mn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/mr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ms-my.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ms.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/mt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/my.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/nb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ne.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/nl-be.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/nn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/pa-in.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/pt-br.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/sd.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/se.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/si.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/sk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/sl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/sq.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/sr-cyrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/sr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ss.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/sv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/sw.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ta.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/te.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/tet.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/tg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/th.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/tl-ph.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/tlh.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/tr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/tzl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/tzm-latn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/tzm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ug-cn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/uk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/ur.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/uz-latn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/uz.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/vi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/x-pseudo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/yo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/zh-cn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/zh-hk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locale/zh-tw.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locales.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/locales.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/moment-with-locales.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/moment-with-locales.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/moment/moment.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2-bootstrap4-theme/select2-bootstrap4.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/css/select2.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/css/select2.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/af.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/ar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/az.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/bg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/bn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/bs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/build.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/da.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/dsb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/el.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/en.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/et.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/eu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/gl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/he.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/hi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/hr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/hsb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/hu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/hy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/id.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/is.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/ka.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/km.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/ko.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/lt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/lv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/mk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/ms.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/nb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/ne.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/ps.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/pt-BR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/ro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/sk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/sl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/sq.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/sr-Cyrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/sr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/sv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/th.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/tk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/tr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/uk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/vi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/zh-CN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/i18n/zh-TW.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/select2.full.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/select2.full.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/select2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/select2/js/select2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/sweetalert2/sweetalert2.all.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/sweetalert2/sweetalert2.all.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/sweetalert2/sweetalert2.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/sweetalert2/sweetalert2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/sweetalert2/sweetalert2.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/sweetalert2/sweetalert2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/toastr/toastr.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/toastr/toastr.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/toastr/toastr.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin_asset/plugins/toastr/toastr.min.js" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="virtual_book@localhost" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="virtual_book@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="virtual_book" type="e3449647:DbNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Unnamed">
+      <favorite_root url="file://$PROJECT_DIR$/routes/web.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/resources/views" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+        <favorite_root url="file://$PROJECT_DIR$/resources/views/AkuntansiJasa" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/resources/views/AkuntansiJasa/main" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+          <favorite_root url="file://$PROJECT_DIR$/resources/views/AkuntansiJasa/report" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/resources/views/AkuntansiJasa/report/Neraca.blade.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/resources/views/AkuntansiJasa/report/LabaRugi.blade.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/resources/views/AkuntansiJasa/report/BukuBesar.blade.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/resources/views/AkuntansiJasa/report/JurnalUmum.blade.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/resources/views/AkuntansiJasa/report/Neraca_old.blade.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/resources/views/AkuntansiJasa/report/NeracaSaldo.blade.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/resources/views/AkuntansiJasa/report/LabaRugi_old.blade.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/resources/views/AkuntansiJasa/report/BukuBesar_old.blade.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/resources/views/AkuntansiJasa/report/NeracaSaldo_old.blade.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/resources/views/base.blade.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/resources/views/welcome.blade.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      </favorite_root>
+      <favorite_root url="file://$PROJECT_DIR$/app/Http/Controllers" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+        <favorite_root url="file://$PROJECT_DIR$/app/Http/Controllers/User.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/app/Http/Controllers/CustomClass" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/app/Http/Controllers/CustomClass/AkuntansiJasa" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/app/Http/Controllers/CustomClass/AkuntansiJasa/Neraca.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/app/Http/Controllers/CustomClass/AkuntansiJasa/LabaRugi.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/app/Http/Controllers/CustomClass/AkuntansiJasa/BukuBesar.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/app/Http/Controllers/CustomClass/AkuntansiJasa/JurnalUmum.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/app/Http/Controllers/CustomClass/AkuntansiJasa/NeracaSaldo.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/app/Http/Controllers/AkuntansiJasa" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/app/Http/Controllers/AkuntansiJasa/report" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/app/Http/Controllers/AkuntansiJasa/report/Neraca.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/app/Http/Controllers/AkuntansiJasa/report/LabaRugi.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/app/Http/Controllers/AkuntansiJasa/report/BukuBesar.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/app/Http/Controllers/AkuntansiJasa/report/JurnalUmum.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/app/Http/Controllers/AkuntansiJasa/report/NeracaSaldo.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      </favorite_root>
+      <favorite_root url="file://$PROJECT_DIR$/app/Model" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+        <favorite_root url="file://$PROJECT_DIR$/app/Model/Users.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/app/Model/AkuntansiJasa" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/app/Model/AkuntansiJasa/Akun.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/app/Model/AkuntansiJasa/Jurnal.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/app/Model/AkuntansiJasa/BukuBesar.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/app/Model/AkuntansiJasa/AkunTransaksi.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/app/Model/AkuntansiJasa/JurnalTransaksiAkun.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+      </favorite_root>
+      <favorite_root url="file://$PROJECT_DIR$/public" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+        <favorite_root url="file://$PROJECT_DIR$/public/.htaccess" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/public/index.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/public/robots.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/public/web.config" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/public/admin_asset" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/js" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/js/pages" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/js/pages/dashboard.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/js/pages/dashboard2.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/js/pages/dashboard3.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/js/demo.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/js/adminlte.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/js/adminlte.js.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/js/adminlte.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/js/adminlte.min.js.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/alt" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.core.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.pages.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.plugins.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.core.css.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.core.min.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.pages.css.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.pages.min.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.components.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.plugins.css.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.plugins.min.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.core.min.css.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.pages.min.css.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.components.css.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.components.min.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.plugins.min.css.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.extra-components.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.components.min.css.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.extra-components.css.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.extra-components.min.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/alt/adminlte.extra-components.min.css.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/adminlte.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/adminlte.css.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/adminlte.min.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/css/adminlte.min.css.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/credit" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/credit/visa.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/credit/cirrus.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/credit/mestro.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/credit/paypal.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/credit/paypal2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/credit/mastercard.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/credit/american-express.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/icons.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/avatar.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/photo1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/photo2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/photo3.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/photo4.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/prod-1.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/prod-2.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/prod-3.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/prod-4.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/prod-5.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/avatar2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/avatar3.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/avatar5.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/avatar04.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/boxed-bg.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/boxed-bg.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/AdminLTELogo.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/user1-128x128.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/user2-160x160.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/user3-128x128.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/user4-128x128.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/user5-128x128.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/user6-128x128.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/user7-128x128.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/user8-128x128.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/dist/img/default-150x150.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/jquery" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/jquery/core.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/jquery/jquery.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/jquery/jquery.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/jquery/jquery.min.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/jquery/jquery.slim.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/jquery/jquery.slim.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/jquery/jquery.slim.min.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/bootstrap" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/bootstrap/js" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/bootstrap/js/bootstrap.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/bootstrap/js/bootstrap.js.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/bootstrap/js/bootstrap.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/bootstrap/js/bootstrap.bundle.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/bootstrap/js/bootstrap.min.js.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/bootstrap/js/bootstrap.bundle.js.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/bootstrap/js/bootstrap.bundle.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/bootstrap/js/bootstrap.bundle.min.js.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/all.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/solid.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/brands.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/all.min.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/regular.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/v4-shims.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/solid.min.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/brands.min.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/fontawesome.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/regular.min.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/svg-with-js.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/v4-shims.min.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/fontawesome.min.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/css/svg-with-js.min.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-solid-900.eot" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-solid-900.svg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-solid-900.ttf" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-brands-400.eot" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-brands-400.svg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-brands-400.ttf" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-solid-900.woff" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-brands-400.woff" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-regular-400.eot" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-regular-400.svg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-regular-400.ttf" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-solid-900.woff2" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-brands-400.woff2" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-regular-400.woff" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/public/admin_asset/plugins/fontawesome-free/webfonts/fa-regular-400.woff2" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+            </favorite_root>
+          </favorite_root>
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/public/favicon.ico" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      </favorite_root>
+      <favorite_root url="file://$PROJECT_DIR$/database/migrations" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+        <favorite_root url="file://$PROJECT_DIR$/database/migrations/Bisnis" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/database/migrations/Bisnis/2020_06_04_093505_create_tabel_bisnis.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/database/migrations/Akuntansi_jasa" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/database/migrations/Akuntansi_jasa/2020_05_22_012922_create_table__akun.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/database/migrations/Akuntansi_jasa/2020_05_22_024439_create_table_jurnal.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/database/migrations/Akuntansi_jasa/2020_05_21_071629_create_table_buku_besar.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/database/migrations/Akuntansi_jasa/2020_05_22_015140_create_table_akun_transaksi.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/database/migrations/Akuntansi_jasa/2020_05_22_025002_create_table_akun_jurnal_transaksi_akun.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      </favorite_root>
+      <favorite_root url="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/action.blade.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/routes/another_route" module="VirtualBooksBetaV_1" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+        <favorite_root url="file://$PROJECT_DIR$/routes/another_route/users_route.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      </favorite_root>
+    </favorites_list>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4794">
+              <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_route.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/another_route/admin_route.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>preview_data_rekapitulasi_persediaan_perjenis_tbk</find>
+      <find>preview_stok_opname</find>
+      <find>data_pembelian_barang_pernota</find>
+      <find>Bili</find>
+      <find>bi</find>
+      <find>stok_op</find>
+      <find>get</find>
+      <find>persediaan</find>
+      <find>Pener</find>
+      <find>set_ket $('#set_ket').text(&quot;Sedang Meload Data&quot;);</find>
+      <find>Cryp</find>
+      <find>id</find>
+      <find>Pembelian</find>
+      <find>nota</find>
+      <find>data_nota_pembel</find>
+      <find>data_nota_pembelian</find>
+      <find>trigger</find>
+      <find>langganan</find>
+      <find>det</find>
+      <find>color</find>
+      <find>menu</find>
+      <find>pic</find>
+      <find>berita</find>
+      <find>tgl_expired</find>
+      <find>bagian</find>
+      <find>TBK_</find>
+      <find>set</find>
+      <find>upDatePaketLangganan</find>
+      <find>setting-langganan</find>
+      <find>Anda telah</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="GenesizVitual &lt;lastfandiansyah@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Persediaan" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/Tahun_Anggaran/content.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/Penyedia/content.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/Gudang/content.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/Berwenang/content.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/Pembelian/js/action.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/PembelianBarang.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/SuratPengeluaran.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/SuratPesanan.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/TBK.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/SpjTBK/content.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/SPJ.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/SpjTBK/js/spj.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/TbkNota/content.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/JenisTbk.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/StatusPenerimaan.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Distribusi.php" />
+        <option value="$PROJECT_DIR$/app/Model/Persediaan/SuratPermintaan.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/SuratPermintaan.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/Surat/SuratPermintaan/template_surat.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/Surat/SuratPengeluaran/template_surat.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/rekapitulasi_persediaan/print.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/rekapitulasi_persediaan_perjenis_tbk/print.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/persediaan_barang/print.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/pengeluaran_barang/print.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/barang_pakai_habis/print.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/semester/print.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/kartu_barang/print.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/mutasi_barang/print.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_barang/print.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_opname/print.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/webview/component/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/component_admin/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/component_admin/Lsidebar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/tab/content.blade.php" />
+        <option value="$PROJECT_DIR$/storage/framework/views/436321cd6c0953ae26e8b7585c0cc36e2b721244.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/action.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/modal.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/js.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/Pembelian/content.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/Pembelian/js/table.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/webview/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Instansi.php" />
+        <option value="$PROJECT_DIR$/app/Imports/GudangImport.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/TahunAggaranCheck.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Nota.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/base.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/penentuan_paket_langganan.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/pembayaran_sedang_d_konfirmasi.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/penentuan_konfirmasi_pembayaran.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/User.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="609" />
+    <option name="y" value="181" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="VirtualBooksBetaV_1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VirtualBooksBetaV_1" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/admin_route.php&#10;admin&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/admin_route.php&#10;User&#9;null&#9;null&#10;web&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/web.php&#10;Langga&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/resources/views/Persediaan/penentuan_paket_langganan.blade.php&#10;lang&#9;null&#9;null&#10;Sura&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/SuratPermintaan.php&#10;Pembelia&#9;null&#9;null&#10;Do&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Apps/Dokumentasi.php&#10;Login&#9;null&#9;null&#10;route&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;Tahun&#9;null&#9;null&#10;user&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;ro&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;MasterL&#9;null&#9;null&#10;Invoi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Invoice.php&#10;Users&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;langganan&#9;null&#9;null&#10;Instansi&#9;null&#9;null&#10;SuratPesanan&#9;null&#9;null&#10;SuratPesana&#9;null&#9;null&#10;Nota&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Nota.php&#10;Pembe&#9;null&#9;null&#10;Berwe&#9;null&#9;null&#10;Gu&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Gudang.php&#10;Gudang&#9;null&#9;null&#10;Penyedi&#9;null&#9;null&#10;Jenis&#9;null&#9;null&#10;TahunA&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/TahunAnggaran.php&#10;Bidang&#9;null&#9;null&#10;Use&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/User.php&#10;TahunAngga&#9;null&#9;null&#10;Ta&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/TahunAnggaran.php&#10;Tah&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/TahunAnggaran.php&#10;Instans&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/Instansi.php&#10;Insta&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Instansi.php&#10;Instan&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Instansi.php&#10;Notas&#9;null&#9;null&#10;PembelianB&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/PembelianBarang.php&#10;PembelianBara&#9;null&#9;null&#10;Master&#9;null&#9;null&#10;we&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/web.php&#10;Guda&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Gudang.php&#10;Pembel&#9;FILE&#9;file://E:/xampp/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/PembelianBarang.php&#10;Dis&#9;FILE&#9;file://E:/xampp/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/Distribusi.php&#10;nota&#9;FILE&#9;file://E:/xampp/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/Nota.php&#10;surat&#9;null&#9;null&#10;Surat&#9;FILE&#9;file://E:/xampp/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/SuratPesanan.php&#10;No&#9;FILE&#9;file://E:/xampp/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/Nota.php&#10;Ber&#9;FILE&#9;file://E:/xampp/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/Berwenang.php" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xampp173\htdocs\VirtualBooksBetaV_1\resources\views\Admin\dokumen" />
+      <recent name="E:\xampp173\htdocs\VirtualBooksBetaV_1\resources\views\webview" />
+      <recent name="E:\xampp173\htdocs\VirtualBooksBetaV_1\public\front\images" />
+      <recent name="E:\xampp173\htdocs\VirtualBooksBetaV_1\resources\views\Persediaan\Donasi" />
+      <recent name="E:\xampp173\htdocs\VirtualBooksBetaV_1\resources\views\Persediaan\laporan\stok_opname" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\xampp173\htdocs\VirtualBooksBetaV_1\resources\views\Persediaan\Invoice" />
+      <recent name="E:\xampp\htdocs\VirtualBooksBetaV_1\app\Http\Controllers\Akuntansi" />
+      <recent name="E:\xampp\htdocs\VirtualBooksBetaV_1\resources\views\Akuntansi" />
+      <recent name="E:\xampp\htdocs\VirtualBooksBetaV_1\resources\views\Persediaan" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="64868ef3-a8b4-45c4-a01c-4c5d46228421" name="Default" comment="" />
+      <created>1593763675329</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593763675329</updated>
+      <workItem from="1593763676824" duration="2177000" />
+      <workItem from="1593776162151" duration="309000" />
+      <workItem from="1593781045659" duration="2885000" />
+      <workItem from="1593829959659" duration="4381000" />
+      <workItem from="1593834649783" duration="21000" />
+      <workItem from="1593839204597" duration="8017000" />
+      <workItem from="1593858807911" duration="15193000" />
+      <workItem from="1593918765760" duration="2126000" />
+      <workItem from="1593925398711" duration="3148000" />
+      <workItem from="1593999240887" duration="56000" />
+      <workItem from="1594265866373" duration="652000" />
+      <workItem from="1594270099164" duration="1317000" />
+      <workItem from="1594277439324" duration="19000" />
+      <workItem from="1594367444300" duration="1294000" />
+      <workItem from="1594388444102" duration="1991000" />
+      <workItem from="1594426422130" duration="37000" />
+      <workItem from="1594541612697" duration="4318000" />
+      <workItem from="1594604404671" duration="384000" />
+      <workItem from="1594698616787" duration="1074000" />
+      <workItem from="1595586616155" duration="12000" />
+      <workItem from="1595586661191" duration="2812000" />
+      <workItem from="1595633756610" duration="15000" />
+      <workItem from="1596256202813" duration="795000" />
+      <workItem from="1596423439444" duration="3560000" />
+      <workItem from="1596434927695" duration="5691000" />
+      <workItem from="1596455832839" duration="3115000" />
+      <workItem from="1596503469900" duration="82000" />
+      <workItem from="1596507508178" duration="6929000" />
+      <workItem from="1596526168438" duration="7442000" />
+      <workItem from="1596594860027" duration="5580000" />
+      <workItem from="1596602611845" duration="2421000" />
+      <workItem from="1596616592880" duration="119000" />
+      <workItem from="1596633518397" duration="4225000" />
+      <workItem from="1596669001583" duration="11924000" />
+      <workItem from="1596765303479" duration="151000" />
+      <workItem from="1596870265595" duration="4829000" />
+      <workItem from="1596888785268" duration="10292000" />
+      <workItem from="1596935296867" duration="18727000" />
+      <workItem from="1597025455397" duration="58000" />
+      <workItem from="1597061344086" duration="6839000" />
+      <workItem from="1597114351200" duration="641000" />
+      <workItem from="1597116279904" duration="10940000" />
+      <workItem from="1597136559557" duration="33000" />
+      <workItem from="1597212139671" duration="1964000" />
+      <workItem from="1597215523410" duration="7314000" />
+      <workItem from="1597272445887" duration="16500000" />
+      <workItem from="1597300751648" duration="6330000" />
+      <workItem from="1597368012076" duration="6609000" />
+      <workItem from="1597380723368" duration="8622000" />
+      <workItem from="1597401193276" duration="78000" />
+      <workItem from="1597414329938" duration="3049000" />
+      <workItem from="1597457079434" duration="10413000" />
+      <workItem from="1597478882980" duration="15625000" />
+      <workItem from="1597632964145" duration="3472000" />
+      <workItem from="1597643857608" duration="3192000" />
+      <workItem from="1597712356886" duration="52000" />
+      <workItem from="1597725873612" duration="9521000" />
+      <workItem from="1597746568303" duration="14000" />
+      <workItem from="1597800293921" duration="5849000" />
+      <workItem from="1597813779883" duration="20000" />
+      <workItem from="1597979107791" duration="2986000" />
+      <workItem from="1597989134235" duration="11079000" />
+      <workItem from="1598000709176" duration="1503000" />
+      <workItem from="1598007678331" duration="7829000" />
+      <workItem from="1598052837332" duration="19554000" />
+      <workItem from="1598083390006" duration="48000" />
+      <workItem from="1598160516992" duration="7738000" />
+      <workItem from="1598232902700" duration="355000" />
+      <workItem from="1598337165430" duration="6833000" />
+      <workItem from="1598355137642" duration="341000" />
+      <workItem from="1598396411618" duration="3837000" />
+      <workItem from="1598404231773" duration="9339000" />
+      <workItem from="1598422624448" duration="65000" />
+      <workItem from="1598505142573" duration="15402000" />
+      <workItem from="1598574975180" duration="269000" />
+      <workItem from="1599555056788" duration="4543000" />
+      <workItem from="1599612397857" duration="9526000" />
+      <workItem from="1599791263962" duration="2704000" />
+      <workItem from="1599817781623" duration="4914000" />
+      <workItem from="1599889636153" duration="14134000" />
+      <workItem from="1599958641498" duration="212000" />
+      <workItem from="1599961632590" duration="10287000" />
+      <workItem from="1599981523797" duration="2443000" />
+      <workItem from="1599993996734" duration="3729000" />
+      <workItem from="1600045161979" duration="3670000" />
+      <workItem from="1600048914429" duration="7470000" />
+      <workItem from="1600135372777" duration="10701000" />
+      <workItem from="1600243601769" duration="502000" />
+      <workItem from="1600309547752" duration="26000" />
+      <workItem from="1600313779087" duration="1733000" />
+      <workItem from="1600316350089" duration="6510000" />
+      <workItem from="1600342382130" duration="197000" />
+      <workItem from="1600395899195" duration="1611000" />
+      <workItem from="1600398454302" duration="1537000" />
+      <workItem from="1600406424991" duration="146000" />
+      <workItem from="1600485057207" duration="58000" />
+      <workItem from="1600568233009" duration="86000" />
+      <workItem from="1601347899015" duration="674000" />
+      <workItem from="1601414278633" duration="60000" />
+      <workItem from="1601529924519" duration="3968000" />
+      <workItem from="1601615809002" duration="307000" />
+      <workItem from="1601616735034" duration="14196000" />
+      <workItem from="1601693395476" duration="11411000" />
+      <workItem from="1601859685062" duration="480000" />
+      <workItem from="1601860240787" duration="10832000" />
+      <workItem from="1601961897349" duration="5985000" />
+      <workItem from="1602032908362" duration="12530000" />
+      <workItem from="1602053071440" duration="4121000" />
+      <workItem from="1602060795113" duration="675000" />
+      <workItem from="1602315992929" duration="12077000" />
+      <workItem from="1602381170862" duration="33000" />
+      <workItem from="1603259030919" duration="3787000" />
+      <workItem from="1603265797350" duration="7778000" />
+      <workItem from="1603282328738" duration="16092000" />
+      <workItem from="1603330937406" duration="96000" />
+      <workItem from="1603436932182" duration="7851000" />
+      <workItem from="1603498956234" duration="11816000" />
+      <workItem from="1603523940955" duration="3122000" />
+      <workItem from="1603581554062" duration="12654000" />
+      <workItem from="1603601454095" duration="600000" />
+      <workItem from="1603608803059" duration="2395000" />
+      <workItem from="1603672884467" duration="26000" />
+      <workItem from="1603782016679" duration="6009000" />
+      <workItem from="1603846920481" duration="10567000" />
+      <workItem from="1603859133587" duration="173000" />
+      <workItem from="1603873883412" duration="29000" />
+      <workItem from="1605412064117" duration="9383000" />
+      <workItem from="1605488250759" duration="23000" />
+      <workItem from="1605667376764" duration="3766000" />
+      <workItem from="1605680977645" duration="1122000" />
+      <workItem from="1605686466773" duration="2902000" />
+      <workItem from="1605700604649" duration="14000" />
+      <workItem from="1610155357670" duration="18908000" />
+      <workItem from="1610193576808" duration="5333000" />
+      <workItem from="1610239599623" duration="11917000" />
+      <workItem from="1610259215866" duration="5910000" />
+      <workItem from="1610329061540" duration="164000" />
+      <workItem from="1610363384656" duration="1226000" />
+      <workItem from="1610365893825" duration="2846000" />
+      <workItem from="1610412224046" duration="176000" />
+      <workItem from="1610444645551" duration="10694000" />
+      <workItem from="1610520015341" duration="7148000" />
+      <workItem from="1610533922421" duration="3567000" />
+      <workItem from="1610538844419" duration="6880000" />
+      <workItem from="1610586021594" duration="1603000" />
+      <workItem from="1610588834163" duration="1109000" />
+      <workItem from="1610608735698" duration="6099000" />
+      <workItem from="1610627658152" duration="5945000" />
+      <workItem from="1610672803674" duration="395000" />
+      <workItem from="1610674454134" duration="1149000" />
+      <workItem from="1610710473879" duration="4247000" />
+      <workItem from="1610714940073" duration="1221000" />
+      <workItem from="1610716234643" duration="2882000" />
+      <workItem from="1610839860988" duration="17007000" />
+      <workItem from="1610931619993" duration="18000" />
+      <workItem from="1611361115296" duration="17698000" />
+      <workItem from="1611403055866" duration="3020000" />
+      <workItem from="1611548168602" duration="641000" />
+      <workItem from="1611559035723" duration="25000" />
+      <workItem from="1611559497603" duration="2973000" />
+      <workItem from="1611648430955" duration="2221000" />
+      <workItem from="1611746066997" duration="995000" />
+      <workItem from="1611749346992" duration="4356000" />
+      <workItem from="1611970488060" duration="16273000" />
+      <workItem from="1612154006869" duration="13000" />
+      <workItem from="1612577125027" duration="4642000" />
+      <workItem from="1612603767574" duration="1381000" />
+      <workItem from="1612745768610" duration="166000" />
+      <workItem from="1613009787589" duration="6431000" />
+      <workItem from="1613018139487" duration="231000" />
+      <workItem from="1613048410550" duration="1240000" />
+      <workItem from="1613110715003" duration="1977000" />
+      <workItem from="1613120216737" duration="1447000" />
+      <workItem from="1613181222916" duration="53000" />
+      <workItem from="1613266470283" duration="13560000" />
+      <workItem from="1613297191480" duration="493000" />
+      <workItem from="1613308800901" duration="98000" />
+      <workItem from="1613350209527" duration="1696000" />
+      <workItem from="1613381610176" duration="1104000" />
+      <workItem from="1613389058709" duration="118000" />
+      <workItem from="1613436787718" duration="8000" />
+      <workItem from="1613436836855" duration="78000" />
+      <workItem from="1613458577848" duration="4463000" />
+      <workItem from="1613478168961" duration="334000" />
+      <workItem from="1613524731330" duration="39000" />
+      <workItem from="1613539401691" duration="3721000" />
+      <workItem from="1613544161898" duration="28000" />
+      <workItem from="1613638020892" duration="1598000" />
+      <workItem from="1613723127340" duration="903000" />
+      <workItem from="1613728434246" duration="7291000" />
+      <workItem from="1613775844649" duration="5182000" />
+      <workItem from="1613791175912" duration="6214000" />
+      <workItem from="1613871654275" duration="62000" />
+      <workItem from="1614294117720" duration="1977000" />
+      <workItem from="1614301504040" duration="661000" />
+      <workItem from="1614387968482" duration="4017000" />
+      <workItem from="1614402843366" duration="8669000" />
+      <workItem from="1614423306270" duration="24000" />
+      <workItem from="1614470612860" duration="398000" />
+      <workItem from="1614478743817" duration="1563000" />
+      <workItem from="1614562446703" duration="34000" />
+      <workItem from="1614846135021" duration="2617000" />
+      <workItem from="1614955800859" duration="17000" />
+      <workItem from="1618263133071" duration="1576000" />
+      <workItem from="1622164544322" duration="8053000" />
+      <workItem from="1622176907937" duration="4909000" />
+      <workItem from="1622182171747" duration="154000" />
+    </task>
+    <task id="LOCAL-00031" summary="- Perancangan Surat Permintaan">
+      <created>1602046968145</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1602046968145</updated>
+    </task>
+    <task id="LOCAL-00032" summary="- Perancangan Form Surat Permintaan Sudah Selesai">
+      <created>1602057225329</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1602057225329</updated>
+    </task>
+    <task id="LOCAL-00033" summary="- Perancangan Surat Permintaan dan Surat Pengeluaran Selesai &#10;- Next Perancangan laporan">
+      <created>1602328793042</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1602328793042</updated>
+    </task>
+    <task id="LOCAL-00034" summary="- Laporan Print preview dan print Daftar Nota Selesai">
+      <created>1603273560822</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1603273560822</updated>
+    </task>
+    <task id="LOCAL-00035" summary="- Laporan Print preview dan print rekapitulasi Persediaan">
+      <created>1603295874237</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1603295874237</updated>
+    </task>
+    <task id="LOCAL-00036" summary="- Laporan Print preview dan print Rekapitulasi Persediaan Perjenis TBK">
+      <created>1603297669684</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1603297669684</updated>
+    </task>
+    <task id="LOCAL-00037" summary="- Laporan Print preview dan print Penerimaan Barang Selesai">
+      <created>1603445362316</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1603445362316</updated>
+    </task>
+    <task id="LOCAL-00038" summary="- Laporan Print preview dan print Barang Pakai Habis Selesai">
+      <created>1603527044599</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1603527044599</updated>
+    </task>
+    <task id="LOCAL-00039" summary="- Perancangan Kartu Barang">
+      <created>1603788974996</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1603788974996</updated>
+    </task>
+    <task id="LOCAL-00040" summary="- Perancangan Kartu Barang  2">
+      <created>1603859216584</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1603859216584</updated>
+    </task>
+    <task id="LOCAL-00041" summary="- Laporan Kartu Barang dan Mutasi Selesai">
+      <created>1605421693787</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1605421693787</updated>
+    </task>
+    <task id="LOCAL-00042" summary="- Perancangan Stok Barang">
+      <created>1605689319190</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1605689319190</updated>
+    </task>
+    <task id="LOCAL-00043" summary="- Laporan Sudah Fix">
+      <created>1610172621847</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1610172621848</updated>
+    </task>
+    <task id="LOCAL-00044" summary="- Laporan Sudah Fix">
+      <created>1610172889250</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1610172889250</updated>
+    </task>
+    <task id="LOCAL-00045" summary="- Penambahan pengaturan menu">
+      <created>1610179870547</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1610179870547</updated>
+    </task>
+    <task id="LOCAL-00046" summary="- Penambahan dasboard">
+      <created>1610198938962</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1610198938962</updated>
+    </task>
+    <task id="LOCAL-00047" summary="- Pengecekan session instansi disetiap controller">
+      <created>1610251730638</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1610251730638</updated>
+    </task>
+    <task id="LOCAL-00048" summary="- Penambahan template">
+      <created>1610252882702</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1610252882702</updated>
+    </task>
+    <task id="LOCAL-00049" summary="- Penambahan Import Data Gudang">
+      <created>1610267606245</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1610267606245</updated>
+    </task>
+    <task id="LOCAL-00050" summary="-revisi table user untuk membuat formulir awal pendaftaran">
+      <created>1610412357476</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1610412357477</updated>
+    </task>
+    <task id="LOCAL-00051" summary="- Tranfer Stok Selesai">
+      <created>1610456859445</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1610456859446</updated>
+    </task>
+    <task id="LOCAL-00052" summary="- Penyesuian laporan mutasi dengan pajak&#10;- Penambahan landing page">
+      <created>1610546222642</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1610546222643</updated>
+    </task>
+    <task id="LOCAL-00053" summary="- Home&#10;- Laporan Print Laporan">
+      <created>1610614466235</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1610614466236</updated>
+    </task>
+    <task id="LOCAL-00054" summary="- Penambahan Encripsi">
+      <created>1610633781704</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1610633781706</updated>
+    </task>
+    <task id="LOCAL-00055" summary="- Kembalikan encriptdata">
+      <created>1610715328892</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1610715328892</updated>
+    </task>
+    <task id="LOCAL-00056" summary="- Penyesuian">
+      <created>1610719447324</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1610719447324</updated>
+    </task>
+    <task id="LOCAL-00057" summary="- Penambahan Pembayaran, Perbaikan nota">
+      <created>1610859210157</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1610859210158</updated>
+    </task>
+    <task id="LOCAL-00058" summary="- Penambahan Status Aktif dan admin">
+      <created>1611385748726</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1611385748730</updated>
+    </task>
+    <task id="LOCAL-00059" summary="- Penambahan Invoice">
+      <created>1611386864367</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1611386864367</updated>
+    </task>
+    <task id="LOCAL-00060" summary="- Penambahan Interface">
+      <created>1611390187375</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1611390187376</updated>
+    </task>
+    <task id="LOCAL-00061" summary="- Penambahan Interface">
+      <created>1611406088923</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1611406088924</updated>
+    </task>
+    <task id="LOCAL-00062" summary="- Penambahan Interface">
+      <created>1611983415238</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1611983415240</updated>
+    </task>
+    <task id="LOCAL-00063" summary="- Penambahan Interface">
+      <created>1611987372201</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1611987372201</updated>
+    </task>
+    <task id="LOCAL-00064" summary="- Penambahan Export Excel">
+      <created>1612577781459</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1612577781463</updated>
+    </task>
+    <task id="LOCAL-00065" summary="- Penambahan Kode Nota">
+      <created>1612745910840</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1612745910841</updated>
+    </task>
+    <task id="LOCAL-00066" summary="- Perbaikan Setting Awal Tahun Anggaram&#10;- Penambahan Dosansi untuk pengguna anonymose&#10;- Perbaikan Login">
+      <created>1613016259853</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1613016259854</updated>
+    </task>
+    <task id="LOCAL-00067" summary="- Perubahan tampilan">
+      <created>1613051664368</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1613051664368</updated>
+    </task>
+    <task id="LOCAL-00068" summary="- Penambahan Admin Dokumentasi">
+      <created>1613281677671</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1613281677671</updated>
+    </task>
+    <task id="LOCAL-00069" summary="- Penambahan file dokumentasi">
+      <created>1613308876873</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1613308876874</updated>
+    </task>
+    <task id="LOCAL-00070" summary="- perubahan ebook">
+      <created>1613389146103</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1613389146104</updated>
+    </task>
+    <task id="LOCAL-00071" summary="- Penambahan Admin Dokumentasi">
+      <created>1613458922266</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1613458922267</updated>
+    </task>
+    <task id="LOCAL-00072" summary="- Penambahan dokumentasi">
+      <created>1613467126264</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1613467126264</updated>
+    </task>
+    <task id="LOCAL-00073" summary="- Penambahan dokumentasi">
+      <created>1613478482261</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1613478482261</updated>
+    </task>
+    <task id="LOCAL-00074" summary="- Perbaikan bug menu pembelian barang">
+      <created>1613542847362</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1613542847363</updated>
+    </task>
+    <task id="LOCAL-00075" summary="- Perbaikan kode bentrok walaupun dibeda instansi&#10;- Penambahan dokumentasi">
+      <created>1613639614214</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1613639614214</updated>
+    </task>
+    <task id="LOCAL-00076" summary="- Perbaikan bug notifikasi pengeluaran&#10;- Penambahan dokumentasi">
+      <created>1613744615440</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1613744615441</updated>
+    </task>
+    <task id="LOCAL-00077" summary="- Perbaikan bug surat permintaan dan surat pengeluaran&#10;- Penambahan dokumentasi">
+      <created>1613783917776</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1613783917776</updated>
+    </task>
+    <task id="LOCAL-00078" summary="- Perbaikan bug semua laporan&#10;- Penambahan dokumentasi">
+      <created>1613800863150</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1613800863150</updated>
+    </task>
+    <task id="LOCAL-00079" summary="- Persediaan Final">
+      <created>1622182314248</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1622182314254</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="870612000" />
+  </component>
+  <component name="TodoView" selected-index="1">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19288956" sideWeight="0.3407155" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21217105" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38134205" sideWeight="0.50907713" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.4969743" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.49403748" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37828946" sideWeight="0.49092284" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20272315" sideWeight="0.6592845" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43585527" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329806" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="- Tranfer Stok Selesai" />
+    <MESSAGE value="- Penyesuian laporan mutasi dengan pajak&#10;- Penambahan landing page" />
+    <MESSAGE value="- Home&#10;- Laporan Print Laporan" />
+    <MESSAGE value="- Penambahan Encripsi" />
+    <MESSAGE value="- Kembalikan encriptdata" />
+    <MESSAGE value="- Penyesuian" />
+    <MESSAGE value="- Penambahan Pembayaran" />
+    <MESSAGE value="- Penambahan Pembayaran, Perbaikan nota" />
+    <MESSAGE value="- Penambahan Status Aktif dan admin" />
+    <MESSAGE value="- Penambahan Invoice" />
+    <MESSAGE value="- Penambahan Interface" />
+    <MESSAGE value="- Penambahan Export Excel" />
+    <MESSAGE value="- Penambahan Kode Nota" />
+    <MESSAGE value="- Perbaikan Setting Awal Tahun Anggaram&#10;- Penambahan Dosansi untuk pengguna anonymose&#10;- Perbaikan Login" />
+    <MESSAGE value="- Perubahan tampilan" />
+    <MESSAGE value="- Penambahan file dokumentasi" />
+    <MESSAGE value="- perubahan ebook" />
+    <MESSAGE value="- Penambahan Admin Dokumentasi" />
+    <MESSAGE value="- Penambahan dokumentasi" />
+    <MESSAGE value="- Perbaikan bug menu pembelian barang" />
+    <MESSAGE value="- Perbaikan kode bentrok walaupun dibeda instansi&#10;- Penambahan dokumentasi" />
+    <MESSAGE value="- Perbaikan bug notifikasi pengeluaran&#10;- Penambahan dokumentasi" />
+    <MESSAGE value="- Perbaikan bug surat permintaan dan surat pengeluaran&#10;- Penambahan dokumentasi" />
+    <MESSAGE value="- Perbaikan bug semua laporan&#10;- Penambahan dokumentasi" />
+    <MESSAGE value="- Persediaan Final" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Persediaan Final" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="13" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/laporan/kartu_barang/print.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="116" column="18" lean-forward="false" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/laporan/mutasi_barang/print.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="129" column="18" lean-forward="false" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_opname/print.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="93" column="83" lean-forward="false" selection-start-line="93" selection-start-column="83" selection-end-line="93" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_barang/print.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="39" column="16" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="59" column="54" lean-forward="false" selection-start-line="59" selection-start-column="54" selection-end-line="59" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/webview/alur_sistem.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-450">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/webview/component/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/component_admin/message.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-115">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/component_admin/toast.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/content.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="41" column="28" lean-forward="false" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/436321cd6c0953ae26e8b7585c0cc36e2b721244.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1314">
+          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/tab/content.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="139" column="61" lean-forward="false" selection-start-line="139" selection-start-column="61" selection-end-line="139" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../persediaan_online_new/resources/views/content2/page_expedures/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="490" column="17" lean-forward="true" selection-start-line="482" selection-start-column="17" selection-end-line="490" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/js.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/action.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1625">
+          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/modal.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="38" column="120" lean-forward="false" selection-start-line="38" selection-start-column="107" selection-end-line="38" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Nota/content.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1425">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Pembelian/js/action.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Pembelian/js/table.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Pembelian/content.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="143" column="50" lean-forward="true" selection-start-line="143" selection-start-column="50" selection-end-line="143" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/webview/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="25" column="44" lean-forward="false" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Imports/GudangImport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/Instansi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="54" column="28" lean-forward="true" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/SPJ.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1050">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/SuratPengeluaran.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/TahunAggaranCheck.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="46" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/RouteServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2534">
+          <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/TBK_NOTA.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3058">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/Nota.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="97" column="36" lean-forward="true" selection-start-line="97" selection-start-column="36" selection-end-line="97" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/TBK.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="120" column="9" lean-forward="true" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Persediaan/Instansi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-520">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/RenderParsial.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/SettingReport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1888">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/StatusPenerimaan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/Berwenang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Apps/Dokumentasi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-748">
+          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/content.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/component_admin/navbar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Apps/Langganan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="29" column="23" lean-forward="false" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/component_admin/Lsidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="8" column="41" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/component_admin/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1634">
+          <caret line="201" column="0" lean-forward="false" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/another_route/users_route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="23" column="62" lean-forward="false" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/base.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-426">
+          <caret line="99" column="19" lean-forward="false" selection-start-line="99" selection-start-column="19" selection-end-line="99" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/pembayaran_sedang_d_konfirmasi.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="48" column="46" lean-forward="true" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/penentuan_konfirmasi_pembayaran.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="89" column="196" lean-forward="false" selection-start-line="89" selection-start-column="196" selection-end-line="89" selection-end-column="196" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/penentuan_paket_langganan.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="69" column="68" lean-forward="true" selection-start-line="69" selection-start-column="68" selection-end-line="69" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4794">
+          <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/another_route/admin_route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
