@@ -87,6 +87,9 @@
                                     <label for="form-username">Biaya yang Harus Dibayarkan : {{ number_format($paket[$data->paket_langganan]['val'],2,',','.') }}. Dengan masa aktif selama 31 hari</label>
                                 </div>
                                 <div class="form-group">
+                                    <label for="form-username" style="color: green">Biaya dapat ditransfer melalui Bank Muamalat no rek. 8280001291 a/n Fandiansyah atau transfer melalui Aplikasi Dana dengan no Telp/Wa : 0813 4127 1530 </label>
+                                </div>
+                                <div class="form-group">
                                     <label for="form-username">Tanggal Pembayaran</label>
                                     <input type="date" name="tgl_pembayaran" placeholder="Tanggal Pembayaran" class="form-username form-control" required>
                                 </div>

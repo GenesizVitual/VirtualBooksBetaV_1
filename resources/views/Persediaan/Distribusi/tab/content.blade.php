@@ -50,56 +50,20 @@
                         <div class="card-body">
                             <div class="tab-content" id="custom-tabs-two-tabContent">
                                 <div class="tab-pane fade active show" id="custom-tabs-two-settings" role="tabpanel" aria-labelledby="custom-tabs-two-settings-tab">
-                                    <div class="row">
-                                        <div class="col-md-12">
+
                                             <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="row">
-                                                        <div class="col-sm-3">
-                                                            <div class="small-box bg-info">
-                                                                <div class="inner">
-                                                                    <h3 id="stok_tersedian">0</h3>
-
-                                                                    <p>Stok Tersediaan</p>
-                                                                </div>
-                                                                <div class="icon">
-                                                                    <i class="ion ion-pie-graph"></i>
-                                                                </div>
-                                                                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                        </div>
-                                                        <div class="col-sm-3">
-                                                            <div class="small-box bg-danger">
-                                                                <div class="inner">
-                                                                    <h3 id="stok_pengeluaran">0</h3>
-
-                                                                    <p>Stok Keluar</p>
-                                                                </div>
-                                                                <div class="icon">
-                                                                    <i class="ion ion-pie-graph"></i>
-                                                                </div>
-                                                                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12">
+                                                <div class="col-md-6">
                                                     <div class="card-body">
-                                                        <h4>Pilihlah konten dibawah ini</h4>
-                                                        <ul class="nav nav-tabs" id="custom-content-below-tab" role="tablist">
+                                                         <ul class="nav nav-tabs" id="custom-content-below-tab" role="tablist">
                                                             <li class="nav-item">
                                                                 <a class="nav-link active" id="custom-content-below-home-tab" data-toggle="pill" href="#custom-content-below-home" role="tab" aria-controls="custom-content-below-home" aria-selected="true">Penerimaan</a>
                                                             </li>
-                                                            <li class="nav-item">
-                                                                <a class="nav-link" id="custom-content-below-pembagian-tab" data-toggle="pill" href="#custom-content-below-pembagian" role="tab" aria-controls="custom-content-below-profile" aria-selected="false">Pembagian</a>
-                                                            </li>
+                                                            {{--<li class="nav-item">--}}
+                                                                {{--<a class="nav-link" id="custom-content-below-pembagian-tab" data-toggle="pill" href="#custom-content-below-pembagian" role="tab" aria-controls="custom-content-below-profile" aria-selected="false">Pembagian</a>--}}
+                                                            {{--</li>--}}
                                                             <li class="nav-item">
                                                                 <a class="nav-link" id="custom-content-below-profile-tab" data-toggle="pill" href="#custom-content-below-profile" role="tab" aria-controls="custom-content-below-profile" aria-selected="false">Pengeluaran</a>
                                                             </li>
-
-
                                                         </ul>
                                                         <div class="tab-content" id="custom-content-below-tabContent">
                                                             <div class="tab-pane fade active show" id="custom-content-below-home" role="tabpanel" aria-labelledby="custom-content-below-home-tab">
@@ -140,36 +104,75 @@
                                                                     </tbody>
                                                                 </table>
                                                             </div>
-                                                            <div class="tab-pane fade" id="custom-content-below-pembagian" role="tabpanel" aria-labelledby="custom-content-below-pembagian-tab">
-                                                                <p style="color: darkblue">* Tabs Pembagian akan menampilkan formulir pembagian dalam format tabel. Tabs pembagian ini juga berfungsi untuk menampilkan barang yang telah dibagi</p>
-                                                                <p id="set_ket" style="color: orangered">Anda belum memilih barang yang anda ingin keluarkan</p>
-                                                                <button class="btn btn-primary" id="tombol-form-keluar" style="margin-bottom: 10px; display: none;">Keluarkan</button>
-                                                                <hr>
-                                                                <form id="form-pembagian">
-                                                                    <table id="sample1" cellspacing="0" class="table table-striped table-bordered dt-responsive " style="width:100%">
-                                                                        <thead>
-                                                                        <tr>
-                                                                            <th>#</th>
-                                                                            <th>Bidang</th>
-                                                                            <th>Tanggal Keluar</th>
-                                                                            <th>Jumlah Keluar</th>
-                                                                            <th>Status Pengeluaran</th>
-                                                                            <th>Keterangan</th>
-                                                                            <th>Aksi</th>
-                                                                        </tr>
-                                                                        </thead>
-                                                                        <tbody>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="row">
+                                                        <div class="col-sm-3">
+                                                            <div class="small-box bg-info">
+                                                                <div class="inner">
+                                                                    <h3 id="stok_tersedian">0</h3>
+                                                                    <p>Stok Persediaan</p>
+                                                                </div>
+                                                                <div class="icon">
+                                                                    <i class="ion ion-pie-graph"></i>
+                                                                </div>
+                                                                {{--<a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>--}}
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="small-box bg-danger">
+                                                                <div class="inner">
+                                                                    <h3 id="stok_pengeluaran">0</h3>
+                                                                    <p>Stok Keluar</p>
+                                                                </div>
+                                                                <div class="icon">
+                                                                    <i class="ion ion-pie-graph"></i>
+                                                                </div>
+                                                                {{--<a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>--}}
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="card-body">
+                                                               <ul class="nav nav-tabs" id="custom-content-below-tab" role="tablist">
+                                                                    <li class="nav-item">
+                                                                        <a class="nav-link active" id="custom-content-below-pembagian-tab" data-toggle="pill" href="#custom-content-below-pembagian" role="tab" aria-controls="custom-content-below-profile" aria-selected="false">Pembagian</a>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="tab-content" id="custom-content-below-tabContent">
+                                                                    <div class="tab-pane fade active show" id="custom-content-below-pembagian" role="tabpanel" aria-labelledby="custom-content-below-pembagian-tab">
+                                                                        <p style="color: darkblue">* Tabs Pembagian akan menampilkan formulir pembagian dalam format tabel. Tabs pembagian ini juga berfungsi untuk menampilkan barang yang telah dibagi</p>
+                                                                        <p id="set_ket" style="color: orangered">Anda belum memilih barang yang anda ingin keluarkan</p>
+                                                                        <button class="btn btn-primary" id="tombol-form-keluar" style="margin-bottom: 10px; display: none;">Keluarkan</button>
+                                                                        <hr>
+                                                                        <form id="form-pembagian">
+                                                                            <table id="sample1" cellspacing="0" class="table table-striped table-bordered dt-responsive " style="width:100%">
+                                                                                <thead>
+                                                                                <tr>
+                                                                                    <th>#</th>
+                                                                                    <th>Bidang</th>
+                                                                                    <th>Tanggal Keluar</th>
+                                                                                    <th>Jumlah Keluar</th>
+                                                                                    <th>Status Pengeluaran</th>
+                                                                                    <th>Keterangan</th>
+                                                                                    <th>Aksi</th>
+                                                                                </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-
                                             </div>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>

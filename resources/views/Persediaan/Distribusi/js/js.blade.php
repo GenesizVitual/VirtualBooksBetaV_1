@@ -3,8 +3,12 @@
 <script src="{{ asset('admin_asset/plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
 <script src="{{ asset('admin_asset/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
 
+<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 <script src="{{ asset('admin_asset/plugins/jquery-validation/jquery.validate.min.js') }}"></script>
 <script src="{{ asset('admin_asset/plugins/jquery-validation/additional-methods.min.js') }}"></script>
+<!-- InputMask -->
+<script src="{{ asset('admin_asset/plugins/moment/moment.min.js') }}"></script>
+<script src="{{ asset('admin_asset/plugins/inputmask/min/jquery.inputmask.bundle.min.js') }}"></script>
 
 <script>
     $(document).ready(function () {
@@ -111,7 +115,7 @@
 
        var form_pengeluaran= $('#sample1').DataTable({
             responsive: true
-        });
+       });
 
 
        CallFormData = function (action, stok_akhir) {
@@ -133,6 +137,7 @@
                 form_pengeluaran.rows.add(result.data_form).draw();
                 $('[name="tgl_terima"]').val(result.tgl_beli);
                 $('[name="stok_terakhir"]').val(stok_kode);
+                $('[name="jumlah_keluar"]').val(stok_kode);
 
                 $('#tombol-form-keluar').attr('onclick','OnPressButtonIncreate('+action+','+stok_kode+')');
                 $('#tombol-form-keluar').show();
@@ -142,19 +147,61 @@
                     .responsive.recalc();
                 $('.select2').select2();
             })
-        }
+       }
 
 
-            $('#custom-content-below-home-tab').click(function () {
-                onLoaded(status,'#table-data-pembelian','pem');
-            })
+       $('#custom-content-below-home-tab').click(function () {
+          onLoaded(status,'#table-data-pembelian','pem');
+       })
 
-            $('#custom-content-below-profile-tab').click(function () {
-                onLoaded(status,'#table-data-pengeluaran','pen');
-            })
+       $('#custom-content-below-profile-tab').click(function () {
+          onLoaded(status,'#table-data-pengeluaran','pen');
+       })
 
-        onLoaded(0,'#table-data-pembelian','pem');
+       onLoaded(0,'#table-data-pembelian','pem');
     });
+
+
+    $('[name="tgl_kerluar"]').change(function () {
+        var tgl_terima = new Date($('[name="tgl_terima"]').val());
+        var tgl_keluar = new Date($(this).val());
+
+        if(tgl_terima > tgl_keluar){
+            $('#notif_tgl').text("Tanggal Keluar Tidak Boleh Lebih Kecil Dari Tanggal Penerimaan");
+            $('#tombol_simpan').attr('disabled',true);
+        }else{
+            // console.log(wokeh_terima.getMonth());
+            // console.log(tgl2+"========"+tgl1);
+            $('#notif_tgl').text("");
+            $('#tombol_simpan').attr('disabled',false);
+        }
+    })
+
+//    $('#jumlah_keluar').keyup(function () {
+//        var stok_terakhir= $('[name="stok_terakhir"]').val();
+//        var stok_dimasukan = $(this).val();
+//
+//        if(stok_dimasukan >stok_terakhir ){
+//            $('#notif_jumlah').text("Jumlah stok tidak mencukupi dengan jumlah keluan yang anda masukan");
+//            $('#tombol_simpan').attr('disabled',true);
+//        }else{
+//            $('#notif_jumlah').text("");
+//            $('#tombol_simpan').attr('disabled',false);
+//        }
+//    })
+
+    $('#jumlah_keluar').change(function () {
+        var stok_terakhir= Number($('[name="stok_terakhir"]').val());
+        var stok_dimasukan = Number($(this).val());
+        console.log(stok_terakhir+'-------'+stok_dimasukan);
+        if(stok_dimasukan > stok_terakhir ){
+            $('#notif_jumlah').text("Jumlah stok tidak mencukupi dengan jumlah keluan yang anda masukan");
+            $('#tombol_simpan').attr('disabled',true);
+        }else{
+            $('#notif_jumlah').text("");
+            $('#tombol_simpan').attr('disabled',false);
+        }
+    })
 
     formatDate =function (date){
         var d = new Date(date),

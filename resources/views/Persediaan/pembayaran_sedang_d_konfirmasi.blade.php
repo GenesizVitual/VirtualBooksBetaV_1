@@ -51,6 +51,11 @@
                                 <h3>
                                     Konfirmasi pembayaran anda sedang kami proses. setelah selesai akun anda akan diaktifkan
                                 </h3>
+                                <br>
+                                <h3>
+                                    Anda bisa menghubungi kami dengan mengirimkan email:
+                                    fandiansyahdev@gmail.com atau dengan chat via Whatshapp di no. 0813 4127 1530 a/n fandiansyah
+                                </h3>
                             </div>
                             <div class="form-top-right">
                                 <i class="fa fa-building"></i>

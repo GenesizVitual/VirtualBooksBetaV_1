@@ -198,6 +198,9 @@
                         </a>
                     </li>
                 @endif
+                <li class="nav-item">
+
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

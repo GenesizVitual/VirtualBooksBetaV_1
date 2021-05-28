@@ -1,7 +1,7 @@
 <script>
 
     OnPressButtonIncreate = function (action, stok) {
-        $('#modal-lg').modal('show');
+        $('#modal-lg').modal({backdrop: 'static', keyboard: false});
         $('[name="kode"]').val(action);
         $('[name="stok_terakhir"]').val(stok);
 //        $('.select2').select2();
@@ -40,7 +40,8 @@
             data : $('#quickForm').serialize(),
             success : function (result) {
                 feedback(result);
-                CallFormData(result.kode);
+                CallFormData(result.kode,result.stok);
+                $('[name="_method"]').val('post');
                 onLoaded(result.status_penerimaan,'#table-data-pembelian','pem');
             }
         })
@@ -57,11 +58,12 @@
             }
         }).done(function (result) {
             var d =formatDate(result.tgl_kerluar);
+            console.log(result.tgl_kerluar);
             $('#modal-lg').modal('show');
             $('[name="kode"]').val(result.id);
             $('[name="_method"]').val('put');
-            $('[name="tgl_kerluar"]').val(d);
-            $('#tgl_keluar').val(d);
+            $('[name="tgl_kerluar"]').val(result.tgl_kerluar);
+
             $('[name="id_bidang"]').val(result.id_bidang).trigger('change');
             $('[name="jumlah_keluar"]').val(result.jumlah_keluar);
             $('[name="status_pengeluaran"]').val(result.status_pengeluaran).trigger('change');

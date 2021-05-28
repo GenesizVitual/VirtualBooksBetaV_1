@@ -51,7 +51,7 @@ class Instansi extends Controller
            'id_provinsi'=>'required',
            'id_kab_kota'=>'required',
            'no_telp'=>'required',
-           'email'=>'required|unique:tbl_instansi,email|max:255',
+           'email'=>'required|max:255',
            'level_instansi'=>'required',
         ]);
 

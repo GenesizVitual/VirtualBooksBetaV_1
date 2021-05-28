@@ -9,7 +9,7 @@
             <ul>
                 <li style="color: white;"><a href="{{ url('/') }}">Homepage</a></li>
                 <li style="color: white;"><a href="{{ url('alur-sistem') }}">Alur Sistem</a></li>
-                <li style="color: white;"><a href="{{ url('alur-sistem') }}">Dokumentasi</a></li>
+                <li style="color: white;"><a href="{{ asset('dokumentasi/Ebook.pdf') }}">Dokumentasi</a></li>
              </ul>
         </nav>
 

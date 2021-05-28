@@ -19,7 +19,8 @@
                                 <input type="hidden" name="status">
                                 <input type="hidden" name="stok_terakhir">
                                 <label for="tgl_keluar">Tanggal Keluar</label>
-                                <input type="date" class="form-control" name="tgl_kerluar" id="tgl_keluar" required>
+                                <input type="date" class=" form-control" name="tgl_kerluar" id="tgl_keluar" required>
+                                <span id="notif_tgl" style="color: red"></span>
                             </div>
                             <div class="form-group">
                                 <label for="id_gudang">Bidang</label>
@@ -36,6 +37,7 @@
                             <div class="form-group">
                                 <label for="jumlah_keluar">Jumlah Keluar</label>
                                 <input type="number" min="0" class="form-control" name="jumlah_keluar" id="jumlah_keluar" required>
+                                <span id="notif_jumlah" style="color: red"></span>
                             </div>
                             <div class="form-group">
                                 <label for="status_pengeluaran">Status Pengeluaran</label>

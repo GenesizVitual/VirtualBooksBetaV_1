@@ -11,6 +11,7 @@ use View;
 use App\Model\Persediaan\Penyedia;
 use App\Http\Controllers\Persediaan\utils\data\Nota as data_nota;
 use App\Model\Persediaan\JenisTbk;
+use App\Model\Persediaan\Instansi;
 
 
 class Nota extends Controller
@@ -31,16 +32,19 @@ class Nota extends Controller
         TahunAggaranCheck::tahun_anggaran_aktif([
             'id_instansi'=> Session::get('id_instansi')
         ]);
-
         $data_thn_anggaran = TahunAggaranCheck::$id_thn_anggaran;
 
         $model_nota = notas::where('id_instansi', Session::get('id_instansi'))
             ->where('id_thn_anggaran', $data_thn_anggaran->id)->count('id');
+        $model_instansi = Instansi::find(Session::get('id_instansi'));
+        $current_date = date('d-m-Y');
+        $romawi = TahunAggaranCheck::DateToConvert($current_date);
+
         $kode_nota =0;
         if($model_nota<10){
-            $kode_nota = '0'.($model_nota+1);
+            $kode_nota = '0'.($model_nota+1).'/NP/'.$model_instansi->singkatan_instansi.'/'.$romawi.'/'.$data_thn_anggaran->thn_anggaran;
         }else{
-            $kode_nota = $model_nota+1;
+            $kode_nota = ($model_nota+1).'/NP/'.$model_instansi->singkatan_instansi.'/'.$romawi.'/'.$data_thn_anggaran->thn_anggaran;
         }
         return $kode_nota;
     }

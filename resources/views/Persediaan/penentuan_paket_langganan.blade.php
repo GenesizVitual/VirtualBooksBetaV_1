@@ -48,6 +48,11 @@
                     <div class="form-box">
                         <div class="form-top">
                             <div class="form-top-left">
+                               @if(!empty(Session::get('message_info')))
+                                    <h3>
+                                        {{ Session::get('message_info') }}
+                                    </h3>
+                               @endif
                                 <h3>
                                     Pililah paket anggaran anda sesuai kebutuhan anda.
                                 </h3>
@@ -62,10 +67,12 @@
                                  @if(!empty($paket))
                                     <div class="form-group">
                                     @foreach($paket as $key=>$data)
+                                        @if($data['status']=='show')
                                             <input type="radio" name="paket_langganan" value="{{ $key }}" class="form-username" required>
                                             <label for="form-username">Paket {{ $key }} : {{ $data['ket'] }}</label>
                                             <label for="form-username pull-right">Harga : {{ number_format($data['val'],2,',','.') }} Per 31 Hari</label>
                                             <br>
+                                        @endif
                                     @endforeach
                                     </div>
 

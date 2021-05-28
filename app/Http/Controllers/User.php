@@ -19,19 +19,23 @@ class User extends Controller
     public $paket = [
         '1' => [
             'ket'=>'Jumlah Pembelian Senilai 50jt - 150jt',
-            'val'=> 120000
+            'val'=> 29000,
+            'status'=>'show'
         ],
         '2' => [
             'ket'=>'Jumlah Pembelian Senilai 150jt - 550jt',
-            'val'=> 260000
+            'val'=> 41000,
+            'status'=>'show'
         ],
         '3' => [
             'ket'=>'Jumlah Pembelian Senilai diatas 1 milyar',
-            'val'=> 400000
+            'val'=> 55000,
+            'status'=>'show'
         ],
         '4' =>[
             'ket'=> 'Paket Anonymous',
-            'val'=> 0
+            'val'=> 0,
+            'status'=>'hidden'
         ]
     ];
 
@@ -95,6 +99,11 @@ class User extends Controller
             $date = date_create($date_after);
             $sisa_hari = date_diff($date_new, $date);
 
+            if((int)$sisa_hari->format("%R%a") < 0 && Session::get('status_paket')!=4){
+                $req->session()->flash('message_info','Paket anda telah berakhir');
+                return view('Persediaan.penentuan_paket_langganan',['paket'=> $this->paket])->with('message_info','Paket anda telah berakhir');
+            }
+
             $req->session()->put('durasi', $sisa_hari->format("%R%a Hari"));
 
             return redirect('dashboard')->with('message_success','Selamat Datang '.$model->name);
@@ -128,7 +137,7 @@ class User extends Controller
         if($model->save())
         {
             if (empty($req->session()->user_id)){
-                return redirect('login')->with('message_success','Silahkan login 5 menit kemudian');
+                return redirect('login')->with('message_success','Silahkan login 1 menit lagi');
             }else{
                 return "User telah ditambahkan";
             }
@@ -143,10 +152,10 @@ class User extends Controller
             $model->paket_langganan = $req->paket_langganan;
             $model->nilai_langganan = $this->paket[$req->paket_langganan]['val'];
             $model->status_langganan ='true';
-            $model->trial_aktif ='false';
+            $model->trial_aktif ='true';
             $model->durasi =date('Y-m-d', strtotime('+31 days'));
             if($model->save()){
-                return redirect('login')->with('message_success','Silahkan login 5 menit kemudian');
+                return redirect('login')->with('message_success','Silahkan login 1 menit lagi, untuk melaukan konfirmasi');
             }
         }catch (Throwable $e){
             return $e;
