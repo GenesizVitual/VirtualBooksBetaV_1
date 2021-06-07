@@ -112,7 +112,7 @@ class Instansi extends Controller
     public function upload(Request $req, $id)
     {
         $this->validate($req,[
-            'logo'=>'required|image|mimes:jpeg,jpg,png|max:25000',
+            'logo'=>'required|image|mimes:jpeg,jpg,png,gif|max:25000',
         ]);
 
         $gambar= $req->logo;

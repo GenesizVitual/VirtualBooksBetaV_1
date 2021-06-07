@@ -8,7 +8,8 @@
 
 namespace App\Http\Controllers\Persediaan\utils\data;
 use App\Http\Controllers\Persediaan\utils\RenderParsial;
-use Illuminate\Support\Facades\Session;
+use Session;
+use App\Http\Controllers\Persediaan\utils\TahunAggaranCheck;
 use Illuminate\Support\Facades\DB;
 use View;
 
@@ -16,10 +17,13 @@ class PembelianBarang
 {
 
     public static $metode;
+    public static $tahun_anggaran;
 
     public static function data_pembelian($array)
     {
         //Ada Kemungkinan error butuh back tester lebih lanjut
+        TahunAggaranCheck::tahun_anggaran_aktif(['id_instansi'=>Session::get('id_instansi')]);
+        $n_data = TahunAggaranCheck::$id_thn_anggaran;
         try {
             $label_button = "";
             if(empty($array['metode'])){
@@ -41,7 +45,7 @@ class PembelianBarang
                                     join tbl_pembelian_barang on tbl_pembelian_barang.id_nota = tbl_nota.id
                                     join tbl_gudang on tbl_gudang.id = tbl_pembelian_barang.id_gudang 
     							     where status_pembayaran=\''.$array['status_pembayaran'].'\' and tbl_jenis_tbk.id_instansi='.Session::get('id_instansi').'
-                                    and tbl_gudang.id = '.$array['id_barang'].'
+                                    and tbl_gudang.id = '.$array['id_barang'].' and tbl_nota.id_thn_anggaran='.$n_data->id.'
     								order by tgl_beli asc
                                 ) as d left join tbl_pengeluaran_barang on tbl_pengeluaran_barang.id_pembelian = d.id GROUP by d.id
                               ) as x where '.$order);
