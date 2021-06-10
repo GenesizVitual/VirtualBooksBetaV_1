@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Persediaan;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Persediaan\utils\data\FormulaPajak;
 use Illuminate\Http\Request;
 use App\Model\Persediaan\Nota as notas;
 use Illuminate\Support\Facades\Session;
@@ -55,7 +56,8 @@ class Nota extends Controller
         $data = [
             'penyedia'=>Penyedia::all()->where('id_instansi', Session::get('id_instansi')),
             'jenis_tbk'=> JenisTbk::all()->where('id_instansi', Session::get('id_instansi')),
-            'kode_nota'=> $this->Kode_Nota()
+            'kode_nota'=> $this->Kode_Nota(),
+            'pajak' => FormulaPajak::$pajak
         ];
         return view('Persediaan.Nota.content',$data);
     }

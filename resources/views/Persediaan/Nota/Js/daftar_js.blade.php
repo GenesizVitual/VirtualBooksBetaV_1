@@ -60,12 +60,26 @@
                     $("[name='tgl_beli']").val(result.data.tgl_beli);
                     $("[name='id_penyedia']").val(result.data.id_penyedia).trigger('change');
                     $("[name='id_jenis_tbk']").val(result.data.id_jenis_tbk).trigger('change');
-                    if(result.data.pph==1){
-                        $("[name='ppn']").prop('checked', true);
-                    }
-                    if(result.data.ppn==1){
-                        $("[name='pph']").prop('checked', true);
-                    }
+//                    if(result.data.pph!=0.0){
+//                        $("[name='ppn']").prop('checked', true);
+//                    }
+//                    if(result.data.ppn!=0.0){
+//                        $("[name='pph']").prop('checked', true);
+//                    }
+
+                    $('.ppn').each(function(i, v){
+                        var ppn = result.data.ppn.replace('.00','');
+                        if($(this).attr('value') == ppn){
+                            $('#ppn_'+i).prop('checked', true);
+                        }
+                    });
+                    $('.pph').each(function(i, v){
+                        var pph = result.data.pph.replace('.00','');
+                        if($(this).attr('value') == parseFloat(pph)){
+                            $('#pph_'+i).prop('checked', true);
+                        }
+                    });
+
                     $('[name="_method"]').val('put');
                     $('#tab2').click();
                 }

@@ -10,7 +10,7 @@ use App\Model\Persediaan\Nota as notas;
 use App\Http\Controllers\Persediaan\utils\TahunAggaranCheck;
 use Session;
 use App\Http\Controllers\Persediaan\utils\RenderParsial;
-
+use App\Http\Controllers\Persediaan\utils\data\FormulaPajak;
 class Nota
 {
     public static $id_nota;
@@ -62,7 +62,7 @@ class Nota
         $no = 1;
         foreach ($model_nota as $data_nota)
         {
-            $cek_pajak = self::cek_pajak($data_nota->linkToPembelian->where('id_instansi', Session::get('id_instansi'))->sum('total_beli'), $data_nota);
+            $cek_pajak = FormulaPajak::cek_pajak($data_nota->linkToPembelian->where('id_instansi', Session::get('id_instansi'))->sum('total_beli'), $data_nota);
             $total_sesudah_pajak = $cek_pajak->total+$cek_pajak->total_ppn+$cek_pajak->total_pph;
 
             $column = array();
@@ -113,7 +113,7 @@ class Nota
 //            $total_pembelian = $nota->linkToPembelian->where('id_instansi', Session::get('id_instansi'))->sum('total_beli');
             $total_pembelian = $total_beli;
             # Nilai total pajak tidak berasal dari field pph atau ppn yang ada pada tabel pembelianbarang
-            $data_pajak = self::cek_pajak($total_pembelian, $nota);
+            $data_pajak = FormulaPajak::cek_pajak($total_pembelian, $nota);
 
 
             return array('data'=> $row,
@@ -130,27 +130,6 @@ class Nota
             report($e);
             return false;
         }
-    }
-
-
-    private static function cek_pajak($total, $model_notal){
-        $total_ppn=0;
-        $total_pph=0;
-
-        if($model_notal->ppn==1){
-            $total_ppn = $total*0.1;
-        }
-
-        if($model_notal->pph==1){
-            $total_pph = $total*0.015;
-        }
-
-        $data_pajak = new \stdClass();
-        $data_pajak->total = $total;
-        $data_pajak->total_ppn = $total_ppn;
-        $data_pajak->total_pph = $total_pph;
-
-        return $data_pajak;
     }
 
     private static function penyebut($nilai) {

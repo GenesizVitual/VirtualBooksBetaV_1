@@ -27,8 +27,8 @@ class Dashboard
                                                 tbl_pembelian_barang.id_nota,
                                                 tbl_pembelian_barang.total_beli,
                                                 tbl_nota.id_jenis_tbk,
-                                                if(tbl_nota.ppn='1', tbl_pembelian_barang.total_beli * 0.1, 0) as total_ppn,
-                                                if(tbl_nota.pph='1', tbl_pembelian_barang.total_beli * 0.015, 0) as total_pph
+                                                if(tbl_nota.ppn!='0.0', tbl_pembelian_barang.total_beli * (tbl_nota.ppn/100), 0) as total_ppn,
+                                                if(tbl_nota.pph!='0.0', tbl_pembelian_barang.total_beli * (tbl_nota.pph/100), 0) as total_pph
                                               from tbl_nota
                                                 JOIN tbl_pembelian_barang on tbl_pembelian_barang.id_nota = tbl_nota.id
                                                 JOIN tbl_jenis_tbk on tbl_nota.id_jenis_tbk = tbl_jenis_tbk.id
@@ -66,8 +66,8 @@ class Dashboard
                                                        tbl_pembelian_barang.id as id_pembelian,
                                                        tbl_nota.id_jenis_tbk,
                                                        tbl_pengeluaran_barang.jumlah_keluar*tbl_pembelian_barang.harga_barang as total_sbl_pajak,
-                                                       if(tbl_nota.ppn='1', (tbl_pengeluaran_barang.jumlah_keluar*tbl_pembelian_barang.harga_barang) * 0.1, 0) as total_ppn,
-                                                       if(tbl_nota.pph='1', (tbl_pengeluaran_barang.jumlah_keluar*tbl_pembelian_barang.harga_barang) * 0.015, 0) as total_pph
+                                                       if(tbl_nota.ppn='0.0', (tbl_pengeluaran_barang.jumlah_keluar*tbl_pembelian_barang.harga_barang) * (tbl_nota.ppn/100), 0) as total_ppn,
+                                                       if(tbl_nota.pph='0.0', (tbl_pengeluaran_barang.jumlah_keluar*tbl_pembelian_barang.harga_barang) * (tbl_nota.pph/100), 0) as total_pph
                                                    from tbl_nota
                                                        JOIN tbl_pembelian_barang on tbl_pembelian_barang.id_nota = tbl_nota.id
                                                        JOIN tbl_jenis_tbk on tbl_nota.id_jenis_tbk = tbl_jenis_tbk.id
