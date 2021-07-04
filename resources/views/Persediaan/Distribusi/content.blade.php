@@ -45,6 +45,7 @@
                                     <th>#</th>
                                     <th>Nama Barang</th>
                                     <th>Stok Barang</th>
+                                    <th>Harga Barang</th>
                                     <th>Aksi</th>
                                 </tr>
                                 </thead>
@@ -54,6 +55,7 @@
                                             <td>{{ $barang['no'] }}</td>
                                             <td>{{ $barang['nama_barang'] }}</td>
                                             <td>{{ $barang['stok_barang'] }}</td>
+                                            <td>{{ $barang['harga_barang'] }}</td>
                                             <td>{!! $barang['aksi'] !!}</td>
                                         </tr>
                                     @endforeach
@@ -80,7 +82,7 @@
             $('#table-data').DataTable({
                 "paging": true,
                 "lengthChange": false,
-                "searching": false,
+                "searching": true,
                 "ordering": true,
                 "info": true,
                 "autoWidth": false,

@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="64868ef3-a8b4-45c4-a01c-4c5d46228421" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Stok.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Stok.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Gudang.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Gudang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/content.blade.php" afterPath="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/content.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -254,47 +255,50 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Stok.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/Stok.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="36" column="7" lean-forward="false" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+            <state relative-caret-position="442">
+              <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users_route.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/another_route/users_route.php">
+      <file leaf-file-name="content.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/content.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="119" column="74" lean-forward="false" selection-start-line="119" selection-start-column="55" selection-end-line="119" selection-end-column="74" />
+            <state relative-caret-position="308">
+              <caret line="85" column="33" lean-forward="false" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MasterLaporan.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/MasterLaporan.php">
+      <file leaf-file-name="content.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Gudang/content.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
-              <caret line="678" column="45" lean-forward="false" selection-start-line="678" selection-start-column="45" selection-end-line="678" selection-end-column="45" />
+            <state relative-caret-position="680">
+              <caret line="128" column="15" lean-forward="true" selection-start-line="120" selection-start-column="11" selection-end-line="128" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Stok.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Stok.php">
+      <file leaf-file-name="Gudang.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Gudang.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="50" column="49" lean-forward="true" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+            <state relative-caret-position="594">
+              <caret line="30" column="41" lean-forward="true" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
               <folding>
-                <marker date="1625368045844" expanded="true" signature="948:2378" ph="SELECT d.id,... id" />
-                <marker date="1625368045844" expanded="true" signature="1156:2335" ph="SELECT tbl_g... tbl_pembelian_barang" />
-                <marker date="1625368045844" expanded="true" signature="2465:4145" ph="SELECT d.id,... id" />
-                <marker date="1625368045844" expanded="true" signature="2674:4102" ph="SELECT tbl_g... tbl_pembelian_barang" />
+                <marker date="1625379325658" expanded="true" signature="1661:3188" ph="SELECT d.id,... id" />
+                <marker date="1625379325658" expanded="true" signature="1661:3189" ph="select d.id,... id" />
+                <marker date="1625379325658" expanded="true" signature="1871:3143" ph="SELECT tbl_g... tbl_pembelian_barang" />
+                <marker date="1625379325658" expanded="true" signature="3040:3056" ph="/*tbl_nota.i... " />
+                <marker date="1625379325658" expanded="true" signature="3228:3334" ph="SELECT d.id,... id" />
+                <marker date="1625379325658" expanded="true" signature="3228:4823" ph="SELECT d.id,... id" />
+                <marker date="1625379325658" expanded="true" signature="3462:4743" ph="SELECT tbl_g... tbl_pembelian_barang" />
               </folding>
             </state>
           </provider>
@@ -304,7 +308,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>get</find>
       <find>persediaan</find>
       <find>Pener</find>
       <find>set_ket $('#set_ket').text(&quot;Sedang Meload Data&quot;);</find>
@@ -334,6 +337,7 @@
       <find>cek_pajak</find>
       <find>stok-barang</find>
       <find>preview_stok_barang</find>
+      <find>distrib</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -352,8 +356,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/Persediaan/SpjTBK/content.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/SPJ.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/SpjTBK/js/spj.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/TbkNota/content.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/JenisTbk.php" />
@@ -403,6 +405,8 @@
         <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/action.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/FormulaPajak.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Stok.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/content.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Gudang.php" />
       </list>
     </option>
   </component>
@@ -453,7 +457,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -464,51 +467,49 @@
             <path>
               <item name="VirtualBooksBetaV_1" type="b2602c69:ProjectViewProjectNode" />
               <item name="VirtualBooksBetaV_1" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="VirtualBooksBetaV_1" type="b2602c69:ProjectViewProjectNode" />
               <item name="VirtualBooksBetaV_1" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="VirtualBooksBetaV_1" type="b2602c69:ProjectViewProjectNode" />
               <item name="VirtualBooksBetaV_1" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="VirtualBooksBetaV_1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VirtualBooksBetaV_1" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Persediaan" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="VirtualBooksBetaV_1" type="b2602c69:ProjectViewProjectNode" />
               <item name="VirtualBooksBetaV_1" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Persediaan" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Distribusi" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="VirtualBooksBetaV_1" type="b2602c69:ProjectViewProjectNode" />
               <item name="VirtualBooksBetaV_1" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="another_route" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Persediaan" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Gudang" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="MasterLapora&#9;null&#9;null&#10;we&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/web.php&#10;Distr&#9;null&#9;null&#10;Nota&#9;null&#9;null&#10;Pembelian&#9;null&#9;null&#10;web&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/web.php&#10;Instansi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Instansi.php&#10;admin&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/admin_route.php&#10;User&#9;null&#9;null&#10;Langga&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/resources/views/Persediaan/penentuan_paket_langganan.blade.php&#10;lang&#9;null&#9;null&#10;Sura&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/SuratPermintaan.php&#10;Pembelia&#9;null&#9;null&#10;Do&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Apps/Dokumentasi.php&#10;Login&#9;null&#9;null&#10;route&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;Tahun&#9;null&#9;null&#10;user&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;ro&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;MasterL&#9;null&#9;null&#10;Invoi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Invoice.php&#10;Users&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;langganan&#9;null&#9;null&#10;SuratPesanan&#9;null&#9;null&#10;SuratPesana&#9;null&#9;null&#10;Pembe&#9;null&#9;null&#10;Berwe&#9;null&#9;null&#10;Gu&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Gudang.php&#10;Gudang&#9;null&#9;null&#10;Penyedi&#9;null&#9;null&#10;Jenis&#9;null&#9;null&#10;TahunA&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/TahunAnggaran.php&#10;Bidang&#9;null&#9;null&#10;Use&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/User.php&#10;TahunAngga&#9;null&#9;null&#10;Ta&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/TahunAnggaran.php&#10;Tah&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/TahunAnggaran.php&#10;Instans&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/Instansi.php&#10;Insta&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Instansi.php&#10;Instan&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Instansi.php&#10;Notas&#9;null&#9;null&#10;PembelianB&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/PembelianBarang.php&#10;PembelianBara&#9;null&#9;null&#10;Master&#9;null&#9;null&#10;Guda&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Gudang.php&#10;Pembel&#9;FILE&#9;file://E:/xampp/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/PembelianBarang.php&#10;Dis&#9;FILE&#9;file://E:/xampp/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/Distribusi.php&#10;nota&#9;FILE&#9;file://E:/xampp/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/Nota.php&#10;surat&#9;null&#9;null&#10;Surat&#9;FILE&#9;file://E:/xampp/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/SuratPesanan.php" />
+    <property name="SearchEverywhereHistoryKey" value="distr&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;MasterLapora&#9;null&#9;null&#10;we&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/web.php&#10;Distr&#9;null&#9;null&#10;Nota&#9;null&#9;null&#10;Pembelian&#9;null&#9;null&#10;web&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/web.php&#10;Instansi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Instansi.php&#10;admin&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/admin_route.php&#10;User&#9;null&#9;null&#10;Langga&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/resources/views/Persediaan/penentuan_paket_langganan.blade.php&#10;lang&#9;null&#9;null&#10;Sura&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/SuratPermintaan.php&#10;Pembelia&#9;null&#9;null&#10;Do&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Apps/Dokumentasi.php&#10;Login&#9;null&#9;null&#10;route&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;Tahun&#9;null&#9;null&#10;user&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;ro&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;MasterL&#9;null&#9;null&#10;Invoi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Invoice.php&#10;Users&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;langganan&#9;null&#9;null&#10;SuratPesanan&#9;null&#9;null&#10;SuratPesana&#9;null&#9;null&#10;Pembe&#9;null&#9;null&#10;Berwe&#9;null&#9;null&#10;Gu&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Gudang.php&#10;Gudang&#9;null&#9;null&#10;Penyedi&#9;null&#9;null&#10;Jenis&#9;null&#9;null&#10;TahunA&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/TahunAnggaran.php&#10;Bidang&#9;null&#9;null&#10;Use&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/User.php&#10;TahunAngga&#9;null&#9;null&#10;Ta&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/TahunAnggaran.php&#10;Tah&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/TahunAnggaran.php&#10;Instans&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/Instansi.php&#10;Insta&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Instansi.php&#10;Instan&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Instansi.php&#10;Notas&#9;null&#9;null&#10;PembelianB&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/PembelianBarang.php&#10;PembelianBara&#9;null&#9;null&#10;Master&#9;null&#9;null&#10;Guda&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Gudang.php&#10;Pembel&#9;FILE&#9;file://E:/xampp/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/PembelianBarang.php&#10;Dis&#9;FILE&#9;file://E:/xampp/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/Distribusi.php&#10;nota&#9;FILE&#9;file://E:/xampp/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/Nota.php&#10;surat&#9;null&#9;null" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
   </component>
@@ -769,14 +770,9 @@
       <workItem from="1625318141668" duration="11000" />
       <workItem from="1625364832001" duration="417000" />
       <workItem from="1625367042938" duration="34000" />
-      <workItem from="1625367099631" duration="1007000" />
-    </task>
-    <task id="LOCAL-00033" summary="- Perancangan Surat Permintaan dan Surat Pengeluaran Selesai &#10;- Next Perancangan laporan">
-      <created>1602328793042</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1602328793042</updated>
+      <workItem from="1625367099631" duration="1205000" />
+      <workItem from="1625375059794" duration="1634000" />
+      <workItem from="1625377949870" duration="1367000" />
     </task>
     <task id="LOCAL-00034" summary="- Laporan Print preview dan print Daftar Nota Selesai">
       <created>1603273560822</created>
@@ -1114,11 +1110,18 @@
       <option name="project" value="LOCAL" />
       <updated>1623287016404</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="- Revisi Tampilan stok dan stok opname">
+      <created>1625368138424</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1625368138425</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="886468000" />
+    <option name="totallyTimeSpent" value="889667000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1132,16 +1135,16 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2980333" sideWeight="0.3407155" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30711043" sideWeight="0.3407155" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21217105" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38134205" sideWeight="0.50907713" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.4969743" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.49403748" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37828946" sideWeight="0.49092284" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20272315" sideWeight="0.6592845" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1186,7 +1189,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- Home&#10;- Laporan Print Laporan" />
     <MESSAGE value="- Penambahan Encripsi" />
     <MESSAGE value="- Kembalikan encriptdata" />
     <MESSAGE value="- Penyesuian" />
@@ -1211,7 +1213,8 @@
     <MESSAGE value="- Persediaan Final" />
     <MESSAGE value="- Revisi Distribusi" />
     <MESSAGE value="- Revisi Pajak PPN dan PPH Dinamis" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Revisi Pajak PPN dan PPH Dinamis" />
+    <MESSAGE value="- Revisi Tampilan stok dan stok opname" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Revisi Tampilan stok dan stok opname" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1220,27 +1223,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/webview/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="25" column="44" lean-forward="false" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Imports/GudangImport.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/SPJ.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1050">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/SuratPengeluaran.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1409,13 +1391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/Distribusi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="101" column="40" lean-forward="true" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/TahunAggaranCheck.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-698">
@@ -1539,7 +1514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="18" column="51" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1547,23 +1521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-134">
           <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/Stok.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="36" column="7" lean-forward="false" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/another_route/users_route.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="119" column="74" lean-forward="false" selection-start-line="119" selection-start-column="55" selection-end-line="119" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1571,19 +1528,66 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="41">
           <caret line="678" column="45" lean-forward="false" selection-start-line="678" selection-start-column="45" selection-end-line="678" selection-end-column="45" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/Distribusi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/another_route/users_route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="59" column="28" lean-forward="false" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Stok.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="50" column="49" lean-forward="true" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+        <state relative-caret-position="102">
+          <caret line="71" column="12" lean-forward="false" selection-start-line="71" selection-start-column="12" selection-end-line="76" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/Stok.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Gudang/content.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="128" column="15" lean-forward="true" selection-start-line="120" selection-start-column="11" selection-end-line="128" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/content.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="85" column="33" lean-forward="false" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Gudang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="30" column="41" lean-forward="true" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
           <folding>
-            <marker date="1625368045844" expanded="true" signature="948:2378" ph="SELECT d.id,... id" />
-            <marker date="1625368045844" expanded="true" signature="1156:2335" ph="SELECT tbl_g... tbl_pembelian_barang" />
-            <marker date="1625368045844" expanded="true" signature="2465:4145" ph="SELECT d.id,... id" />
-            <marker date="1625368045844" expanded="true" signature="2674:4102" ph="SELECT tbl_g... tbl_pembelian_barang" />
+            <marker date="1625379325658" expanded="true" signature="1661:3188" ph="SELECT d.id,... id" />
+            <marker date="1625379325658" expanded="true" signature="1661:3189" ph="select d.id,... id" />
+            <marker date="1625379325658" expanded="true" signature="1871:3143" ph="SELECT tbl_g... tbl_pembelian_barang" />
+            <marker date="1625379325658" expanded="true" signature="3040:3056" ph="/*tbl_nota.i... " />
+            <marker date="1625379325658" expanded="true" signature="3228:3334" ph="SELECT d.id,... id" />
+            <marker date="1625379325658" expanded="true" signature="3228:4823" ph="SELECT d.id,... id" />
+            <marker date="1625379325658" expanded="true" signature="3462:4743" ph="SELECT tbl_g... tbl_pembelian_barang" />
           </folding>
         </state>
       </provider>
