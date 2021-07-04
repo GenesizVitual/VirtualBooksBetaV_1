@@ -44,7 +44,7 @@ class Stok
                                     join tbl_nota on tbl_pembelian_barang.id_nota = tbl_nota.id
                                     join tbl_gudang on tbl_pembelian_barang.id_gudang = tbl_gudang.id
                                     where tbl_nota.id_instansi = '.Session::get('id_instansi').' and tbl_nota.id_thn_anggaran='.$model->id.'
-                                    GROUP by tbl_nota.id, tbl_gudang.id
+                                    GROUP by tbl_nota.id, tbl_gudang.id, tbl_pembelian_barang.harga_barang
                                     ) as d 
                                 ');
         }else{
@@ -58,7 +58,7 @@ class Stok
                                     join tbl_jenis_tbk on tbl_jenis_tbk.id = tbl_nota.id_jenis_tbk
                                     where tbl_nota.id_instansi = '.Session::get('id_instansi').' and tbl_nota.id_thn_anggaran='.$model->id.' and 
                                     tbl_nota.tgl_beli >= "'.self::$tgl_awal.'" and tbl_nota.tgl_beli <= "'.self::$tgl_akhir.'" '.$query_segmen.'
-                                    GROUP by tbl_nota.id, tbl_gudang.id 
+                                    GROUP by tbl_nota.id, tbl_gudang.id, tbl_pembelian_barang.harga_barang
                                     ) as d 
                                 ');
         }
