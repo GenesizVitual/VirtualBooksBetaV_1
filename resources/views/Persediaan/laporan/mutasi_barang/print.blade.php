@@ -88,7 +88,7 @@
             @if(!empty($data))
                 @php($no=1)
 
-                @foreach($data as $data_mutasi)
+                @foreach($data as $key=> $data_mutasi)
                     <tr>
                         <td >{{ $no++ }}</td>
                         <td >{{ date('d-m-Y', strtotime($data_mutasi['tgl'])) }}</td>

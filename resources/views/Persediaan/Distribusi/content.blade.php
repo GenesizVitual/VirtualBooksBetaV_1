@@ -45,7 +45,7 @@
                                     <th>#</th>
                                     <th>Nama Barang</th>
                                     <th>Stok Barang</th>
-                                    <th>Harga Barang</th>
+                                    {{--<th>Harga Barang</th>--}}
                                     <th>Aksi</th>
                                 </tr>
                                 </thead>
@@ -55,7 +55,7 @@
                                             <td>{{ $barang['no'] }}</td>
                                             <td>{{ $barang['nama_barang'] }}</td>
                                             <td>{{ $barang['stok_barang'] }}</td>
-                                            <td>{{ $barang['harga_barang'] }}</td>
+                                            {{--<td>{{ $barang['harga_barang'] }}</td>--}}
                                             <td>{!! $barang['aksi'] !!}</td>
                                         </tr>
                                     @endforeach
@@ -72,6 +72,7 @@
 
 
 @section('jsContainer')
+    <script src="{{ asset('admin_asset/plugins/moment/moment.min.js') }}"></script>
     <script src="{{ asset('admin_asset/plugins/datatables/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('admin_asset/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
     <script src="{{ asset('admin_asset/plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>

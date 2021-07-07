@@ -146,7 +146,7 @@
                                                                     <div class="tab-pane fade active show" id="custom-content-below-pembagian" role="tabpanel" aria-labelledby="custom-content-below-pembagian-tab">
                                                                         <p style="color: darkblue">* Tabs Pembagian akan menampilkan formulir pembagian dalam format tabel. Tabs pembagian ini juga berfungsi untuk menampilkan barang yang telah dibagi</p>
                                                                         <p id="set_ket" style="color: orangered">Anda belum memilih barang yang anda ingin keluarkan</p>
-                                                                        <button class="btn btn-primary" id="tombol-form-keluar" style="margin-bottom: 10px; display: none;">Keluarkan</button>
+                                                                        <button class="btn btn-primary" id="tombol-form-keluar" style="margin-bottom: 10px; display: none;"></button><label class="stok_label" style="font-size: 30px">Sisa Stok: 0</label>
                                                                         <hr>
                                                                         <form id="form-pembagian">
                                                                             <table id="sample1" cellspacing="0" class="table table-striped table-bordered dt-responsive " style="width:100%">

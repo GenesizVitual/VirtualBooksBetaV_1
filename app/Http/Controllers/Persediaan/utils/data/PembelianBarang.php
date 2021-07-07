@@ -48,7 +48,7 @@ class PembelianBarang
                                     and tbl_gudang.id = '.$array['id_barang'].' and tbl_nota.id_thn_anggaran='.$n_data->id.'
     								order by tgl_beli asc
                                 ) as d left join tbl_pengeluaran_barang on tbl_pengeluaran_barang.id_pembelian = d.id GROUP by d.id
-                              ) as x where '.$order);
+                              ) as x where '.$order .' order by x.tgl_beli asc');
                                     //Ubah condisi where jika ingin menampilkan stok yang tidak tersisah
 
             $row = array();

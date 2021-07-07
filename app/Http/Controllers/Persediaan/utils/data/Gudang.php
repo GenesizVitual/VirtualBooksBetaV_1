@@ -36,19 +36,6 @@ class Gudang
             # Inisialisasi ID tahun Anggaran
             $model = TahunAggaranCheck::$id_thn_anggaran;
 
-//            $query = DB::select('SELECT d.id, d.nama_barang,d.satuan,d.id_nota, d.keterangan,d.id_pembelian,d.ppn,d.pph,if(d.stok is null, d.jumlah_barang, d.stok) as stok,d.harga_barang,d.sisa_uang from(
-//                                    SELECT tbl_gudang.id,tbl_nota.id as id_nota,tbl_pembelian_barang.id as id_pembelian,tbl_nota.tgl_beli,tbl_nota.ppn,tbl_nota.pph, tbl_gudang.nama_barang, tbl_pembelian_barang.satuan,tbl_pembelian_barang.jumlah_barang,tbl_pembelian_barang.keterangan,tbl_pembelian_barang.harga_barang,
-//                                    tbl_pembelian_barang.jumlah_barang - sum(tbl_pengeluaran_barang.jumlah_keluar) as stok, (tbl_pembelian_barang.jumlah_barang - sum(tbl_pengeluaran_barang.jumlah_keluar)) * tbl_pembelian_barang.harga_barang as sisa_uang
-//                                    FROM tbl_pembelian_barang
-//                                    LEFT join tbl_pengeluaran_barang on tbl_pembelian_barang.id = tbl_pengeluaran_barang.id_pembelian
-//                                    join tbl_nota on tbl_pembelian_barang.id_nota = tbl_nota.id
-//                                    join tbl_gudang on tbl_pembelian_barang.id_gudang = tbl_gudang.id
-//                                    where tbl_nota.id_instansi = '.Session::get('id_instansi').' and tbl_nota.id_thn_anggaran='.$model->id.'
-//                                    GROUP by
-//                                    /*tbl_nota.id,*/
-//                                    tbl_gudang.id, tbl_pembelian_barang.harga_barang
-//                                    ) as d ') ;
-
             $query = DB::select('SELECT d.id, d.nama_barang,d.satuan,d.id_nota, d.keterangan,d.id_pembelian,d.ppn,d.pph,if(d.stok is null, sum(d.jumlah_barang), sum(d.stok)) as stok,d.harga_barang,d.sisa_uang, d.harga_barang from(
                                     SELECT tbl_gudang.id, tbl_gudang.id as id_barang,tbl_nota.id as id_nota,tbl_pembelian_barang.id as id_pembelian,tbl_nota.tgl_beli,tbl_nota.ppn,tbl_nota.pph, tbl_gudang.nama_barang, tbl_pembelian_barang.satuan,tbl_pembelian_barang.jumlah_barang,tbl_pembelian_barang.keterangan,tbl_pembelian_barang.harga_barang,
                                     tbl_pembelian_barang.jumlah_barang - sum(tbl_pengeluaran_barang.jumlah_keluar) as stok, (tbl_pembelian_barang.jumlah_barang - sum(tbl_pengeluaran_barang.jumlah_keluar)) * tbl_pembelian_barang.harga_barang as sisa_uang
@@ -59,8 +46,24 @@ class Gudang
                                     where tbl_nota.id_instansi = '.Session::get('id_instansi').' and tbl_nota.id_thn_anggaran='.$model->id.'
                                     GROUP by 
                                     tbl_nota.id, 
-                                    tbl_gudang.id, tbl_pembelian_barang.harga_barang
-                                    ) as d GROUP by d.id_barang, d.harga_barang') ;
+                                    tbl_gudang.id, tbl_pembelian_barang.id
+                                    ) as d GROUP by d.id') ;
+
+//            $query = DB::select('SELECT d.id, d.nama_barang,d.satuan,d.id_nota, d.keterangan,d.id_pembelian,d.ppn,d.pph,if(d.stok is null, d.jumlah_barang, d.stok) as stok,d.harga_barang,d.sisa_uang, d.harga_barang from(
+//                                    SELECT tbl_gudang.id, tbl_gudang.id as id_barang,tbl_nota.id as id_nota,tbl_pembelian_barang.id as id_pembelian,tbl_nota.tgl_beli,tbl_nota.ppn,tbl_nota.pph, tbl_gudang.nama_barang, tbl_pembelian_barang.satuan,tbl_pembelian_barang.jumlah_barang,tbl_pembelian_barang.keterangan,tbl_pembelian_barang.harga_barang,
+//                                    tbl_pembelian_barang.jumlah_barang - sum(tbl_pengeluaran_barang.jumlah_keluar) as stok, (tbl_pembelian_barang.jumlah_barang - sum(tbl_pengeluaran_barang.jumlah_keluar)) * tbl_pembelian_barang.harga_barang as sisa_uang
+//                                    FROM tbl_pembelian_barang
+//                                    LEFT join tbl_pengeluaran_barang on tbl_pembelian_barang.id = tbl_pengeluaran_barang.id_pembelian
+//                                    join tbl_nota on tbl_pembelian_barang.id_nota = tbl_nota.id
+//                                    join tbl_gudang on tbl_pembelian_barang.id_gudang = tbl_gudang.id
+//                                    where tbl_nota.id_instansi = '.Session::get('id_instansi').' and tbl_nota.id_thn_anggaran='.$model->id.'
+//                                    GROUP by
+//                                    tbl_nota.id,
+//                                    tbl_gudang.id
+//                                    /*, tbl_pembelian_barang.harga_barang */
+//                                    ) as d GROUP by d.id_barang ORDER by d.stok asc
+//                                    /* , d.harga_barang */
+//                                    ') ;
 
             $row = array();
             $no=1;

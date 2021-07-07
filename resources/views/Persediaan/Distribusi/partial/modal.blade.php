@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-lg modal-primary">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Pengeluaran Barang : {{ $gudang->nama_barang }}</h4>
+                <h4 class="modal-title">Pengeluaran Barang : {{ $gudang->nama_barang }} <label class="stok_label"></label></h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -19,7 +19,7 @@
                                 <input type="hidden" name="status">
                                 <input type="hidden" name="stok_terakhir">
                                 <label for="tgl_keluar">Tanggal Keluar</label>
-                                <input type="date" class=" form-control" name="tgl_kerluar" id="tgl_keluar" required>
+                                <input type="date" class=" form-control" name="tgl_kerluar" id="tgl_keluar" format='dd/mm/yyyy' required>
                                 <span id="notif_tgl" style="color: red"></span>
                             </div>
                             <div class="form-group">

@@ -27,6 +27,7 @@ class Stok extends Controller
                         ],
                         [
                             'tgl_beli'=> $data_nota->tgl_beli,
+                            'status_stok'=> '1',
                             'id_jenis_tbk'=> $data_nota->id_jenis_tbk,
                             'pph'=> $data_nota->pph,
                             'ppn'=> $data_nota->ppn,

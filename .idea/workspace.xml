@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64868ef3-a8b4-45c4-a01c-4c5d46228421" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/RevisiMutasi.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Distribusi.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Distribusi.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Stok.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Stok.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Gudang.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Gudang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Nota.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Nota.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PembelianBarang.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PembelianBarang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Stok.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Stok.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/content.blade.php" afterPath="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/content.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/js.blade.php" afterPath="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/js.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/button_distribusi.blade.php" afterPath="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/button_distribusi.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/modal.blade.php" afterPath="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/modal.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/tab/content.blade.php" afterPath="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/tab/content.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/mutasi_barang/print.blade.php" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/mutasi_barang/print.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/pengeluaran_barang/content.blade.php" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/pengeluaran_barang/content.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -256,49 +269,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Stok.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/Stok.php">
+      <file leaf-file-name="users_route.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/another_route/users_route.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+            <state relative-caret-position="4114">
+              <caret line="125" column="79" lean-forward="false" selection-start-line="125" selection-start-column="62" selection-end-line="125" selection-end-column="79" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/content.blade.php">
+      <file leaf-file-name="MasterLaporan.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/MasterLaporan.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="85" column="33" lean-forward="false" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
+            <state relative-caret-position="26690">
+              <caret line="802" column="35" lean-forward="false" selection-start-line="802" selection-start-column="35" selection-end-line="802" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Gudang/content.blade.php">
+      <file leaf-file-name="Stok.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Stok.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="128" column="15" lean-forward="true" selection-start-line="120" selection-start-column="11" selection-end-line="128" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gudang.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Gudang.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="30" column="41" lean-forward="true" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+            <state relative-caret-position="254">
+              <caret line="90" column="28" lean-forward="false" selection-start-line="90" selection-start-column="28" selection-end-line="90" selection-end-column="28" />
               <folding>
-                <marker date="1625379325658" expanded="true" signature="1661:3188" ph="SELECT d.id,... id" />
-                <marker date="1625379325658" expanded="true" signature="1661:3189" ph="select d.id,... id" />
-                <marker date="1625379325658" expanded="true" signature="1871:3143" ph="SELECT tbl_g... tbl_pembelian_barang" />
-                <marker date="1625379325658" expanded="true" signature="3040:3056" ph="/*tbl_nota.i... " />
-                <marker date="1625379325658" expanded="true" signature="3228:3334" ph="SELECT d.id,... id" />
-                <marker date="1625379325658" expanded="true" signature="3228:4823" ph="SELECT d.id,... id" />
-                <marker date="1625379325658" expanded="true" signature="3462:4743" ph="SELECT tbl_g... tbl_pembelian_barang" />
+                <marker date="1625632908485" expanded="true" signature="972:2419" ph="SELECT d.id,... id" />
+                <marker date="1625632908485" expanded="true" signature="1182:2374" ph="SELECT tbl_g... tbl_pembelian_barang" />
+                <marker date="1625632908485" expanded="true" signature="2492:2598" ph="SELECT d.id,... id" />
+                <marker date="1625632908485" expanded="true" signature="2492:4083" ph="SELECT d.id,... id" />
+                <marker date="1625632908485" expanded="true" signature="2726:4004" ph="SELECT tbl_g... tbl_pembelian_barang" />
+                <marker date="1625632908485" expanded="true" signature="5965:6014" ph="SELECT d.id,... id" />
+                <marker date="1625632908485" expanded="true" signature="5965:7731" ph="SELECT d.id,... id" />
+                <marker date="1625632908485" expanded="true" signature="6199:7652" ph="SELECT tbl_g... tbl_pembelian_barang" />
               </folding>
             </state>
           </provider>
@@ -308,19 +312,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>persediaan</find>
-      <find>Pener</find>
-      <find>set_ket $('#set_ket').text(&quot;Sedang Meload Data&quot;);</find>
-      <find>Cryp</find>
-      <find>id</find>
-      <find>Pembelian</find>
-      <find>nota</find>
-      <find>data_nota_pembel</find>
-      <find>data_nota_pembelian</find>
-      <find>trigger</find>
-      <find>langganan</find>
-      <find>det</find>
-      <find>color</find>
       <find>menu</find>
       <find>pic</find>
       <find>berita</find>
@@ -332,12 +323,25 @@
       <find>setting-langganan</find>
       <find>Anda telah</find>
       <find>load-data-pembelian</find>
-      <find>data_pembelian_barang_pernota</find>
       <find>bagikan-barang</find>
       <find>cek_pajak</find>
       <find>stok-barang</find>
       <find>preview_stok_barang</find>
       <find>distrib</find>
+      <find>Anda belum memilih barang yang anda ingin keluarkan</find>
+      <find>cetak-mutasi-barang</find>
+      <find>cetak_mutasi_barang</find>
+      <find>laporan_mutas</find>
+      <find>mutasi</find>
+      <find>stok-opname</find>
+      <find>data_pembelian_barang_pernota</find>
+      <find>data_pembelian_barang_perbarang</find>
+      <find>load-data-pembe</find>
+      <find>form_distribusi</find>
+      <find>modal</find>
+      <find>form-data-distribusi</find>
+      <find>cetak-stok-opname</find>
+      <find>cetak_stok_opname</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -356,11 +360,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/Persediaan/SpjTBK/js/spj.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Persediaan/TbkNota/content.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/JenisTbk.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/StatusPenerimaan.php" />
-        <option value="$PROJECT_DIR$/app/Model/Persediaan/SuratPermintaan.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/SuratPermintaan.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/Surat/SuratPermintaan/template_surat.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/Surat/SuratPengeluaran/template_surat.blade.php" />
@@ -370,18 +369,13 @@
         <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/pengeluaran_barang/print.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/barang_pakai_habis/print.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/semester/print.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/kartu_barang/print.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/mutasi_barang/print.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_barang/print.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_opname/print.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/webview/component/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/component_admin/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/component_admin/Lsidebar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/tab/content.blade.php" />
         <option value="$PROJECT_DIR$/storage/framework/views/436321cd6c0953ae26e8b7585c0cc36e2b721244.php" />
-        <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/modal.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/js.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/Pembelian/content.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/Pembelian/js/table.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/webview/index.blade.php" />
@@ -395,18 +389,28 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Instansi.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/PembelianBarang.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Distribusi.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Distribusi.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PembelianBarang.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Nota.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Dashboard.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Nota.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/Nota/content.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/Nota/Js/daftar_js.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/action.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/FormulaPajak.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Stok.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/pengeluaran_barang/content.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/button_distribusi.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/content.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/mutasi_barang/print.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/RevisiMutasi.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Stok.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Gudang.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Nota.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PembelianBarang.php" />
+        <option value="$PROJECT_DIR$/routes/another_route/users_route.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Distribusi.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/action.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/js.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/modal.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/tab/content.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Stok.php" />
       </list>
     </option>
   </component>
@@ -456,7 +460,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -467,41 +470,26 @@
             <path>
               <item name="VirtualBooksBetaV_1" type="b2602c69:ProjectViewProjectNode" />
               <item name="VirtualBooksBetaV_1" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="VirtualBooksBetaV_1" type="b2602c69:ProjectViewProjectNode" />
               <item name="VirtualBooksBetaV_1" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="VirtualBooksBetaV_1" type="b2602c69:ProjectViewProjectNode" />
               <item name="VirtualBooksBetaV_1" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Persediaan" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="VirtualBooksBetaV_1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VirtualBooksBetaV_1" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Persediaan" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Distribusi" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="VirtualBooksBetaV_1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VirtualBooksBetaV_1" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Persediaan" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Gudang" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -509,7 +497,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="distr&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;MasterLapora&#9;null&#9;null&#10;we&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/web.php&#10;Distr&#9;null&#9;null&#10;Nota&#9;null&#9;null&#10;Pembelian&#9;null&#9;null&#10;web&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/web.php&#10;Instansi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Instansi.php&#10;admin&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/admin_route.php&#10;User&#9;null&#9;null&#10;Langga&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/resources/views/Persediaan/penentuan_paket_langganan.blade.php&#10;lang&#9;null&#9;null&#10;Sura&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/SuratPermintaan.php&#10;Pembelia&#9;null&#9;null&#10;Do&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Apps/Dokumentasi.php&#10;Login&#9;null&#9;null&#10;route&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;Tahun&#9;null&#9;null&#10;user&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;ro&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;MasterL&#9;null&#9;null&#10;Invoi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Invoice.php&#10;Users&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;langganan&#9;null&#9;null&#10;SuratPesanan&#9;null&#9;null&#10;SuratPesana&#9;null&#9;null&#10;Pembe&#9;null&#9;null&#10;Berwe&#9;null&#9;null&#10;Gu&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Gudang.php&#10;Gudang&#9;null&#9;null&#10;Penyedi&#9;null&#9;null&#10;Jenis&#9;null&#9;null&#10;TahunA&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/TahunAnggaran.php&#10;Bidang&#9;null&#9;null&#10;Use&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/User.php&#10;TahunAngga&#9;null&#9;null&#10;Ta&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/TahunAnggaran.php&#10;Tah&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/TahunAnggaran.php&#10;Instans&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/Instansi.php&#10;Insta&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Instansi.php&#10;Instan&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Instansi.php&#10;Notas&#9;null&#9;null&#10;PembelianB&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/PembelianBarang.php&#10;PembelianBara&#9;null&#9;null&#10;Master&#9;null&#9;null&#10;Guda&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Gudang.php&#10;Pembel&#9;FILE&#9;file://E:/xampp/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/PembelianBarang.php&#10;Dis&#9;FILE&#9;file://E:/xampp/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/Distribusi.php&#10;nota&#9;FILE&#9;file://E:/xampp/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/Nota.php&#10;surat&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="Master&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/MasterLaporan.php&#10;Gudang&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/Gudang.php&#10;Stok&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/Stok.php&#10;Distri&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;distribusi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;admin&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/admin_route.php&#10;rout&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/admin_route.php&#10;PembelianBaran&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/PembelianBarang.php&#10;Pembelian&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/PembelianBarang.php&#10;Nota&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Nota.php&#10;stok&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Stok.php&#10;sto&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/Stok.php&#10;user&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;pembeli&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/PembelianBarang.php&#10;lapora&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/MasterLaporan.php&#10;Mutasi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php&#10;Dis&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;distr&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;MasterLapora&#9;null&#9;null&#10;we&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/web.php&#10;Distr&#9;null&#9;null&#10;web&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/web.php&#10;Instansi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Instansi.php&#10;User&#9;null&#9;null&#10;Langga&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/resources/views/Persediaan/penentuan_paket_langganan.blade.php&#10;lang&#9;null&#9;null&#10;Sura&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/SuratPermintaan.php&#10;Pembelia&#9;null&#9;null&#10;Do&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Apps/Dokumentasi.php&#10;Login&#9;null&#9;null&#10;route&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;Tahun&#9;null&#9;null&#10;ro&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;MasterL&#9;null&#9;null&#10;Invoi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Invoice.php&#10;Users&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;langganan&#9;null&#9;null&#10;SuratPesanan&#9;null&#9;null&#10;SuratPesana&#9;null&#9;null&#10;Pembe&#9;null&#9;null&#10;Berwe&#9;null&#9;null&#10;Gu&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Gudang.php&#10;Penyedi&#9;null&#9;null&#10;Jenis&#9;null&#9;null&#10;TahunA&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/TahunAnggaran.php&#10;Bidang&#9;null&#9;null&#10;Use&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/User.php&#10;TahunAngga&#9;null&#9;null&#10;Ta&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/TahunAnggaran.php" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
   </component>
@@ -772,14 +760,14 @@
       <workItem from="1625367042938" duration="34000" />
       <workItem from="1625367099631" duration="1205000" />
       <workItem from="1625375059794" duration="1634000" />
-      <workItem from="1625377949870" duration="1367000" />
-    </task>
-    <task id="LOCAL-00034" summary="- Laporan Print preview dan print Daftar Nota Selesai">
-      <created>1603273560822</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1603273560822</updated>
+      <workItem from="1625377949870" duration="1997000" />
+      <workItem from="1625384679081" duration="934000" />
+      <workItem from="1625447860261" duration="105000" />
+      <workItem from="1625540536214" duration="16468000" />
+      <workItem from="1625573796979" duration="1974000" />
+      <workItem from="1625621667334" duration="9000" />
+      <workItem from="1625626351864" duration="6957000" />
+      <workItem from="1625643956718" duration="72000" />
     </task>
     <task id="LOCAL-00035" summary="- Laporan Print preview dan print rekapitulasi Persediaan">
       <created>1603295874237</created>
@@ -1117,11 +1105,18 @@
       <option name="project" value="LOCAL" />
       <updated>1625368138425</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="- Revisi Tampilan stok dan stok opname 2">
+      <created>1625379523744</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1625379523745</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="889667000" />
+    <option name="totallyTimeSpent" value="916816000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1135,7 +1130,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30711043" sideWeight="0.3407155" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3260212" sideWeight="0.3407155" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21217105" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38134205" sideWeight="0.50907713" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1143,7 +1138,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.49403748" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37828946" sideWeight="0.49092284" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20272315" sideWeight="0.6592845" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1709531" sideWeight="0.6592845" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1189,7 +1184,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- Penambahan Encripsi" />
     <MESSAGE value="- Kembalikan encriptdata" />
     <MESSAGE value="- Penyesuian" />
     <MESSAGE value="- Penambahan Pembayaran" />
@@ -1214,7 +1208,8 @@
     <MESSAGE value="- Revisi Distribusi" />
     <MESSAGE value="- Revisi Pajak PPN dan PPH Dinamis" />
     <MESSAGE value="- Revisi Tampilan stok dan stok opname" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Revisi Tampilan stok dan stok opname" />
+    <MESSAGE value="- Revisi Tampilan stok dan stok opname 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Revisi Tampilan stok dan stok opname 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1223,90 +1218,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/SuratPengeluaran.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/RouteServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2534">
-          <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/TBK_NOTA.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3058">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/TBK.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="120" column="9" lean-forward="true" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Persediaan/Instansi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-520">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/RenderParsial.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/SettingReport.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1888">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/Berwenang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Apps/Dokumentasi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/content.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/component_admin/navbar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Apps/Langganan.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="986">
@@ -1370,52 +1281,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Persediaan/PembelianBarang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="12" column="49" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Distribusi.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="55" column="12" lean-forward="false" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Persediaan/Nota.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="11" column="92" lean-forward="false" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/TahunAggaranCheck.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-698">
-          <caret line="10" column="71" lean-forward="false" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/StatusPenerimaan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="37" column="42" lean-forward="false" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/PembelianBarang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="135" column="5" lean-forward="true" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PembelianBarang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-168">
-          <caret line="44" column="68" lean-forward="false" selection-start-line="44" selection-start-column="68" selection-end-line="44" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -1433,13 +1302,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="109" column="79" lean-forward="false" selection-start-line="109" selection-start-column="66" selection-end-line="109" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
@@ -1447,52 +1309,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Nota.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-499">
-          <caret line="116" column="0" lean-forward="true" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/Nota.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="60" column="10" lean-forward="true" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Nota/Js/daftar_js.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="77" column="21" lean-forward="false" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/tab/content.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4284">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/action.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="30" column="81" lean-forward="true" selection-start-line="30" selection-start-column="81" selection-end-line="30" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/modal.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="36" column="18" lean-forward="false" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/js.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="111" column="14" lean-forward="false" selection-start-line="111" selection-start-column="14" selection-end-line="111" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1510,13 +1330,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/another_route/admin_route.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="18" column="51" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-134">
@@ -1524,70 +1337,253 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/MasterLaporan.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Gudang/content.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="678" column="45" lean-forward="false" selection-start-line="678" selection-start-column="45" selection-end-line="678" selection-end-column="45" />
+        <state relative-caret-position="240">
+          <caret line="128" column="15" lean-forward="false" selection-start-line="120" selection-start-column="11" selection-end-line="128" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/Distribusi.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/laporan/pengeluaran_barang/content.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+        <state relative-caret-position="-168">
+          <caret line="248" column="34" lean-forward="true" selection-start-line="248" selection-start-column="34" selection-end-line="248" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/another_route/users_route.php">
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/00c9dcc1fe558cd25044f3befdf808b8ccad7c08.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="59" column="28" lean-forward="false" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="28" />
+        <state relative-caret-position="330">
+          <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Stok.php">
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/436321cd6c0953ae26e8b7585c0cc36e2b721244.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="71" column="12" lean-forward="false" selection-start-line="71" selection-start-column="12" selection-end-line="76" selection-end-column="57" />
+        <state relative-caret-position="-10">
+          <caret line="120" column="7" lean-forward="false" selection-start-line="120" selection-start-column="7" selection-end-line="120" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/button_distribusi.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/form_table_distribusi.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/button_gudang.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/button_pembelian.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/laporan/mutasi_barang/content.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2346">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/laporan/mutasi_barang/print.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="90" column="53" lean-forward="false" selection-start-line="90" selection-start-column="41" selection-end-line="90" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../persediaan_online_new/app/Http/Controllers/MutasiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45315">
+          <caret line="304" column="19" lean-forward="false" selection-start-line="304" selection-start-column="13" selection-end-line="304" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Persediaan/TahunAnggaran.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="11" column="40" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="68" column="33" lean-forward="false" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/TahunAggaranCheck.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/RevisiMutasi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Persediaan/Nota.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/Nota.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="157" column="31" lean-forward="true" selection-start-line="157" selection-start-column="31" selection-end-line="157" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/Stok.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="322">
+          <caret line="23" column="52" lean-forward="false" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Gudang/content.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Model/Persediaan/PembelianBarang.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="128" column="15" lean-forward="true" selection-start-line="120" selection-start-column="11" selection-end-line="128" selection-end-column="15" />
-          <folding />
+        <state relative-caret-position="515">
+          <caret line="19" column="49" lean-forward="false" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Nota.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="87" column="27" lean-forward="false" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/PembelianBarang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="145" column="11" lean-forward="true" selection-start-line="145" selection-start-column="11" selection-end-line="145" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/another_route/admin_route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="18" column="51" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PembelianBarang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="41" column="179" lean-forward="false" selection-start-line="41" selection-start-column="175" selection-end-line="41" selection-end-column="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/StatusPenerimaan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="37" column="45" lean-forward="false" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/tab/content.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="148" column="243" lean-forward="false" selection-start-line="148" selection-start-column="243" selection-end-line="148" selection-end-column="243" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/action.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/modal.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="4" column="112" lean-forward="false" selection-start-line="4" selection-start-column="102" selection-end-line="4" selection-end-column="112" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/content.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="85" column="33" lean-forward="false" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="442">
+          <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/js.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="147" column="0" lean-forward="true" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/Distribusi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="81" column="31" lean-forward="true" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Gudang.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="30" column="41" lean-forward="true" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+        <state relative-caret-position="-1120">
+          <caret line="44" column="18" lean-forward="false" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/another_route/users_route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4114">
+          <caret line="125" column="79" lean-forward="false" selection-start-line="125" selection-start-column="62" selection-end-line="125" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/MasterLaporan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26690">
+          <caret line="802" column="35" lean-forward="false" selection-start-line="802" selection-start-column="35" selection-end-line="802" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Stok.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="90" column="28" lean-forward="false" selection-start-line="90" selection-start-column="28" selection-end-line="90" selection-end-column="28" />
           <folding>
-            <marker date="1625379325658" expanded="true" signature="1661:3188" ph="SELECT d.id,... id" />
-            <marker date="1625379325658" expanded="true" signature="1661:3189" ph="select d.id,... id" />
-            <marker date="1625379325658" expanded="true" signature="1871:3143" ph="SELECT tbl_g... tbl_pembelian_barang" />
-            <marker date="1625379325658" expanded="true" signature="3040:3056" ph="/*tbl_nota.i... " />
-            <marker date="1625379325658" expanded="true" signature="3228:3334" ph="SELECT d.id,... id" />
-            <marker date="1625379325658" expanded="true" signature="3228:4823" ph="SELECT d.id,... id" />
-            <marker date="1625379325658" expanded="true" signature="3462:4743" ph="SELECT tbl_g... tbl_pembelian_barang" />
+            <marker date="1625632908485" expanded="true" signature="972:2419" ph="SELECT d.id,... id" />
+            <marker date="1625632908485" expanded="true" signature="1182:2374" ph="SELECT tbl_g... tbl_pembelian_barang" />
+            <marker date="1625632908485" expanded="true" signature="2492:2598" ph="SELECT d.id,... id" />
+            <marker date="1625632908485" expanded="true" signature="2492:4083" ph="SELECT d.id,... id" />
+            <marker date="1625632908485" expanded="true" signature="2726:4004" ph="SELECT tbl_g... tbl_pembelian_barang" />
+            <marker date="1625632908485" expanded="true" signature="5965:6014" ph="SELECT d.id,... id" />
+            <marker date="1625632908485" expanded="true" signature="5965:7731" ph="SELECT d.id,... id" />
+            <marker date="1625632908485" expanded="true" signature="6199:7652" ph="SELECT tbl_g... tbl_pembelian_barang" />
           </folding>
         </state>
       </provider>

@@ -168,7 +168,7 @@
 
                                 <p style="height: 2px; background-color: grey; width: 100%; margin-top:10px"></p>
                                 <div class="col-md-12 table-responsive p-0">
-                                    <table id="table-data-nota" class="table table-bordered table-striped" style="width: 100%" role="grid">
+                                    <table id="table-data-pengeluaran" class="table table-bordered table-striped" style="width: 100%" role="grid">
                                         <thead>
                                             <tr>
                                                 <th >No</th>
@@ -243,15 +243,15 @@
 
             $('.select2').select2();
 
-//            $('#table-data-nota').DataTable({
-//                "paging": true,
-//                "lengthChange": false,
-//                "searching": true,
-//                "ordering": true,
-//                "info": true,
-//                "autoWidth": false,
-//                "responsive": true,
-//            });
+            $('#table-data-pengeluaran').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": true,
+                "ordering": false,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
 
             //Datemask dd/mm/yyyy
             $('[name="tgl_awal"]').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' });

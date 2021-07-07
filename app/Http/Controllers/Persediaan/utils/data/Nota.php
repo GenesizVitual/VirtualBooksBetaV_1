@@ -54,7 +54,7 @@ class Nota
             }else{ # Kalau Tanggal Awal dan akhir tidak ada jalankan query defaul tampa tanggal awal dan tanggal akhir
                 $model_nota = notas::all()->where('id_instansi',$ndata->id_instansi)
                     ->where('id_thn_anggaran', $ndata->id)
-                    ->sortByDesc('tgl_beli');
+                    ->sortByDesc('kode_nota');
             }
         }
 
