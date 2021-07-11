@@ -82,7 +82,7 @@ class Berwenang extends Controller
     {
         try{
             $this->validate($req,[
-                'nip'=> 'required|unique:tbl_berwenang,nip',
+                'nip'=> 'required',
                 'nama'=> 'required',
                 'jabatan'=> 'required',
             ]);

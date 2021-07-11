@@ -53,7 +53,7 @@
             <tbody>
             @if(!empty($data))
                 @php($no=1)
-
+                @php($total=0)
                 @foreach($data as $data_mutasi)
                     <tr>
                         <td >{{ $no++ }}</td>
@@ -61,10 +61,11 @@
                         <td style="width: 10px">{{ $data_mutasi['satuan'] }}</td>
                         <td style="width: 10px">{{ number_format($data_mutasi['stok_barang'],2,',','.') }}</td>
                         <td style="width: 20px">{{ $data_mutasi['harga_barang'] }}</td>
-                        <td style="width: 20px">{{ number_format($data_mutasi['stok_barang']*$data_mutasi['harga_barang'],2,',','.') }}</td>
+                        <td style="width: 20px">{{ number_format($data_mutasi['stok_barang']*$data_mutasi['harga_barang'],2,'.',',') }}</td>
                         <td style="width: 30px">{{ $data_mutasi['keterangan'] }}</td>
                     </tr>
-                @endforeach
+                 @endforeach
+
             @endif
             </tbody>
         </table>

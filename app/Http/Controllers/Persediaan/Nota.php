@@ -120,13 +120,17 @@ class Nota extends Controller
 
         if(!empty($req->pph)){
             $model->pph = $req->pph;
+        }else{
+            $model->pph = 0;
         }
 
         if(!empty($req->ppn)) {
             $model->ppn = $req->ppn;
+        }else{
+            $model->ppn = 0;
         }
 
-        if($model->save()){
+         if($model->save()){
             return redirect('nota')->with('message_success','Anda telah mengubah nota pembelian dengan kode: '.$model->kode_nota);
         }else{
             return redirect('nota')->with('message_error','Gagal, mengubah nota pembelian');

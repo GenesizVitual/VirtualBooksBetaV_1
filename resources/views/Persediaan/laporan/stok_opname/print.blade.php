@@ -28,7 +28,7 @@
 
 </head>
 <body style="background-color: white">
-    <div style="background-color: white; padding: 1%">
+    <div style="background-color: white; padding: 1%; margin-left: 30px">
         <table style="width: 100%; text-align: center">
             <tr>
                 <td rowspan="4" style="width: 100px"><img src="{{ asset('persediaan/logo/'.$instansi->logo) }}" alt="Logo tidak ditemukan" style="width:100px;height: 110px; margin-left: 20px"></td>
@@ -84,10 +84,10 @@
             <tbody>
             @if(!empty($data))
                 @php($no=1)
-
+                @php($total = 0)
                 @foreach($data as $data_mutasi)
                     <tr>
-                        <td >{{ $no++ }}</td>
+                        <td style="text-align: center">{{ $no++ }}</td>
                         <td >{{ $data_mutasi['nama_barang'] }}</td>
                         <td >{{ $data_mutasi['satuan'] }}</td>
                         <td >{{ number_format($data_mutasi['stok_barang'],2,',','.') }}</td>
@@ -95,7 +95,14 @@
                         <td >{{ number_format($data_mutasi['stok_barang']*$data_mutasi['harga_barang'],2,',','.') }}</td>
                         <td >{{ $data_mutasi['keterangan'] }}</td>
                     </tr>
+                    @php($total +=$data_mutasi['stok_barang']*$data_mutasi['harga_barang'])
                 @endforeach
+                <tr>
+                    <td></td>
+                    <td style="font-weight: bold" colspan="4" style="text-align: center">Total</td>
+                    <td style="font-weight: bold">{{ number_format($total,2,',','.') }}</td>
+                    <td ></td>
+                </tr>
             @endif
             </tbody>
         </table>
@@ -110,8 +117,8 @@
                 <td>{{ $jabatan_2 }}</td>
             </tr>
             <tr style="text-align: center; font-weight: bold;">
-                <td style="height: 100px"><label style="text-decoration: underline">{{ $berwenang_1->nama }}</label> <br> {{ $berwenang_1->nip }}</td>
-                <td style="height: 100px"><label style="text-decoration: underline">{{ $berwenang_2->nama }}</label> <br> {{ $berwenang_2->nip }}</td>
+                <td style="height: 200px"><label style="text-decoration: underline"><br><br><br>{{ $berwenang_1->nama }}</label> <br> {{ $berwenang_1->nip }}</td>
+                <td style="height: 200px"><label style="text-decoration: underline"><br><br><br>{{ $berwenang_2->nama }}</label> <br> {{ $berwenang_2->nip }}</td>
             </tr>
         </table>
     </div>
