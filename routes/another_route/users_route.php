@@ -31,11 +31,15 @@ Route::middleware([CheckLevel::class, CheckUser::class])->group(function () {
 
     Route::get('dashboard','Persediaan\Dashboard@index');
     Route::resource('instansi','Persediaan\Instansi');
+    Route::post('response-instansi','Persediaan\Instansi@response_instansi');
+    Route::resource('share-report','Persediaan\Sharereport');
     Route::put('instansi/{id}/upload','Persediaan\Instansi@upload');
     Route::post('kota-kab/{id}','Apps\Provinsi@getLinkKab');
     Route::post('setting-tahun-anggaran','Persediaan\TahunAnggaran@setting_thn_awal_penggunaan');
     Route::resource('tahun-anggaran', 'Persediaan\TahunAnggaran');
     Route::resource('jenis-tbk','Persediaan\JenisTbk');
+    Route::post('jenis-tbk-link-klasifikasi','Persediaan\JenisTbk@hubungkan_ke_klasifikasi');
+    Route::post('response_rincian_persediaan','Persediaan\MasterLaporan@response_rincian_persediaan');
     Route::resource('penyedia','Persediaan\Penyedia');
     Route::resource('bidang','Persediaan\Bidang');
     Route::resource('gudang','Persediaan\Gudang');
@@ -78,6 +82,14 @@ Route::middleware([CheckLevel::class, CheckUser::class])->group(function () {
     Route::get('invoice', 'Persediaan\Invoice@index');
     Route::get('invoice/{id}/print', 'Persediaan\Invoice@cetak');
 
+
+    # Todo mencari kabupaten dan kota berdasarkan provinsi
+    Route::get('kab-kota/{id}','Apps\KabKota@show');
+    # Response Buku Persediaan Barang
+    Route::post('response_buku_persediaan','Persediaan\MasterLaporan@response_buku_persediaan');
+
+    # Todo Berbagi laporan
+    Route::get('berbagi-laporan','Persediaan\ShareReport@share_report');
     # Todo laporan
     Route::get('laporan','Persediaan\MasterLaporan@index');
     # Preview Daftar Nota
@@ -116,6 +128,17 @@ Route::middleware([CheckLevel::class, CheckUser::class])->group(function () {
     Route::get('mutasi-barang','Persediaan\MasterLaporan@preview_mutasi_barang');
     # Cetak Mutasi Barang
     Route::post('cetak-mutasi-barang','Persediaan\MasterLaporan@cetak_mutasi_barang');
+    # Preview Buku Persediaan Barang
+    Route::get('buku-persediaan-fifo','Persediaan\MasterLaporan@preview_buku_persediaan');
+    # Cetak Buku Persediaan
+    Route::post('buku-persediaan-fifo','Persediaan\MasterLaporan@cetak_buku_persediaan');
+    # Preview Rincian Buku Persediaan
+    Route::get('rincian-stok-persediaan','Persediaan\MasterLaporan@preview_rincian_persediaan');
+    # Cetak Rincian Persediaan Barang
+    Route::post('rincian-stok-persediaan','Persediaan\MasterLaporan@cetak_rincian_persediaan_barang');
+    # Preview Persediaan barang pakai habis
+    Route::get('rincian-persediaan-barang-pakai-habis','Persediaan\MasterLaporan@preview_persediaan_barang_pakai_habis');
+    Route::post('rincian-persediaan-barang-pakai-habis','Persediaan\MasterLaporan@cetak_persediaan_barang_pakai_habis');
     # Preview Stok Barang
     Route::get('stok-barang','Persediaan\MasterLaporan@preview_stok_barang');
     # Cetak Barang Stok

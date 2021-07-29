@@ -11,12 +11,8 @@
     OnSubmit = function () {
         if($('#quickForm').valid()){
             if($('[name="_method"]').val()=="post"){
-                $('#tombol_simpan').text('Sedang memproses...');
-                $('#tombol_simpan').prop('disabled', true);
                 OnItemOut();
             }else{
-                $('#tombol_simpan').text('Sedang memproses...');
-                $('#tombol_simpan').prop('disabled', true);
                 OnItemUpdate();
             }
         }else{
@@ -32,12 +28,7 @@
             success : function (result) {
                 feedback(result);
                 CallFormData(result.kode, result.stok);
-                $('#tombol_simpan').text('Simpan');
-                $('#tombol_simpan').prop('disabled', false);
                 onLoaded(result.status_penerimaan,'#table-data-pembelian','pem');
-            },
-            error:  function(xhr, status, error) {
-                alert('Pastikan jaringan internet anda stabil');
             }
         })
     }
@@ -51,13 +42,7 @@
                 feedback(result);
                 CallFormData(result.kode,result.stok);
                 $('[name="_method"]').val('post');
-                $('#tombol_simpan').text('Simpan');
-                $('#tombol_simpan').prop('disabled', false);
                 onLoaded(result.status_penerimaan,'#table-data-pembelian','pem');
-            },
-            error:  function(xhr, status, error) {
-                $('#tombol_simpan').text('Simpan');
-                alert('Pastikan jaringan internet anda stabil');
             }
         })
     }
@@ -84,6 +69,7 @@
             $('[name="status_pengeluaran"]').val(result.status_pengeluaran).trigger('change');
             $('[name="keterangan"]').val(result.keterangan);
             $('#tombol_simpan').attr('onclick','OnItemUpdate('+result.id+')');
+
         })
     }
 
@@ -102,9 +88,6 @@
                     feedback(result);
                     CallFormData(result.kode, result.stok);
                     onLoaded(result.status_penerimaan,'#table-data-pembelian','pem');
-                },
-                error:  function(xhr, status, error) {
-                    alert('Pastikan jaringan internet anda stabil');
                 }
             })
         }else {

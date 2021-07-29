@@ -2,7 +2,8 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('admin_asset/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('admin_asset/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
+    <link rel="stylesheet"
+          href="{{ asset('admin_asset/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
 @stop
 
 @section('content')
@@ -20,7 +21,8 @@
                     </ol>
                 </div><!-- /.col -->
                 <div class="col-sm-12">
-                    <p style="color: darkgray">Halaman Instansi berfungsi untuk mengolah data jenis tanda bukti kas(TBK) anda.</p>
+                    <p style="color: darkgray">Halaman Instansi berfungsi untuk mengolah data jenis tanda bukti kas(TBK)
+                        anda.</p>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -28,14 +30,14 @@
     <!-- /.content-header -->
     <!-- Main content -->
     <div class="content" style="margin-top: 0px">
-        <div class="container-fluid" >
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="card card-success">
                         <div class="card-header">
                             <h3 class="card-title">Daftar Jenis TBK</h3>
                             <div class="card-tools">
-                                <a href="{{ url('jenis-tbk/create') }}" class="btn btn-tool" ><i class="fas fa-plus"></i></a>
+                                <a href="{{ url('jenis-tbk/create') }}" class="btn btn-tool"><i class="fas fa-plus"></i></a>
                             </div>
                         </div>
                         <div class="card-body">
@@ -45,27 +47,45 @@
                                     <th>Kode Rekening</th>
                                     <th>Jenis TBK</th>
                                     <th>Status Penerimaan</th>
+                                    <th>Klasifikasi TBK</th>
                                     <th>Aksi</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                   @foreach($data as $data)
-                                        <tr>
-                                            <td>{{ $data->kode }}</td>
-                                            <td>{{ $data->jenis_tbk }}</td>
-                                            <td><span class="badge bg-danger">{{ $status_pembayaran[$data->status_pembayaran] }}</span></td>
-                                            <td>
-                                                <form action="{{ url('jenis-tbk/'.$data->id) }}" method="post">
-                                                    {{ csrf_field() }}
-                                                    <input type="hidden" name="_method" value="delete">
-                                                    <div class="btn-group">
-                                                        <a href="{{ url('jenis-tbk/'.$data->id.'/edit') }}" class="btn btn-info btn-warning"><i class="fa fa-pen"></i></a>
-                                                        <button type="submit" class="btn btn-info btn-danger" onclick="return confirm('Jika anda ingin menghapus Tbk ini, maka data yang terkait akan dihilangkan')"><i class="fa fa-eraser"></i></button>
-                                                    </div>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                   @endforeach
+                                @foreach($data as $keys=> $data)
+                                    <tr>
+                                        <td>{{ $data->kode }}</td>
+                                        <td>{{ $data->jenis_tbk }}</td>
+                                        <td><span
+                                                class="badge bg-danger">{{ $status_pembayaran[$data->status_pembayaran] }}</span>
+                                        </td>
+                                        <td>
+                                            <div class="form-group">
+                                                <select class="form-control select2-blue" id="class{{$keys}}" onchange="linkToKlasifikasi({{$data->id}}, $('#class{{$keys}}').val())">
+                                                    @if(!empty($klasifikasi_tbk))
+                                                        <option value="">Belum terklasifikasi</option>
+                                                        @foreach($klasifikasi_tbk as $classifikasi)
+                                                            <option value="{{ $classifikasi->id }}" @if(!empty($data->linkToConnectJenisTBkDanKlasifikasi)) @if($data->linkToConnectJenisTBkDanKlasifikasi->id_klasifikasi_tbk==$classifikasi->id) selected @endif @endif>{{ $classifikasi->nama }}</option>
+                                                        @endforeach
+                                                    @endif
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <form action="{{ url('jenis-tbk/'.$data->id) }}" method="post">
+                                                {{ csrf_field() }}
+                                                <input type="hidden" name="_method" value="delete">
+                                                <div class="btn-group">
+                                                    <a href="{{ url('jenis-tbk/'.$data->id.'/edit') }}"
+                                                       class="btn btn-info btn-warning"><i class="fa fa-pen"></i></a>
+                                                    <button type="submit" class="btn btn-info btn-danger"
+                                                            onclick="return confirm('Jika anda ingin menghapus Tbk ini, maka data yang terkait akan dihilangkan')">
+                                                        <i class="fa fa-eraser"></i></button>
+                                                </div>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -83,7 +103,7 @@
     <script src="{{ asset('admin_asset/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
     <script src="{{ asset('admin_asset/plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
     <script src="{{ asset('admin_asset/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
-
+    @include('Persediaan.Jenis_Tbk.js')
     <script>
         $(function () {
             $('#table-data').DataTable({

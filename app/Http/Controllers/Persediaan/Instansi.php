@@ -29,6 +29,23 @@ class Instansi extends Controller
         return view('Persediaan.Instansi.content', $data);
     }
 
+    public function response_instansi(Request $req){
+        $this->validate($req,[
+            'id_provinsi'=> 'required',
+            'id_kab_kota'=> 'required',
+            '_token'=> 'required'
+        ]);
+
+        $model = instance::all();
+        if(!empty($req->id_provinsi)){
+            $model->where('id_provinsi', $req->id_provinsi);
+        }
+
+        if(!empty($req->id_kab_kota)){
+            $model->where('id_kab_kota', $req->id_kab_kota);
+        }
+        return response()->json($model);
+    }
 
     public function create()
     {

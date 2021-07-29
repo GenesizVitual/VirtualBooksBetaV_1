@@ -28,6 +28,9 @@ class MutasiBarang
     private static $total = 0;
     private static $stok_penerimaan = 0;
     private static $total_penerimaan = 0;
+    private static $uraian;
+    private static $no_urut = 1;
+    public static $klasifikasi_persediaan;
 
     public static function sortFunctionByDate($a, $b)
     {
@@ -53,24 +56,24 @@ class MutasiBarang
             # Inisialisasi ID tahun Anggaran
             $ndata = TahunAggaranCheck::$id_thn_anggaran;
 
-
-            # Jika id barang tidak kosong maka tambahkan query where id barang
-//            if(!empty(self::$id_barang)){
-//                $pembelian = PembelianBarang::all()->where('id_instansi', Session::get('id_instansi'))->where('id_gudang', self::$id_barang);
-//            }else{
-//                $pembelian = PembelianBarang::all()->where('id_instansi', Session::get('id_instansi'));
-//            }
-
-            if(!empty(self::$tgl_awal) && !empty(self::$tgl_akhir)){
-                $nota = Nota::whereBetween('tgl_beli',[self::$tgl_awal,self::$tgl_akhir])->where('id_thn_anggaran', $ndata->id)->where('id_instansi', Session::get('id_instansi'))->orderBy('tgl_beli','asc');
-            }else{
-                $nota = Nota::where('id_thn_anggaran', $ndata->id)->where('id_instansi', Session::get('id_instansi'))->orderBy('tgl_beli','asc');
+            if (!empty(self::$tgl_awal) && !empty(self::$tgl_akhir)) {
+                $nota = Nota::whereBetween('tgl_beli', [self::$tgl_awal, self::$tgl_akhir])->where('id_thn_anggaran', $ndata->id)->where('id_instansi', Session::get('id_instansi'));
+            } else {
+                $nota = Nota::where('id_thn_anggaran', $ndata->id)->where('id_instansi', Session::get('id_instansi'));
             }
-            foreach ($nota->get() as $item_nota) {
-                self::pemilahan_data_perimaan_pengeluaran($item_nota->linkToPembelian->groupBy('id_gudang'), $item_nota->status_stok);
+
+            foreach ($nota->orderBy('tgl_beli', 'asc')->get() as $item_nota) {
+                if (!empty(self::$klasifikasi_persediaan)) {
+                    if (!empty($item_nota->linkToNotaBelongsToTbk->linkToConnectJenisTBkDanKlasifikasi)) {
+                        if ($item_nota->linkToNotaBelongsToTbk->linkToConnectJenisTBkDanKlasifikasi->id_klasifikasi_tbk == self::$klasifikasi_persediaan) {
+                            self::pemilahan_data_perimaan_pengeluaran($item_nota->linkToPembelian->groupBy('id_gudang'), $item_nota->status_stok);
+                        }
+                    }
+                } else {
+                    self::pemilahan_data_perimaan_pengeluaran($item_nota->linkToPembelian->groupBy('id_gudang'), $item_nota->status_stok);
+                }
             }
-            # urutkan pengeluaran barang berdasarkan tanggal keluar barang
-//            usort(self::$row,"self::sortFunctionByDate");
+
             return self::$row;
         } catch (Throwable $e) {
             return false;
@@ -85,23 +88,18 @@ class MutasiBarang
             self::$stok = 0;
             self::$total = 0;
 
-            # Mencari Data Stok yang tersisah
-//            $data_stok = self::cek_stok_terakhir(['id_thn_anggaran'=> $ndata->id, 'id_instansi'=>$ndata->id_instansi,'id_gudang'=>$group_barang->first()->id_gudang]);
-//            if(!empty($data_stok->stok)){
-//                self::$stok = $data_stok->stok;
-//                self::$total = $data_stok->sisa_uang;
-//            }
-
             # Data group looping untuk mendapatkan data pembelian
             foreach ($group_barang as $sub_key => $data_barang) {
                 if ($status_stok == '1') {
                     self::$stok = $data_barang->jumlah_barang;
                     self::$total = $data_barang->total_beli;
                     self::$stok_penerimaan = 0;
+                    self::$uraian = 'Saldo Awal Persediaan';
                     self::$total_penerimaan = 0;
                 } else {
                     self::$stok_penerimaan = $data_barang->jumlah_barang;
                     self::$total_penerimaan = $data_barang->total_beli;
+                    self::$uraian = 'Terima dari toko ' . $data_barang->linkToNota->linkToPenyedia->penyedia;
                     self::$stok = 0;
                     self::$total = 0;
                 }
@@ -113,7 +111,7 @@ class MutasiBarang
                     }
                 } else {
                     if (!empty(self::$id_barang)) {
-                        if(!empty(self::$id_barang == $data_barang->id_gudang)){
+                        if (!empty(self::$id_barang == $data_barang->id_gudang)) {
                             self::daftar_mutasi_barang($data_barang);
                         };
                     } else {
@@ -127,8 +125,14 @@ class MutasiBarang
     private static function daftar_mutasi_barang($data_barang)
     {
         $column = self::colomMutasi();
+        $column['no_urut'] = self::$no_urut;
+        self::$no_urut += 1;
         $column['tgl'] = $data_barang->linkToNota->tgl_beli;
         $column['nm_barang'] = $data_barang->linkToGudang->nama_barang;
+        $column['no_nota'] = $data_barang->linkToNota->kode_nota;
+        $column['uraian'] = self::$uraian;
+        self::$uraian = 'Terima barang dari ' . $data_barang->linkToNota->linkToPenyedia->penyedia;
+        $column['bukti'] = 'BAST';
         $column['masuk'] = number_format(self::$stok_penerimaan, 2, ',', '.');
         $column['keluar'] = 0;
         $column['sisa'] = number_format(self::$stok, 2, ',', '.');
@@ -136,7 +140,8 @@ class MutasiBarang
         $column['sisa_pp'] = number_format(self::$stok, 2, ',', '.');
         $column['satuan'] = $data_barang->satuan;
         $column['harga_beli'] = number_format(FormulaPajak::formula_pajak($data_barang->harga_barang, $data_barang->linkToNota->ppn, $data_barang->linkToNota->pph), 2, ',', '.');
-        $column['total_penerimaan'] = number_format(FormulaPajak::formula_pajak($data_barang->harga_barang * $data_barang->jumlah_barang, $data_barang->linkToNota->ppn, $data_barang->linkToNota->pph), 2, ',', '.');
+//        $column['total_penerimaan'] = number_format(FormulaPajak::formula_pajak($data_barang->harga_barang * $data_barang->jumlah_barang, $data_barang->linkToNota->ppn, $data_barang->linkToNota->pph), 2, ',', '.');
+        $column['total_penerimaan'] = number_format(FormulaPajak::formula_pajak($data_barang->harga_barang * self::$stok_penerimaan, $data_barang->linkToNota->ppn, $data_barang->linkToNota->pph), 2, ',', '.');
         $column['total_pengeluaran'] = number_format(0, 2, ',', '.');
         $column['id_barang'] = $data_barang->id_gudang;
         $column['total'] = number_format(FormulaPajak::formula_pajak(self::$total, $data_barang->linkToNota->ppn, $data_barang->linkToNota->pph), 2, ',', '.');
@@ -146,8 +151,12 @@ class MutasiBarang
 
         foreach ($data_barang->linkToDistribusi as $data_barang_keluar) {
             $column = self::colomMutasi();
+            $column['no_urut'] = '';
             $column['sisa'] = number_format(self::$stok, 2, ',', '.');
             $column['tgl'] = $data_barang_keluar->tgl_kerluar;
+            $column['uraian'] = 'Pengambilan oleh ' . $data_barang_keluar->linkToBidang->nama_bidang;
+            $column['no_nota'] = '';
+            $column['bukti'] = '';
             $column['nm_barang'] = $data_barang->linkToGudang->nama_barang;
             $column['masuk'] = 0;
             $column['keluar'] = number_format($data_barang_keluar->jumlah_keluar, 2, ',', '.');
@@ -166,29 +175,10 @@ class MutasiBarang
             if (empty(self::$tgl_awal) && empty(self::$tgl_akhir)) {
                 self::$row[] = $column;
             } else {
-//                if (strtotime($data_barang_keluar->linkToPembelian->linkToNota->tgl_beli) >= strtotime(self::$tgl_awal) && strtotime($data_barang_keluar->tgl_kerluar) <= strtotime(self::$tgl_akhir)) {
-                    self::$row[] = $column;
-//                }
+                self::$row[] = $column;
             }
 
         }
-    }
-
-    # Menghitung stok terakhir dari pembelian sebelum tahun aktif
-    private static function cek_stok_terakhir($array)
-    {
-        $stok = DB::select('SELECT jumlah_barang,total_beli, 
-                            (jumlah_barang-SUM(tbl_pengeluaran_barang.jumlah_keluar)) as stok, 
-                            (jumlah_barang-SUM(tbl_pengeluaran_barang.jumlah_keluar)) * harga_barang as sisa_uang 
-                            FROM tbl_pembelian_barang 
-                            JOIN tbl_nota on tbl_nota.id = tbl_pembelian_barang.id_nota
-                            JOIN tbl_pengeluaran_barang on tbl_pengeluaran_barang.id_pembelian = tbl_pembelian_barang.id 
-                            WHERE tbl_nota.id_thn_anggaran !=' . $array['id_thn_anggaran'] . ' and tbl_nota.id_instansi =' . $array['id_instansi'] . '
-                            and tbl_pembelian_barang.id_gudang = ' . $array['id_gudang'] . '
-                            GROUP by tbl_pembelian_barang.id'
-        );
-
-        return $stok;
     }
 
     # Sediakan wadah untuk menyimpan semua data yang akan diberikan

@@ -29,7 +29,7 @@
                 <div class="card card-success">
                     <div class="card-body">
                         <a href="{{ url($menu_laporan['url']) }}">
-                            <p  style="font-size: 50px; text-align: center"><i class="fas fa-book-open fa-md"></i></p>
+                            <p  style="font-size: 50px; text-align: center"><i class="{{ $menu_laporan['icon'] }} "></i></p>
                             <p style="text-align: center">{{ $menu_laporan['title'] }}</p>
                         </a>
                     </div>

@@ -19,9 +19,6 @@
             padding: 3px;
         }
 
-
-
-
         @page {
             size: legal landscape;
             margin-left: 100px;

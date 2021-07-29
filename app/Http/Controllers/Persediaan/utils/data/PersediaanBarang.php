@@ -36,7 +36,7 @@ class PersediaanBarang
             # Data nota pembelian berdasarkan tahun anggaran
             if(!empty(self::$tgl_awal) && !empty(self::$tgl_akhir)){
                 $nota = Nota::whereBetween('tgl_beli',[self::$tgl_awal,self::$tgl_akhir])->where('id_thn_anggaran', $ndata->id)
-                    ->where('id_instansi', Session::get('id_instansi'))->get();
+                    ->where('id_instansi', Session::get('id_instansi'))->orderBy('tgl_beli','asc')->get();
             }else{
                 $nota = Nota::all()->where('id_thn_anggaran', $ndata->id)
                     ->where('id_instansi', Session::get('id_instansi'))->sortBy('tgl_beli');

@@ -7,6 +7,9 @@ use App\Model\Persediaan\JenisTbk as jenis_tbk;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\Persediaan\utils\StatusPenerimaan;
+use App\Model\Persediaan\ConnectJenisTBKdanKlasfikasi;
+use App\Model\Persediaan\KlasifikasiTBK;
+
 class JenisTbk extends Controller
 {
     //
@@ -21,11 +24,10 @@ class JenisTbk extends Controller
         });
     }
 
-
-
     public function index(){
         $data = [
             'data'=> jenis_tbk::all()->where('id_instansi', Session::get('id_instansi')),
+            'klasifikasi_tbk'=>KlasifikasiTBK::all()->sortBy('nama'),
             'status_pembayaran'=> $this->status_pembayaran
         ];
         return view('Persediaan.Jenis_tbk.content', $data);
@@ -95,6 +97,28 @@ class JenisTbk extends Controller
             return redirect('jenis-tbk')->with('message_success','Anda telah menghapus TBK dengan Kode:'. $model->kode);
         }else{
             return redirect('jenis-tbk')->with('message_error','Gagal telah menghapus TBK');
+        }
+    }
+
+    public function hubungkan_ke_klasifikasi(Request $req){
+        $this->validate($req,[
+            'index'=> 'required',
+            'value'=> 'required',
+            '_token'=> 'required'
+        ]);
+
+        $model = ConnectJenisTBKdanKlasfikasi::updateOrCreate(
+            [
+                'id_jenis_tbk'=>$req->index
+            ],
+            [
+                'id_klasifikasi_tbk'=>$req->value
+            ]
+        );
+        if($model->save()){
+            return response()->json(['msg'=>'Already procced','status'=>true]);
+        }else{
+            return response()->json(['msg'=>'Error to procced','status'=>false]);
         }
     }
 }

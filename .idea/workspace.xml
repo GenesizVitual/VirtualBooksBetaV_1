@@ -1,22 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="64868ef3-a8b4-45c4-a01c-4c5d46228421" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Berwenang.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Berwenang.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Nota.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Nota.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Gudang.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Gudang.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PembelianBarang.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PembelianBarang.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Stok.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Stok.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_opname/export_excel.blade.php" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_opname/export_excel.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_opname/print.blade.php" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_opname/print.blade.php" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/BukuPersediaan.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PersediaanBarangPakaiHabis.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/RincianPersediaanBarang.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/Jenis_Tbk/js.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/buku_persediaan/content.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/buku_persediaan/export_excel.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/buku_persediaan/js.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/buku_persediaan/print.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_barang_persediaan/content.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_barang_persediaan/export_excel.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_barang_persediaan/print.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_persediaan_barang/content.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_persediaan_barang/export_excel.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_persediaan_barang/js.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_persediaan_barang/print.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/share_report/content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/VirtualBooksBetaV_1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/VirtualBooksBetaV_1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Instansi.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Instansi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/JenisTbk.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/JenisTbk.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/MasterLaporan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/MasterLaporan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/SettingReport.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/SettingReport.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PersediaanBarang.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PersediaanBarang.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Stok.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Stok.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Persediaan/JenisTbk.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Persediaan/JenisTbk.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/action.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/action.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/Jenis_Tbk/content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/Jenis_Tbk/content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/daftar_nota/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/daftar_nota/print.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/master_laporan/content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/master_laporan/content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/persediaan_barang/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/persediaan_barang/print.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/another_route/users_route.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/another_route/users_route.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -259,62 +289,8 @@
       </favorite_root>
     </favorites_list>
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="users_route.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/another_route/users_route.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PembelianBarang.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/PembelianBarang.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="152" column="40" lean-forward="true" selection-start-line="152" selection-start-column="40" selection-end-line="152" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PembelianBarang.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PembelianBarang.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="64" column="59" lean-forward="false" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
-              <folding>
-                <marker date="1625978757687" expanded="true" signature="1165:2374" ph="select * fro... *" />
-                <marker date="1625978757687" expanded="true" signature="1217:2295" ph="SELECT d.*,i... tgl_beli" />
-                <marker date="1625978757687" expanded="true" signature="1405:2163" ph="SELECT tbl_n... tbl_jenis_tbk" />
-                <marker date="1625978757687" expanded="true" signature="2910:2928" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MutasiBarang.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2108">
-              <caret line="72" column="59" lean-forward="false" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="59" />
-              <folding>
-                <marker date="1625558384993" expanded="true" signature="8882:9696" ph="SELECT jumla... tbl_pembelian_barang" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>menu</find>
-      <find>pic</find>
-      <find>berita</find>
       <find>tgl_expired</find>
       <find>bagian</find>
       <find>TBK_</find>
@@ -342,6 +318,9 @@
       <find>load-data-pembe</find>
       <find>data_pembelian_barang_perbarang</find>
       <find>load-data-pembelian</find>
+      <find>distribusi</find>
+      <find>prop</find>
+      <find>share_report</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -357,20 +336,25 @@
       </map>
     </option>
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="4f2913f6-93fd-40d7-b75e-9dd583057ab5" />
+        <option name="url" value="https://github.com/GenesizVitual/VirtualBooksBetaV_1.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/Persediaan/Surat/SuratPengeluaran/template_surat.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/rekapitulasi_persediaan/print.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/rekapitulasi_persediaan_perjenis_tbk/print.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/persediaan_barang/print.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/pengeluaran_barang/print.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/barang_pakai_habis/print.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/semester/print.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/kartu_barang/print.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/webview/component/sidebar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Persediaan/component_admin/sidebar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Persediaan/component_admin/Lsidebar.blade.php" />
         <option value="$PROJECT_DIR$/storage/framework/views/436321cd6c0953ae26e8b7585c0cc36e2b721244.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/Pembelian/content.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/Pembelian/js/table.blade.php" />
@@ -382,7 +366,6 @@
         <option value="$PROJECT_DIR$/resources/views/Persediaan/pembayaran_sedang_d_konfirmasi.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/penentuan_konfirmasi_pembayaran.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/User.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Instansi.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/PembelianBarang.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Distribusi.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Dashboard.php" />
@@ -392,25 +375,37 @@
         <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/pengeluaran_barang/content.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/button_distribusi.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/content.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/mutasi_barang/print.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/RevisiMutasi.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Stok.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Nota.php" />
-        <option value="$PROJECT_DIR$/routes/another_route/users_route.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Distribusi.php" />
-        <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/action.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/js.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/modal.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/tab/content.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Nota.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Stok.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Gudang.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_barang/print.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_opname/export_excel.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Berwenang.php" />
         <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_opname/print.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PembelianBarang.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PersediaanBarang.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Gudang.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/mutasi_barang/print.blade.php" />
+        <option value="$PROJECT_DIR$/storage/framework/views/00c9dcc1fe558cd25044f3befdf808b8ccad7c08.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/action.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/master_laporan/content.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/SettingReport.php" />
+        <option value="$PROJECT_DIR$/routes/another_route/admin_route.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Apps/KabKota.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Instansi.php" />
+        <option value="$PROJECT_DIR$/database/migrations/Persediaan/2021_07_28_062245_tbl_share_report.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/MasterLaporan.php" />
+        <option value="$PROJECT_DIR$/routes/another_route/users_route.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Persediaan/ShareReport.php" />
+        <option value="$PROJECT_DIR$/app/Model/Persediaan/ShareReportModel.php" />
+        <option value="$PROJECT_DIR$/resources/views/Persediaan/laporan/share_report/content.blade.php" />
       </list>
     </option>
   </component>
@@ -420,13 +415,131 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2162" />
-    <option name="y" value="-8" />
-    <option name="width" value="697" />
-    <option name="height" value="735" />
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/vendor/mpdf/mpdf" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
+      <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/ezyang/htmlpurifier" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/maennchen/zipstream-php" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/php-enum" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/hashids/hashids" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/matrix" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/maatwebsite/excel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+    </include_path>
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectId" id="1vvGlSCUaUBpMjXGhP3sdm956j1" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
@@ -468,6 +581,37 @@
               <item name="VirtualBooksBetaV_1" type="b2602c69:ProjectViewProjectNode" />
               <item name="VirtualBooksBetaV_1" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="VirtualBooksBetaV_1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VirtualBooksBetaV_1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="VirtualBooksBetaV_1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VirtualBooksBetaV_1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="VirtualBooksBetaV_1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VirtualBooksBetaV_1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="VirtualBooksBetaV_1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VirtualBooksBetaV_1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="VirtualBooksBetaV_1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VirtualBooksBetaV_1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Persediaan" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -476,21 +620,27 @@
       <pane id="Scratches" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="SearchEverywhereHistoryKey" value="Instansi&#9;null&#9;null&#10;user&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;master&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/MasterLaporan.php&#10;Master&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/MasterLaporan.php&#10;pengelua&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/PengeluaranBarang.php&#10;Persediaan&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/PersediaanBarang.php&#10;Distribu&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;Dis&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/Distribusi.php&#10;admin&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/admin_route.php&#10;Pembelian&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/PembelianBarang.php&#10;data_pembelian_barang_perbarang&#9;null&#9;null&#10;mutasi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php&#10;Mutas&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php&#10;Stok&#9;null&#9;null&#10;Gudang&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/Gudang.php&#10;Distri&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;distribusi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;rout&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/admin_route.php&#10;PembelianBaran&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/PembelianBarang.php&#10;Nota&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Nota.php&#10;stok&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Stok.php&#10;sto&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/Stok.php&#10;pembeli&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/PembelianBarang.php&#10;lapora&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/MasterLaporan.php&#10;Mutasi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php&#10;distr&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;MasterLapora&#9;null&#9;null&#10;we&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/web.php&#10;Distr&#9;null&#9;null&#10;web&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/web.php&#10;User&#9;null&#9;null&#10;Langga&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/resources/views/Persediaan/penentuan_paket_langganan.blade.php&#10;lang&#9;null&#9;null&#10;Sura&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/SuratPermintaan.php&#10;Pembelia&#9;null&#9;null&#10;Do&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Apps/Dokumentasi.php&#10;Login&#9;null&#9;null&#10;route&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;Tahun&#9;null&#9;null&#10;ro&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;MasterL&#9;null&#9;null&#10;Invoi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Invoice.php&#10;Users&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;langganan&#9;null&#9;null&#10;SuratPesanan&#9;null&#9;null&#10;SuratPesana&#9;null&#9;null&#10;Pembe&#9;null&#9;null&#10;Berwe&#9;null&#9;null&#10;Gu&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Gudang.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="Pembelian&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/PembelianBarang.php&#10;data_pembelian_barang_perbarang&#9;null&#9;null&#10;mutasi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php&#10;Mutas&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php&#10;Stok&#9;null&#9;null&#10;Gudang&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/Gudang.php&#10;Master&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/MasterLaporan.php&#10;Distri&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;distribusi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;admin&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/admin_route.php&#10;rout&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/admin_route.php&#10;PembelianBaran&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/PembelianBarang.php&#10;Nota&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Nota.php&#10;stok&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Stok.php&#10;sto&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/Stok.php&#10;user&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;pembeli&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/PembelianBarang.php&#10;lapora&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/MasterLaporan.php&#10;Mutasi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php&#10;Dis&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;distr&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;MasterLapora&#9;null&#9;null&#10;we&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/web.php&#10;Distr&#9;null&#9;null&#10;web&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/web.php&#10;Instansi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Instansi.php&#10;User&#9;null&#9;null&#10;Langga&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/resources/views/Persediaan/penentuan_paket_langganan.blade.php&#10;lang&#9;null&#9;null&#10;Sura&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/SuratPermintaan.php&#10;Pembelia&#9;null&#9;null&#10;Do&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Apps/Dokumentasi.php&#10;Login&#9;null&#9;null&#10;route&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;Tahun&#9;null&#9;null&#10;ro&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;MasterL&#9;null&#9;null&#10;Invoi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Invoice.php&#10;Users&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;langganan&#9;null&#9;null&#10;SuratPesanan&#9;null&#9;null&#10;SuratPesana&#9;null&#9;null&#10;Pembe&#9;null&#9;null&#10;Berwe&#9;null&#9;null&#10;Gu&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Gudang.php&#10;Penyedi&#9;null&#9;null&#10;Jenis&#9;null&#9;null&#10;TahunA&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/TahunAnggaran.php&#10;Bidang&#9;null&#9;null&#10;Use&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/User.php" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/Persediaan/laporan" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xampp173\htdocs\VirtualBooksBetaV_1\resources\views\Persediaan\laporan" />
+      <recent name="E:\xampp173\htdocs\VirtualBooksBetaV_1\resources\views\Persediaan\laporan\rincian_persediaan_barang" />
+      <recent name="E:\xampp173\htdocs\VirtualBooksBetaV_1\resources\views\Persediaan\laporan\share_report" />
       <recent name="E:\xampp173\htdocs\VirtualBooksBetaV_1\resources\views\Admin\dokumen" />
       <recent name="E:\xampp173\htdocs\VirtualBooksBetaV_1\resources\views\webview" />
-      <recent name="E:\xampp173\htdocs\VirtualBooksBetaV_1\public\front\images" />
-      <recent name="E:\xampp173\htdocs\VirtualBooksBetaV_1\resources\views\Persediaan\Donasi" />
-      <recent name="E:\xampp173\htdocs\VirtualBooksBetaV_1\resources\views\Persediaan\laporan\stok_opname" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\xampp173\htdocs\VirtualBooksBetaV_1\resources\views\Persediaan\Invoice" />
@@ -499,21 +649,18 @@
       <recent name="E:\xampp\htdocs\VirtualBooksBetaV_1\resources\views\Persediaan" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="''jenis-tbk-link-klasifikasi" />
     </option>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
+  <component name="RunManager">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -754,14 +901,34 @@
       <workItem from="1625656537893" duration="939000" />
       <workItem from="1625686774180" duration="9836000" />
       <workItem from="1625793796353" duration="43000" />
-      <workItem from="1625978237484" duration="847000" />
-    </task>
-    <task id="LOCAL-00036" summary="- Laporan Print preview dan print Rekapitulasi Persediaan Perjenis TBK">
-      <created>1603297669684</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1603297669684</updated>
+      <workItem from="1625978237484" duration="873000" />
+      <workItem from="1626053757052" duration="44000" />
+      <workItem from="1626237765836" duration="16000" />
+      <workItem from="1626244273322" duration="16000" />
+      <workItem from="1626335863845" duration="7000" />
+      <workItem from="1626401938979" duration="1312000" />
+      <workItem from="1626513095363" duration="1351000" />
+      <workItem from="1626591122833" duration="15000" />
+      <workItem from="1626837534742" duration="772000" />
+      <workItem from="1627340145733" duration="2396000" />
+      <workItem from="1627373858479" duration="29000" />
+      <workItem from="1627392522590" duration="2844000" />
+      <workItem from="1627423309287" duration="4146000" />
+      <workItem from="1627435319615" duration="593000" />
+      <workItem from="1627436015146" duration="53000" />
+      <workItem from="1627436141596" duration="66000" />
+      <workItem from="1627436249237" duration="246000" />
+      <workItem from="1627436616386" duration="125000" />
+      <workItem from="1627437511004" duration="12000" />
+      <workItem from="1627437573565" duration="559000" />
+      <workItem from="1627446828767" duration="38000" />
+      <workItem from="1627450229101" duration="4087000" />
+      <workItem from="1627456180165" duration="8034000" />
+      <workItem from="1627467750532" duration="2562000" />
+      <workItem from="1627475375338" duration="9263000" />
+      <workItem from="1627508811924" duration="5814000" />
+      <workItem from="1627520815150" duration="10689000" />
+      <workItem from="1627533259844" duration="8311000" />
     </task>
     <task id="LOCAL-00037" summary="- Laporan Print preview dan print Penerimaan Barang Selesai">
       <created>1603445362316</created>
@@ -1099,11 +1266,18 @@
       <option name="project" value="LOCAL" />
       <updated>1625644136393</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="- Revisi gudang, stok, pengeluaran, laporan mutasi">
+      <created>1625979105270</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1625979105271</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="928650000" />
+    <option name="totallyTimeSpent" value="941624000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1115,9 +1289,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17397882" sideWeight="0.3407155" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20726173" sideWeight="0.3407155" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21217105" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38134205" sideWeight="0.50907713" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1139,36 +1314,19 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- Penyesuian" />
@@ -1198,139 +1356,7 @@
     <MESSAGE value="- Revisi gudang, stok, pengeluaran, laporan mutasi" />
     <option name="LAST_COMMIT_MESSAGE" value="- Revisi gudang, stok, pengeluaran, laporan mutasi" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="14" />
-    </breakpoint-manager>
-    <watches-manager />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/penentuan_konfirmasi_pembayaran.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="89" column="196" lean-forward="false" selection-start-line="89" selection-start-column="196" selection-end-line="89" selection-end-column="196" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/penentuan_paket_langganan.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="69" column="68" lean-forward="true" selection-start-line="69" selection-start-column="68" selection-end-line="69" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/Instansi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="114" column="58" lean-forward="false" selection-start-line="114" selection-start-column="58" selection-end-line="114" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="172" column="48" lean-forward="false" selection-start-line="172" selection-start-column="48" selection-end-line="172" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Distribusi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="55" column="12" lean-forward="false" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PengeluaranBarang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2856">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PersediaanBarang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="77" column="118" lean-forward="false" selection-start-line="77" selection-start-column="118" selection-end-line="77" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="68" column="141" lean-forward="true" selection-start-line="68" selection-start-column="141" selection-end-line="68" selection-end-column="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Nota/Js/daftar_js.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="77" column="21" lean-forward="false" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/FormulaPajak.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="22" column="18" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Nota/content.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="128" column="66" lean-forward="false" selection-start-line="128" selection-start-column="66" selection-end-line="128" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-134">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Gudang/content.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="128" column="15" lean-forward="false" selection-start-line="120" selection-start-column="11" selection-end-line="128" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/laporan/pengeluaran_barang/content.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-168">
-          <caret line="248" column="34" lean-forward="true" selection-start-line="248" selection-start-column="34" selection-end-line="248" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/framework/views/00c9dcc1fe558cd25044f3befdf808b8ccad7c08.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/framework/views/436321cd6c0953ae26e8b7585c0cc36e2b721244.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="120" column="7" lean-forward="false" selection-start-line="120" selection-start-column="7" selection-end-line="120" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/button_distribusi.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/form_table_distribusi.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/button_gudang.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1349,13 +1375,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2346">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/laporan/mutasi_barang/print.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="90" column="53" lean-forward="false" selection-start-line="90" selection-start-column="41" selection-end-line="90" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1387,13 +1406,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Persediaan/Nota.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/Stok.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -1408,52 +1420,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/another_route/admin_route.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="18" column="51" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/StatusPenerimaan.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="37" column="45" lean-forward="false" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/action.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/modal.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="4" column="112" lean-forward="false" selection-start-line="4" selection-start-column="102" selection-end-line="4" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/content.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/Distribusi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="81" column="31" lean-forward="true" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/MasterLaporan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="802" column="35" lean-forward="false" selection-start-line="802" selection-start-column="35" selection-end-line="802" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -1471,20 +1441,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Persediaan/Distribusi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="11" column="132" lean-forward="false" selection-start-line="11" selection-start-column="119" selection-end-line="11" selection-end-column="132" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2108">
           <caret line="72" column="59" lean-forward="false" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="59" />
-          <folding>
-            <marker date="1625558384993" expanded="true" signature="8882:9696" ph="SELECT jumla... tbl_pembelian_barang" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1492,13 +1452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="85" column="49" lean-forward="false" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Gudang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="53" column="72" lean-forward="false" selection-start-line="53" selection-start-column="72" selection-end-line="53" selection-end-column="72" />
         </state>
       </provider>
     </entry>
@@ -1513,7 +1466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2754">
           <caret line="84" column="33" lean-forward="false" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1528,51 +1480,623 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1614">
           <caret line="98" column="27" lean-forward="true" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/another_route/users_route.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/PembelianBarang.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="152" column="40" lean-forward="true" selection-start-line="152" selection-start-column="40" selection-end-line="152" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/tab/content.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2786">
-          <caret line="148" column="243" lean-forward="false" selection-start-line="148" selection-start-column="243" selection-end-line="148" selection-end-column="243" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/js.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2448">
-          <caret line="147" column="0" lean-forward="true" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="4930">
+          <caret line="152" column="40" lean-forward="false" selection-start-line="152" selection-start-column="40" selection-end-line="152" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PembelianBarang.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1768">
+          <caret line="61" column="44" lean-forward="false" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Persediaan/Distribusi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="11" column="132" lean-forward="false" selection-start-line="11" selection-start-column="119" selection-end-line="11" selection-end-column="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PengeluaranBarang.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="64" column="59" lean-forward="false" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
+          <caret line="42" column="85" lean-forward="true" selection-start-line="42" selection-start-column="85" selection-end-line="42" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PersediaanBarang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="41" column="47" lean-forward="false" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Gudang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="45" column="111" lean-forward="true" selection-start-line="45" selection-start-column="111" selection-end-line="45" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/758e4050/5419884a-2ffa-47a1-b998-5433ec7de360/virtual_book.jurnal_transaksi_akun">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/Distribusi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/5419884a-2ffa-47a1-b998-5433ec7de360">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>5419884a-2ffa-47a1-b998-5433ec7de360</OriginalElement>
+          <nodes>
+            <node x="640.125" y="201.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.kotaprov</node>
+            <node x="2076.75" y="680.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.jurnal_transaksi_akun</node>
+            <node x="1085.0" y="906.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_jenis_tbk</node>
+            <node x="579.0" y="1217.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_spj</node>
+            <node x="844.5" y="446.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_instansi</node>
+            <node x="53.211807359307386" y="1936.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_surat_pengeluaran</node>
+            <node x="1439.4372402597403" y="1980.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_pengeluaran_barang</node>
+            <node x="1409.0" y="884.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_penyedia</node>
+            <node x="516.625" y="490.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.bisnis</node>
+            <node x="662.125" y="0.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.provinsi</node>
+            <node x="1672.5" y="1228.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_gudang</node>
+            <node x="528.5" y="1583.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_tbk</node>
+            <node x="214.0" y="2385.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.migrations</node>
+            <node x="706.9997402597404" y="2057.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_tbk_nota</node>
+            <node x="0.0" y="2385.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.failed_jobs</node>
+            <node x="1193.0" y="1162.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_nota</node>
+            <node x="2237.0" y="0.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.buku_besar</node>
+            <node x="1982.0" y="424.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.jurnal</node>
+            <node x="849.0" y="917.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_thn_anggaran</node>
+            <node x="956.0" y="1506.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_surat_pesanan</node>
+            <node x="118.39999999999998" y="1484.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_surat_permintaan_barang</node>
+            <node x="285.5" y="1228.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_bidang</node>
+            <node x="1527.0" y="1495.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_pembelian_barang</node>
+            <node x="2141.5" y="190.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.akun</node>
+            <node x="879.125" y="168.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.users</node>
+            <node x="2206.0" y="424.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.akun_transaksi</node>
+            <node x="49.5" y="1206.0">5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_berwenang</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_surat_pengeluaran" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_bidang">
+              <point x="112.91666666666663" y="-202.0" />
+              <point x="301.628474025974" y="1916.0" />
+              <point x="393.2998376623377" y="1916.0" />
+              <point x="0.0" y="70.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_pembelian_barang" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_instansi">
+              <point x="32.375" y="-180.0" />
+              <point x="1688.875" y="1464.0" />
+              <point x="1662.0" y="1464.0" />
+              <point x="1662.0" y="824.0" />
+              <point x="1031.1666666666667" y="824.0" />
+              <point x="74.66666666666674" y="169.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_surat_pengeluaran" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_instansi">
+              <point x="-112.91666666666663" y="-202.0" />
+              <point x="75.79514069264076" y="1916.0" />
+              <point x="39.0" y="1916.0" />
+              <point x="39.0" y="804.0" />
+              <point x="851.9666666666667" y="804.0" />
+              <point x="-104.5333333333333" y="169.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_surat_permintaan_barang" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_berwenang">
+              <point x="-97.60000000000002" y="-191.0" />
+              <point x="142.79999999999995" y="1464.0" />
+              <point x="157.0" y="1464.0" />
+              <point x="0.0" y="92.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.akun" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.buku_besar">
+              <point x="0.0" y="-92.0" />
+              <point x="2260.0" y="165.0" />
+              <point x="2280.75" y="165.0" />
+              <point x="-43.75" y="70.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_gudang" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_instansi">
+              <point x="0.0" y="-70.0" />
+              <point x="1780.0" y="814.0" />
+              <point x="1046.1" y="814.0" />
+              <point x="89.59999999999991" y="169.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.bisnis" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.provinsi">
+              <point x="-58.25" y="-125.0" />
+              <point x="574.875" y="421.0" />
+              <point x="600.5" y="421.0" />
+              <point x="600.5" y="143.0" />
+              <point x="691.2916666666666" y="143.0" />
+              <point x="-58.33333333333337" y="59.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_thn_anggaran" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_instansi">
+              <point x="0.0" y="-81.0" />
+              <point x="0.0" y="169.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_pengeluaran_barang" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_gudang">
+              <point x="58.0" y="-158.0" />
+              <point x="1613.4372402597403" y="1906.0" />
+              <point x="1833.75" y="1906.0" />
+              <point x="53.75" y="70.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_instansi" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.kotaprov">
+              <point x="-74.66666666666674" y="-169.0" />
+              <point x="881.8333333333333" y="421.0" />
+              <point x="804.375" y="421.0" />
+              <point x="54.75" y="81.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_pembelian_barang" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_gudang">
+              <point x="97.125" y="-180.0" />
+              <point x="1753.625" y="1464.0" />
+              <point x="1726.25" y="1464.0" />
+              <point x="-53.75" y="70.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_pengeluaran_barang" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_bidang">
+              <point x="-96.66666666666674" y="-158.0" />
+              <point x="1458.7705735930736" y="1906.0" />
+              <point x="518.0" y="1906.0" />
+              <point x="518.0" y="1464.0" />
+              <point x="464.6666666666667" y="1464.0" />
+              <point x="71.66666666666669" y="70.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_pengeluaran_barang" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_penyedia">
+              <point x="-19.333333333333258" y="-158.0" />
+              <point x="1536.103906926407" y="1916.0" />
+              <point x="1516.5" y="1916.0" />
+              <point x="0.0" y="114.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_spj" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_thn_anggaran">
+              <point x="62.25" y="-81.0" />
+              <point x="765.75" y="1137.0" />
+              <point x="902.75" y="1137.0" />
+              <point x="-53.75" y="81.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_bidang" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_instansi">
+              <point x="0.0" y="-70.0" />
+              <point x="393.0" y="834.0" />
+              <point x="896.7666666666667" y="834.0" />
+              <point x="-59.73333333333335" y="169.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_surat_pesanan" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_berwenang">
+              <point x="-79.0" y="-169.0" />
+              <point x="995.5" y="1454.0" />
+              <point x="249.1428571428571" y="1454.0" />
+              <point x="92.14285714285714" y="92.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_pengeluaran_barang" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_nota">
+              <point x="-58.0" y="-158.0" />
+              <point x="1497.4372402597403" y="1896.0" />
+              <point x="1311.0332359307358" y="1896.0" />
+              <point x="1311.0332359307358" y="1464.0" />
+              <point x="1348.625" y="1464.0" />
+              <point x="31.125" y="136.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.jurnal_transaksi_akun" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.jurnal">
+              <point x="-63.75" y="-125.0" />
+              <point x="2140.5" y="655.0" />
+              <point x="2084.0" y="655.0" />
+              <point x="0.0" y="103.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_tbk" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_spj">
+              <point x="53.75" y="-92.0" />
+              <point x="689.75" y="1464.0" />
+              <point x="703.5" y="1464.0" />
+              <point x="0.0" y="81.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_berwenang" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_instansi">
+              <point x="0.0" y="-92.0" />
+              <point x="157.0" y="814.0" />
+              <point x="866.9" y="814.0" />
+              <point x="-89.60000000000002" y="169.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_surat_permintaan_barang" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_bidang">
+              <point x="97.60000000000002" y="-191.0" />
+              <point x="338.0" y="1464.0" />
+              <point x="321.33333333333326" y="1464.0" />
+              <point x="-71.66666666666669" y="70.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_surat_pengeluaran" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_berwenang">
+              <point x="22.58333333333337" y="-202.0" />
+              <point x="211.29514069264076" y="1886.0" />
+              <point x="82.84999999999991" y="1886.0" />
+              <point x="82.84999999999991" y="1464.0" />
+              <point x="126.28571428571422" y="1464.0" />
+              <point x="-30.71428571428578" y="92.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_surat_pengeluaran" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_surat_permintaan_barang">
+              <point x="67.75" y="-202.0" />
+              <point x="256.4618073593074" y="1916.0" />
+              <point x="240.39999999999998" y="1916.0" />
+              <point x="0.0" y="191.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.akun_transaksi" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.akun">
+              <point x="-59.25" y="-103.0" />
+              <point x="2265.25" y="399.0" />
+              <point x="2260.0" y="399.0" />
+              <point x="0.0" y="92.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_penyedia" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_instansi">
+              <point x="0.0" y="-114.0" />
+              <point x="1516.5" y="834.0" />
+              <point x="1016.2333333333333" y="834.0" />
+              <point x="59.73333333333335" y="169.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_surat_pesanan" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_nota">
+              <point x="79.0" y="-169.0" />
+              <point x="1153.5" y="1464.0" />
+              <point x="1224.125" y="1464.0" />
+              <point x="-93.375" y="136.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_tbk" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_instansi">
+              <point x="-53.75" y="-92.0" />
+              <point x="582.25" y="1464.0" />
+              <point x="568.5" y="1464.0" />
+              <point x="568.5" y="844.0" />
+              <point x="911.7" y="844.0" />
+              <point x="-44.799999999999955" y="169.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_pengeluaran_barang" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_pembelian_barang">
+              <point x="19.333333333333258" y="-158.0" />
+              <point x="1574.7705735930736" y="1896.0" />
+              <point x="1656.5" y="1896.0" />
+              <point x="0.0" y="180.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_surat_permintaan_barang" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_instansi">
+              <point x="48.80000000000007" y="-191.0" />
+              <point x="289.20000000000005" y="1464.0" />
+              <point x="275.0" y="1464.0" />
+              <point x="275.0" y="824.0" />
+              <point x="881.8333333333334" y="824.0" />
+              <point x="-74.66666666666663" y="169.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_tbk_nota" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_instansi">
+              <point x="0.0" y="-81.0" />
+              <point x="814.4997402597404" y="1916.0" />
+              <point x="838.5" y="1916.0" />
+              <point x="838.5" y="864.0" />
+              <point x="941.5666666666667" y="864.0" />
+              <point x="-14.93333333333328" y="169.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_jenis_tbk" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_instansi">
+              <point x="0.0" y="-92.0" />
+              <point x="1236.5" y="854.0" />
+              <point x="986.3666666666667" y="854.0" />
+              <point x="29.866666666666674" y="169.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_instansi" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.provinsi">
+              <point x="74.66666666666674" y="-169.0" />
+              <point x="1031.1666666666667" y="421.0" />
+              <point x="1108.625" y="421.0" />
+              <point x="1108.625" y="143.0" />
+              <point x="807.9583333333334" y="143.0" />
+              <point x="58.33333333333337" y="59.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_pengeluaran_barang" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_instansi">
+              <point x="96.66666666666674" y="-158.0" />
+              <point x="1652.103906926407" y="1916.0" />
+              <point x="1898.0" y="1916.0" />
+              <point x="1898.0" y="804.0" />
+              <point x="1061.0333333333333" y="804.0" />
+              <point x="104.5333333333333" y="169.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_nota" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_thn_anggaran">
+              <point x="-93.375" y="-136.0" />
+              <point x="1224.125" y="1137.0" />
+              <point x="1010.25" y="1137.0" />
+              <point x="53.75" y="81.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_instansi" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.users">
+              <point x="0.0" y="-169.0" />
+              <point x="956.5" y="421.0" />
+              <point x="988.625" y="421.0" />
+              <point x="0.0" y="114.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_tbk_nota" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_tbk">
+              <point x="-71.66666666666674" y="-81.0" />
+              <point x="742.8330735930737" y="1916.0" />
+              <point x="636.0" y="1916.0" />
+              <point x="0.0" y="92.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.jurnal_transaksi_akun" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.akun_transaksi">
+              <point x="63.75" y="-125.0" />
+              <point x="2268.0" y="655.0" />
+              <point x="2324.5" y="655.0" />
+              <point x="0.0" y="103.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_pembelian_barang" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_penyedia">
+              <point x="-32.375" y="-180.0" />
+              <point x="1624.125" y="1464.0" />
+              <point x="1651.0" y="1464.0" />
+              <point x="1651.0" y="1137.0" />
+              <point x="1588.1666666666667" y="1137.0" />
+              <point x="71.66666666666674" y="114.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.bisnis" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.kotaprov">
+              <point x="58.25" y="-125.0" />
+              <point x="691.375" y="421.0" />
+              <point x="694.875" y="421.0" />
+              <point x="-54.75" y="81.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_pembelian_barang" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_nota">
+              <point x="-97.125" y="-180.0" />
+              <point x="1559.375" y="1464.0" />
+              <point x="1410.875" y="1464.0" />
+              <point x="93.375" y="136.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_spj" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_instansi">
+              <point x="-62.25" y="-81.0" />
+              <point x="641.25" y="854.0" />
+              <point x="926.6333333333333" y="854.0" />
+              <point x="-29.866666666666674" y="169.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_nota" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_jenis_tbk">
+              <point x="-31.125" y="-136.0" />
+              <point x="1286.375" y="1137.0" />
+              <point x="1236.5" y="1137.0" />
+              <point x="0.0" y="92.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.akun_transaksi" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.buku_besar">
+              <point x="59.25" y="-103.0" />
+              <point x="2383.75" y="399.0" />
+              <point x="2389.0" y="399.0" />
+              <point x="2389.0" y="165.0" />
+              <point x="2368.25" y="165.0" />
+              <point x="43.75" y="70.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_tbk_nota" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_nota">
+              <point x="71.66666666666663" y="-81.0" />
+              <point x="886.166406926407" y="1916.0" />
+              <point x="1300.0332359307358" y="1916.0" />
+              <point x="1300.0332359307358" y="1464.0" />
+              <point x="1286.375" y="1464.0" />
+              <point x="-31.125" y="136.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_nota" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_instansi">
+              <point x="31.125" y="-136.0" />
+              <point x="1348.625" y="1137.0" />
+              <point x="1398.5" y="1137.0" />
+              <point x="1398.5" y="844.0" />
+              <point x="1001.3" y="844.0" />
+              <point x="44.799999999999955" y="169.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_nota" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_penyedia">
+              <point x="93.375" y="-136.0" />
+              <point x="1410.875" y="1137.0" />
+              <point x="1444.8333333333333" y="1137.0" />
+              <point x="-71.66666666666674" y="114.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.kotaprov" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.provinsi">
+              <point x="0.0" y="-81.0" />
+              <point x="0.0" y="59.0" />
+            </edge>
+            <edge source="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_surat_pesanan" target="5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_instansi">
+              <point x="0.0" y="-169.0" />
+              <point x="1074.5" y="864.0" />
+              <point x="971.4333333333334" y="864.0" />
+              <point x="14.933333333333394" y="169.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.4165952473704714" x="1343.0" y="1079.0" />
+          <SelectedNodes>
+            <node>5419884a-2ffa-47a1-b998-5433ec7de360.TABLE:virtual_book.tbl_berwenang</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/laporan/mutasi_barang/print.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="114" column="16" lean-forward="true" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/TbkNota/content.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="73" column="52" lean-forward="false" selection-start-line="73" selection-start-column="52" selection-end-line="73" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/js.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4998">
+          <caret line="147" column="0" lean-forward="true" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/00c9dcc1fe558cd25044f3befdf808b8ccad7c08.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="6" column="34" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="106" selection-end-column="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/action.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="116" column="0" lean-forward="true" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/modal.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="58" column="104" lean-forward="false" selection-start-line="58" selection-start-column="91" selection-end-line="58" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/tab/content.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="238" column="11" lean-forward="true" selection-start-line="238" selection-start-column="11" selection-end-line="238" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/content.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2416">
+          <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/base.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-612">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/laporan/master_laporan/content.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="31" column="114" lean-forward="false" selection-start-line="31" selection-start-column="114" selection-end-line="31" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/laporan/semester/content.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/SettingReport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Apps/Provinsi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/another_route/admin_route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Apps/KotaProv.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="11" column="54" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Apps/KabKota.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/Instansi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/Persediaan/2021_07_28_062245_tbl_share_report.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="18" column="54" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Persediaan/Nota.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/MasterLaporan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
-            <marker date="1625978757687" expanded="true" signature="1165:2374" ph="select * fro... *" />
-            <marker date="1625978757687" expanded="true" signature="1217:2295" ph="SELECT d.*,i... tgl_beli" />
-            <marker date="1625978757687" expanded="true" signature="1405:2163" ph="SELECT tbl_n... tbl_jenis_tbk" />
-            <marker date="1625978757687" expanded="true" signature="2910:2928" ph="..." />
+            <element signature="e#51#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/another_route/users_route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="87" column="56" lean-forward="false" selection-start-line="87" selection-start-column="56" selection-end-line="87" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Persediaan/ShareReportModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Persediaan/ShareReport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/laporan/share_report/content.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="189" column="28" lean-forward="false" selection-start-line="189" selection-start-column="28" selection-end-line="189" selection-end-column="28" />
+          <folding>
+            <element signature="e#6247#6584#0#HTML" expanded="false" />
+            <element signature="e#6295#6535#0#HTML" expanded="false" />
+            <element signature="e#7905#8242#0#HTML" expanded="false" />
+            <element signature="e#7953#8193#0#HTML" expanded="false" />
+            <marker date="1627427451068" expanded="true" signature="6754:12133" ph="..." />
+            <marker date="1627427451068" expanded="true" signature="10068:12111" ph="..." />
+            <marker date="1627427451068" expanded="true" signature="10081:10417" ph="..." />
+            <marker date="1627427451068" expanded="true" signature="10754:11310" ph="..." />
+            <marker date="1627427451068" expanded="true" signature="10768:11293" ph="..." />
+            <marker date="1627427451068" expanded="true" signature="10977:11275" ph="..." />
+            <marker date="1627427451068" expanded="true" signature="11054:11200" ph="..." />
+            <marker date="1627427451068" expanded="true" signature="11342:12100" ph="..." />
+            <marker date="1627427451068" expanded="true" signature="11356:12083" ph="..." />
+            <marker date="1627427451068" expanded="true" signature="11775:12065" ph="..." />
+            <marker date="1627427451068" expanded="true" signature="11846:11995" ph="..." />
           </folding>
         </state>
       </provider>
