@@ -1,10 +1,7 @@
-<!doctype html>
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <title>Cetak Daftar Nota</title>
     <style>
         table.table_nota{
@@ -22,7 +19,8 @@
             size: legal landscape;
             margin-left: 100px;
         }
-
+        @media print {
+        }
     </style>
 
 </head>
@@ -91,6 +89,7 @@
         </table>
         <br>
         <br>
+        <div style="height: 300px;">
         <table style="width: 100%;">
             <tr>
                 <td colspan="2" style="text-align: right;font-weight: bold; height: 80px">{{ $instansi->BelongsToKabupatenKot->nama }}, {{ $tgl_cetak }}</td>
@@ -104,6 +103,7 @@
                 <td style="height: 100px"><label style="text-decoration: underline">{{ $berwenang_2->nama }}</label> <br> {{ $berwenang_2->nip }}</td>
             </tr>
         </table>
+        </div>
     </div>
 </body>
 </html>

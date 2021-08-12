@@ -20,6 +20,12 @@
         @page {
             size: legal landscape;
             margin-left: 100px;
+            margin-top: 5cm;
+            margin-bottom: 5cm;
+        }
+        @media print {
+            body {margin-top: 10mm; margin-bottom: 50mm;
+                margin-left: 0mm; margin-right: 0mm}
         }
 
     </style>
@@ -68,7 +74,7 @@
                 <th >Tota Harga</th>
                 <th >Untuk</th>
                 <th >Tanggal Penyerahan</th>
-                <th > Keterangan</th>
+                <th style="width: 50px"> Keterangan</th>
             </tr>
             <tr>
                 <th >1</th>

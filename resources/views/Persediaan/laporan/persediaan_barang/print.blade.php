@@ -22,8 +22,13 @@
         @page {
             size: legal landscape;
             margin-left: 100px;
+            margin-top: 5cm;
+            margin-bottom: 5cm;
         }
-
+        @media print {
+            body {margin-top: 10mm; margin-bottom: 50mm;
+                margin-left: 0mm; margin-right: 0mm}
+        }
     </style>
 
 </head>
@@ -70,7 +75,7 @@
                 <th rowspan="2">Harga Satuan</th>
                 <th rowspan="2">Jumlah Harga</th>
                 <th colspan="2">Bukti Penerimaan <br> BA. Penerimaan</th>
-                <th rowspan="2"> Keterangan</th>
+                <th rowspan="2" width="50"> Keterangan</th>
             </tr>
             <tr>
                 <th>Nomor</th>

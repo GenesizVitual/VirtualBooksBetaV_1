@@ -21,6 +21,12 @@
         @page {
             size: legal landscape;
             margin-left: 100px;
+            margin-top: 5cm;
+            margin-bottom: 5cm;
+        }
+        @media print {
+            body {margin-top: 10mm; margin-bottom: 50mm;
+                margin-left: 0mm; margin-right: 0mm}
         }
 
     </style>
@@ -112,7 +118,7 @@
                         <td >{{ $data_pengeluaran['bidang'] }}</td>
                         <td >{{ $data_pengeluaran['banyak_barang'] }}</td>
                         <td style="text-align: center;">{{ date('d-m-Y', strtotime($data_pengeluaran['tanggal_penyerahan'])) }}</td>
-                        <td >{{ $data_pengeluaran['keterangan'] }}</td>
+                        <td style="width: 50px;">{{ $data_pengeluaran['keterangan'] }}</td>
                     </tr>
                 @endforeach
             @endif

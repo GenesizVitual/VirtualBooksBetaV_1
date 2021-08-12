@@ -4,40 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64868ef3-a8b4-45c4-a01c-4c5d46228421" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/BukuPersediaan.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PersediaanBarangPakaiHabis.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/RincianPersediaanBarang.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/Jenis_Tbk/js.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/buku_persediaan/content.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/buku_persediaan/export_excel.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/buku_persediaan/js.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/buku_persediaan/print.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_barang_persediaan/content.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_barang_persediaan/export_excel.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_barang_persediaan/print.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_persediaan_barang/content.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_persediaan_barang/export_excel.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_persediaan_barang/js.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_persediaan_barang/print.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/share_report/content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/VirtualBooksBetaV_1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/VirtualBooksBetaV_1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="64868ef3-a8b4-45c4-a01c-4c5d46228421" name="Default" comment="- Revisi Mutasi, revisi laporan stok opname, penambahan button loading di distribusi.&#10;- penambahan share laporan, klasifikasi jenis tbk&#10;- penambahan laporan: laporan persediaan barang fifo, Laporan Rincian Persediaan barang, Laporan Rincian Persediaan barang pakai habis">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Instansi.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Instansi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/JenisTbk.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/JenisTbk.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/MasterLaporan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/MasterLaporan.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/SettingReport.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/SettingReport.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PersediaanBarang.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PersediaanBarang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Stok.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Stok.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Persediaan/JenisTbk.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Persediaan/JenisTbk.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/action.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/js/action.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/Jenis_Tbk/content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/Jenis_Tbk/content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/barang_pakai_habis/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/barang_pakai_habis/print.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/buku_persediaan/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/buku_persediaan/print.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/daftar_nota/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/daftar_nota/print.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/master_laporan/content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/master_laporan/content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/kartu_barang/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/kartu_barang/print.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/mutasi_barang/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/mutasi_barang/print.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/pengeluaran_barang/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/pengeluaran_barang/print.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/persediaan_barang/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/persediaan_barang/print.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/another_route/users_route.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/another_route/users_route.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rekapitulasi_persediaan/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rekapitulasi_persediaan/print.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rekapitulasi_persediaan_perjenis_tbk/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rekapitulasi_persediaan_perjenis_tbk/print.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_barang_persediaan/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_barang_persediaan/print.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_persediaan_barang/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_persediaan_barang/print.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/semester/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/semester/print.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_barang/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_barang/print.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_opname/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_opname/print.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -625,6 +607,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SearchEverywhereHistoryKey" value="Instansi&#9;null&#9;null&#10;user&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;master&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/MasterLaporan.php&#10;Master&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/MasterLaporan.php&#10;pengelua&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/PengeluaranBarang.php&#10;Persediaan&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/PersediaanBarang.php&#10;Distribu&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;Dis&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/Distribusi.php&#10;admin&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/admin_route.php&#10;Pembelian&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/PembelianBarang.php&#10;data_pembelian_barang_perbarang&#9;null&#9;null&#10;mutasi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php&#10;Mutas&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php&#10;Stok&#9;null&#9;null&#10;Gudang&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/Gudang.php&#10;Distri&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;distribusi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;rout&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/admin_route.php&#10;PembelianBaran&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/PembelianBarang.php&#10;Nota&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Nota.php&#10;stok&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Stok.php&#10;sto&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/Stok.php&#10;pembeli&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/PembelianBarang.php&#10;lapora&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/MasterLaporan.php&#10;Mutasi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php&#10;distr&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;MasterLapora&#9;null&#9;null&#10;we&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/web.php&#10;Distr&#9;null&#9;null&#10;web&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/web.php&#10;User&#9;null&#9;null&#10;Langga&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/resources/views/Persediaan/penentuan_paket_langganan.blade.php&#10;lang&#9;null&#9;null&#10;Sura&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/SuratPermintaan.php&#10;Pembelia&#9;null&#9;null&#10;Do&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Apps/Dokumentasi.php&#10;Login&#9;null&#9;null&#10;route&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;Tahun&#9;null&#9;null&#10;ro&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;MasterL&#9;null&#9;null&#10;Invoi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Invoice.php&#10;Users&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;langganan&#9;null&#9;null&#10;SuratPesanan&#9;null&#9;null&#10;SuratPesana&#9;null&#9;null&#10;Pembe&#9;null&#9;null&#10;Berwe&#9;null&#9;null&#10;Gu&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Gudang.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
@@ -928,14 +912,13 @@
       <workItem from="1627475375338" duration="9263000" />
       <workItem from="1627508811924" duration="5814000" />
       <workItem from="1627520815150" duration="10689000" />
-      <workItem from="1627533259844" duration="8311000" />
-    </task>
-    <task id="LOCAL-00037" summary="- Laporan Print preview dan print Penerimaan Barang Selesai">
-      <created>1603445362316</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1603445362316</updated>
+      <workItem from="1627533259844" duration="8721000" />
+      <workItem from="1627562893440" duration="85000" />
+      <workItem from="1627978015696" duration="5292000" />
+      <workItem from="1628054846569" duration="608000" />
+      <workItem from="1628055511876" duration="67000" />
+      <workItem from="1628113311411" duration="55000" />
+      <workItem from="1628737035514" duration="750000" />
     </task>
     <task id="LOCAL-00038" summary="- Laporan Print preview dan print Barang Pakai Habis Selesai">
       <created>1603527044599</created>
@@ -1273,7 +1256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625979105271</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="- Revisi Mutasi, revisi laporan stok opname, penambahan button loading di distribusi.&#10;- penambahan share laporan, klasifikasi jenis tbk&#10;- penambahan laporan: laporan persediaan barang fifo, Laporan Rincian Persediaan barang, Laporan Rincian Persediaan barang pakai habis">
+      <created>1627542189142</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1627542189143</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1329,7 +1319,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- Penyesuian" />
     <MESSAGE value="- Penambahan Pembayaran" />
     <MESSAGE value="- Penambahan Pembayaran, Perbaikan nota" />
     <MESSAGE value="- Penambahan Status Aktif dan admin" />
@@ -1354,7 +1343,8 @@
     <MESSAGE value="- Revisi Tampilan stok dan stok opname" />
     <MESSAGE value="- Revisi Tampilan stok dan stok opname 2" />
     <MESSAGE value="- Revisi gudang, stok, pengeluaran, laporan mutasi" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Revisi gudang, stok, pengeluaran, laporan mutasi" />
+    <MESSAGE value="- Revisi Mutasi, revisi laporan stok opname, penambahan button loading di distribusi.&#10;- penambahan share laporan, klasifikasi jenis tbk&#10;- penambahan laporan: laporan persediaan barang fifo, Laporan Rincian Persediaan barang, Laporan Rincian Persediaan barang pakai habis" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Revisi Mutasi, revisi laporan stok opname, penambahan button loading di distribusi.&#10;- penambahan share laporan, klasifikasi jenis tbk&#10;- penambahan laporan: laporan persediaan barang fifo, Laporan Rincian Persediaan barang, Laporan Rincian Persediaan barang pakai habis" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/resources/views/Persediaan/Distribusi/partial/button_gudang.blade.php">
