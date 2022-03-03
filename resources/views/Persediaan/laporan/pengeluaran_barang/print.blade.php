@@ -9,27 +9,17 @@
     <style>
         table.table_nota{
             width: 100%;
+
             border: 1px solid black;
             border-collapse: collapse;
         }
         #customers td, #customers th {
             border: 1px solid #0f0f0f;
             padding: 3px;
+            height: 20px;
         }
-
-        @page {
-            size: legal landscape;
-            margin-left: 100px;
-            margin-top: 5cm;
-            margin-bottom: 5cm;
-        }
-        @media print {
-            body {margin-top: 10mm; margin-bottom: 50mm;
-                margin-left: 0mm; margin-right: 0mm}
-        }
-
     </style>
-
+    <link rel="stylesheet" href="{{ asset('persediaan/page_print.css') }}">
 </head>
 <body style="background-color: white">
     <div style="background-color: white; padding: 1%">
@@ -78,14 +68,14 @@
             </tr>
             <tr>
                 <th >1</th>
-                <th >2</th>
+                <th width="80">2</th>
                 <th >3</th>
                 <th >4</th>
                 <th >5</th>
                 <th >6</th>
                 <th >7</th>
-                <th >8</th>
-                <th >9</th>
+                <th width="130">8</th>
+                <th width="80">9</th>
                 <th >10</th>
             </tr>
             </thead>
@@ -100,8 +90,8 @@
                         <td style="text-align: center;">{{ $no2++ }}</td>
                         <td >{{ $data_pengeluaran['nama_barang'] }}</td>
                         <td style="text-align: center;">{{ $data_pengeluaran['banyak_barang'] }}</td>
-                        <td >{{ $data_pengeluaran['harga_satuan'] }}</td>
-                        <td >{{ $data_pengeluaran['jumlah_harga'] }}</td>
+                        <td >{{ number_format($data_pengeluaran['harga_satuan'],0,'.',',') }}</td>
+                        <td >{{ number_format($data_pengeluaran['jumlah_harga'],0,'.',',') }}</td>
                         <td >{{ $data_pengeluaran['bidang'] }}</td>
                         <td style="text-align: center;">{{ date('d-m-Y', strtotime($data_pengeluaran['tanggal_penyerahan'])) }}</td>
                         <td >{{ $data_pengeluaran['keterangan'] }}</td>

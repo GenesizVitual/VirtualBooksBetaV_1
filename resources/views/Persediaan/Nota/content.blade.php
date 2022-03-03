@@ -139,7 +139,7 @@
                                                 </div>
                                                 <div class="col-sm-12" style="padding-bottom: 3px">
                                                     <button type="submit" class="btn btn-primary btn-sm float-right"><i
-                                                                class="fa fa-check"></i></button>
+                                                                class="fa fa-check"></i> Simpan</button>
                                                 </div>
                                             </form>
                                         </div>

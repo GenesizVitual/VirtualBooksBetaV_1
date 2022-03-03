@@ -16,7 +16,7 @@ class AdminAuth
     public function handle($request, Closure $next)
     {
         if(empty(Session::get('id_admin'))){
-            return redirect('login')->with('alert','Anda tidak memiliki hak akses.');
+            return redirect('admin')->with('alert','Anda tidak memiliki hak akses.');
         }
         return $next($request);
     }

@@ -150,7 +150,7 @@
                 <li class="nav-item">
                     <a href="{{ url('distribusi') }}" class="nav-link @if(Session::get('menu')=='distribusi') active @endif">
                         <i class="nav-icon fas fa fa-share"></i>
-                        <p>Distribusi Barang</p>
+                        <p>Pengeluaran barang</p>
                     </a>
                 </li>
 

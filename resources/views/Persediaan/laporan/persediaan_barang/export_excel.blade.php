@@ -77,9 +77,9 @@
                         <td style="width: 20px;">{{ $data_persediaan['nomor_faktur'] }}</td>
                         <td style="width: 20px;">{{ $data_persediaan['tgl_faktur'] }}</td>
                         <td style="width: 20px;">{{ $data_persediaan['nama_barang'] }}</td>
-                        <td style="width: 20px;">{{ number_format($data_persediaan['banyak_barang'],2,',','.') }}</td>
-                        <td style="width: 20px;">{{ number_format($data_persediaan['harga_barang'],2,',','.') }}</td>
-                        <td style="width: 20px;">{{ number_format($data_persediaan['jumlah_harga'],2,',','.') }}</td>
+                        <td style="width: 20px;">{{ number_format($data_persediaan['banyak_barang'],0,'','') }}</td>
+                        <td style="width: 20px;">{{ number_format($data_persediaan['harga_barang'],0,'','') }}</td>
+                        <td style="width: 20px;">{{ number_format($data_persediaan['jumlah_harga'],0,'','') }}</td>
                         <td style="width: 20px;">{{ $data_persediaan['BA_nomor'] }}</td>
                         <td style="width: 20px;">{{ $data_persediaan['BA_tanggal'] }}</td>
                         <td style="width: 20px;">{{ $data_persediaan['keterangan'] }}</td>

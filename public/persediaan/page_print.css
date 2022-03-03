@@ -1,0 +1,11 @@
+@page {
+    size: 216mm 356mm landscape;
+    /*margin: 25mm 25mm 25mm 25mm;*/
+    margin-left: 4cm;
+    margin-right: 3cm;
+    margin-top: 3cm;
+    margin-bottom: 2.8cm;
+}
+table.table_header {
+    page-break-after: avoid;
+}

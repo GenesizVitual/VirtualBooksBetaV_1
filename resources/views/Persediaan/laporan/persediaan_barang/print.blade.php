@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cetak Buku Penerimaan Barang</title>
     <style>
+        body{
+            margin: 0px;
+        }
         table.table_nota{
             width: 100%;
             border: 1px solid black;
@@ -19,22 +22,12 @@
             padding: 3px;
         }
 
-        @page {
-            size: legal landscape;
-            margin-left: 100px;
-            margin-top: 5cm;
-            margin-bottom: 5cm;
-        }
-        @media print {
-            body {margin-top: 10mm; margin-bottom: 50mm;
-                margin-left: 0mm; margin-right: 0mm}
-        }
     </style>
-
+    <link rel="stylesheet" href="{{ asset('persediaan/page_print.css') }}">
 </head>
 <body style="background-color: white">
     <div style="background-color: white; padding: 1%">
-        <table style="width: 100%; text-align: center">
+        <table style="width: 12in; text-align: center">
             <tr>
                 <td rowspan="4" style="width: 100px"><img src="{{ asset('persediaan/logo/'.$instansi->logo) }}" alt="Logo tidak ditemukan" style="width:100px;height: 110px; margin-left: 20px"></td>
                 <td><h2>BUKU PENERIMAAN BARANG</h2></td>
@@ -63,7 +56,7 @@
             </tr>
         </table>
         <br>
-        <table class="table_nota" role="grid" id="customers" border="1">
+        <table style="width: 100%; " class="table_nota" role="grid" id="customers" border="1">
             <thead>
             <tr>
                 <th rowspan="2" style="width: 30px">#</th>
@@ -121,7 +114,7 @@
         </table>
         <br>
         <br>
-        <table style="width: 100%;">
+        <table style="width: 12in;">
             <tr>
                 <td colspan="2" style="text-align: right;font-weight: bold; height: 80px">{{ $instansi->BelongsToKabupatenKot->nama }}, {{ $tgl_cetak }}</td>
             </tr>

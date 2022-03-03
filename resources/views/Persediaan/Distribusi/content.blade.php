@@ -2,7 +2,8 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('admin_asset/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('admin_asset/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
+    <link rel="stylesheet"
+          href="{{ asset('admin_asset/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
 @stop
 
 @section('content')
@@ -21,7 +22,8 @@
                 </div><!-- /.col -->
                 <div class="col-sm-12">
                     <p style="color: darkgray">
-                        Halaman distribusi berfungsi untuk membagikan barang ke bidang/bagian. metode pengeluaran pada aplikasi ini menggunakan metode FIFO (First In Firts Out).
+                        Halaman distribusi berfungsi untuk membagikan barang ke bidang/bagian. metode pengeluaran pada
+                        aplikasi ini menggunakan metode FIFO (First In Firts Out).
                         Aturan FIFO akan bekerja hanya untuk pengeluaran barang rutin saja.
                     </p>
                 </div>
@@ -31,40 +33,98 @@
     <!-- /.content-header -->
     <!-- Main content -->
     <div class="content" style="margin-top: 0px">
-        <div class="container-fluid" >
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card card-success">
-                        <div class="card-header">
-                            <h3 class="card-title">Daftar Barang</h3>
-                        </div>
+                    <div class="card">
+                        <div class="card-header d-flex p-0">
+                            <h3 class="card-title p-3">Panel Distribusi Barang</h3>
+                            <ul class="nav nav-pills ml-auto p-2">
+                                <li class="nav-item"><a
+                                        class="nav-link  @if(Session::get('tab-menu')=='daftar-barang') active @endif"
+                                        href="{{url('distribusi')}}">Daftar
+                                        Barang</a></li>
+                                <li class="nav-item"><a
+                                        class="nav-link @if(Session::get('tab-menu')=='barang-keluar') active @endif"
+                                        href="{{url('barang-keluar')}}">Barang
+                                        Keluar</a></li>
+                            </ul>
+                        </div><!-- /.card-header -->
                         <div class="card-body">
-                            <table id="table-data" class="table table-bordered table-striped">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Nama Barang</th>
-                                    <th>Stok Barang</th>
-                                    {{--<th>Harga Barang</th>--}}
-                                    <th>Aksi</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach($data as $barang)
+                            <div class="tab-content">
+                                <div class="tab-pane @if(Session::get('tab-menu')=='daftar-barang') active @endif"
+                                     id="tab_1">
+                                    <table @if(Session::get('tab-menu')=='daftar-barang') id="table-data"
+                                           @endif class="table table-bordered table-striped">
+                                        <thead>
                                         <tr>
-                                            <td>{{ $barang['no'] }}</td>
-                                            <td>{{ $barang['nama_barang'] }}</td>
-                                            <td>{{ $barang['stok_barang'] }}</td>
-                                            {{--<td>{{ $barang['harga_barang'] }}</td>--}}
-                                            <td>{!! $barang['aksi'] !!}</td>
+                                            <th>#</th>
+                                            <th>Nama Barang</th>
+                                            <th>Stok Barang</th>
+                                            {{--<th>Harga Barang</th>--}}
+                                            <th>Aksi</th>
                                         </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
+                                        </thead>
+                                        <tbody>
+                                        @if(!empty($data))
+                                            @foreach($data as $barang)
+                                                <tr>
+                                                    <td>{{ $barang['no'] }}</td>
+                                                    <td>{{ $barang['nama_barang'] }}</td>
+                                                    <td>{{ $barang['stok_barang'] }}</td>
+                                                    {{--<td>{{ $barang['harga_barang'] }}</td>--}}
+                                                    <td>{!! $barang['aksi'] !!}</td>
+                                                </tr>
+                                            @endforeach
+                                        @endif
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.tab-pane -->
+                                <div class="tab-pane @if(Session::get('tab-menu')=='barang-keluar') active @endif"
+                                     id="tab_2">
+                                    <table @if(Session::get('tab-menu')=='barang-keluar')id="table-data"
+                                           @endif class="table table-bordered table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Tanggal keluar</th>
+                                            <th>Nama Barang</th>
+                                            <th>Jumlah Keluar</th>
+                                            <th>Bidang</th>
+                                            <th>Aksi</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @if(!empty($data_pengeluaran))
+                                            @foreach($data_pengeluaran as $barang)
+                                                <tr>
+                                                    <td>{{ $barang['no'] }}</td>
+                                                    <td>{{ $barang['tgl_keluar'] }}</td>
+                                                    <td>{{ $barang['nm_barang'] }}</td>
+                                                    <td>{{ $barang['jumlah_keluar'] }}</td>
+                                                    <td>{{ $barang['bidang'] }}</td>
+                                                    <td>
+                                                        <form action="{{ url('hapus-barang-keluar/'.$barang['id']) }}"
+                                                              method="post">
+                                                            @method('delete')
+                                                            {{ csrf_field() }}
+                                                            {!! $barang['aksi'] !!}
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        @endif
+                                        </tbody>
+                                    </table>
+                                </div>
 
+                            </div>
+                            <!-- /.tab-content -->
+                        </div><!-- /.card-body -->
                     </div>
                 </div>
+
             </div>
         </div><!-- /.container-fluid -->
     </div>

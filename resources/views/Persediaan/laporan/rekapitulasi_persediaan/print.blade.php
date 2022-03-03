@@ -17,19 +17,8 @@
             padding: 3px;
         }
 
-        @page {
-            size: legal landscape;
-            margin-left: 100px;
-            margin-top: 5cm;
-            margin-bottom: 5cm;
-        }
-        @media print {
-            body {margin-top: 10mm; margin-bottom: 50mm;
-                margin-left: 0mm; margin-right: 0mm}
-        }
-
     </style>
-
+    <link rel="stylesheet" href="{{ asset('persediaan/page_print.css') }}">
 </head>
 <body style="background-color: white">
     <div style="background-color: white; padding: 1%">
@@ -98,7 +87,7 @@
                         @endforeach
                         <tr>
                             <th colspan="7">Total </th>
-                            <th colspan="7" style="text-align: left;padding: 5px;">{{ number_format($saldo,2,',','.') }} </th>
+                            <th colspan="7" style="text-align: left;padding: 5px;">{{ number_format($saldo,0,'.',',') }} </th>
                         </tr>
                     @endif
                 @endforeach

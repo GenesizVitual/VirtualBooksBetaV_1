@@ -191,7 +191,7 @@
                                                     @endforeach
                                                     <tr>
                                                         <th colspan="7">Total </th>
-                                                        <th colspan="7">{{ number_format($saldo,2,',','.') }} </th>
+                                                        <th colspan="7">{{ number_format($saldo,0,'.',',') }} </th>
                                                     </tr>
                                                 @endif
                                             @endforeach

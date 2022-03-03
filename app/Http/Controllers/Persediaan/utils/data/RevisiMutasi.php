@@ -88,37 +88,37 @@ class RevisiMutasi
         $column = self::colomMutasi();
         $column['tgl'] = $data_barang->linkToNota->tgl_beli;
         $column['nm_barang'] = $data_barang->linkToGudang->nama_barang;
-        $column['masuk'] = number_format($data_barang->jumlah_barang, 2, ',', '.');
+        $column['masuk'] = number_format($data_barang->jumlah_barang, 2, '.', ',');
         $column['keluar'] = 0;
-        $column['sisa'] = number_format(self::$stok, 2, ',', '.');
+        $column['sisa'] = number_format(self::$stok, 2, '.', ',');
         self::$stok += $data_barang->jumlah_barang;
-        $column['sisa_pp'] = number_format(self::$stok, 2, ',', '.');
+        $column['sisa_pp'] = number_format(self::$stok, 2, '.', ',');
         $column['satuan'] = $data_barang->satuan;
-        $column['harga_beli'] = number_format(FormulaPajak::formula_pajak($data_barang->harga_barang, $data_barang->linkToNota->ppn, $data_barang->linkToNota->pph), 2, ',', '.');
-        $column['total_penerimaan'] = number_format(FormulaPajak::formula_pajak($data_barang->harga_barang * $data_barang->jumlah_barang, $data_barang->linkToNota->ppn, $data_barang->linkToNota->pph), 2, ',', '.');
-        $column['total_pengeluaran'] = number_format(0, 2, ',', '.');
+        $column['harga_beli'] = number_format(FormulaPajak::formula_pajak($data_barang->harga_barang, $data_barang->linkToNota->ppn, $data_barang->linkToNota->pph), 2, '.', ',');
+        $column['total_penerimaan'] = number_format(FormulaPajak::formula_pajak($data_barang->harga_barang * $data_barang->jumlah_barang, $data_barang->linkToNota->ppn, $data_barang->linkToNota->pph), 2, '.', ',');
+        $column['total_pengeluaran'] = number_format(0, 2, '.', ',');
         $column['id_barang'] = $data_barang->id_gudang;
-        $column['total'] = number_format(FormulaPajak::formula_pajak(self::$total, $data_barang->linkToNota->ppn, $data_barang->linkToNota->pph), 2, ',', '.');
+        $column['total'] = number_format(FormulaPajak::formula_pajak(self::$total, $data_barang->linkToNota->ppn, $data_barang->linkToNota->pph), 2, '.', ',');
         self::$total += ($data_barang->harga_barang * $data_barang->jumlah_barang);
-        $column['total_akhir'] = number_format(FormulaPajak::formula_pajak(self::$total, $data_barang->linkToNota->ppn, $data_barang->linkToNota->pph), 2, ',', '.');
+        $column['total_akhir'] = number_format(FormulaPajak::formula_pajak(self::$total, $data_barang->linkToNota->ppn, $data_barang->linkToNota->pph), 2, '.', ',');
         self::$row[] = $column;
 
         foreach ($data_barang->linkToDistribusi as $data_barang_keluar) {
             $column2 = self::colomMutasi();
-            $column2['sisa'] = number_format(self::$stok, 2, ',', '.');
+            $column2['sisa'] = number_format(self::$stok, 2, '.', ',');
             $column['tgl'] = $data_barang_keluar->tgl_kerluar;
             $column['nm_barang'] = $data_barang->linkToGudang->nama_barang;
             $column['masuk'] = 0;
-            $column['keluar'] = number_format($data_barang_keluar->jumlah_keluar, 2, ',', '.');
+            $column['keluar'] = number_format($data_barang_keluar->jumlah_keluar, 2, '.', ',');
             self::$stok -= $data_barang_keluar->jumlah_keluar;
             $column['satuan'] = $data_barang->satuan;
-            $column['harga_beli'] = number_format(FormulaPajak::formula_pajak($data_barang->harga_barang, $data_barang->linkToNota->ppn, $data_barang->linkToNota->pph), 2, ',', '.');
-            $column['total_penerimaan'] = number_format(0, 2, ',', '.');
-            $column['total_pengeluaran'] = number_format(FormulaPajak::formula_pajak($data_barang->harga_barang * $data_barang_keluar->jumlah_keluar, $data_barang->linkToNota->ppn, $data_barang->linkToNota->pph), 2, ',', '.');
-            $column['sisa_pp'] = number_format(self::$stok, 2, ',', '.');
-            $column['total'] = number_format(FormulaPajak::formula_pajak(self::$total, $data_barang->linkToNota->ppn, $data_barang->linkToNota->pph), 2, ',', '.');
+            $column['harga_beli'] = number_format(FormulaPajak::formula_pajak($data_barang->harga_barang, $data_barang->linkToNota->ppn, $data_barang->linkToNota->pph), 2, '.', ',');
+            $column['total_penerimaan'] = number_format(0, 2, '.', ',');
+            $column['total_pengeluaran'] = number_format(FormulaPajak::formula_pajak($data_barang->harga_barang * $data_barang_keluar->jumlah_keluar, $data_barang->linkToNota->ppn, $data_barang->linkToNota->pph), 2, '.', ',');
+            $column['sisa_pp'] = number_format(self::$stok, 2, '.', ',');
+            $column['total'] = number_format(FormulaPajak::formula_pajak(self::$total, $data_barang->linkToNota->ppn, $data_barang->linkToNota->pph), 2, '.', ',');
             self::$total -= ($data_barang->harga_barang * $data_barang_keluar->jumlah_keluar);
-            $column['total_akhir'] = number_format(FormulaPajak::formula_pajak(self::$total, $data_barang->linkToNota->ppn, $data_barang->linkToNota->pph), 2, ',', '.');
+            $column['total_akhir'] = number_format(FormulaPajak::formula_pajak(self::$total, $data_barang->linkToNota->ppn, $data_barang->linkToNota->pph), 2, '.', ',');
             $column['id_barang'] = $data_barang_keluar->id_gudang;
 
             #Menyeleksi Tanggal Barang Beli dan Tanggal Barang Keluar

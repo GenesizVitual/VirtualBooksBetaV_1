@@ -62,6 +62,8 @@ Route::middleware([CheckLevel::class, CheckUser::class])->group(function () {
     Route::put('load-data-pembelian','Persediaan\PembelianBarang@data_pembelian_barang_perbarang');
 
     Route::resource('distribusi','Persediaan\Distribusi');
+    Route::delete('hapus-barang-keluar/{id}','Persediaan\Distribusi@destroy_barang_keluar');
+    Route::get('barang-keluar','Persediaan\Distribusi@barang_keluar');
     Route::get('bagikan-barang/{id}','Persediaan\Distribusi@show');
     Route::put('form-data-distribusi','Persediaan\Distribusi@form_distribusi');
     Route::put('edit-data-distribusi','Persediaan\Distribusi@edit');

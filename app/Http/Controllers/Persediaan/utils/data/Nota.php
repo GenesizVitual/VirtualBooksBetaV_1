@@ -70,10 +70,10 @@ class Nota
             $column[] = date('d-m-Y', strtotime($data_nota->tgl_beli));
             $column[] = RenderParsial::render_partial('Persediaan.Nota.partial.button',$data_nota, self::$status);
             $column[] = $data_nota->linkToPenyedia->penyedia;
-            $column[] = number_format($cek_pajak->total_ppn,2,',','.');
-            $column[] = number_format($cek_pajak->total_pph,2,',','.');
-            $column[] = number_format($cek_pajak->total,2,',','.');
-            $column[] = number_format($total_sesudah_pajak,2,',','.');
+            $column[] = number_format($cek_pajak->total_ppn,0,'.',',');
+            $column[] = number_format($cek_pajak->total_pph,0,'.',',');
+            $column[] = number_format($cek_pajak->total,0,'.',',');
+            $column[] = number_format($total_sesudah_pajak,0,'.',',');
             $column[] = $data_nota->id;
             $column[] = $data_nota->linkToTbkNota;
             $column[] = $total_sesudah_pajak;
@@ -101,10 +101,10 @@ class Nota
                 $column = array();
                 $column[] = $no++;
                 $column[] = $data->linkToGudang->nama_barang;
-                $column[] = number_format($data->jumlah_barang,2,',','.');
+                $column[] = number_format($data->jumlah_barang,0,'.',',');
                 $column[] = $data->satuan;
-                $column[] = number_format($data->harga_barang,2,',','.');
-                $column[] = number_format($data->total_beli,2,',','.');
+                $column[] = number_format($data->harga_barang,0,'.',',');
+                $column[] = number_format($data->total_beli,0,'.',',');
                 $column[] = $data->keterangan;
                 $column[] = RenderParsial::render_partial('Persediaan.Pembelian.partial.button', $data);
                 $row[] = $column;
@@ -117,11 +117,11 @@ class Nota
 
 
             return array('data'=> $row,
-                'total_beli'=>number_format(($data_pajak->total+$data_pajak->total_ppn+$data_pajak->total_pph),2,',','.'),
-                'ppn'=>number_format($data_pajak->total_ppn,2,',','.'),
-                'pph'=>number_format($data_pajak->total_pph,2,',','.'),
-                'total_pajak'=>number_format($data_pajak->total_ppn+$data_pajak->total_pph,2,',','.'),
-                'total_sebelum_bajak'=>number_format($data_pajak->total,2,',','.'),
+                'total_beli'=>number_format(($data_pajak->total+$data_pajak->total_ppn+$data_pajak->total_pph),0,'.',','),
+                'ppn'=>number_format($data_pajak->total_ppn,0,'.',','),
+                'pph'=>number_format($data_pajak->total_pph,0,'.',','),
+                'total_pajak'=>number_format($data_pajak->total_ppn+$data_pajak->total_pph,0,'.',','),
+                'total_sebelum_bajak'=>number_format($data_pajak->total,0,'.',','),
                 'terbilang'=> self::terbilang(($data_pajak->total+$data_pajak->total_ppn+$data_pajak->total_pph)),
                 'nota'=> $nota
             );

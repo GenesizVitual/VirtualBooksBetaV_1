@@ -177,7 +177,7 @@ return [
         Maatwebsite\Excel\ExcelServiceProvider::class,
         App\Providers\SecurityServiceProvider::class,
 //        Barryvdh\DomPDF\ServiceProvider::class,
-
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
     ],
 
     /*
@@ -232,6 +232,8 @@ return [
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'EnDec'=> App\Helpers\EnDecIDs::class,
 //        'PDF' => Barryvdh\DomPDF\Facade::class,
+        'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
+        'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class,
     ],
 
 ];

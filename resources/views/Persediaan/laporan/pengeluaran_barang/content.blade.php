@@ -206,8 +206,8 @@
                                                         <td >{{ $no2++ }}</td>
                                                         <td >{{ $data_pengeluaran['nama_barang'] }}</td>
                                                         <td >{{ $data_pengeluaran['banyak_barang'] }}</td>
-                                                        <td >{{ $data_pengeluaran['harga_satuan'] }}</td>
-                                                        <td >{{ $data_pengeluaran['jumlah_harga'] }}</td>
+                                                        <td >{{ number_format($data_pengeluaran['harga_satuan'],0,'.',',') }}</td>
+                                                        <td >{{ number_format($data_pengeluaran['jumlah_harga'],0,'.',',') }}</td>
                                                         <td >{{ $data_pengeluaran['bidang'] }}</td>
                                                         <td >{{ date('d-m-Y', strtotime($data_pengeluaran['tanggal_penyerahan'])) }}</td>
                                                         <td >{{ $data_pengeluaran['keterangan'] }}</td>

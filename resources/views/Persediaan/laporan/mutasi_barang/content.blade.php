@@ -218,15 +218,15 @@
                                                             <td >{{ $data_mutasi['nm_barang'] }}</td>
                                                             <td >{{ $data_mutasi['sisa'] }}</td>
                                                             <td >{{ $data_mutasi['satuan'] }}</td>
-                                                            <td >{{ $data_mutasi['total'] }}</td>
-                                                            <td >{{ $data_mutasi['masuk'] }}</td>
-                                                            <td >{{ $data_mutasi['harga_beli'] }}</td>
-                                                            <td >{{ $data_mutasi['total_penerimaan'] }}</td>
-                                                            <td >{{ $data_mutasi['keluar'] }}</td>
-                                                            <td >{{ $data_mutasi['harga_beli'] }}</td>
-                                                            <td >{{ $data_mutasi['total_pengeluaran'] }}</td>
-                                                            <td >{{ $data_mutasi['sisa_pp'] }}</td>
-                                                            <td >{{ $data_mutasi['total_akhir'] }}</td>
+                                                            <td >{{ number_format($data_mutasi['total'],0,'.',',') }}</td>
+                                                            <td >{{ number_format($data_mutasi['masuk'],0,'.',',') }}</td>
+                                                            <td >{{ number_format($data_mutasi['harga_beli'],0,'.',',') }}</td>
+                                                            <td >{{ number_format($data_mutasi['total_penerimaan'],0,'.',',') }}</td>
+                                                            <td >{{ number_format($data_mutasi['keluar'],0,'.',',') }}</td>
+                                                            <td >{{ number_format($data_mutasi['harga_beli'],0,'.',',') }}</td>
+                                                            <td >{{ number_format($data_mutasi['total_pengeluaran'],0,'.',',') }}</td>
+                                                            <td >{{ number_format($data_mutasi['sisa_pp'],0,'.',',') }}</td>
+                                                            <td >{{ number_format($data_mutasi['total_akhir'],0,'.',',') }}</td>
                                                         </tr>
                                                     @endforeach
                                                 @endif

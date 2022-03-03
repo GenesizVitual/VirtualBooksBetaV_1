@@ -12,6 +12,7 @@ use App\Http\Controllers\Persediaan\utils\StatusPenerimaan;
 use App\Model\Persediaan\Gudang as tbl_gudang;
 use App\Model\Persediaan\PembelianBarang as tbl_pembelian;
 use App\Model\Persediaan\Distribusi as tbl_distribusi;
+use App\Http\Controllers\Persediaan\utils\data\PengeluaranBarang;
 
 class Distribusi extends Controller
 {
@@ -29,8 +30,15 @@ class Distribusi extends Controller
     public function index()
     {
         $data = Gudang::getDataStokBarang(null);
-
+        Session::put('tab-menu','daftar-barang');
         return view('Persediaan.Distribusi.content', $data);
+    }
+
+    public function barang_keluar()
+    {
+        Session::put('tab-menu','barang-keluar');
+        $data_pengeluaran = PengeluaranBarang::BarangKeluar();
+        return view('Persediaan.Distribusi.content', compact(['data_pengeluaran']));
     }
 
     public function store(Request $req)
@@ -200,6 +208,24 @@ class Distribusi extends Controller
             }else{
                 return response()->json(array('status'=>'error','status_penerimaan'=> $req->status,'message'=>'Gagal, menghapus barang, silahkan cek kembali form'));
             }
+        }catch (Throwable $e){
+            report($e);
+            return false;
+        }
+    }
+
+    public function destroy_barang_keluar(Request $req,$id){
+        try{
+            $this->validate($req, [
+                '_token'=> 'required',
+                '_method'=> 'required',
+            ]);
+            $model_ditribusi=tbl_distribusi::where('id_instansi', Session::get('id_instansi'))->find($id);
+            if($model_ditribusi->delete())
+            {
+                return redirect()->back()->with('message_success','Barang '.$model_ditribusi->linkToGudang->nama_barang.' telah dihapus');
+            }else{
+                return redirect()->back()->with('message_fail','Barang '.$model_ditribusi->linkToGudang->nama_barang.', Gagal telah dihapus');          }
         }catch (Throwable $e){
             report($e);
             return false;

@@ -10,7 +10,7 @@ namespace app\Http\Controllers\Persediaan\utils\data;
 use Session;
 use App\Model\Persediaan\Nota;
 use App\Http\Controllers\Persediaan\utils\TahunAggaranCheck;
-use App\Http\Controllers\Persediaan\utils\data\FormulaPajak;
+use App\Model\Persediaan\PengeluaranBarang as BarangKeluar;
 
 class PengeluaranBarang
 {
@@ -27,8 +27,7 @@ class PengeluaranBarang
         return strtotime($a["tanggal_keluar"]) - strtotime($b["tanggal_keluar"]);
     }
 
-    public static function pengeluaran_barang($array){
-
+    public static function pengeluaran_barang($array=null){
         try{
             $no = 1;
             # Cek Tahun Anggaran Akhif
@@ -45,7 +44,6 @@ class PengeluaranBarang
             # Exrat data pengeluaran dari data nota
             foreach ($nota as $data_nota)
             {
-
                 if (self::$status_penerimaan != 99) {
                     # Membuat Array Colom Pembelian Jika status pembelian sama dengan status penerimaan
                     if ($data_nota->linkToNotaBelongsToTbk->status_pembayaran == self::$status_penerimaan) {
@@ -60,6 +58,34 @@ class PengeluaranBarang
             usort(self::$row,"self::sortFunction");
 
             return self::$row;
+        }catch (Throwable $e){
+            return false;
+        }
+    }
+
+    public static function BarangKeluar($array=null){
+        try{
+            TahunAggaranCheck::tahun_anggaran_aktif([
+                'id_instansi'=> Session::get('id_instansi')
+            ]);
+            # Inisialisasi ID tahun Anggaran
+            $ndata = TahunAggaranCheck::$id_thn_anggaran;
+            self::$tahun = $ndata->thn_anggaran;
+            $model = BarangKeluar::where('id_instansi', Session::get('id_instansi'))->whereYear('created_at', self::$tahun);
+            $container = [];
+            $no = 1;
+            foreach ($model->get() as $data){
+                $column = [];
+                $column['no']=$no++;
+                $column['id']=$data->id;
+                $column['tgl_keluar']=date('d-m-Y', strtotime($data->tgl_kerluar));
+                $column['nm_barang']=$data->getBarang->nama_barang;
+                $column['jumlah_keluar']=$data->jumlah_keluar;
+                $column['bidang']=$data->getBidang->nama_bidang;
+                $column['aksi']='<button type="submit" class="btn btn-danger" onclick="return confirm("apakah anda akan menghapus data ini...?")"><i class="fa fa-eraser"></i> hapus</button>';
+                $container[] = $column;
+            }
+            return $container;
         }catch (Throwable $e){
             return false;
         }
@@ -91,8 +117,8 @@ class PengeluaranBarang
             $column['tanggal_keluar'] =$data->tgl_kerluar;
             $column['nama_barang'] =$data->linkToGudang->nama_barang;
             $column['banyak_barang'] =$data->jumlah_keluar;
-            $column['harga_satuan'] =number_format(FormulaPajak::formula_pajak($data->linkToPembelian->harga_barang,$data_nota->ppn,$data_nota->pph),2,',','.');
-            $column['jumlah_harga'] =number_format(round(FormulaPajak::formula_pajak($data->jumlah_keluar*$data->linkToPembelian->harga_barang,$data_nota->ppn,$data_nota->pph),2),2,',','.');
+            $column['harga_satuan'] =number_format(FormulaPajak::formula_pajak($data->linkToPembelian->harga_barang,$data_nota->ppn,$data_nota->pph),0,'','');
+            $column['jumlah_harga'] =number_format(round(FormulaPajak::formula_pajak($data->jumlah_keluar*$data->linkToPembelian->harga_barang,$data_nota->ppn,$data_nota->pph),0),0,'','');
             $column['bidang'] =$data->linkToBidang->nama_bidang;
             $column['tanggal_penyerahan'] =$data->tgl_kerluar;
             $column['keterangan'] =$data->keterangan;

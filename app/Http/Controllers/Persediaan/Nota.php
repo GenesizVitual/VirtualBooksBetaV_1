@@ -79,7 +79,7 @@ class Nota extends Controller
         $new_request['id_thn_anggaran'] = $ndata->id;
         $model = new notas($new_request);
         if($model->save()){
-            return redirect('nota')->with('message_success','Anda telah menambahkan nota pembelian baru dengan kode: '.$model->kode_nota);
+            return redirect('pembelian-barang/'.$model->id)->with('message_success','Anda telah menambahkan nota pembelian baru dengan kode: '.$model->kode_nota);
         }else{
             return redirect('nota')->with('message_error','Gagal, menambahkan nota pembelian');
         }
