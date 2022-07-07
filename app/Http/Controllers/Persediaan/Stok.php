@@ -8,6 +8,7 @@ use Session;
 use App\Http\Controllers\Persediaan\utils\data\Stok as stoks;
 use App\Model\Persediaan\Nota as nota;
 use App\Model\Persediaan\PembelianBarang;
+use App\Model\Persediaan\TahunAnggaran;
 class Stok extends Controller
 {
     public function preview_stok_opname(Request $req){
@@ -19,6 +20,7 @@ class Stok extends Controller
                     $data_nota = nota::where('id_instansi',Session::get('id_instansi'))
                         ->findOrFail($data_stok['id_nota']);
                     # Todo Buat Nota
+                    $tahun_anggaran = TahunAnggaran::find($req->tahun_anggaran);
                     $nota_baru = nota::updateOrCreate(
                         [
                             'id_instansi'=>Session::get('id_instansi'),
@@ -26,7 +28,7 @@ class Stok extends Controller
                             'id_thn_anggaran'=>$req->tahun_anggaran,
                         ],
                         [
-                            'tgl_beli'=> $data_nota->tgl_beli,
+                            'tgl_beli'=> date('Y-m-d', strtotime($tahun_anggaran->thn_anggaran.'-01-01')),
                             'status_stok'=> '1',
                             'id_jenis_tbk'=> $data_nota->id_jenis_tbk,
                             'pph'=> $data_nota->pph,

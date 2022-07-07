@@ -64,7 +64,6 @@ class Nota
         {
             $cek_pajak = FormulaPajak::cek_pajak($data_nota->linkToPembelian->where('id_instansi', Session::get('id_instansi'))->sum('total_beli'), $data_nota);
             $total_sesudah_pajak = $cek_pajak->total+$cek_pajak->total_ppn+$cek_pajak->total_pph;
-
             $column = array();
             $column[] = $no++;
             $column[] = date('d-m-Y', strtotime($data_nota->tgl_beli));
@@ -77,11 +76,23 @@ class Nota
             $column[] = $data_nota->id;
             $column[] = $data_nota->linkToTbkNota;
             $column[] = $total_sesudah_pajak;
-
+            $column[] = self::get_pengeluaran($data_nota->linkToPengeluaranBarang);
             $row[] = $column;
         }
 
         return $row;
+    }
+
+
+    public static function get_pengeluaran($model)
+    {
+        $total_pengeluaran = 0;
+        foreach($model as $data_pengeluaran){
+            $harga_satuan = $data_pengeluaran->linkToPembelian->harga_barang;
+            $jumlah_keluar = $data_pengeluaran->jumlah_keluar;
+            $total_pengeluaran += $harga_satuan*$jumlah_keluar;
+        }
+        return $total_pengeluaran;
     }
 
     # Data Nota Berdasarkan id Nota

@@ -63,6 +63,11 @@ class SettingReport
             'icon'=>'fas fa-book-open fa-lg'
         ],
         [
+            'title'=> 'Berita Acara pengeluaran',
+            'url' => 'berita-acara-pengeluaran',
+            'icon'=>'fas fa-book-open fa-lg'
+        ],
+        [
             'title'=> 'Buku Persediaan (FIFO)',
             'url' => 'buku-persediaan-fifo',
             'icon'=>'fas fa-book-open fa-lg'

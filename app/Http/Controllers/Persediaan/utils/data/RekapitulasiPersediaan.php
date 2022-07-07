@@ -32,4 +32,21 @@ class RekapitulasiPersediaan
             return false;
         }
     }
+    
+    public static function DataRekapitupitulasiPengeluaran($array){
+        try{
+            $model = JenisTbk::all()->where('id_instansi', Session::get('id_instansi'))->sortBy('status_pembayaran');
+            $array = [];
+            foreach ($model as $data){
+                Nota::$id_jenis_nota = $data->id;
+                Nota::$status = true;
+                Nota::$tgl_awal = self::$tgl_awal;
+                Nota::$tgl_akhir = self::$tgl_akhir;
+                $array[$data->id] = Nota::data_nota(null);
+            }
+            return $array;
+        }catch (Throwable $e){
+            return false;
+        }
+    }
 }

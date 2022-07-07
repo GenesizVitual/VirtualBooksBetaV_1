@@ -5,61 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64868ef3-a8b4-45c4-a01c-4c5d46228421" name="Default" comment="- Update Dashboard">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Api/Dashboard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Api/TestBarang.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Api/UsersApi.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/JwtMiddleWare.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/InstansiResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/KabupateKotaResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/ProvinsiResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/persediaan/logo/1640573836.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/persediaan/logo/logo_sultra2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/persediaan/page_print.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/laravel-excel/laravel-excel-Lw7CjEdyWoylg77EeyNx4b1oKKqRAbKj.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/VirtualBooksBetaV_1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/VirtualBooksBetaV_1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Distribusi.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Distribusi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Nota.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/Nota.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Gudang.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Gudang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Nota.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/Nota.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PembelianBarang.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PembelianBarang.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PengeluaranBarang.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/PengeluaranBarang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/RevisiMutasi.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Persediaan/utils/data/RevisiMutasi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/AdminAuth.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/AdminAuth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Persediaan/PengeluaranBarang.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Persediaan/PengeluaranBarang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/Distribusi/content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/Nota/content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/Nota/content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/component_admin/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/component_admin/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/barang_pakai_habis/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/barang_pakai_habis/print.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/buku_persediaan/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/buku_persediaan/print.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/daftar_nota/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/daftar_nota/print.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/kartu_barang/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/kartu_barang/print.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/mutasi_barang/content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/mutasi_barang/content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/mutasi_barang/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/mutasi_barang/print.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/pengeluaran_barang/content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/pengeluaran_barang/content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/pengeluaran_barang/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/pengeluaran_barang/print.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/persediaan_barang/export_excel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/persediaan_barang/export_excel.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/persediaan_barang/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/persediaan_barang/print.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rekapitulasi_persediaan/content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rekapitulasi_persediaan/content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rekapitulasi_persediaan/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rekapitulasi_persediaan/print.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rekapitulasi_persediaan_perjenis_tbk/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rekapitulasi_persediaan_perjenis_tbk/print.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_barang_persediaan/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_barang_persediaan/print.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_persediaan_barang/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/rincian_persediaan_barang/print.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/semester/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/semester/print.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_barang/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_barang/print.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_opname/export_excel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_opname/export_excel.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_opname/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Persediaan/laporan/stok_opname/print.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/another_route/users_route.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/another_route/users_route.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -667,7 +616,7 @@
     <property name="SearchEverywhereHistoryKey" value="Instansi&#9;null&#9;null&#10;user&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;master&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/MasterLaporan.php&#10;Master&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/MasterLaporan.php&#10;pengelua&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/PengeluaranBarang.php&#10;Persediaan&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/PersediaanBarang.php&#10;Distribu&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;Dis&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/Distribusi.php&#10;admin&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/admin_route.php&#10;Pembelian&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/PembelianBarang.php&#10;data_pembelian_barang_perbarang&#9;null&#9;null&#10;mutasi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php&#10;Mutas&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php&#10;Stok&#9;null&#9;null&#10;Gudang&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/Gudang.php&#10;Distri&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;distribusi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;rout&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/admin_route.php&#10;PembelianBaran&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/PembelianBarang.php&#10;Nota&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Nota.php&#10;stok&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Stok.php&#10;sto&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/Stok.php&#10;pembeli&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Persediaan/PembelianBarang.php&#10;lapora&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/MasterLaporan.php&#10;Mutasi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/utils/data/MutasiBarang.php&#10;distr&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Distribusi.php&#10;MasterLapora&#9;null&#9;null&#10;we&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/web.php&#10;Distr&#9;null&#9;null&#10;web&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/web.php&#10;User&#9;null&#9;null&#10;Langga&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/resources/views/Persediaan/penentuan_paket_langganan.blade.php&#10;lang&#9;null&#9;null&#10;Sura&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/SuratPermintaan.php&#10;Pembelia&#9;null&#9;null&#10;Do&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Model/Apps/Dokumentasi.php&#10;Login&#9;null&#9;null&#10;route&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;Tahun&#9;null&#9;null&#10;ro&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;MasterL&#9;null&#9;null&#10;Invoi&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Invoice.php&#10;Users&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/routes/another_route/users_route.php&#10;langganan&#9;null&#9;null&#10;SuratPesanan&#9;null&#9;null&#10;SuratPesana&#9;null&#9;null&#10;Pembe&#9;null&#9;null&#10;Berwe&#9;null&#9;null&#10;Gu&#9;FILE&#9;file://E:/xampp173/htdocs/VirtualBooksBetaV_1/app/Http/Controllers/Persediaan/Gudang.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/admin_asset/plugins" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -999,7 +948,14 @@
       <workItem from="1644891920904" duration="44000" />
       <workItem from="1646052172385" duration="5229000" />
       <workItem from="1646097216452" duration="554000" />
-      <workItem from="1646275203084" duration="2654000" />
+      <workItem from="1646275203084" duration="2742000" />
+      <workItem from="1646356640289" duration="176000" />
+      <workItem from="1652151891973" duration="2361000" />
+      <workItem from="1652159996884" duration="1070000" />
+      <workItem from="1653688384953" duration="1927000" />
+      <workItem from="1653712283139" duration="1271000" />
+      <workItem from="1653714841154" duration="282000" />
+      <workItem from="1653874913190" duration="44000" />
     </task>
     <task id="LOCAL-00039" summary="- Perancangan Kartu Barang">
       <created>1603788974996</created>

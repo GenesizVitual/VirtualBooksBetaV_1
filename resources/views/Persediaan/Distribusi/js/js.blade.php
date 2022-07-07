@@ -47,7 +47,7 @@
         var pembelian = $('#table-data-pembelian').DataTable({
             "paging": true,
             "lengthChange": false,
-            "searching": false,
+            "searching": true,
             "ordering": true,
             "info": true,
             "autoWidth": false,
@@ -67,7 +67,7 @@
         var pengeluaran = $('#table-data-pengeluaran').DataTable({
             "paging": true,
             "lengthChange": false,
-            "searching": false,
+            "searching": true,
             "ordering": true,
             "info": true,
             "autoWidth": false,

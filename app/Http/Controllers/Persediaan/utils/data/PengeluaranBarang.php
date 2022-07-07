@@ -11,9 +11,12 @@ use Session;
 use App\Model\Persediaan\Nota;
 use App\Http\Controllers\Persediaan\utils\TahunAggaranCheck;
 use App\Model\Persediaan\PengeluaranBarang as BarangKeluar;
+use App\Http\Controllers\Persediaan\utils\data\FormulaPajak;
 
 class PengeluaranBarang
 {
+
+
     public static $tgl_awal;
     public static $tgl_akhir;
     public static $status_penerimaan=99;

@@ -40,10 +40,10 @@ class PembelianBarang
 
             $query = DB::select('select * from (
                                     SELECT d.*,if(d.stok_p-sum(tbl_pengeluaran_barang.jumlah_keluar) is null,d.stok_p, d.stok_p-sum(tbl_pengeluaran_barang.jumlah_keluar) ) as stok  from (
-                                    SELECT tbl_nota.tgl_beli, tbl_nota.kode_nota,tbl_gudang.nama_barang,tbl_pembelian_barang.*, tbl_pembelian_barang.jumlah_barang as stok_p FROM tbl_jenis_tbk 
+                                    SELECT tbl_nota.tgl_beli, tbl_nota.kode_nota,tbl_gudang.nama_barang,tbl_pembelian_barang.*, tbl_pembelian_barang.jumlah_barang as stok_p FROM tbl_jenis_tbk
                                     join tbl_nota on tbl_nota.id_jenis_tbk = tbl_jenis_tbk.id
                                     join tbl_pembelian_barang on tbl_pembelian_barang.id_nota = tbl_nota.id
-                                    join tbl_gudang on tbl_gudang.id = tbl_pembelian_barang.id_gudang 
+                                    join tbl_gudang on tbl_gudang.id = tbl_pembelian_barang.id_gudang
     							     where status_pembayaran=\''.$array['status_pembayaran'].'\' and tbl_jenis_tbk.id_instansi='.Session::get('id_instansi').'
                                     and tbl_gudang.id = '.$array['id_barang'].' and tbl_nota.id_thn_anggaran='.$n_data->id.'
     								order by tgl_beli asc
@@ -60,7 +60,7 @@ class PembelianBarang
                 $column = array();
                 $column['no'] = $no++;
                 $column['tgl_beli'] = date('d-m-Y', strtotime($data->tgl_beli));
-                $column['nama_barang'] = $data->nama_barang.",<p style='font-weight: bold;'>$data->kode_nota</p>";
+                $column['nama_barang'] = $data->nama_barang.",<a href='".url('pembelian-barang/'.$data->id_nota)."'> <p style='font-weight: bold;'>$data->kode_nota</p></a>";
                 $column['stok'] = number_format($data->stok,2,',','.');
                 $column['harga'] = number_format($data->harga_barang,2,',','.');
                 $column['sub_total'] = number_format($data->harga_barang*$data->stok,2,',','.');
